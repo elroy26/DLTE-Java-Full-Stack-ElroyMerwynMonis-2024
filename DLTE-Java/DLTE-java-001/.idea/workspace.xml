@@ -2,32 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cca6214-e5df-474a-a4b1-914765619328" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/basic/service/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/basic/service/Blocks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/basic/service/Interaction.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/basic/service/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DLTE-java-001.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/basics/service/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/basics/service/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DLTE-java-001-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/DLTE-java-001-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/basics/service/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-basics.service.AppTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/basics.service.AppTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/basics/service/AppTest.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/DLTE-java-001-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/basic/service/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-basic.service.AppTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/surefire-reports/basic.service.AppTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/basic/service/AppTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -50,6 +59,85 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+  </component>
+  <component name="RunManager" selected="Application.Interaction">
+    <configuration name="Device" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="basic.service.Device" />
+      <module name="DLTE-java-001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="basic.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Facility" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="basic.service.Facility" />
+      <module name="DLTE-java-001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="basic.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Interaction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="basic.service.Interaction" />
+      <module name="DLTE-java-001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="basic.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Traditional" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="basic.service.Traditional" />
+      <module name="DLTE-java-001" />
+      <option name="PROGRAM_PARAMETERS" value="elroy monis 21 java python jas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="basic.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Device" />
+      <item itemvalue="Application.Facility" />
+      <item itemvalue="Application.Traditional" />
+      <item itemvalue="Application.Interaction" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Interaction" />
+        <item itemvalue="Application.Traditional" />
+        <item itemvalue="Application.Facility" />
+        <item itemvalue="Application.Device" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -73,7 +161,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708074270807</updated>
-      <workItem from="1708074273513" duration="437000" />
+      <workItem from="1708074273513" duration="8662000" />
     </task>
     <servers />
   </component>
@@ -84,22 +172,34 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1237" height="161" key="GridCell.Tab.0.bottom" timestamp="1708074559616">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1708081868509">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1708074559616" />
-    <state width="1237" height="161" key="GridCell.Tab.0.center" timestamp="1708074559616">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.672@0.0.1280.672" timestamp="1708081868509" />
+    <state x="444" y="92" key="FileChooserDialogImpl" timestamp="1708077854343">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1708074559616" />
-    <state width="1237" height="161" key="GridCell.Tab.0.left" timestamp="1708074559616">
+    <state x="444" y="92" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1708077854343" />
+    <state width="1237" height="161" key="GridCell.Tab.0.bottom" timestamp="1708085666339">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1708074559616" />
-    <state width="1237" height="161" key="GridCell.Tab.0.right" timestamp="1708074559616">
+    <state width="1237" height="161" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1708085666339" />
+    <state width="1237" height="161" key="GridCell.Tab.0.center" timestamp="1708085666339">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1708074559616" />
+    <state width="1237" height="161" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1708085666339" />
+    <state width="1237" height="161" key="GridCell.Tab.0.left" timestamp="1708085666339">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="161" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1708085666339" />
+    <state width="1237" height="161" key="GridCell.Tab.0.right" timestamp="1708085666339">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="161" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1708085666339" />
+    <state x="144" y="0" key="SettingsEditor" timestamp="1708078406649">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="144" y="0" key="SettingsEditor/0.0.1280.672@0.0.1280.672" timestamp="1708078406649" />
     <state x="349" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1708074274874">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
