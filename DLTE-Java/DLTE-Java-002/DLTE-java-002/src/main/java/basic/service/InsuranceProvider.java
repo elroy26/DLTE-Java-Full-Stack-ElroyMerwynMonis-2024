@@ -17,7 +17,7 @@ public class InsuranceProvider {
             features[i] = input.nextLine();
         }
 
-        // Check if features exist in any company and print the company name
+        // Process
         boolean found = false;
         if (containsAny(hdfc, features)) {
             System.out.println("HDFC is suitable for the provided features.");
@@ -35,14 +35,12 @@ public class InsuranceProvider {
             System.out.println("SBI is suitable for the provided features.");
             found = true;
         }
-
-        // If no company found
         if (!found) {
             System.out.println("No suitable insurance provider found for the provided features.");
         }
     }
 
-    // Method to check if any of the features exist in the given string
+    // Process
     public static boolean containsAny(String haystack, String[] needles) {
         for (String needle : needles) {
             if (haystack.contains(needle)) {

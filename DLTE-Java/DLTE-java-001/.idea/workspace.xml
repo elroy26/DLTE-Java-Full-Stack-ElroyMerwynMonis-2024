@@ -2,25 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cca6214-e5df-474a-a4b1-914765619328" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/DLTE-java-002.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/src/main/java/basic/service/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/src/test/java/basic/service/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/target/DLTE-java-002-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/target/classes/basic/service/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/target/surefire-reports/TEST-basic.service.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/target/surefire-reports/basic.service.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-002/DLTE-java-002/target/test-classes/basic/service/AppTest.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -30,7 +11,6 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/basic/service/App.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/basic/service/Blocks.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/basic/service/FdCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/basic/service/Flexipay.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/basic/service/Interaction.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/basic/service/InternetBanking.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/basic/service/MobileBanking.java" afterDir="false" />
@@ -46,15 +26,31 @@
       <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-basic.service.AppTest.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/surefire-reports/basic.service.AppTest.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/basic/service/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Task142/Task142/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Task142/Task142/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Task142/Task142/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Task142/Task142/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Task142/Task142/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Task142/Task142/Task142.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Task142/Task142/src/main/java/basic/service/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Task142/Task142/src/test/java/basic/service/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/basic/service/Interaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/basic/service/Interaction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Tasks/DLTE-Task#142/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Tasks/DLTE-Task#142/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Tasks/DLTE-Task#142/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Tasks/DLTE-Task#142/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Tasks/DLTE-Task#142/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Tasks/DLTE-Task#142/DLTE-Task#142.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Tasks/DLTE-Task#142/src/main/java/basics/services/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Tasks/DLTE-Task#142/src/main/java/basics/services/FdCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Tasks/DLTE-Task#142/src/main/java/basics/services/InternetBanking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Tasks/DLTE-Task#142/src/main/java/basics/services/MobileBanking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Tasks/DLTE-Task#142/src/main/java/basics/services/PersonalLoan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Tasks/DLTE-Task#142/src/test/java/basics/services/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Tasks/DLTE-Task#142/target/classes/basics/services/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Tasks/DLTE-Task#142/target/classes/basics/services/FdCalculator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Tasks/DLTE-Task#142/target/test-classes/basics/services/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Task142/Task142/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Task142/Task142/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Task142/Task142/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Task142/Task142/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Task142/Task142/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Task142/Task142/Task142.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Task142/Task142/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Task142/Task142/src/main/java/basic/service/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Task142/Task142/src/test/java/basic/service/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,6 +212,7 @@
       <workItem from="1708306464238" duration="161000" />
       <workItem from="1708306739824" duration="3234000" />
       <workItem from="1708314044696" duration="4547000" />
+      <workItem from="1708367672198" duration="778000" />
     </task>
     <servers />
   </component>
