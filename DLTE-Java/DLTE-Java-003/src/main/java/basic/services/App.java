@@ -6,8 +6,9 @@ package basic.services;
  */
 public class App 
 {
-    public static void main( String[] args )
+    static public int main( String[] args )
     {
         System.out.println( "Hello World!" );
+        return 0;
     }
 }
