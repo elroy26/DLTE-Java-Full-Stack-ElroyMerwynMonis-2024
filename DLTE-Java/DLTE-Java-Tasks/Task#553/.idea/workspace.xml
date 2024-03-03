@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d791b81c-e78f-4d05-b8d1-a097c7160074" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task#553.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CreditCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TransactionResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TransactionSchedulerMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Task#548/src/main/java/org/example/CreditTransactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task#548/src/main/java/org/example/CreditTransactions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#312" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#312" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#390" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#390" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#400" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#400" afterDir="false" />
@@ -107,7 +96,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709448926213</updated>
-      <workItem from="1709448929827" duration="1769000" />
+      <workItem from="1709448929827" duration="2614000" />
     </task>
     <servers />
   </component>
@@ -122,22 +111,22 @@
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="446" y="43" key="#com.intellij.ide.util.MemberChooser/0.0.1280.672@0.0.1280.672" timestamp="1709449105142" />
-    <state width="1237" height="161" key="GridCell.Tab.0.bottom" timestamp="1709455815678">
+    <state width="1237" height="33" key="GridCell.Tab.0.bottom" timestamp="1709455936122">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1709455815678" />
-    <state width="1237" height="161" key="GridCell.Tab.0.center" timestamp="1709455815678">
+    <state width="1237" height="33" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1709455936122" />
+    <state width="1237" height="33" key="GridCell.Tab.0.center" timestamp="1709455936122">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1709455815678" />
-    <state width="1237" height="161" key="GridCell.Tab.0.left" timestamp="1709455815678">
+    <state width="1237" height="33" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1709455936122" />
+    <state width="1237" height="33" key="GridCell.Tab.0.left" timestamp="1709455936122">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1709455815678" />
-    <state width="1237" height="161" key="GridCell.Tab.0.right" timestamp="1709455815678">
+    <state width="1237" height="33" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1709455936122" />
+    <state width="1237" height="33" key="GridCell.Tab.0.right" timestamp="1709455936122">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1709455815678" />
+    <state width="1237" height="33" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1709455936122" />
     <state x="383" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1709455644235">
       <screen x="0" y="0" width="1280" height="672" />
     </state>

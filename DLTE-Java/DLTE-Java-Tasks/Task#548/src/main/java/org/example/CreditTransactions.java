@@ -43,9 +43,6 @@ public class CreditTransactions {
                 case 3:
                     maximumAmountTransferred();
                     break;
-                case 4:
-                    customizedSort();
-                    break;
                 case 5:
                     System.out.println("Exiting...");
                     return;
@@ -81,41 +78,5 @@ public class CreditTransactions {
         System.out.println(maxTransaction);
     }
 
-    public static void customizedSort() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter property to sort (date, amount, recipient, remarks): ");
-        String property = input.next().toLowerCase();
-        System.out.println("Enter sorting order (asc, desc): ");
-        String order = input.next().toLowerCase();
 
-        Comparator<CreditCard> comparator = null;
-        switch (property) {
-            case "date":
-                comparator = Comparator.comparing(CreditCard::getDateOfTransaction);
-                break;
-            case "amount":
-                comparator = Comparator.comparingDouble(CreditCard::getAmountInTransaction);
-                break;
-            case "recipient":
-                comparator = Comparator.comparing(CreditCard::getToRecipient);
-                break;
-            case "remarks":
-                comparator = Comparator.comparing(CreditCard::getRemarks);
-                break;
-            default:
-                System.out.println("Invalid property! Sorting by date.");
-                comparator = Comparator.comparing(CreditCard::getDateOfTransaction);
-        }
-
-        if (order.equals("desc")) {
-            comparator = comparator.reversed();
-        }
-
-        List<CreditCard> sortedList = transactionsDetails.stream()
-                .sorted(comparator)
-                .collect(Collectors.toList());
-
-        System.out.println("Sorted transactions:");
-        sortedList.forEach(System.out::println);
-    }
 }
