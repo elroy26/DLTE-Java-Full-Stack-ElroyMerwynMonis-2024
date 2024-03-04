@@ -2,27 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2ec2485-eebf-4661-88ed-ef09a04c62fb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../DLTE-Database/DLTE-Oracle-002.txt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-Tasks/Task#581/loans.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-Tasks/Task#581/loans.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-Tasks/Task#581/src/main/java/file/oops/Loan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-Tasks/Task#581/src/main/java/file/oops/MyBank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-Tasks/Task#581/src/main/java/file/oops/MyBankExecute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-Tasks/Task#581/src/main/java/file/oops/MyBankMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-Tasks/Task#581/target/classes/file/oops/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-Tasks/Task#581/target/classes/file/oops/Loan.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-Tasks/Task#581/target/classes/file/oops/MyBank.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-Tasks/Task#581/target/classes/file/oops/MyBankExecute.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-Tasks/Task#581/target/classes/file/oops/MyBankMain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-Tasks/Task#581/target/test-classes/file/oops/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-Tasks/Task#553/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-Tasks/Task#553/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task#312" beforeDir="false" afterPath="$PROJECT_DIR$/../Task#312" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task#390" beforeDir="false" afterPath="$PROJECT_DIR$/../Task#390" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task#400" beforeDir="false" afterPath="$PROJECT_DIR$/../Task#400" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/Tasl#431.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/src/main/java/exception/logs/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/src/main/java/exception/logs/CreditCard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/src/main/java/exception/logs/CustomerSupport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/src/main/java/exception/logs/MyBankCreditCardException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/src/test/java/exception/logs/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/target/classes/exception/logs/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/target/classes/exception/logs/CreditCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/target/classes/exception/logs/CustomerSupport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/target/classes/exception/logs/MyBankCreditCardException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasl#431/target/test-classes/exception/logs/AppTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +58,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Task#431" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -116,6 +112,7 @@
       <workItem from="1708841015299" duration="5873000" />
       <workItem from="1708924839661" duration="93000" />
       <workItem from="1708949376610" duration="15000" />
+      <workItem from="1709529288515" duration="82000" />
     </task>
     <servers />
   </component>
