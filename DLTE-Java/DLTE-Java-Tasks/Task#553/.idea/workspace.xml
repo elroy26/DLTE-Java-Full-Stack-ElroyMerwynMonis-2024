@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d791b81c-e78f-4d05-b8d1-a097c7160074" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Task#548/src/main/java/org/example/CreditTransactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task#548/src/main/java/org/example/CreditTransactions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#312" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#312" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#390" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#390" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#400" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#400" afterDir="false" />
@@ -97,6 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1709448926213</updated>
       <workItem from="1709448929827" duration="2614000" />
+      <workItem from="1709515443553" duration="203000" />
     </task>
     <servers />
   </component>
