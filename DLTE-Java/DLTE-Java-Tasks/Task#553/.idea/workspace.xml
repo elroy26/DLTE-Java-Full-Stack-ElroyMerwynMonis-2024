@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7187448-26bc-4678-82b8-f53e632f5191" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/creditCard.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CreditCardActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CreditCardMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MyBankDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task#553.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CreditCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TransactionResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TransactionSchedulerMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/CreditCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/CreditCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/TransactionResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/TransactionSchedulerMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/example/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creditCard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creditCard.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/MyBankDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/MyBankDatabase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#312" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#312" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#390" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#390" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#400" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#400" afterDir="false" />
@@ -112,6 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1709597672794</updated>
       <workItem from="1709597681493" duration="5002000" />
+      <workItem from="1709608770979" duration="1612000" />
     </task>
     <servers />
   </component>
@@ -127,21 +114,21 @@
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="371" y="85" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.672@0.0.1280.672" timestamp="1709597874519" />
-    <state width="1237" height="210" key="GridCell.Tab.0.bottom" timestamp="1709605245617">
+    <state width="1237" height="210" key="GridCell.Tab.0.bottom" timestamp="1709610965746">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="210" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1709605245617" />
-    <state width="1237" height="210" key="GridCell.Tab.0.center" timestamp="1709605245617">
+    <state width="1237" height="210" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1709610965746" />
+    <state width="1237" height="210" key="GridCell.Tab.0.center" timestamp="1709610965746">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="210" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1709605245617" />
-    <state width="1237" height="210" key="GridCell.Tab.0.left" timestamp="1709605245617">
+    <state width="1237" height="210" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1709610965746" />
+    <state width="1237" height="210" key="GridCell.Tab.0.left" timestamp="1709610965746">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="210" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1709605245617" />
-    <state width="1237" height="210" key="GridCell.Tab.0.right" timestamp="1709605245617">
+    <state width="1237" height="210" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1709610965746" />
+    <state width="1237" height="210" key="GridCell.Tab.0.right" timestamp="1709610965746">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="210" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1709605245617" />
+    <state width="1237" height="210" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1709610965746" />
   </component>
 </project>
