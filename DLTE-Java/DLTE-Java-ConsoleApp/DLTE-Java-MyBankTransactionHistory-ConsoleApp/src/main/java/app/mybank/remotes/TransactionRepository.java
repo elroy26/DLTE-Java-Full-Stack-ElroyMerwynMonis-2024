@@ -9,4 +9,8 @@ public interface TransactionRepository {
     boolean verifyAccount(String userName, String password);
     void addAccount();
     void viewTransaction(String userName);
+    List<Account> findByDate(String startDate,String endDate);
+    List<Account> findByAmount();
+    List<Account> findByType();
+
 }

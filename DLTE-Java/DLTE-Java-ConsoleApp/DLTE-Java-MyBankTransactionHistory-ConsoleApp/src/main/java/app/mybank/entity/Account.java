@@ -71,7 +71,7 @@ public class Account implements Serializable {
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", transactions=" + transactions +
+                ", transactions=" + transactions +"\n"+
                 '}';
     }
 }

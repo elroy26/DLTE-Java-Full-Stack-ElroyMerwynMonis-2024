@@ -5,18 +5,19 @@ import app.mybank.remotes.TransactionRepository;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 public class TransactionFileRepository implements TransactionRepository {
     private String transactionFilePath;
     private Logger logger= Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    private Account account;
     private List<Account> transactionList=new ArrayList<>();
-
+    private List<String> dataList = new ArrayList<>();
+    private List<String[]> timeFormat= new ArrayList<>();
     public TransactionFileRepository(String url) {
         transactionFilePath=url;
         try{
@@ -56,7 +57,7 @@ public class TransactionFileRepository implements TransactionRepository {
 
         readAccountFile();
 
-        Account account=transactionList.stream().filter(each->each.getUserName().equals(userName)).findFirst().orElse(null);
+        account=transactionList.stream().filter(each->each.getUserName().equals(userName)).findFirst().orElse(null);
         if (account==null){
             System.out.println("User does not exit");
             return false;
@@ -105,8 +106,41 @@ public class TransactionFileRepository implements TransactionRepository {
     @Override
     public void viewTransaction(String userName) {
         Account account=transactionList.stream().filter(each->each.getUserName().equals(userName)).findFirst().orElse(null);
+
         if(account!=null){
-            System.out.println(account.getTransactions());
+            for(int i=0;i<account.getTransactions().size();i++){
+                System.out.println(account.getTransactions().get(i));
+
+            }
+
         }
+
+
+    }
+
+    @Override
+    public List<Account> findByDate(String startDate, String endDate) {
+
+        readAccountFile();
+        int i;
+        for (i=0;i<transactionList.size();i++){
+            String input = account.getTransactions().get(i);
+            String[] parts = input.split(",");
+            Date date=new Date(parts[2]);
+            if (date.after(new Date(startDate))&&date.before(new Date(endDate))){
+                System.out.println(transactionList.get(i));
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public List<Account> findByAmount() {
+        return null;
+    }
+
+    @Override
+    public List<Account> findByType() {
+        return null;
     }
 }

@@ -4,6 +4,7 @@ import app.mybank.entity.Account;
 import app.mybank.middleware.TransactionFileRepository;
 import app.mybank.remotes.TransactionRepository;
 
+import java.util.Date;
 import java.util.List;
 
 public class TransactionService {
@@ -22,13 +23,13 @@ public class TransactionService {
         }
         return false;
     }
-    public void addAccount(){
-        try{
-            transactionRepository.addAccount();
-        }catch (Exception e){
-
-        }
-    }
+//    public void addAccount(){
+//        try{
+//            transactionRepository.addAccount();
+//        }catch (Exception e){
+//
+//        }
+//    }
 
     public void viewTransaction(String userName) {
         try{
@@ -37,4 +38,15 @@ public class TransactionService {
 
         }
     }
+
+    public List<Account> findByDate(String startDate,String endDate){
+        return transactionRepository.findByDate(startDate,endDate);
+    }
+    public List<Account> findByAmount(){
+        return transactionRepository.findByAmount();
+    }
+    public List<Account> findByType(){
+        return transactionRepository.findByType();
+    }
+
 }
