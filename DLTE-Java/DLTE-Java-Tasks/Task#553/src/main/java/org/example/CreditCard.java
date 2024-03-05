@@ -3,60 +3,104 @@ package org.example;
 import java.util.Date;
 
 public class CreditCard {
-    private Date dateOfTransaction;
-    private Double amountInTransaction;
-    private String toRecipient;
-    private String remarks;
+    private Long creditCardNumber;
+    private String creditCardHolder;
+    private Date creditCardExpiry;
+    private Integer creditCardCvv;
+    private Integer creditCardLimit;
+    private Date dateOfBillGeneration;
+    private Date dateOfBillPayment;
+    private Integer creditCardPin;
 
     public CreditCard() {
     }
 
-    public CreditCard(Date dateOfTransaction, Double amountInTransaction, String toRecipient, String remarks) {
-        this.dateOfTransaction = dateOfTransaction;
-        this.amountInTransaction = amountInTransaction;
-        this.toRecipient = toRecipient;
-        this.remarks = remarks;
+    public CreditCard(Long creditCardNumber, String creditCardHolder, Date creditCardExpiry, Integer creditCardCvv, Integer creditCardLimit, Date dateOfBillGeneration, Date dateOfBillPayment, Integer creditCardPin) {
+        this.creditCardNumber = creditCardNumber;
+        this.creditCardHolder = creditCardHolder;
+        this.creditCardExpiry = creditCardExpiry;
+        this.creditCardCvv = creditCardCvv;
+        this.creditCardLimit = creditCardLimit;
+        this.dateOfBillGeneration = dateOfBillGeneration;
+        this.dateOfBillPayment = dateOfBillPayment;
+        this.creditCardPin = creditCardPin;
     }
 
-    public Date getDateOfTransaction() {
-        return dateOfTransaction;
+    public Long getCreditCardNumber() {
+        return creditCardNumber;
     }
 
-    public void setDateOfTransaction(Date dateOfTransaction) {
-        this.dateOfTransaction = dateOfTransaction;
+    public void setCreditCardNumber(Long creditCardNumber) {
+        this.creditCardNumber = creditCardNumber;
     }
 
-    public Double getAmountInTransaction() {
-        return amountInTransaction;
+    public String getCreditCardHolder() {
+        return creditCardHolder;
     }
 
-    public void setAmountInTransaction(Double amountInTransaction) {
-        this.amountInTransaction = amountInTransaction;
+    public void setCreditCardHolder(String creditCardHolder) {
+        this.creditCardHolder = creditCardHolder;
     }
 
-    public String getToRecipient() {
-        return toRecipient;
+    public Date getCreditCardExpiry() {
+        return creditCardExpiry;
     }
 
-    public void setToRecipient(String toRecipient) {
-        this.toRecipient = toRecipient;
+    public void setCreditCardExpiry(Date creditCardExpiry) {
+        this.creditCardExpiry = creditCardExpiry;
     }
 
-    public String getRemarks() {
-        return remarks;
+    public Integer getCreditCardCvv() {
+        return creditCardCvv;
     }
 
-    public void setRemarks(String remarks) {
-        this.remarks = remarks;
+    public void setCreditCardCvv(Integer creditCardCvv) {
+        this.creditCardCvv = creditCardCvv;
+    }
+
+    public Integer getCreditCardLimit() {
+        return creditCardLimit;
+    }
+
+    public void setCreditCardLimit(Integer creditCardLimit) {
+        this.creditCardLimit = creditCardLimit;
+    }
+
+    public Date getDateOfBillGeneration() {
+        return dateOfBillGeneration;
+    }
+
+    public void setDateOfBillGeneration(Date dateOfBillGeneration) {
+        this.dateOfBillGeneration = dateOfBillGeneration;
+    }
+
+    public Date getDateOfBillPayment() {
+        return dateOfBillPayment;
+    }
+
+    public void setDateOfBillPayment(Date dateOfBillPayment) {
+        this.dateOfBillPayment = dateOfBillPayment;
+    }
+
+    public Integer getCreditCardPin() {
+        return creditCardPin;
+    }
+
+    public void setCreditCardPin(Integer creditCardPin) {
+        this.creditCardPin = creditCardPin;
     }
 
     @Override
     public String toString() {
-        return "Transaction{" +
-                "dateOfTransaction=" + dateOfTransaction +
-                ", amountInTransaction=" + amountInTransaction +
-                ", toRecipient='" + toRecipient + '\'' +
-                ", remarks='" + remarks + '\'' +
+        return "CreditCard{" +
+                "creditCardNumber=" + creditCardNumber +
+                ", creditCardHolder='" + creditCardHolder + '\'' +
+                ", creditCardExpiry=" + creditCardExpiry +
+                ", creditCardCvv=" + creditCardCvv +
+                ", creditCardLimit=" + creditCardLimit +
+                ", dateOfBillGeneration=" + dateOfBillGeneration +
+                ", dateOfBillPayment=" + dateOfBillPayment +
+                ", creditCardPin=" + creditCardPin +
                 '}';
     }
 }
