@@ -18,34 +18,34 @@ public class TransactionFileRepository implements TransactionRepository {
     private List<Account> transactionList=new ArrayList<>();
     private List<String> dataList = new ArrayList<>();
     private List<String[]> timeFormat= new ArrayList<>();
-    public TransactionFileRepository(String url) {
-        transactionFilePath=url;
-        try{
-            FileHandler fileHandler=new FileHandler("transaction-logs.txt",true);
-            SimpleFormatter simpleFormatter=new SimpleFormatter();
-            fileHandler.setFormatter(simpleFormatter);
-            logger.addHandler(fileHandler);
-        }
-        catch (IOException ioException){}
-    }
-
-
+//    public TransactionFileRepository(String url) {
+//        transactionFilePath=url;
+//        try{
+//            FileHandler fileHandler=new FileHandler("transaction-logs.txt",true);
+//            SimpleFormatter simpleFormatter=new SimpleFormatter();
+//            fileHandler.setFormatter(simpleFormatter);
+//            logger.addHandler(fileHandler);
+//        }
+//        catch (IOException ioException){}
+//    }
 
 
     public void writeAccountFile() {
-        try(ObjectOutputStream objectOutputStream=new ObjectOutputStream(new FileOutputStream(transactionFilePath))){
+        try(ObjectOutputStream objectOutputStream=new ObjectOutputStream(new FileOutputStream(transactionFilePath,true))){
             objectOutputStream.writeObject(transactionList);
         }catch (IOException e){
             System.out.println("Error writing the"+ e.getMessage());
         }
     }
 
-    private void readAccountFile() {
+    private List<Account> readAccountFile() {
         try(ObjectInputStream objectInputStream=new ObjectInputStream(new FileInputStream(transactionFilePath))){
             transactionList=(List<Account>) objectInputStream.readObject();
+            return transactionList;
         }catch (IOException|ClassNotFoundException e){
             System.out.println("error reading the "+e.getMessage());
         }
+        return null;
     }
     @Override
     public List<Account> findAllByAccount(String userName, String password) {
@@ -84,19 +84,19 @@ public class TransactionFileRepository implements TransactionRepository {
        transactions1.add("deposit,50000,03/24/2024,arjun");
         transactions1.add("widrawal,60700,12/03/2023,arjun");
         transactions1.add("transfer,43000,04/03/2024,arjun");
-        Account account1= new Account("arjun","1234","123@123.com",12413241324L,transactions);
+        Account account1= new Account("arjun","1234","123@123.com",12413241324L,transactions1);
         transactionList.add(account1);
         ArrayList<String> transactions2 = new ArrayList<>();
        transactions2.add("deposit,50050,03/24/2024,ajay");
         transactions2.add("widrawal,60700,12/03/2023,ajay");
         transactions2.add("transfer,43300,04/03/2024,ajay");
-        Account account2= new Account("ajay","1234","123@123.com",12413241324L,transactions);
+        Account account2= new Account("ajay","1234","123@123.com",12413241324L,transactions2);
         transactionList.add(account2);
         ArrayList<String> transactions3 = new ArrayList<>();
         transactions3.add("deposit,50050,03/24/2024,aman");
         transactions3.add("widrawal,60700,12/03/2023,aman");
         transactions3.add("transfer,43300,04/03/2024,aman");
-        Account account3= new Account("aman","1234","123@123.com",12413241324L,transactions);
+        Account account3= new Account("aman","1234","123@123.com",12413241324L,transactions3);
         transactionList.add(account3);
         writeAccountFile();
 
@@ -105,7 +105,8 @@ public class TransactionFileRepository implements TransactionRepository {
 
     @Override
     public void viewTransaction(String userName) {
-        Account account=transactionList.stream().filter(each->each.getUserName().equals(userName)).findFirst().orElse(null);
+        readAccountFile();
+//        account=transactionList.stream().filter(each->each.getUserName().equals(userName)).findFirst().orElse(null);
 
         if(account!=null){
             for(int i=0;i<account.getTransactions().size();i++){
@@ -113,7 +114,10 @@ public class TransactionFileRepository implements TransactionRepository {
 
             }
 
+        }else {
+            System.out.println("null");
         }
+
 
 
     }
@@ -121,26 +125,55 @@ public class TransactionFileRepository implements TransactionRepository {
     @Override
     public List<Account> findByDate(String startDate, String endDate) {
 
-        readAccountFile();
-        int i;
-        for (i=0;i<transactionList.size();i++){
-            String input = account.getTransactions().get(i);
-            String[] parts = input.split(",");
-            Date date=new Date(parts[2]);
-            if (date.after(new Date(startDate))&&date.before(new Date(endDate))){
-                System.out.println(transactionList.get(i));
+        if (account != null) {
+            for (String transaction : account.getTransactions()) {
+                String[] parts = transaction.split(",");
+                Date date = new Date(parts[2]);
+                if (date.after(new Date(startDate)) && date.before(new Date(endDate))) {
+                    System.out.println(transaction);
+                }
             }
+        } else {
+            System.out.println("User account not found.");
         }
         return null;
     }
 
     @Override
-    public List<Account> findByAmount() {
+    public List<Account> findByAmount(Double amount) {
+        if (account != null) {
+            for (String transaction : account.getTransactions()) {
+                String[] parts = transaction.split(",");
+                Double initialAmount=Double.parseDouble(parts[1]);
+                if (initialAmount<amount) {
+                    System.out.println(transaction);
+                }
+            }
+        } else {
+            System.out.println("User account not found.");
+        }
         return null;
     }
 
     @Override
-    public List<Account> findByType() {
+    public List<Account> findByAmount(Double initialAmount, Double finalAmount) {
         return null;
+    }
+
+    @Override
+    public List<Account> findByType(String type) {
+        if (account != null) {
+            for (String transaction : account.getTransactions()) {
+                String[] parts = transaction.split(",");
+                String typeTransaction=parts[0];
+                if (typeTransaction.equalsIgnoreCase(type)) {
+                    System.out.println(transaction);
+                }
+            }
+        } else {
+            System.out.println("User account not found.");
+        }
+        return null;
+
     }
 }

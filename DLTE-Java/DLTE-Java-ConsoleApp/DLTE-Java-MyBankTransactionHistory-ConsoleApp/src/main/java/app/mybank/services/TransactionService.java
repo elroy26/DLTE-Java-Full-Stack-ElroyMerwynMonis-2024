@@ -23,13 +23,13 @@ public class TransactionService {
         }
         return false;
     }
-//    public void addAccount(){
-//        try{
-//            transactionRepository.addAccount();
-//        }catch (Exception e){
-//
-//        }
-//    }
+    public void addAccount(){
+        try{
+            transactionRepository.addAccount();
+        }catch (Exception e){
+
+        }
+    }
 
     public void viewTransaction(String userName) {
         try{
@@ -42,11 +42,11 @@ public class TransactionService {
     public List<Account> findByDate(String startDate,String endDate){
         return transactionRepository.findByDate(startDate,endDate);
     }
-    public List<Account> findByAmount(){
-        return transactionRepository.findByAmount();
+    public List<Account> findByAmount(Double amount){
+        return transactionRepository.findByAmount(amount);
     }
-    public List<Account> findByType(){
-        return transactionRepository.findByType();
+    public List<Account> findByType(String type){
+        return transactionRepository.findByType(type);
     }
 
 }

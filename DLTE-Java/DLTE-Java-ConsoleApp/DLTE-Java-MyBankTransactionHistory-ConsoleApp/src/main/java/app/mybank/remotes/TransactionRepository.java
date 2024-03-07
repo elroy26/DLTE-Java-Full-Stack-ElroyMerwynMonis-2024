@@ -10,7 +10,8 @@ public interface TransactionRepository {
     void addAccount();
     void viewTransaction(String userName);
     List<Account> findByDate(String startDate,String endDate);
-    List<Account> findByAmount();
-    List<Account> findByType();
+    List<Account> findByAmount(Double amount);
+    List<Account> findByAmount(Double initialAmount,Double finalAmount);
+    List<Account> findByType(String type);
 
 }
