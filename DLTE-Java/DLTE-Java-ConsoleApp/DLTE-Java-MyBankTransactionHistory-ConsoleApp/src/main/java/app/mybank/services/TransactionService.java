@@ -12,9 +12,9 @@ public class TransactionService {
     public TransactionService(){
         transactionRepository=new TransactionFileRepository("transactions.txt");
     }
-    public List<Account> callFindAllByAccount(String userName,String password){
-        return transactionRepository.findAllByAccount(userName, password);
-    }
+//    public List<Account> callFindAllByAccount(String userName,String password){
+//        return transactionRepository.findAllByAccount(userName, password);
+//    }
     public boolean verifyAccount(String userName, String password) {
         try {
             return transactionRepository.verifyAccount(userName, password);
@@ -23,13 +23,13 @@ public class TransactionService {
         }
         return false;
     }
-    public void addAccount(){
-        try{
-            transactionRepository.addAccount();
-        }catch (Exception e){
-
-        }
-    }
+//    public void addAccount(){
+//        try{
+//            transactionRepository.addAccount();
+//        }catch (Exception e){
+//
+//        }
+//    }
 
     public void viewTransaction(String userName) {
         try{
