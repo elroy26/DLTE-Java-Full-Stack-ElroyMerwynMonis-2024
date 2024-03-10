@@ -4,7 +4,6 @@ import app.mybank.entity.Account;
 import app.mybank.middleware.TransactionFileRepository;
 import app.mybank.remotes.TransactionRepository;
 
-import java.util.Date;
 import java.util.List;
 
 public class TransactionService {
@@ -23,14 +22,14 @@ public class TransactionService {
         }
         return false;
     }
-//    public void addAccount(){
-//        try{
-//            transactionRepository.addAccount();
-//        }catch (Exception e){
-//
-//        }
-//    }
+    public void addAccount(){
+        try{
+            transactionRepository.addAccount();
+        }catch (Exception e){
 
+        }
+    }
+    
     public void viewTransaction(String userName) {
         try{
             transactionRepository.viewTransaction(userName);

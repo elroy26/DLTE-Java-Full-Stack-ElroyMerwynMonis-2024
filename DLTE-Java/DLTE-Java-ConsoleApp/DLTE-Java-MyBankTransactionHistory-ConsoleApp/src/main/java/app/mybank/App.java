@@ -1,25 +1,25 @@
 package app.mybank;
 
-import app.mybank.entity.Account;
 import app.mybank.exceptions.TransactionHistoryException;
-import app.mybank.middleware.TransactionFileRepository;
-import app.mybank.remotes.TransactionRepository;
 import app.mybank.services.TransactionService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
-import java.util.regex.Pattern;
-
-import static java.lang.System.exit;
 
 public class App {
+//    private static StorageTarget storageTarget;
     private static TransactionService transactionService = new TransactionService();
     private static ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
     private static ResourceBundle resourceBundleTransaction = ResourceBundle.getBundle("transactionHistory");
+    private static Logger logger = LoggerFactory.getLogger(App.class);
     private static String userName;
 
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+//        storageTarget=new FileStorageTarget();
+        transactionService.addAccount();
         int option;
         String choice1 = "", choice2 = "", choice3 = "", choice4 = "";
         int attempts = 0;
@@ -41,24 +41,27 @@ public class App {
                     int attemptsLeft = maxAttempts - attempts;
                     if (attempts >= 3) {
                         System.out.println(resourceBundle.getString("app.log.suspend"));
-                        exit(0);
+                        System.exit(0);
                     } else {
                         System.out.println(resourceBundle.getString("app.login.fail") + attemptsLeft + resourceBundle.getString("app.login.attempts"));
                     }
                 }
             } catch (InputMismatchException e) {
+                logger.error(resourceBundleTransaction.getString("app.exception.input"));
                 System.out.println("app.exception.input");
                 scanner.nextLine();
             } catch (NoSuchElementException e) {
-                System.out.println("app.exception.noElement");
+                System.out.println("exception.date");
+                logger.error(resourceBundleTransaction.getString("exception.date"));
                 scanner.nextLine();
             }
         }
 
         if (loggedIn) {
+            System.out.println(resourceBundle.getString("app.greet.jarvis"));
             while (true) {
                 try {
-                    System.out.println(resourceBundle.getString("app.greet.jarvis"));
+
                     System.out.println(resourceBundle.getString("app.jarvis.menu"));
                     int choice = scanner.nextInt();
                     switch (choice) {
@@ -134,23 +137,29 @@ public class App {
                                             choice4 = scanner.next();
                                             break;
 
-
                                     default:
-                                        System.out.println(resourceBundle.getString("app.jarvis.choice"));
+                                        System.out.println(resourceBundle.getString("user.transaction.type"));
                                 }
                             } while (choice1.equalsIgnoreCase("yes") || choice2.equalsIgnoreCase("yes") || choice3.equalsIgnoreCase("yes") || choice4.equalsIgnoreCase("yes"));
                             break;
-                        case 5:
+
+
+
+
+
+                            case 5:
                             System.out.println(resourceBundle.getString("app.exit"));
-                            exit(0);
+                            System.exit(0);
                         default:
                             System.out.println(resourceBundle.getString("app.jarvis.choice"));
 
                     }
                 } catch (InputMismatchException e) {
-                    System.out.println(resourceBundle.getString("app.exception.input"));
+                    logger.error(resourceBundle.getString("app.exception.input"));
+//                    System.out.println(resourceBundle.getString("app.exception.input"));
                     scanner.nextLine();
                 } catch (NoSuchElementException e) {
+                    logger.error(resourceBundleTransaction.getString("app.exception.input"));
                     System.out.println(resourceBundle.getString("app.exception.noElement"));
                     scanner.nextLine();
                 }
