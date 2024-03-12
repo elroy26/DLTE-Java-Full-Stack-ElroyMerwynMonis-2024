@@ -1,17 +1,16 @@
 package app.mybank.remotes;
 
-import app.mybank.entity.Account;
+import app.mybank.entity.Transaction;
 
 import java.util.List;
 
 public interface TransactionRepository {
     //    List<Account> findAllByAccount(String userName,String password);
     boolean verifyAccount(String userName, String password);
-    void addAccount();
-    void viewTransaction(String userName);
-    List<Account> findByDate(String startDate,String endDate);
-    List<Account> findByAmount(Double amount);
-    //    List<Account> findByAmount(Double initialAmount,Double finalAmount);
-    List<Account> findByType(String type);
+    List<Transaction> viewTransaction(String userName);
+    List<Transaction> findByDate(String user,String startDate, String endDate);
+    List<Transaction> findByAmount(Double amount);
+    List<Transaction> findByType(String type);
+    List<Transaction> viewAllTransaction();
 
 }

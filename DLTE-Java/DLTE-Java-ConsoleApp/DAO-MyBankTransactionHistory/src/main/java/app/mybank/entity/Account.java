@@ -1,6 +1,7 @@
 package app.mybank.entity;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.util.ArrayList;
 
 public class Account implements Serializable {
@@ -8,18 +9,23 @@ public class Account implements Serializable {
     private String password;
     private String email;
     private Long phoneNumber;
-    ArrayList<String> transactions;
+//    private String transactionType;
+//    private Double transactionAmount;
+//    private Date transactionDate;
 
     public Account() {
     }
 
-    public Account(String userName, String password, String email, Long phoneNumber, ArrayList<String> transactions) {
+    public Account(String userName, String password, String email, Long phoneNumber) {
         this.userName = userName;
         this.password = password;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.transactions = transactions;
+//        this.transactionType = transactionType;
+//        this.transactionAmount = transactionAmount;
+//        this.transactionDate = transactionDate;
     }
+
 
 
     public String getUserName() {
@@ -54,13 +60,29 @@ public class Account implements Serializable {
         this.phoneNumber = phoneNumber;
     }
 
-    public ArrayList<String> getTransactions() {
-        return transactions;
-    }
+//    public String getTransactionType(String string) {
+//        return transactionType;
+//    }
+//
+//    public void setTransactionType(String transactionType) {
+//        this.transactionType = transactionType;
+//    }
+//
+//    public Double getTransactionAmount(double aDouble) {
+//        return transactionAmount;
+//    }
 
-    public void setTransactions(ArrayList<String> transactions) {
-        this.transactions = transactions;
-    }
+//    public void setTransactionAmount(Double transactionAmount) {
+//        this.transactionAmount = transactionAmount;
+//    }
+//
+//    public Date getTransactionDate(Date date) {
+//        return transactionDate;
+//    }
+//
+//    public void setTransactionDate(Date transactionDate) {
+//        this.transactionDate = transactionDate;
+//    }
 
     @Override
     public String toString() {
@@ -68,8 +90,8 @@ public class Account implements Serializable {
                 "userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", transactions=" + transactions +"\n"+
+                ", phoneNumber=" + phoneNumber +
+                "\n"+
                 '}';
     }
 }

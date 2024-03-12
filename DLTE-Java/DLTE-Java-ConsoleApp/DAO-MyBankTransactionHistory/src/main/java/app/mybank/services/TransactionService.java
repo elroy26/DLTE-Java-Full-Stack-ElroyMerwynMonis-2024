@@ -1,6 +1,7 @@
 package app.mybank.services;
 
 import app.mybank.entity.Account;
+import app.mybank.entity.Transaction;
 import app.mybank.remotes.StorageTarget;
 import app.mybank.remotes.TransactionRepository;
 
@@ -10,9 +11,7 @@ import java.util.ResourceBundle;
 public class TransactionService {
     TransactionRepository transactionRepository;
     private ResourceBundle resourceBundle=ResourceBundle.getBundle("database");
-//    public TransactionService(){
-//        transactionRepository=new TransactionFileRepository("transactions.txt");
-//    }
+
 //    //    public List<Account> callFindAllByAccount(String userName,String password){
 ////        return transactionRepository.findAllByAccount(userName, password);
 ////    }
@@ -27,30 +26,27 @@ public class TransactionService {
         }
         return false;
     }
-    public void addAccount(){
-        try{
-            transactionRepository.addAccount();
-        }catch (Exception e){
+//    public void addAccount(){
+//        try{
+//            transactionRepository.addAccount();
+//        }catch (Exception e){
+//
+//        }
+//    }
 
-        }
+    public List<Transaction> callViewTransaction(String userName) {
+        return transactionRepository.viewTransaction(userName);
     }
 
-    public void viewTransaction(String userName) {
-        try{
-            transactionRepository.viewTransaction(userName);
-        }catch (Exception e){
-
-        }
+    public List<Transaction> callFindByDate(String user,String startDate, String endDate){
+        return transactionRepository.findByDate(user,startDate,endDate);
     }
-
-    public List<Account> findByDate(String startDate,String endDate){
-        return transactionRepository.findByDate(startDate,endDate);
-    }
-    public List<Account> findByAmount(Double amount){
+    public List<Transaction> callFindByAmount(Double amount){
         return transactionRepository.findByAmount(amount);
     }
-    public List<Account> findByType(String type){
+    public List<Transaction> callFindByType(String type){
         return transactionRepository.findByType(type);
     }
+    public List<Transaction> callViewAllTransaction(){return transactionRepository.viewAllTransaction();}
 
 }
