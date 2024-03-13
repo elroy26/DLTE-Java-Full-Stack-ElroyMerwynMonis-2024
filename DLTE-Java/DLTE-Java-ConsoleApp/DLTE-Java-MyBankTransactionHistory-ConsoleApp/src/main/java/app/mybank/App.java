@@ -74,94 +74,89 @@ public class App {
                     int choice = scanner.nextInt();
                     switch (choice) {
                         case 4:
-                            do {
-                                System.out.println(resourceBundleTransaction.getString("user.transaction.greet"));
-                                System.out.println(resourceBundleTransaction.getString("user.transaction.menu"));
-                                option = scanner.nextInt();
-                                switch (option) {
-                                    case 1:
-                                        System.out.println(userName);
-                                        transactionService.callviewTransaction(userName);
-                                        System.out.println(resourceBundleTransaction.getString("user.menu.continue"));
-                                        choice1 = scanner.next();
-                                        break;
-                                    case 2:
-                                        while (true) {
-                                            System.out.println(resourceBundleTransaction.getString("user.transaction.date"));
-                                            String startDate = scanner.next();
-                                            System.out.println(resourceBundleTransaction.getString("user.transaction.date.endDate"));
-                                            String endDate = scanner.next();
+                                do {
+                                    System.out.println(resourceBundleTransaction.getString("user.transaction.greet"));
+                                    System.out.println(resourceBundleTransaction.getString("user.transaction.menu"));
+                                    option = scanner.nextInt();
+                                    switch (option) {
+                                        case 1:
+                                            System.out.println(userName);
+                                            transactionService.callviewTransaction(userName);
+                                            System.out.println(resourceBundleTransaction.getString("user.menu.continue"));
+                                            choice1 = scanner.next();
+                                            break;
+                                        case 2:
+                                            while (true) {
+                                                System.out.println(resourceBundleTransaction.getString("user.transaction.date"));
+                                                String startDate = scanner.next();
+                                                System.out.println(resourceBundleTransaction.getString("user.transaction.date.endDate"));
+                                                String endDate = scanner.next();
 
-                                            try {
-                                                transactionService.callfindByDate(startDate, endDate);
-                                                break;
-                                            } catch (TransactionHistoryException e) {
-                                                System.out.println(e.getMessage()); // Print the exception message
-                                                System.out.println(resourceBundleTransaction.getString("date.request"));
+                                                try {
+                                                    transactionService.callfindByDate(startDate, endDate);
+                                                    break;
+                                                } catch (TransactionHistoryException e) {
+                                                    System.out.println(e.getMessage()); // Print the exception message
+                                                    System.out.println(resourceBundleTransaction.getString("date.request"));
+                                                }
                                             }
-                                        }
-                                        System.out.println(resourceBundleTransaction.getString("user.menu.continue"));
-                                        choice2 = scanner.next();
-                                        break;
-                                    case 3:
-                                        while (true) {
+                                            System.out.println(resourceBundleTransaction.getString("user.menu.continue"));
+                                            choice2 = scanner.next();
+                                            break;
+                                        case 3:
+                                            while (true) {
 
-                                            try {
-                                                System.out.println(resourceBundleTransaction.getString("user.transaction.amount"));
-                                                Double amount = scanner.nextDouble();
-                                                transactionService.callfindByAmount(amount);
-                                                break;
-                                            } catch (InputMismatchException e) {
-                                                System.out.println(e.getMessage());
-                                                scanner.nextLine();
-                                                System.out.println(resourceBundleTransaction.getString("amount.request"));
+                                                try {
+                                                    System.out.println(resourceBundleTransaction.getString("user.transaction.amount"));
+                                                    Double amount = scanner.nextDouble();
+                                                    transactionService.callfindByAmount(amount);
+                                                    break;
+                                                } catch (InputMismatchException e) {
+                                                    System.out.println(e.getMessage());
+                                                    scanner.nextLine();
+                                                    System.out.println(resourceBundleTransaction.getString("amount.request"));
+                                                }
                                             }
-                                        }
                                             System.out.println(resourceBundleTransaction.getString("user.menu.continue"));
                                             choice3 = scanner.next();
                                             break;
 
-                                    case 4:
-                                        while (true) {
+                                        case 4:
+                                            while (true) {
 
-                                            try {
-                                                System.out.println(resourceBundleTransaction.getString("user.transaction.type"));
-                                                String type = scanner.next();
-                                                if (!type.matches("(?i)^(Withdrawal|Deposit|Transfer)$")) {
-                                                    throw new TransactionHistoryException(resourceBundleTransaction.getString("exception.type"));
+                                                try {
+                                                    System.out.println(resourceBundleTransaction.getString("user.transaction.type"));
+                                                    String type = scanner.next();
+                                                    if (!type.matches("(?i)^(Withdrawal|Deposit|Transfer)$")) {
+                                                        throw new TransactionHistoryException(resourceBundleTransaction.getString("exception.type"));
+                                                    }
+                                                    transactionService.callfindByType(type);
+                                                    break;
+                                                } catch (InputMismatchException e) {
+                                                    System.out.println(e.getMessage());
+                                                    scanner.nextLine();
+                                                    System.out.println(resourceBundleTransaction.getString("exception.type"));
+
+                                                } catch (TransactionHistoryException e) {
+                                                    System.out.println(e.getMessage());
+                                                    System.out.println(resourceBundleTransaction.getString("type.request"));
                                                 }
-                                                transactionService.callfindByType(type);
-                                                break;
-                                            } catch (InputMismatchException e) {
-                                                System.out.println(e.getMessage());
-                                                scanner.nextLine();
-                                                System.out.println(resourceBundleTransaction.getString("exception.type"));
-
-                                            }catch (TransactionHistoryException e) {
-                                                System.out.println(e.getMessage());
-                                                System.out.println(resourceBundleTransaction.getString("type.request"));
                                             }
-                                        }
                                             System.out.println(resourceBundleTransaction.getString("user.menu.continue"));
                                             choice4 = scanner.next();
                                             break;
-
-                                    default:
-                                        System.out.println(resourceBundle.getString("user.transaction.type"));
-                                }
-                            } while (choice1.equalsIgnoreCase("yes") || choice2.equalsIgnoreCase("yes") || choice3.equalsIgnoreCase("yes") || choice4.equalsIgnoreCase("yes"));
-                            break;
-
-
-
-
+                                        default:
+                                            System.out.println(resourceBundle.getString("app.jarvis.choice"));
+                                            break;
+                                    }
+                                } while (choice1.equalsIgnoreCase("yes") || choice2.equalsIgnoreCase("yes") || choice3.equalsIgnoreCase("yes") || choice4.equalsIgnoreCase("yes") );
+                                break;
 
                             case 5:
                             System.out.println(resourceBundle.getString("app.exit"));
                             System.exit(0);
                         default:
                             System.out.println(resourceBundle.getString("app.jarvis.choice"));
-
                     }
                 } catch (InputMismatchException e) {
                     logger.error(resourceBundle.getString("app.exception.input"));

@@ -34,12 +34,12 @@ public class TransactionService {
 //        }
 //    }
 
-    public List<Transaction> callViewTransaction(String userName) {
-        return transactionRepository.viewTransaction(userName);
+    public void callViewTransaction(String userName) {
+      transactionRepository.viewTransaction(userName);
     }
 
-    public List<Transaction> callFindByDate(String user,String startDate, String endDate){
-        return transactionRepository.findByDate(user,startDate,endDate);
+    public List<Transaction> callFindByDate(String startDate, String endDate){
+        return transactionRepository.findByDate(startDate,endDate);
     }
     public List<Transaction> callFindByAmount(Double amount){
         return transactionRepository.findByAmount(amount);
@@ -47,6 +47,6 @@ public class TransactionService {
     public List<Transaction> callFindByType(String type){
         return transactionRepository.findByType(type);
     }
-    public List<Transaction> callViewAllTransaction(){return transactionRepository.viewAllTransaction();}
+//    public List<Transaction> callViewAllTransaction(){return transactionRepository.viewAllTransaction();}
 
 }

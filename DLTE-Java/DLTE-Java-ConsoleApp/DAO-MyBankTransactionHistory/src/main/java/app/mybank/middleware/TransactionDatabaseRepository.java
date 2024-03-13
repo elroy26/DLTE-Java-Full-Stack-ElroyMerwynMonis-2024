@@ -26,7 +26,7 @@ public class TransactionDatabaseRepository implements TransactionRepository {
 
     private PreparedStatement preparedStatement;
     private ResultSet resultSet;
-//    private String user;
+    private String user;
 
     public TransactionDatabaseRepository(Connection connection){
         try{
@@ -57,7 +57,7 @@ public class TransactionDatabaseRepository implements TransactionRepository {
             // If a matching entry is found, return true; otherwise, return false
             if (resultSet.next()) {
                 int count = resultSet.getInt(1);
-//                user=userName;
+                user=userName;
                 return count > 0;
             }
         } catch (SQLException sqlException) {
@@ -72,7 +72,7 @@ public class TransactionDatabaseRepository implements TransactionRepository {
 //    }
 
     @Override
-    public List<Transaction> viewTransaction(String userName) {
+    public void viewTransaction(String userName) {
         try{
             accountList.clear();
             String query="select * from TransactionHistory where nameuser=?";
@@ -93,12 +93,12 @@ public class TransactionDatabaseRepository implements TransactionRepository {
         catch (SQLException sqlException){
             System.out.println(sqlException);
         }
-        return accountList;
+
 
     }
 
     @Override
-    public List<Transaction> findByDate(String user,String startDate, String endDate) {
+    public List<Transaction> findByDate(String startDate, String endDate) {
         try{
             accountList.clear();
             String query="SELECT * FROM TransactionHistory WHERE nameuser=? AND transaction_date BETWEEN TO_DATE(?, 'MM/DD/YYYY') AND TO_DATE(?, 'MM/DD/YYYY')";
@@ -132,7 +132,7 @@ public class TransactionDatabaseRepository implements TransactionRepository {
             accountList.clear();
             String query="select * from TransactionHistory where nameuser=? and amount > ?";
             preparedStatement=connection.prepareStatement(query);
-//            preparedStatement.setString(1,user);
+            preparedStatement.setString(1,user);
             preparedStatement.setDouble(2,amount);
 
 
@@ -160,7 +160,7 @@ public class TransactionDatabaseRepository implements TransactionRepository {
             accountList.clear();
             String query="select * from TransactionHistory where nameuser=? and transaction_type = ?";
             preparedStatement=connection.prepareStatement(query);
-//            preparedStatement.setString(1,user);
+            preparedStatement.setString(1,user);
             preparedStatement.setString(2,type);
 
 
