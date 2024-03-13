@@ -1,0 +1,9 @@
+app\mybank\exceptions\TransactionHistoryException.class
+app\mybank\services\TransactionService.class
+app\mybank\middleware\DatabaseTarget.class
+app\mybank\middleware\TransactionDatabaseRepository.class
+app\mybank\remotes\StorageTarget.class
+app\mybank\App.class
+app\mybank\entity\Transaction.class
+app\mybank\remotes\TransactionRepository.class
+app\mybank\entity\Account.class
