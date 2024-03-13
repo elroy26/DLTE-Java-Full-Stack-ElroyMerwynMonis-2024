@@ -2,6 +2,7 @@ package app.mybank.services;
 
 import app.mybank.entity.Account;
 import app.mybank.middleware.TransactionFileRepository;
+import app.mybank.remotes.StorageTarget;
 import app.mybank.remotes.TransactionRepository;
 
 import java.util.List;
@@ -29,22 +30,26 @@ public class TransactionService {
 
         }
     }
-    
-    public void viewTransaction(String userName) {
+
+    public void callviewTransaction(String userName) {
         try{
             transactionRepository.viewTransaction(userName);
         }catch (Exception e){
 
         }
     }
+    public TransactionService(StorageTarget storageTarget){
+//        creditCardRepository=new CreditCardFileRepository("mybank-creditcard.doc");
+        transactionRepository = storageTarget.getTransactionRepository();
+    }
 
-    public List<Account> findByDate(String startDate,String endDate){
+    public List<Account> callfindByDate(String startDate,String endDate){
         return transactionRepository.findByDate(startDate,endDate);
     }
-    public List<Account> findByAmount(Double amount){
+    public List<Account> callfindByAmount(Double amount){
         return transactionRepository.findByAmount(amount);
     }
-    public List<Account> findByType(String type){
+    public List<Account> callfindByType(String type){
         return transactionRepository.findByType(type);
     }
 

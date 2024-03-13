@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="DLTE-JavaEE-001:war" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcd4367-bffd-41b1-bb57-3e55f1c937eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/src/main/java/app/mybank/middleware/FileStorageTarget.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/src/main/java/app/mybank/remotes/StorageTarget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="4042de87-43bc-44d0-80a5-824650763554" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/src/main/java/app/mybank/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/src/main/java/app/mybank/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/src/main/java/app/mybank/entity/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/src/main/java/app/mybank/entity/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/src/main/java/app/mybank/middleware/TransactionDatabaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/src/main/java/app/mybank/middleware/TransactionDatabaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/src/main/java/app/mybank/remotes/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/src/main/java/app/mybank/remotes/TransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/src/main/java/app/mybank/services/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/src/main/java/app/mybank/services/TransactionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/src/main/java/app/mybank/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/src/main/java/app/mybank/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/src/main/java/app/mybank/entity/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/src/main/java/app/mybank/entity/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/src/main/java/app/mybank/middleware/FileStorageTarget.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/src/main/java/app/mybank/middleware/FileStorageTarget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/src/main/java/app/mybank/remotes/StorageTarget.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/src/main/java/app/mybank/remotes/StorageTarget.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/src/main/java/app/mybank/services/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/src/main/java/app/mybank/services/TransactionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/src/test/java/app/mybank/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/src/test/java/app/mybank/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/DLTE-Java-MyBankTransactionHistory-ConsoleApp-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/DLTE-Java-MyBankTransactionHistory-ConsoleApp-1.0-SNAPSHOT.jar" afterDir="false" />
@@ -22,12 +27,23 @@
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/classes/app/mybank/middleware/FileStorageTarget.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/classes/app/mybank/middleware/FileStorageTarget.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/classes/app/mybank/remotes/StorageTarget.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/classes/app/mybank/remotes/StorageTarget.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/classes/app/mybank/services/TransactionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/classes/app/mybank/services/TransactionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/classes/database.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/surefire-reports/TEST-app.mybank.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/surefire-reports/TEST-app.mybank.AppTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/surefire-reports/app.mybank.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/surefire-reports/app.mybank.AppTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/test-classes/app/mybank/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/target/test-classes/app/mybank/AppTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/test-transaction.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DLTE-Java-MyBankTransactionHistory-ConsoleApp/test-transaction.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/first/MyFirstServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/MyFirstServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/first/SipCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/SipCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DLTE-JavaEE-001.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/DLTE-JavaEE-001.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/first/MyFirstServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/MyFirstServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#312" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#312" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#390" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#390" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#400" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#400" afterDir="false" />
@@ -39,48 +55,137 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
-  </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-JavaEE\DLTE-JavaEE-HandsOn\DLTE-JavaEE-001\.idea" />
-      </set>
-    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2dWmqxlqpRRtcbCLX2uncNu2J9J" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2dWyjkUJwSIf23abYgXFni6PnG1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/DAO-MyBankTransactionHistoryUpdated/DAO-MyBankTransactionHistory" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
+  </component>
+  <component name="RunManager">
+    <configuration name="JBoss 18.1.2.Final-redhat-00001" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 18.1.2.Final-redhat-00001" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:15083/DLTE-JavaEE-001/" />
+      <option name="COMMON_VM_ARGUMENTS" value=" -Djboss.socket.binding.port-offset=8082" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="DLTE-JavaEE-001:war">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="SERVER" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" value="main-server-group" />
+        <option name="USERNAME" value="" />
+        <option name="CREDENTIAL_ALIAS" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="JBoss" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="65503" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="DLTE-JavaEE-001:war" />
+        </option>
+      </method>
+    </configuration>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -92,16 +197,73 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cfcd4367-bffd-41b1-bb57-3e55f1c937eb" name="Default Changelist" comment="" />
-      <created>1710132403022</created>
+      <changelist id="4042de87-43bc-44d0-80a5-824650763554" name="Default Changelist" comment="" />
+      <created>1710138265663</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1710132403022</updated>
-      <workItem from="1710132409564" duration="1206000" />
+      <updated>1710138265663</updated>
+      <workItem from="1710138268552" duration="6523000" />
+      <workItem from="1710164449310" duration="1293000" />
+      <workItem from="1710172454481" duration="748000" />
+      <workItem from="1710173765392" duration="1630000" />
+      <workItem from="1710239636744" duration="1016000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="233" y="0" key="#JBoss_Server" timestamp="1710138598956">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="233" y="0" key="#JBoss_Server/0.0.1280.672@0.0.1280.672" timestamp="1710138598956" />
+    <state x="233" y="0" key="#Project_Structure" timestamp="1710141847416">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="233" y="0" key="#Project_Structure/0.0.1280.672@0.0.1280.672" timestamp="1710141847416" />
+    <state x="233" y="0" key="#Schemas_and_DTDs" timestamp="1710138629365">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="233" y="0" key="#Schemas_and_DTDs/0.0.1280.672@0.0.1280.672" timestamp="1710138629365" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1710147288817">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.672@0.0.1280.672" timestamp="1710147288817" />
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1710172558756">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.672@0.0.1280.672" timestamp="1710172558756" />
+    <state x="421" y="79" key="FileChooserDialogImpl" timestamp="1710242616269">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="421" y="79" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1710242616269" />
+    <state width="845" height="2" key="GridCell.Tab.0.bottom" timestamp="1710176832785">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="845" height="2" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1710176832785" />
+    <state width="845" height="2" key="GridCell.Tab.0.center" timestamp="1710176832785">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="845" height="2" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1710176832785" />
+    <state width="845" height="2" key="GridCell.Tab.0.left" timestamp="1710176832785">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="845" height="2" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1710176832785" />
+    <state width="845" height="2" key="GridCell.Tab.0.right" timestamp="1710176832785">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="845" height="2" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1710176832785" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1710141789401">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.672@0.0.1280.672" timestamp="1710141789401" />
+    <state x="91" y="33" key="new project wizard" timestamp="1710156745964">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="91" y="33" key="new project wizard/0.0.1280.672@0.0.1280.672" timestamp="1710156745964" />
   </component>
 </project>

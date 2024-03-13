@@ -1,15 +1,20 @@
 package app.mybank;
 
 import app.mybank.exceptions.TransactionHistoryException;
+import app.mybank.middleware.DatabaseTarget;
+import app.mybank.remotes.StorageTarget;
 import app.mybank.services.TransactionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.*;
+import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
+import java.util.ResourceBundle;
+import java.util.Scanner;
 
 public class App {
-//    private static StorageTarget storageTarget;
-    private static TransactionService transactionService = new TransactionService();
+    private static StorageTarget storageTarget;
+    private static TransactionService transactionService;
     private static ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
     private static ResourceBundle resourceBundleTransaction = ResourceBundle.getBundle("transactionHistory");
     private static Logger logger = LoggerFactory.getLogger(App.class);
@@ -19,7 +24,10 @@ public class App {
 
     public static void main(String[] args) {
 //        storageTarget=new FileStorageTarget();
-        transactionService.addAccount();
+        storageTarget=new DatabaseTarget();
+
+        transactionService=new TransactionService(storageTarget);
+        //        transactionService.addAccount();
         int option;
         String choice1 = "", choice2 = "", choice3 = "", choice4 = "";
         int attempts = 0;
@@ -72,7 +80,8 @@ public class App {
                                 option = scanner.nextInt();
                                 switch (option) {
                                     case 1:
-                                        transactionService.viewTransaction(userName);
+                                        System.out.println(userName);
+                                        transactionService.callviewTransaction(userName);
                                         System.out.println(resourceBundleTransaction.getString("user.menu.continue"));
                                         choice1 = scanner.next();
                                         break;
@@ -84,7 +93,7 @@ public class App {
                                             String endDate = scanner.next();
 
                                             try {
-                                                transactionService.findByDate(startDate, endDate);
+                                                transactionService.callfindByDate(startDate, endDate);
                                                 break;
                                             } catch (TransactionHistoryException e) {
                                                 System.out.println(e.getMessage()); // Print the exception message
@@ -100,7 +109,7 @@ public class App {
                                             try {
                                                 System.out.println(resourceBundleTransaction.getString("user.transaction.amount"));
                                                 Double amount = scanner.nextDouble();
-                                                transactionService.findByAmount(amount);
+                                                transactionService.callfindByAmount(amount);
                                                 break;
                                             } catch (InputMismatchException e) {
                                                 System.out.println(e.getMessage());
@@ -121,7 +130,7 @@ public class App {
                                                 if (!type.matches("(?i)^(Withdrawal|Deposit|Transfer)$")) {
                                                     throw new TransactionHistoryException(resourceBundleTransaction.getString("exception.type"));
                                                 }
-                                                transactionService.findByType(type);
+                                                transactionService.callfindByType(type);
                                                 break;
                                             } catch (InputMismatchException e) {
                                                 System.out.println(e.getMessage());

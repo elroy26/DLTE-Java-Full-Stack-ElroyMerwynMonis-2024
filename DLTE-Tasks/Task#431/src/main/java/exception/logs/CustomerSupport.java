@@ -1,10 +1,13 @@
 package exception.logs;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.Scanner;
+import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class CustomerSupport {
     static ResourceBundle resourceBundle= ResourceBundle.getBundle("application");
@@ -17,6 +20,13 @@ public class CustomerSupport {
             new CreditCard(8765678764545L,"Sanath",new Date(2031,5,15),955,600000,new Date(2024,3,10),new Date(2024,03,11),9864),
             new CreditCard(1234565456767L,"Akash",new Date(2028,8,11),767,200000,new Date(2024,3,5),new Date(2024,03,29),1945),
     };
+        try{
+            FileHandler fileHandler=new FileHandler("credit-card-logs.txt",true);
+            SimpleFormatter simpleFormatter=new SimpleFormatter();
+            fileHandler.setFormatter(simpleFormatter);
+            logger.addHandler(fileHandler);
+        }
+        catch (IOException ioException){}
 
     CustomerSupport support=new CustomerSupport();
     Scanner input=new Scanner(System.in);

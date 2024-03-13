@@ -1,5 +1,7 @@
 C:\Users\xxbhatka\Documents\java\DLTE-Java-ConsoleApp\DLTE-Java-MyBankTransactionHistory-ConsoleApp\src\main\java\app\mybank\remotes\TransactionRepository.java
 C:\Users\xxbhatka\Documents\java\DLTE-Java-ConsoleApp\DLTE-Java-MyBankTransactionHistory-ConsoleApp\src\main\java\app\mybank\services\TransactionService.java
+C:\Users\xxbhatka\Documents\java\DLTE-Java-ConsoleApp\DLTE-Java-MyBankTransactionHistory-ConsoleApp\src\main\java\app\mybank\middleware\FileStorageTarget.java
+C:\Users\xxbhatka\Documents\java\DLTE-Java-ConsoleApp\DLTE-Java-MyBankTransactionHistory-ConsoleApp\src\main\java\app\mybank\remotes\StorageTarget.java
 C:\Users\xxbhatka\Documents\java\DLTE-Java-ConsoleApp\DLTE-Java-MyBankTransactionHistory-ConsoleApp\src\main\java\app\mybank\App.java
 C:\Users\xxbhatka\Documents\java\DLTE-Java-ConsoleApp\DLTE-Java-MyBankTransactionHistory-ConsoleApp\src\main\java\app\mybank\exceptions\TransactionHistoryException.java
 C:\Users\xxbhatka\Documents\java\DLTE-Java-ConsoleApp\DLTE-Java-MyBankTransactionHistory-ConsoleApp\src\main\java\app\mybank\entity\Account.java
