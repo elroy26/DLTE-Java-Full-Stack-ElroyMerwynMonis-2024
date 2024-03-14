@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eba768e8-a3d1-425e-b6e5-51c81018b26e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task879/Task879-Client/Task879-Client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task879/Task879/Task879.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task885-Soap-DAOLayer/DAO-MyBankTransactionHistory/DAO-MyBankTransactionHistory.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task885-Soap-DAOLayer/Task879/Task879-Client/Task879-Client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task885-Soap-DAOLayer/Task879/Task879-Soap/Task879.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/src/main/java/app/mybank/services/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/src/main/java/app/mybank/services/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/Task879-Client.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/main/java/web/Date.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/main/java/web/Date.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/main/java/web/GroupOfTransactions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/main/java/web/GroupOfTransactions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/main/java/web/ObjectFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/main/java/web/ObjectFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/main/java/web/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/main/java/web/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/main/java/web/TransactionsSoap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/main/java/web/TransactionsSoap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/main/java/web/TransactionsSoapService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/main/java/web/TransactionsSoapService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/main/java/web/package-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/main/java/web/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/target/classes/org/example/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/target/classes/web/Date.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/target/classes/web/GroupOfTransactions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/target/classes/web/ObjectFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/target/classes/web/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/target/classes/web/TransactionsSoap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/target/classes/web/TransactionsSoapService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/target/classes/web/package-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879-Client/target/test-classes/org/example/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/Task879.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/src/main/java/web/GroupOfTransactions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/src/main/java/web/SoapEndpoints.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/src/main/java/web/TransactionsSoap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/target/Task879-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/target/classes/org/example/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/target/classes/web/GroupOfTransactions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/target/classes/web/SoapEndpoints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/target/classes/web/TransactionsSoap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/target/test-classes/org/example/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/transaction-history-logs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-Tasks/Task#879/Task879/transaction-history-logs.txt.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#312" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#312" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#390" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#390" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#400" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#400" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2dfSUUZHnJa9T9NVxxJHMS32L6l" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eba768e8-a3d1-425e-b6e5-51c81018b26e" name="Default Changelist" comment="" />
+      <created>1710397654267</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710397654267</updated>
+      <workItem from="1710397657132" duration="4000" />
+    </task>
+    <servers />
+  </component>
+</project>
