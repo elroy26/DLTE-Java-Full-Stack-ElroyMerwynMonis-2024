@@ -1,0 +1,20 @@
+<configuration>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{dd/MM/YYYY} %highlight[%thread]  %highlight(%-5level) %logger(40) - %highlight(%msg) %n</pattern>
+        </encoder>
+    </appender>
+    <appender name="Logfile" class="ch.qos.logback.core.FileAppender">
+
+        <file>log/app.log</file>
+        <encoder>
+            <pattern>%d{dd/MM/YYYY HH:mm:ss} %highlight[%thread]  %highlight(%-5level) %logger(40) - %highlight(%msg) %n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="console"/>
+        <appender-ref ref="Logfile"/>
+    </root>
+
+</configuration>

@@ -1,0 +1,9 @@
+C:\Users\xxbhatka\Documents\java\Task854-Rest-DAOLayer\DAO-MyBankTransactionHistory\src\main\java\app\mybank\remotes\TransactionRepository.java
+C:\Users\xxbhatka\Documents\java\Task854-Rest-DAOLayer\DAO-MyBankTransactionHistory\src\main\java\app\mybank\services\TransactionService.java
+C:\Users\xxbhatka\Documents\java\Task854-Rest-DAOLayer\DAO-MyBankTransactionHistory\src\main\java\app\mybank\App.java
+C:\Users\xxbhatka\Documents\java\Task854-Rest-DAOLayer\DAO-MyBankTransactionHistory\src\main\java\app\mybank\entity\Transaction.java
+C:\Users\xxbhatka\Documents\java\Task854-Rest-DAOLayer\DAO-MyBankTransactionHistory\src\main\java\app\mybank\middleware\TransactionDatabaseRepository.java
+C:\Users\xxbhatka\Documents\java\Task854-Rest-DAOLayer\DAO-MyBankTransactionHistory\src\main\java\app\mybank\exceptions\TransactionHistoryException.java
+C:\Users\xxbhatka\Documents\java\Task854-Rest-DAOLayer\DAO-MyBankTransactionHistory\src\main\java\app\mybank\remotes\StorageTarget.java
+C:\Users\xxbhatka\Documents\java\Task854-Rest-DAOLayer\DAO-MyBankTransactionHistory\src\main\java\app\mybank\middleware\DatabaseTarget.java
+C:\Users\xxbhatka\Documents\java\Task854-Rest-DAOLayer\DAO-MyBankTransactionHistory\src\main\java\app\mybank\entity\Account.java
