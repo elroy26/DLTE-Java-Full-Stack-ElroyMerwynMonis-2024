@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transactions>
+    <transaction Amount="12341.0" Date="2024-01-01T00:00:00+05:30" Remarks="water" sentTo="elroy"/>
+    <transaction Amount="13341.0" Date="2024-02-02T00:00:00+05:30" Remarks="education" sentTo="ajay"/>
+    <transaction Amount="35341.0" Date="2024-02-24T00:00:00+05:30" Remarks="gym" sentTo="elroy"/>
+    <transaction Amount="234231.0" Date="2024-01-13T00:00:00+05:30" Remarks="hotel" sentTo="aman"/>
+    <transaction Amount="2342311.0" Date="2024-03-25T00:00:00+05:30" Remarks="water" sentTo="elroy"/>
+</transactions>
