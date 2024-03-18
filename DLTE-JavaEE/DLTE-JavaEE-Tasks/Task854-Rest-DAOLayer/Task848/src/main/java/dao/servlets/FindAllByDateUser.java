@@ -17,7 +17,7 @@ import java.util.List;
 
 @WebServlet("/app/findallbydateuser")
 public class FindAllByDateUser extends HttpServlet {
-    private TransactionService transactionService;
+    public TransactionService transactionService;
 
     @Override
     public void init() throws ServletException {
@@ -26,7 +26,7 @@ public class FindAllByDateUser extends HttpServlet {
     }
 //http://localhost:7001/Task848/app/findallbydateuser?user=elroy&startdate=01/02/2024&enddate=03/04/2024
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String requestUser =req.getParameter("user");
         String requestStartDate=req.getParameter("startdate");
         String requestEndDate=req.getParameter("enddate");

@@ -16,7 +16,7 @@ import java.util.List;
 
 @WebServlet("/app/findall/*")
 public class FindAll extends HttpServlet {
-    private TransactionService transactionService;
+    public TransactionService transactionService;
 
     @Override
     public void init() throws ServletException {
@@ -25,7 +25,7 @@ public class FindAll extends HttpServlet {
     }
     //http://localhost:7001/Task848/app/findall
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         resp.setContentType("application/json");
         try {

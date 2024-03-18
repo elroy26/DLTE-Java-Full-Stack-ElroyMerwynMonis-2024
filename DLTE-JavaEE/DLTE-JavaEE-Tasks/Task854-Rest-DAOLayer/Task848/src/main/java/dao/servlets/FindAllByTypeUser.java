@@ -16,7 +16,7 @@ import java.util.List;
 
 @WebServlet("/app/findAllByTypeUser")
 public class FindAllByTypeUser extends HttpServlet {
-    private TransactionService transactionService;
+    public TransactionService transactionService;
 
     @Override
     public void init() throws ServletException {

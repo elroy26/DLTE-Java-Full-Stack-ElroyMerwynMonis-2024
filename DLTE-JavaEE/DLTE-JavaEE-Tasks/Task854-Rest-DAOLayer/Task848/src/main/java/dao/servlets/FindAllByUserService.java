@@ -16,7 +16,7 @@ import java.util.List;
 
 @WebServlet("/app/findallbybyuser/*")
 public class FindAllByUserService extends HttpServlet {
-    private TransactionService transactionService;
+    public TransactionService transactionService;
 
     @Override
     public void init() throws ServletException {
@@ -25,7 +25,7 @@ public class FindAllByUserService extends HttpServlet {
     }
 //http://localhost:7001/Task848/app/findallbybyuser?user=elroy
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String requestUser =req.getParameter("user");
         resp.setContentType("application/json");
         try {
