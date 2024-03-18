@@ -5,6 +5,8 @@ import app.mybank.entity.Transaction;
 import app.mybank.remotes.StorageTarget;
 import app.mybank.remotes.TransactionRepository;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -52,6 +54,7 @@ public class TransactionService {
     public List<Transaction> callFindByType(String user,String type){
         return transactionRepository.findByType(user,type);
     }
+
     public List<Transaction> callViewAllTransaction(){return transactionRepository.viewAllTransaction();}
 
 }

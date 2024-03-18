@@ -17,9 +17,6 @@ public class App
     {
         StorageTarget storageTarget=  new DatabaseTarget();
         TransactionService transactionService = new TransactionService(storageTarget);
-        List<Transaction> transactions=transactionService.callViewTransaction("elroy");
-        for (Transaction trans:transactions) {
-            System.out.println(trans.getTransactionDate()+" "+trans.getTransactionType());
-        }
+
     }
 }

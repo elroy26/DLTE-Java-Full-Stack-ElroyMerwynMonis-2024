@@ -2,10 +2,13 @@ package app.mybank.entity;
 
 import sun.util.calendar.LocalGregorianCalendar;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Transaction {
+
+public class Transaction implements Serializable {
     private String userName;
     private String transactionType;
     private Double transactionAmount;

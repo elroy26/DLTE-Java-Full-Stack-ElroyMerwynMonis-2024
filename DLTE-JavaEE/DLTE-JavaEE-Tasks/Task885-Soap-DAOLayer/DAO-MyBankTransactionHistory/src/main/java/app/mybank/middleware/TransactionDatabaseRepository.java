@@ -55,15 +55,7 @@ public class TransactionDatabaseRepository implements TransactionRepository {
             preparedStatement.setString(3,user.getEmail());
             preparedStatement.setLong(4,user.getPhoneNumber());
             preparedStatement.executeUpdate();
-//            int result = preparedStatement.executeUpdate();
-//            if (result!=0) {
-//                logger.log(Level.INFO, resourceBundle.getString("record.push.ok"));
-//                System.out.println(resourceBundle.getString("record.push.ok"));
-//            }
-//            else {
-//                logger.log(Level.INFO, resourceBundle.getString("record.push.fail"));
-//                System.out.println(resourceBundle.getString("record.push.fail"));
-//            }
+
 
         } catch (SQLException sqlException) {
             System.out.println(resourceBundle.getString("account.not.ok"));
@@ -81,7 +73,7 @@ public class TransactionDatabaseRepository implements TransactionRepository {
             preparedStatement.setString(2, password);
             resultSet = preparedStatement.executeQuery();
 
-            // If a matching entry is found, return true; otherwise, return false
+
             if (resultSet.next()) {
                 int count = resultSet.getInt(1);
 //                user=userName;
