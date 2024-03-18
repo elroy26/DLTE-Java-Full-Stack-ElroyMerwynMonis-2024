@@ -15,6 +15,7 @@ public class TransactionService {
 //    //    public List<Account> callFindAllByAccount(String userName,String password){
 ////        return transactionRepository.findAllByAccount(userName, password);
 ////    }
+
     public TransactionService(StorageTarget storageTarget){
         transactionRepository=storageTarget.getTransactionRepository();
     }
@@ -35,7 +36,7 @@ public class TransactionService {
 //    }
 
     public void callViewTransaction(String userName) {
-      transactionRepository.viewTransaction(userName);
+        transactionRepository.viewTransaction(userName);
     }
 
     public List<Transaction> callFindByDate(String startDate, String endDate){
