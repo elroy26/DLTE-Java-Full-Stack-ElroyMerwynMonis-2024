@@ -17,7 +17,7 @@ import java.util.Scanner;
 @WebService
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 public class TransactionsSoap {
-    private TransactionService service;
+    public TransactionService service;
     public TransactionsSoap(){
         StorageTarget storageTarget=new DatabaseTarget();
         service=new TransactionService(storageTarget);
@@ -28,6 +28,15 @@ public class TransactionsSoap {
     public GroupOfTransactions readAll(@WebParam(name="StringUser") String user, @WebParam(name = "stringType") String type){
         GroupOfTransactions groupOfTransactions=new GroupOfTransactions();
         List<Transaction> transactionList=service.callFindByType(user,type);
+        groupOfTransactions.setTransactions(transactionList);
+        return groupOfTransactions;
+    }
+
+    @WebMethod
+    @WebResult(name="GroupOfTransactions")
+    public GroupOfTransactions readAllTransaction(){
+        GroupOfTransactions groupOfTransactions=new GroupOfTransactions();
+        List<Transaction> transactionList=service.callViewAllTransaction();
         groupOfTransactions.setTransactions(transactionList);
         return groupOfTransactions;
     }
@@ -57,6 +66,11 @@ public class TransactionsSoap {
     @WebMethod
     public void createAccount(@WebParam (name="CreateAccount")Account account){
         service.callSaveAccount(account);
+    }
+
+    @WebMethod
+    public void createTransaction(@WebParam (name="CreateTransaction")Transaction transaction){
+        service.callSaveTransaction(transaction);
     }
 
 }

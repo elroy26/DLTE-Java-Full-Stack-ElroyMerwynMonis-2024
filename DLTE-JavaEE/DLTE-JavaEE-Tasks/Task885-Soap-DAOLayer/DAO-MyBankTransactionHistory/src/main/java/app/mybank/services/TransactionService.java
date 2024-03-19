@@ -24,6 +24,9 @@ public class TransactionService {
     public void callSaveAccount(Account user){
         transactionRepository.saveAccount(user);
     }
+    public void callSaveTransaction(Transaction transaction){
+        transactionRepository.saveTransaction(transaction);
+    }
 
     public boolean verifyAccount(String userName, String password) {
         try {

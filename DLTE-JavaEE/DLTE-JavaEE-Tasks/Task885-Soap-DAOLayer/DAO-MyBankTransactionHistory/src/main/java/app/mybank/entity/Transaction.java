@@ -1,18 +1,14 @@
 package app.mybank.entity;
 
-import sun.util.calendar.LocalGregorianCalendar;
-
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
 public class Transaction implements Serializable {
-    private String userName;
-    private String transactionType;
-    private Double transactionAmount;
-    private Date transactionDate;
+    String userName;
+    String transactionType;
+    Double transactionAmount;
+    Date transactionDate;
 
     public Transaction(String userName, String transactionType, Double transactionAmount, Date transactionDate) {
         this.userName = userName;
@@ -48,7 +44,7 @@ public class Transaction implements Serializable {
         this.transactionAmount = transactionAmount;
     }
 
-    public java.util.Date getTransactionDate() {
+    public Date getTransactionDate() {
         return transactionDate;
     }
 

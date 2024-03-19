@@ -8,6 +8,7 @@ import java.util.List;
 public interface TransactionRepository {
     //    List<Account> findAllByAccount(String userName,String password);
     void saveAccount(Account user);
+    void saveTransaction(Transaction transaction);
     boolean verifyAccount(String userName, String password);
     List<Transaction> viewTransaction(String userName);
     List<Transaction> findByDate(String user,String startDate, String endDate);

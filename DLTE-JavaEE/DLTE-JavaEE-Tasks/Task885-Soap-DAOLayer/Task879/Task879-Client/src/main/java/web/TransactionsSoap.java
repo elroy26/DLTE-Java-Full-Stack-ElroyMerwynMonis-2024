@@ -42,19 +42,6 @@ public interface TransactionsSoap {
 
     /**
      * 
-     * @param string
-     * @return
-     *     returns web.GroupOfTransactions
-     */
-    @WebMethod
-    @WebResult(name = "GroupOfTransactions", partName = "GroupOfTransactions")
-    @Action(input = "http://web/TransactionsSoap/readAllByUserRequest", output = "http://web/TransactionsSoap/readAllByUserResponse")
-    public GroupOfTransactions readAllByUser(
-        @WebParam(name = "String", partName = "String")
-        String string);
-
-    /**
-     * 
      * @param stringUser
      * @param stringStartDate
      * @param stringEndDate
@@ -74,13 +61,23 @@ public interface TransactionsSoap {
 
     /**
      * 
-     * @param createAccount
+     * @return
+     *     returns web.GroupOfTransactions
      */
     @WebMethod
-    @Action(input = "http://web/TransactionsSoap/createAccountRequest", output = "http://web/TransactionsSoap/createAccountResponse")
-    public void createAccount(
-        @WebParam(name = "CreateAccount", partName = "CreateAccount")
-        Account createAccount);
+    @WebResult(name = "GroupOfTransactions", partName = "GroupOfTransactions")
+    @Action(input = "http://web/TransactionsSoap/readAllTransactionRequest", output = "http://web/TransactionsSoap/readAllTransactionResponse")
+    public GroupOfTransactions readAllTransaction();
+
+    /**
+     * 
+     * @param createTransaction
+     */
+    @WebMethod
+    @Action(input = "http://web/TransactionsSoap/createTransactionRequest", output = "http://web/TransactionsSoap/createTransactionResponse")
+    public void createTransaction(
+        @WebParam(name = "CreateTransaction", partName = "CreateTransaction")
+        Transaction createTransaction);
 
     /**
      * 
@@ -97,5 +94,28 @@ public interface TransactionsSoap {
         String stringUser,
         @WebParam(name = "stringPassword", partName = "stringPassword")
         String stringPassword);
+
+    /**
+     * 
+     * @param createAccount
+     */
+    @WebMethod
+    @Action(input = "http://web/TransactionsSoap/createAccountRequest", output = "http://web/TransactionsSoap/createAccountResponse")
+    public void createAccount(
+        @WebParam(name = "CreateAccount", partName = "CreateAccount")
+        Account createAccount);
+
+    /**
+     * 
+     * @param string
+     * @return
+     *     returns web.GroupOfTransactions
+     */
+    @WebMethod
+    @WebResult(name = "GroupOfTransactions", partName = "GroupOfTransactions")
+    @Action(input = "http://web/TransactionsSoap/readAllByUserRequest", output = "http://web/TransactionsSoap/readAllByUserResponse")
+    public GroupOfTransactions readAllByUser(
+        @WebParam(name = "String", partName = "String")
+        String string);
 
 }

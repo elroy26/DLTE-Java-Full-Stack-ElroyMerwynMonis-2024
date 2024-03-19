@@ -5,10 +5,7 @@ import app.mybank.entity.Transaction;
 import app.mybank.remotes.TransactionRepository;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -54,6 +51,25 @@ public class TransactionDatabaseRepository implements TransactionRepository {
             preparedStatement.setString(2, user.getPassword());
             preparedStatement.setString(3,user.getEmail());
             preparedStatement.setLong(4,user.getPhoneNumber());
+            preparedStatement.executeUpdate();
+
+
+        } catch (SQLException sqlException) {
+            System.out.println(resourceBundle.getString("account.not.ok"));
+        }
+    }
+
+    @Override
+    public void saveTransaction(Transaction transaction) {
+        try {
+            String query = "insert into TransactionHistory values(?,?,?,?)";
+            preparedStatement=connection.prepareStatement(query);
+            java.sql.Date sqlDate = new java.sql.Date(transaction.getTransactionDate().getTime());
+
+            preparedStatement.setString(1,transaction.getUserName());
+            preparedStatement.setString(2, transaction.getTransactionType());
+            preparedStatement.setDouble(3,transaction.getTransactionAmount());
+            preparedStatement.setDate(4, sqlDate);
             preparedStatement.executeUpdate();
 
 
