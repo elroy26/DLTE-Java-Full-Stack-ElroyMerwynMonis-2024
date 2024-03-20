@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9989ee08-feae-49b3-82d9-23fcf93b5635" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring-HandsOn/DLTE-SPRING-Hybernet/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring-HandsOn/DLTE-SPRING-Hybernet/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring-HandsOn/DLTE-SPRING-Hybernet/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring-HandsOn/DLTE-SPRING-Hybernet/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring-HandsOn/DLTE-SPRING-Hybernet/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring-HandsOn/DLTE-SPRING-Hybernet/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring-HandsOn/DLTE-SPRING-Hybernet/src/main/java/com/example/hybernetjpa/HybernetjpaApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring-HandsOn/DLTE-SPRING-Hybernet/src/main/java/com/example/hybernetjpa/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring-HandsOn/DLTE-SPRING-Hybernet/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring-HandsOn/DLTE-SPRING-Hybernet/src/test/java/com/example/hybernetjpa/HybernetjpaApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_22_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_7_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_7_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_7_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_7_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_7_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_7_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task1007.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autowire/ExecutingFieldInjection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autowire/HomeLoanImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autowire/Loans.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autowire/LoansInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autowire/MyBank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autowire/PersonalLoanImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#312" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#312" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#390" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#390" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#400" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Tasks/Task#400" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2dw5nKuls3jkMqEsN8764MEqVUM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="15" />
+    <property name="RequestMappingsPanelWidth1" value="15" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager" selected="Application.ExecutingFieldInjection">
+    <configuration name="ExecutingFieldInjection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.autowire.ExecutingFieldInjection" />
+      <module name="Task1007" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.autowire.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AutowireApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Task1007" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.autowire.AutowireApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ExecutingFieldInjection" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9989ee08-feae-49b3-82d9-23fcf93b5635" name="Default Changelist" comment="" />
+      <created>1710906465608</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710906465608</updated>
+      <workItem from="1710906470499" duration="8119000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="446" y="43" key="#com.intellij.ide.util.MemberChooser" timestamp="1710924141428">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="446" y="43" key="#com.intellij.ide.util.MemberChooser/0.0.1280.672@0.0.1280.672" timestamp="1710924141428" />
+    <state x="421" y="79" key="FileChooserDialogImpl" timestamp="1710907576784">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="421" y="79" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1710907576784" />
+    <state width="1237" height="160" key="GridCell.Tab.0.bottom" timestamp="1710926944822">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="160" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1710926944822" />
+    <state width="1237" height="160" key="GridCell.Tab.0.center" timestamp="1710926944822">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="160" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1710926944822" />
+    <state width="1237" height="160" key="GridCell.Tab.0.left" timestamp="1710926944822">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="160" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1710926944822" />
+    <state width="1237" height="160" key="GridCell.Tab.0.right" timestamp="1710926944822">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="160" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1710926944822" />
+    <state width="1237" height="160" key="GridCell.Tab.1.bottom" timestamp="1710926944822">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="160" key="GridCell.Tab.1.bottom/0.0.1280.672@0.0.1280.672" timestamp="1710926944822" />
+    <state width="1237" height="160" key="GridCell.Tab.1.center" timestamp="1710926944822">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="160" key="GridCell.Tab.1.center/0.0.1280.672@0.0.1280.672" timestamp="1710926944822" />
+    <state width="1237" height="160" key="GridCell.Tab.1.left" timestamp="1710926944822">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="160" key="GridCell.Tab.1.left/0.0.1280.672@0.0.1280.672" timestamp="1710926944822" />
+    <state width="1237" height="160" key="GridCell.Tab.1.right" timestamp="1710926944822">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="160" key="GridCell.Tab.1.right/0.0.1280.672@0.0.1280.672" timestamp="1710926944822" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1710907195717">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.672@0.0.1280.672" timestamp="1710907195717" />
+    <state x="91" y="40" key="new project wizard" timestamp="1710907622467">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="91" y="40" key="new project wizard/0.0.1280.672@0.0.1280.672" timestamp="1710907622467" />
+  </component>
+</project>
