@@ -9,10 +9,9 @@ import java.util.stream.Collectors;
 public class HomeLoanImplementation implements LoansInterface {
     @Override
     public List<Loans> findAllLoans() {
-        // Call the default method to initialize loans
         List<Loans> allLoans = initializeMyLoans();
 
-        // Filter loans with "personal loan" status
+        // Filter loans with "home loan" status
         List<Loans> homeLoans = allLoans.stream()
                 .filter(loan -> "home loan".equalsIgnoreCase(loan.getLoanStatus()))
                 .collect(Collectors.toList());

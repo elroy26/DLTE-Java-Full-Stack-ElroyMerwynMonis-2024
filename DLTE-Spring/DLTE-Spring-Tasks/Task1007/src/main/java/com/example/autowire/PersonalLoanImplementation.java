@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class PersonalLoanImplementation implements LoansInterface {
     @Override
     public List<Loans> findAllLoans() {
-        // Call the default method to initialize loans
+
         List<Loans> allLoans = initializeMyLoans();
 
         // Filter loans with "personal loan" status
