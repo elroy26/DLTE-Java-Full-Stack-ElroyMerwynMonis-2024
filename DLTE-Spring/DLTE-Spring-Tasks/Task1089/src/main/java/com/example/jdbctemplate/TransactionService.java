@@ -43,7 +43,7 @@ public class TransactionService {
                 new TransactionMapper());
     }
 
-    private class TransactionMapper implements RowMapper<TransactionEntity>{
+    class TransactionMapper implements RowMapper<TransactionEntity>{
 
         @Override
         public TransactionEntity mapRow(ResultSet rs, int rowNum) throws SQLException {
