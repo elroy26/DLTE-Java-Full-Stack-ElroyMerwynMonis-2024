@@ -11,6 +11,7 @@ import services.transactions.*;
 //import services.transactions.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -20,6 +21,9 @@ public class SoapPhase {
 
     @Autowired
     private TransactionService transactionService;
+
+    //http://localhost:8083/transactionsrepo/transactions.wsdl
+
     @PayloadRoot(namespace = url,localPart = "findByAmountRequest")
     @ResponsePayload
     public FindByAmountResponse findByAmountResponse(@RequestPayload FindByAmountRequest findByAmountRequest){
@@ -127,5 +131,49 @@ public class SoapPhase {
 //        System.out.println(newTransactionResponse.getServiceStatus().toString());
 
         return newTransactionResponse;
+    }
+
+    @PayloadRoot(namespace = url, localPart = "updateRemarksRequest")
+    @ResponsePayload
+    public UpdateRemarksResponse updatingTransaction(@RequestPayload UpdateRemarksRequest updateRemarksRequest){
+        UpdateRemarksResponse updateRemarksResponse=new UpdateRemarksResponse();
+        ServiceStatus serviceStatus = new ServiceStatus();
+        Transactions transactions=new Transactions();
+
+        com.example.soapendpoints.dao.Transactions daoTransaction = new com.example.soapendpoints.dao.Transactions();
+        BeanUtils.copyProperties(updateRemarksRequest.getTransactions(),daoTransaction);
+        daoTransaction = transactionService.updateRemarks(daoTransaction);
+        if (daoTransaction!=null){
+            serviceStatus.setStatus("SUCCESS");
+            serviceStatus.setMessage(daoTransaction.getTransactionId()+" has been updated");
+        }else {
+            serviceStatus.setStatus("FAILURE");
+            serviceStatus.setMessage(daoTransaction.getTransactionId()+" hasn't been updated");
+        }
+        BeanUtils.copyProperties(daoTransaction,transactions);
+
+        updateRemarksResponse.setServiceStatus(serviceStatus);
+        updateRemarksResponse.setTransactions(transactions);
+
+        return updateRemarksResponse;
+    }
+
+    @PayloadRoot(namespace = url, localPart = "removeTransactionBetweenDates")
+    @ResponsePayload
+    public RemoveTransactionBetweenDatesResponse datesResponse(@RequestPayload RemoveTransactionBetweenDatesRequest request){
+        RemoveTransactionBetweenDatesResponse response = new RemoveTransactionBetweenDatesResponse();
+        ServiceStatus serviceStatus = new ServiceStatus();
+
+        String result = transactionService.removeTransactionBetweenDates(request.getStartDate(), request.getEndDate());
+        if (result.equals("removed")) {
+            serviceStatus.setStatus("removed");
+        } else {
+            serviceStatus.setStatus("not removed");
+        }
+        serviceStatus.setMessage(result);
+
+        response.setServiceStatus(serviceStatus);
+
+        return response;
     }
 }

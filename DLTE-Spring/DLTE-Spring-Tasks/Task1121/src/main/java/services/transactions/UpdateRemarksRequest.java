@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="receiver" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="transactions" type="{http://transactions.services}transactions"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "receiver"
+    "transactions"
 })
-@XmlRootElement(name = "findByReceiverRequest")
-public class FindByReceiverRequest {
+@XmlRootElement(name = "updateRemarksRequest")
+public class UpdateRemarksRequest {
 
     @XmlElement(required = true)
-    protected String receiver;
+    protected Transactions transactions;
 
     /**
-     * Gets the value of the receiver property.
+     * Gets the value of the transactions property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Transactions }
      *     
      */
-    public String getReceiver() {
-        return receiver;
+    public Transactions getTransactions() {
+        return transactions;
     }
 
     /**
-     * Sets the value of the receiver property.
+     * Sets the value of the transactions property.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Transactions }
      *     
      */
-    public void setReceiver(String value) {
-        this.receiver = value;
+    public void setTransactions(Transactions value) {
+        this.transactions = value;
     }
 
 }

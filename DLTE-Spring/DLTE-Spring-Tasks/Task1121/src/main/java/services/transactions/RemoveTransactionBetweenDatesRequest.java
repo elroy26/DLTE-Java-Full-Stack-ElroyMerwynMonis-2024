@@ -12,7 +12,9 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -25,8 +27,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="serviceStatus" type="{http://transactions.services}serviceStatus"/>
- *         &lt;element name="transaction" type="{http://transactions.services}transactions"/>
+ *         &lt;element name="startDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *         &lt;element name="endDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,63 +39,65 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "serviceStatus",
-    "transaction"
+    "startDate",
+    "endDate"
 })
-@XmlRootElement(name = "newTransactionResponse")
-public class NewTransactionResponse {
+@XmlRootElement(name = "removeTransactionBetweenDatesRequest")
+public class RemoveTransactionBetweenDatesRequest {
 
     @XmlElement(required = true)
-    protected ServiceStatus serviceStatus;
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar startDate;
     @XmlElement(required = true)
-    protected Transactions transaction;
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar endDate;
 
     /**
-     * Gets the value of the serviceStatus property.
+     * Gets the value of the startDate property.
      * 
      * @return
      *     possible object is
-     *     {@link ServiceStatus }
+     *     {@link XMLGregorianCalendar }
      *     
      */
-    public ServiceStatus getServiceStatus() {
-        return serviceStatus;
+    public XMLGregorianCalendar getStartDate() {
+        return startDate;
     }
 
     /**
-     * Sets the value of the serviceStatus property.
+     * Sets the value of the startDate property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ServiceStatus }
+     *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setServiceStatus(ServiceStatus value) {
-        this.serviceStatus = value;
+    public void setStartDate(XMLGregorianCalendar value) {
+        this.startDate = value;
     }
 
     /**
-     * Gets the value of the transaction property.
+     * Gets the value of the endDate property.
      * 
      * @return
      *     possible object is
-     *     {@link Transactions }
+     *     {@link XMLGregorianCalendar }
      *     
      */
-    public Transactions getTransaction() {
-        return transaction;
+    public XMLGregorianCalendar getEndDate() {
+        return endDate;
     }
 
     /**
-     * Sets the value of the transaction property.
+     * Sets the value of the endDate property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Transactions }
+     *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setTransaction(Transactions value) {
-        this.transaction = value;
+    public void setEndDate(XMLGregorianCalendar value) {
+        this.endDate = value;
     }
 
 }
