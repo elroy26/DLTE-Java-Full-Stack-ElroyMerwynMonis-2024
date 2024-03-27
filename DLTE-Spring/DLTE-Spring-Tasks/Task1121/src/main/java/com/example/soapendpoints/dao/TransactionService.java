@@ -10,12 +10,12 @@ import java.sql.SQLException;
 import java.util.List;
 
 @Service
-public class TansactionService {
+public class TransactionService {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    public TransactionEntity newTransaction(TransactionEntity transaction) {
+    public com.example.soapendpoints.dao.Transactions newTransaction(com.example.soapendpoints.dao.Transactions transaction) {
         jdbcTemplate.update("INSERT INTO transaction_entity (transaction_id, amount, received_by, remarks, sent_to, transaction_date ) VALUES (?, ?, ?, ?, ?, ?)",
                 new Object[]{
                         transaction.getTransactionId(),
@@ -27,29 +27,29 @@ public class TansactionService {
         return transaction;
     }
 
-    public List<TransactionEntity> findBySender(String sender) {
+    public List<com.example.soapendpoints.dao.Transactions> findBySender(String sender) {
         return jdbcTemplate.query("SELECT * FROM transaction_entity WHERE sent_to = ?",
                 new Object[]{sender},
                 new TransactionMapper());
     }
 
-    public List<TransactionEntity> findByReceiver(String receiver) {
+    public List<com.example.soapendpoints.dao.Transactions> findByReceiver(String receiver) {
         return jdbcTemplate.query("SELECT * FROM transaction_entity WHERE received_by = ?",
                 new Object[]{receiver},
                 new TransactionMapper());
     }
 
-    public List<TransactionEntity> findByAmount(Double amount) {
+    public List<com.example.soapendpoints.dao.Transactions> findByAmount(Double amount) {
         return jdbcTemplate.query("SELECT * FROM transaction_entity WHERE amount = ?",
                 new Object[]{amount},
                 new TransactionMapper());
     }
 
-    class TransactionMapper implements RowMapper<TransactionEntity> {
+    class TransactionMapper implements RowMapper<com.example.soapendpoints.dao.Transactions> {
 
         @Override
-        public TransactionEntity mapRow(ResultSet rs, int rowNum) throws SQLException {
-            TransactionEntity transactionEntity=new TransactionEntity();
+        public com.example.soapendpoints.dao.Transactions mapRow(ResultSet rs, int rowNum) throws SQLException {
+            com.example.soapendpoints.dao.Transactions transactionEntity=new Transactions();
             transactionEntity.setTransactionId(rs.getLong(1));
             transactionEntity.setAmount(rs.getDouble(2));
             transactionEntity.setReceivedBy(rs.getString(3));
