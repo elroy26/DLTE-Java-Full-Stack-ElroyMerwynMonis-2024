@@ -5,7 +5,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
@@ -53,7 +52,8 @@ public class TransactionService {
         return transactions;
     }
 
-    public String removeTransactionBetweenDates(XMLGregorianCalendar startDate, XMLGregorianCalendar endDate) {
+    public String removeTransactionBetweenDates(Date startDate, Date endDate) {
+        System.out.println(startDate+" "+endDate);
         int acknowledge =jdbcTemplate.update("DELETE FROM transaction_entity WHERE transaction_date BETWEEN ? AND ?",
                  new Object[]{startDate, endDate});
         if(acknowledge!=0)

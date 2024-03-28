@@ -10,6 +10,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import services.transactions.*;
 //import services.transactions.*;
 
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -158,13 +159,24 @@ public class SoapPhase {
         return updateRemarksResponse;
     }
 
-    @PayloadRoot(namespace = url, localPart = "removeTransactionBetweenDates")
+    @PayloadRoot(namespace = url, localPart = "removeTransactionBetweenDatesRequest")
     @ResponsePayload
     public RemoveTransactionBetweenDatesResponse datesResponse(@RequestPayload RemoveTransactionBetweenDatesRequest request){
+
         RemoveTransactionBetweenDatesResponse response = new RemoveTransactionBetweenDatesResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
-
-        String result = transactionService.removeTransactionBetweenDates(request.getStartDate(), request.getEndDate());
+//        XMLGregorianCalendar start,end;
+//        Date sDate=null,eDate=null;
+//        start=request.getStartDate();
+//        end=request.getEndDate();
+//        BeanUtils.copyProperties(start,sDate);
+//        System.out.println(sDate);
+//        BeanUtils.copyProperties(end,eDate);
+//
+        //System.out.println(request.getStartDate().toString()+" "+request.getStartDate().toGregorianCalendar().getTime().getClass());
+        Date startDate=request.getStartDate().toGregorianCalendar().getTime();
+        Date endDate=request.getEndDate().toGregorianCalendar().getTime();
+        String result = transactionService.removeTransactionBetweenDates(startDate,endDate);
         if (result.equals("removed")) {
             serviceStatus.setStatus("removed");
         } else {
