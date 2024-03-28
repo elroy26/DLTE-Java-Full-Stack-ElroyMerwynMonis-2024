@@ -63,7 +63,7 @@ public class TransactionService {
     }
 
 
-    class TransactionMapper implements RowMapper<com.example.soapendpoints.dao.Transactions> {
+    public class TransactionMapper implements RowMapper<com.example.soapendpoints.dao.Transactions> {
 
         @Override
         public com.example.soapendpoints.dao.Transactions mapRow(ResultSet rs, int rowNum) throws SQLException {

@@ -165,14 +165,7 @@ public class SoapPhase {
 
         RemoveTransactionBetweenDatesResponse response = new RemoveTransactionBetweenDatesResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
-//        XMLGregorianCalendar start,end;
-//        Date sDate=null,eDate=null;
-//        start=request.getStartDate();
-//        end=request.getEndDate();
-//        BeanUtils.copyProperties(start,sDate);
-//        System.out.println(sDate);
-//        BeanUtils.copyProperties(end,eDate);
-//
+
         //System.out.println(request.getStartDate().toString()+" "+request.getStartDate().toGregorianCalendar().getTime().getClass());
         Date startDate=request.getStartDate().toGregorianCalendar().getTime();
         Date endDate=request.getEndDate().toGregorianCalendar().getTime();
