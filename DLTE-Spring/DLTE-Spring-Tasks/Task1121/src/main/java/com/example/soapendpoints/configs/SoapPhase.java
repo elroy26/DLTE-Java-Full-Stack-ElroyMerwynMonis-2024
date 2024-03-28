@@ -112,7 +112,9 @@ public class SoapPhase {
         ServiceStatus serviceStatus=new ServiceStatus();
 
         Transactions actual=newTransactionRequest.getTransaction();
+        Date date=newTransactionRequest.getTransaction().getTransactionDate().toGregorianCalendar().getTime();
         com.example.soapendpoints.dao.Transactions daoTransactions= new com.example.soapendpoints.dao.Transactions();
+        daoTransactions.setTransactionDate(date);
         BeanUtils.copyProperties(actual,daoTransactions);
         daoTransactions=transactionService.newTransaction(daoTransactions);
 
