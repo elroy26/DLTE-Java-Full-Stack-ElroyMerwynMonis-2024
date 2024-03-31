@@ -7,6 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -62,5 +65,19 @@ public class TransactionController {
             logger.error("Error occurred while fetching transactions by amount: " + exception.getMessage());
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, exception.getMessage(), exception);
         }
+    }
+    @PutMapping("/updateRemarks")
+    public TransactionEntity updateTransaction(@RequestBody TransactionEntity transaction){
+        TransactionEntity transaction1=transactionService.updateRemarks(transaction);
+        return transaction1;
+    }
+
+    @DeleteMapping("/deleteBasedOnRangeOfDate/{startDate}/{endDate}")
+    public String deleteTransaction(@PathVariable("startDate") String startDateString,@PathVariable("endDate") String endDateString) throws ParseException {
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
+        Date startDate=simpleDateFormat.parse(startDateString);
+        Date endDate=simpleDateFormat.parse(endDateString);
+        return transactionService.removeTransactionBetweenDates(startDate,endDate);
+
     }
 }

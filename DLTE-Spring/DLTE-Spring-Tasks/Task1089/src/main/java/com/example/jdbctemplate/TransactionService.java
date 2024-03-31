@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 @Service
 public class TransactionService {
@@ -41,6 +42,21 @@ public class TransactionService {
         return jdbcTemplate.query("SELECT * FROM transaction_entity WHERE amount = ?",
                 new Object[]{amount},
                 new TransactionMapper());
+    }
+    public TransactionEntity updateRemarks(TransactionEntity transactions){
+        jdbcTemplate.update("UPDATE transaction_entity SET remarks = ? WHERE transaction_id = ?",
+                new Object[]{transactions.getRemarks(), transactions.getTransactionId()});
+        return transactions;
+    }
+
+    public String removeTransactionBetweenDates(Date startDate, Date endDate) {
+        System.out.println(startDate+" "+endDate);
+        int acknowledge =jdbcTemplate.update("DELETE FROM transaction_entity WHERE transaction_date BETWEEN ? AND ?",
+                new Object[]{startDate, endDate});
+        if(acknowledge!=0)
+            return "removed";
+        else
+            return "not removed";
     }
 
     class TransactionMapper implements RowMapper<TransactionEntity>{
