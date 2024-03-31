@@ -753,4 +753,11 @@
 [0;39m[31m2024-03-28 14:12:49,480[0;39m [32m[INFO][0;39m com.example.soapendpoints.SoapendpointsApplicationTests main [32mStarted SoapendpointsApplicationTests in 3.851 seconds (JVM running for 5.101)
 [0;39m[31m2024-03-28 14:12:49,647[0;39m [32m[INFO][0;39m com.zaxxer.hikari.HikariDataSource SpringApplicationShutdownHook [32mHikariPool-1 - Shutdown initiated...
 [0;39m[31m2024-03-28 14:12:49,662[0;39m [32m[INFO][0;39m com.zaxxer.hikari.HikariDataSource SpringApplicationShutdownHook [32mHikariPool-1 - Shutdown completed.
+[0;39m[31m2024-03-28 14:48:01,987[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-3 housekeeper [32mHikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=14m6s145ms597µs200ns).
+[0;39m[31m2024-03-28 15:19:35,450[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-3 housekeeper [32mHikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=12m3s118ms252µs600ns).
+[0;39m[31m2024-03-28 15:43:07,139[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-3 housekeeper [32mHikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=20m31s627ms26µs).
+[0;39m[31m2024-03-28 15:48:19,191[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-3 housekeeper [32mHikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1m12s23ms487µs500ns).
+[0;39m[31m2024-03-28 16:08:20,619[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-3 housekeeper [32mHikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=11m31s304ms754µs800ns).
+[0;39m[31m2024-03-28 16:12:51,716[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-3 housekeeper [32mHikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=2m1s72ms850µs800ns).
+[0;39m[31m2024-03-28 16:24:52,448[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-3 housekeeper [32mHikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=3m591ms119µs400ns).
 [0;39m
