@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Apply for a Check Book</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/My-BankLogo.png" alt="MyBank Logo">
+        </div>
+        <h1>Apply for a Check Book</h1>
+    </header>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="accountNumber">Account Number:</label>
+                <input type="text" id="accountNumber" name="accountNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="accountHolder">Account Holder:</label>
+                <input type="text" id="accountHolder" name="accountHolder" required>
+            </div>
+            <div class="form-group">
+                <label>Account Type:</label>
+                <div class="radio-group">
+                    <input type="radio" id="savings" name="accountType" value="savings" checked>
+                    <label for="savings">Savings</label>
+                    <input type="radio" id="current" name="accountType" value="current">
+                    <label for="current">Current</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="chequeBookType">Cheque Book Type:</label>
+                <select id="chequeBookType" name="chequeBookType">
+                    <option value="personal">Personal</option>
+                    <option value="business">Business</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dateOfApply">Date of Apply:</label>
+                <input type="date" id="dateOfApply" name="dateOfApply" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="signature">Signature:</label>
+                <input type="file" id="signature" name="signature" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" name="contactNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="termsAndConditions" name="termsAndConditions" required>
+                    <label for="termsAndConditions">I agree to the Terms and Conditions</label>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
