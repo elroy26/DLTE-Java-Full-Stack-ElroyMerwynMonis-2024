@@ -1,4 +1,10 @@
 package maybank.insurance.dao.insurancedao.remotes;
 
-public class InsuranceAvailableRepository {
+import maybank.insurance.dao.insurancedao.entity.InsuranceAvailable;
+
+import java.sql.SQLSyntaxErrorException;
+import java.util.List;
+
+public interface InsuranceAvailableRepository {
+    List<InsuranceAvailable> callAllInsuranceAvailable() throws SQLSyntaxErrorException;
 }
