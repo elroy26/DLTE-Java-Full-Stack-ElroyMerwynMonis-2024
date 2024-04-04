@@ -13,9 +13,12 @@ import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
 
+//This configuration file generates the java classes from xsd file to wsdl in the services. insurance package
+
+
 @EnableWs
 @Configuration
-@ComponentScan("maybank.insurance.dao.insurancedao.services")
+@ComponentScan("maybank.insurance.dao.insurancedao")
 public class SoapServiceConfiguration extends WsConfigurerAdapter {
 
     // conversion xsd to wsdl

@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 
 public class InsuranceAvailable {
     @NotNull(message = "{available.insuranceId.null}")
-    @Digits(integer = 8, fraction = 0, message = "{user.customerId.null}")
+    @Digits(integer = 8, fraction = 0, message = "{available.insuranceId.invalid}")
     private Integer insuranceId;
     @NotNull(message = "{available.insuranceType.null}")
     private String insuranceType;
