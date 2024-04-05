@@ -31,13 +31,12 @@ public class InsuranceAvailableEndpoint {
     Logger LOGGER = LoggerFactory.getLogger(InsuranceAvailableEndpoint.class);
     ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
 
-
     @Autowired
     private InsuranceAvailableRepository availableDbRepo;
 
     @PayloadRoot(namespace = url, localPart = "callAllInsuranceAvailableRequest")
     @ResponsePayload
-    public CallAllInsuranceAvailableResponse listLoans(@RequestPayload CallAllInsuranceAvailableRequest availableRequest) {
+    public CallAllInsuranceAvailableResponse listInsurance(@RequestPayload CallAllInsuranceAvailableRequest availableRequest) {
         CallAllInsuranceAvailableResponse availableResponse = new CallAllInsuranceAvailableResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
         try {
