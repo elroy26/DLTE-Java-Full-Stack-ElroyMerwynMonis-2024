@@ -1,0 +1,14 @@
+maybank\insurance\dao\insurancedao\services\InsuranceAvailedDbRepo.class
+maybank\insurance\dao\insurancedao\remotes\InsuranceAvailableRepository.class
+maybank\insurance\dao\insurancedao\entity\InsuranceAvailed.class
+maybank\insurance\dao\insurancedao\exceptions\CustomerException.class
+maybank\insurance\dao\insurancedao\entity\Customer.class
+maybank\insurance\dao\insurancedao\remotes\InsuranceAvailedRepository.class
+maybank\insurance\dao\insurancedao\services\InsuranceAvailableDbRepo.class
+maybank\insurance\dao\insurancedao\InsurancedaoApplication.class
+maybank\insurance\dao\insurancedao\services\CustomerDbRepo.class
+maybank\insurance\dao\insurancedao\services\InsuranceAvailableDbRepo$InsuranceMapper.class
+maybank\insurance\dao\insurancedao\remotes\CustomerRepository.class
+maybank\insurance\dao\insurancedao\entity\InsuranceAvailable.class
+maybank\insurance\dao\insurancedao\exceptions\InsuranceAvailableException.class
+maybank\insurance\dao\insurancedao\exceptions\InsuranceAvailedException.class
