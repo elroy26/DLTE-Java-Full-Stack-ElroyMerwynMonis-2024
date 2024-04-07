@@ -23,23 +23,23 @@ import java.util.ResourceBundle;
 
 @Service
 public class InsuranceAvailableDbRepo implements InsuranceAvailableRepository {
-    ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
 
+     ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
      Logger LOGGER = LoggerFactory.getLogger(InsuranceAvailableDbRepo.class);
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Override
-    public List<InsuranceAvailable> callAllInsuranceAvailable() throws SQLSyntaxErrorException, InsuranceAvailableException {
+    public List<InsuranceAvailable> callAllInsuranceAvailable() throws SQLException, InsuranceAvailableException {
         List<InsuranceAvailable> insuranceList=null;
         try {
-             insuranceList = jdbcTemplate.query("select * from MYBANK_APP_INSURANCEAVAILABLE", new CardMapper());
+             insuranceList = jdbcTemplate.query("select * from MYBANK_APP_INSURANCEAVAILABLE", new InsuranceMapper());
             LOGGER.debug(resourceBundle.getString("insurance.list.size"), insuranceList.size());
 
         } catch (DataAccessException sqlException) {
             LOGGER.error(resourceBundle.getString("insurance.sql.error"), sqlException);
-            throw new SQLSyntaxErrorException(sqlException);
+            throw new SQLException(sqlException);
         }
         if(insuranceList.size()==0){
             LOGGER.warn(resourceBundle.getString("insurance.data.null"));
@@ -48,7 +48,7 @@ public class InsuranceAvailableDbRepo implements InsuranceAvailableRepository {
         return insuranceList;
     }
 
-    public class CardMapper implements RowMapper<InsuranceAvailable> {
+    public class InsuranceMapper implements RowMapper<InsuranceAvailable> {
 
         @Override
         public InsuranceAvailable mapRow(ResultSet rs, int rowNum) throws SQLException {

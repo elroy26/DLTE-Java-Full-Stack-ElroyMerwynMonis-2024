@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import java.sql.SQLException;
 import java.sql.SQLSyntaxErrorException;
 
 @SpringBootApplication
@@ -19,7 +20,7 @@ public class InsurancedaoApplication {
         try{
             System.out.println(availableDbRepo.callAllInsuranceAvailable());
         }
-        catch (InsuranceAvailableException exception){
+        catch (InsuranceAvailableException | SQLException exception){
             System.out.println(exception);
         }
     }

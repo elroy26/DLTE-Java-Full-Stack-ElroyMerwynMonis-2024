@@ -1,0 +1,4 @@
+app\soap\endpoints\App.class
+web\EmployeeCard.class
+web\SoapEndpoints.class
+web\EmployeeSoap.class

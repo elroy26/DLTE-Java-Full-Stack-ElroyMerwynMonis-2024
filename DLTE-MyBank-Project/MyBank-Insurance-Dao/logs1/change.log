@@ -10,3 +10,110 @@
 2024-04-05 14:37:46 [main] WARN  m.i.d.i.s.InsuranceAvailableDbRepo - No data found
 2024-04-05 14:37:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-04-05 14:37:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-05 14:48:12 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Starting InsurancedaoApplicationTests using Java 1.8.0_292 on WPG02VBMJ with PID 20236 (started by xxmonise in C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-Dao)
+2024-04-05 14:48:12 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-04-05 14:48:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-05 14:48:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 JDBC repository interfaces.
+2024-04-05 14:48:14 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-05 14:48:14 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-05 14:48:15 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-05 14:48:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-05 14:48:15 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Started InsurancedaoApplicationTests in 4.267 seconds (JVM running for 6.648)
+2024-04-05 14:48:15 [main] WARN  m.i.d.i.s.InsuranceAvailableDbRepo - No data found
+2024-04-05 14:48:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-05 14:48:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-05 15:50:50 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Starting InsurancedaoApplicationTests using Java 1.8.0_292 on WPG02VBMJ with PID 25012 (started by xxmonise in C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-Dao)
+2024-04-05 15:50:50 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-04-05 15:50:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-05 15:50:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JDBC repository interfaces.
+2024-04-05 15:50:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-05 15:50:52 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-05 15:50:52 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-05 15:50:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-05 15:50:52 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Started InsurancedaoApplicationTests in 2.014 seconds (JVM running for 4.587)
+2024-04-05 15:50:52 [main] WARN  m.i.d.i.s.InsuranceAvailableDbRepo - No data found
+2024-04-05 15:50:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-05 15:50:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-05 15:51:54 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Starting InsurancedaoApplicationTests using Java 1.8.0_292 on WPG02VBMJ with PID 4372 (started by xxmonise in C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-Dao)
+2024-04-05 15:51:54 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-04-05 15:51:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-05 15:51:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JDBC repository interfaces.
+2024-04-05 15:51:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-05 15:51:55 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-05 15:51:56 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-05 15:51:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-05 15:51:56 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Started InsurancedaoApplicationTests in 1.892 seconds (JVM running for 4.46)
+2024-04-05 15:51:56 [main] WARN  m.i.d.i.s.InsuranceAvailableDbRepo - No data found
+2024-04-05 15:51:56 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-05 15:51:56 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-05 15:55:33 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Starting InsurancedaoApplicationTests using Java 1.8.0_292 on WPG02VBMJ with PID 5544 (started by xxmonise in C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-Dao)
+2024-04-05 15:55:33 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-04-05 15:55:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-05 15:55:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
+2024-04-05 15:55:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-05 15:55:34 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-05 15:55:34 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-05 15:55:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-05 15:55:34 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Started InsurancedaoApplicationTests in 2.072 seconds (JVM running for 4.535)
+2024-04-05 15:55:35 [main] WARN  m.i.d.i.s.InsuranceAvailableDbRepo - No data found
+2024-04-05 15:55:35 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-05 15:55:35 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-05 15:55:56 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Starting InsurancedaoApplicationTests using Java 1.8.0_292 on WPG02VBMJ with PID 27016 (started by xxmonise in C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-Dao)
+2024-04-05 15:55:56 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-04-05 15:55:57 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-05 15:55:57 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 JDBC repository interfaces.
+2024-04-05 15:55:59 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-05 15:55:59 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-05 15:55:59 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-05 15:55:59 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-05 15:56:00 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Started InsurancedaoApplicationTests in 4.267 seconds (JVM running for 8.381)
+2024-04-05 15:56:00 [main] WARN  m.i.d.i.s.InsuranceAvailableDbRepo - No data found
+2024-04-05 15:56:00 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-05 15:56:00 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-05 15:59:52 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Starting InsurancedaoApplicationTests using Java 1.8.0_292 on WPG02VBMJ with PID 8216 (started by xxmonise in C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-Dao)
+2024-04-05 15:59:52 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-04-05 15:59:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-05 15:59:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JDBC repository interfaces.
+2024-04-05 15:59:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-05 15:59:53 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-05 15:59:53 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-05 15:59:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-05 15:59:54 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Started InsurancedaoApplicationTests in 1.827 seconds (JVM running for 4.321)
+2024-04-05 15:59:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-05 15:59:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-05 16:00:23 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Starting InsurancedaoApplicationTests using Java 1.8.0_292 on WPG02VBMJ with PID 14628 (started by xxmonise in C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-Dao)
+2024-04-05 16:00:23 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-04-05 16:00:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-05 16:00:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JDBC repository interfaces.
+2024-04-05 16:00:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-05 16:00:24 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-05 16:00:24 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-05 16:00:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-05 16:00:24 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Started InsurancedaoApplicationTests in 1.953 seconds (JVM running for 4.22)
+2024-04-05 16:00:24 [main] WARN  m.i.d.i.s.InsuranceAvailableDbRepo - No data found
+2024-04-05 16:00:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-05 16:00:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-05 16:03:52 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Starting InsurancedaoApplicationTests using Java 1.8.0_292 on WPG02VBMJ with PID 9664 (started by xxmonise in C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-Dao)
+2024-04-05 16:03:52 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-04-05 16:03:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-05 16:03:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2024-04-05 16:03:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-05 16:03:53 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-05 16:03:54 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-05 16:03:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-05 16:03:54 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Started InsurancedaoApplicationTests in 1.892 seconds (JVM running for 3.541)
+2024-04-05 16:03:54 [main] WARN  m.i.d.i.s.InsuranceAvailableDbRepo - No data found
+2024-04-05 16:03:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-05 16:03:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-05 16:27:44 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Starting InsurancedaoApplicationTests using Java 1.8.0_292 on WPG02VBMJ with PID 26248 (started by xxmonise in C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-Dao)
+2024-04-05 16:27:44 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-04-05 16:27:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-05 16:27:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2024-04-05 16:27:45 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-05 16:27:45 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-05 16:27:45 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-05 16:27:45 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-05 16:27:46 [main] INFO  m.i.d.i.InsurancedaoApplicationTests - Started InsurancedaoApplicationTests in 1.914 seconds (JVM running for 6.425)
+2024-04-05 16:27:46 [main] WARN  m.i.d.i.s.InsuranceAvailableDbRepo - No data found
+2024-04-05 16:27:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-05 16:27:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
