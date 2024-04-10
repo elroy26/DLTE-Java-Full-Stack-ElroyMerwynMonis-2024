@@ -1,8 +1,8 @@
 package mybank.insurance.webservice.soap.endpoint;
 
-import maybank.insurance.dao.insurancedao.entity.InsuranceAvailable;
-import maybank.insurance.dao.insurancedao.exceptions.InsuranceAvailableException;
-import maybank.insurance.dao.insurancedao.remotes.InsuranceAvailableRepository;
+import maybank.insurance.dao.entity.InsuranceAvailable;
+import maybank.insurance.dao.exceptions.InsuranceAvailableException;
+import maybank.insurance.dao.remotes.InsuranceAvailableRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
@@ -24,7 +24,7 @@ import java.util.ResourceBundle;
 
 //this endpoint performs the handling req and res for fetching all the insurance types from db
 @Endpoint
-@ComponentScan("maybank.insurance.dao.insurancedao.remotes.InsuranceAvailableRepository")
+@ComponentScan("maybank.insurance.dao")
 public class InsuranceAvailableEndpoint {
     //http://localhost:8082/insurancerepo/insurance.wsdl
 
