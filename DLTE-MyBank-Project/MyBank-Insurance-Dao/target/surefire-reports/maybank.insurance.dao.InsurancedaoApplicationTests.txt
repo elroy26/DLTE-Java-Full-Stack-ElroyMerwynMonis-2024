@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: maybank.insurance.dao.InsurancedaoApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.07 s - in maybank.insurance.dao.InsurancedaoApplicationTests
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.414 s - in maybank.insurance.dao.InsurancedaoApplicationTests

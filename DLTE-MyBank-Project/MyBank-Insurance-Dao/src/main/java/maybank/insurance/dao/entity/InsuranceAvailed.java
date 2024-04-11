@@ -2,6 +2,7 @@ package maybank.insurance.dao.entity;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 public class InsuranceAvailed {
 
@@ -15,10 +16,11 @@ public class InsuranceAvailed {
     @NotNull(message = "{availed.insuranceKeyBenefits.null}")
     private String insuranceKeyBenefits;
     @NotNull(message = "{availed.insuranceLifetime.null}")
-    @Digits(integer = 4, fraction = 0, message = "{availed.insuranceLifetime.invalid}")
+    @Digits(integer = 2, fraction = 0, message = "{availed.insuranceLifetime.invalid}")
     private Integer insuranceLifetime;
     @NotNull(message = "{availed.insurancePremium.null}")
     @Digits(integer = Integer.MAX_VALUE, fraction = Integer.MAX_VALUE, message = "{availed.insurancePremium.invalid}")
+//    @Pattern(regexp = "^\\d+$", message = "{availed.insurancePremium.invalid}")
     private Double insurancePremium;
     @NotNull(message = "{availed.customerId.null}")
     @Digits(integer = 8, fraction = 0, message = "{user.customerId.null}")
