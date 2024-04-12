@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="87dfa00f-3a6b-40e2-9ca9-66a3cd985f6b" activeEnvironment="Default" name="insurance" resourceRoot="" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="e49a93a2-7df9-4c83-a6df-352f753c9ccf" wsaVersion="NONE" name="EmployeePortSoap11" type="wsdl" bindingName="{http://employee.services}EmployeePortSoap11" soapVersion="1_1" anonymous="optional" definition="http://localhost:8082/employeerepo/employee.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8082/employeerepo/employee.wsdl"><con:part><con:url>http://localhost:8082/employeerepo/employee.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://employee.services" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://employee.services" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://employee.services">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://employee.services" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <!--Employee Details-->
+      <xsd:complexType name="EmployeeDetails">
+        <xsd:sequence>
+          <xsd:element name="employeeID" type="xsd:int"/>
+          <xsd:element name="employeeFirstName" type="xsd:string"/>
+          <xsd:element name="employeeMiddleName" type="xsd:string"/>
+          <xsd:element name="employeeLastName" type="xsd:string"/>
+          <xsd:element name="email" type="xsd:string"/>
+          <xsd:element name="phoneNumber" type="xsd:long"/>
+          <xsd:element name="employeePermanentAddress" type="tns:EmployeeAddress"/>
+          <xsd:element name="employeeTemporaryAddress" type="tns:EmployeeAddress"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Employee Address-->
+      <xsd:complexType name="EmployeeAddress">
+        <xsd:sequence>
+          <xsd:element name="houseName" type="xsd:string"/>
+          <xsd:element name="streetName" type="xsd:string"/>
+          <xsd:element name="city" type="xsd:string"/>
+          <xsd:element name="state" type="xsd:string"/>
+          <xsd:element name="pincode" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Employee HTTP Response-->
+      <xsd:complexType name="serviceStatus">
+        <xsd:sequence>
+          <xsd:element name="status" type="xsd:int"/>
+          <xsd:element name="message" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Insert Employee Request-->
+      <xsd:element name="callInsertEmployeeDetailsRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="employeeDetails" type="tns:EmployeeDetails"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <!--Insert Employee Response-->
+      <xsd:element name="callInsertEmployeeDetailsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="serviceStatus" type="tns:serviceStatus"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <!--Insert Employee Address Request-->
+      <xsd:element name="callInsertEmployeeAddressRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="employeePermanentAddress" type="tns:EmployeeAddress"/>
+            <xsd:element name="employeeTemporaryAddress" type="tns:EmployeeAddress"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <!--Insert Employee Address Response-->
+      <xsd:element name="callInsertEmployeeAddressResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="serviceStatus" type="tns:serviceStatus"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <!--Output Employee Response-->
+      <xsd:element name="callOutputEmployeeRequest">
+        <xsd:complexType/>
+      </xsd:element>
+      <xsd:element name="callOutputEmployeeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="serviceStatus" type="tns:serviceStatus"/>
+            <xsd:element maxOccurs="unbounded" name="employeeProfile" type="tns:EmployeeDetails"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <!--Filter Employee Request-->
+      <xsd:element name="callFilterEmployeeRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pincode" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <!--Filter Employee Response-->
+      <xsd:element name="callFilterEmployeeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="employeeDetails" type="tns:EmployeeDetails"/>
+            <xsd:element name="serviceStatus" type="tns:serviceStatus"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="callOutputEmployeeResponse">
+    <wsdl:part element="tns:callOutputEmployeeResponse" name="callOutputEmployeeResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="callFilterEmployeeResponse">
+    <wsdl:part element="tns:callFilterEmployeeResponse" name="callFilterEmployeeResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="callInsertEmployeeDetailsResponse">
+    <wsdl:part element="tns:callInsertEmployeeDetailsResponse" name="callInsertEmployeeDetailsResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="callInsertEmployeeAddressResponse">
+    <wsdl:part element="tns:callInsertEmployeeAddressResponse" name="callInsertEmployeeAddressResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="callOutputEmployeeRequest">
+    <wsdl:part element="tns:callOutputEmployeeRequest" name="callOutputEmployeeRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="callFilterEmployeeRequest">
+    <wsdl:part element="tns:callFilterEmployeeRequest" name="callFilterEmployeeRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="callInsertEmployeeDetailsRequest">
+    <wsdl:part element="tns:callInsertEmployeeDetailsRequest" name="callInsertEmployeeDetailsRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="callInsertEmployeeAddressRequest">
+    <wsdl:part element="tns:callInsertEmployeeAddressRequest" name="callInsertEmployeeAddressRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="EmployeePort">
+    <wsdl:operation name="callOutputEmployee">
+      <wsdl:input message="tns:callOutputEmployeeRequest" name="callOutputEmployeeRequest"></wsdl:input>
+      <wsdl:output message="tns:callOutputEmployeeResponse" name="callOutputEmployeeResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="callFilterEmployee">
+      <wsdl:input message="tns:callFilterEmployeeRequest" name="callFilterEmployeeRequest"></wsdl:input>
+      <wsdl:output message="tns:callFilterEmployeeResponse" name="callFilterEmployeeResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="callInsertEmployeeDetails">
+      <wsdl:input message="tns:callInsertEmployeeDetailsRequest" name="callInsertEmployeeDetailsRequest"></wsdl:input>
+      <wsdl:output message="tns:callInsertEmployeeDetailsResponse" name="callInsertEmployeeDetailsResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="callInsertEmployeeAddress">
+      <wsdl:input message="tns:callInsertEmployeeAddressRequest" name="callInsertEmployeeAddressRequest"></wsdl:input>
+      <wsdl:output message="tns:callInsertEmployeeAddressResponse" name="callInsertEmployeeAddressResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EmployeePortSoap11" type="tns:EmployeePort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="callOutputEmployee">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="callOutputEmployeeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="callOutputEmployeeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="callFilterEmployee">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="callFilterEmployeeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="callFilterEmployeeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="callInsertEmployeeDetails">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="callInsertEmployeeDetailsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="callInsertEmployeeDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="callInsertEmployeeAddress">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="callInsertEmployeeAddressRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="callInsertEmployeeAddressResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmployeePortService">
+    <wsdl:port binding="tns:EmployeePortSoap11" name="EmployeePortSoap11">
+      <soap:address location="http://localhost:8082/employeerepo"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8082/employeerepo</con:endpoint></con:endpoints><con:operation id="ec918da5-2c37-4ea3-b34e-1cdf14da8c3e" isOneWay="false" action="" name="callFilterEmployee" bindingOperationName="callFilterEmployee" type="Request-Response" outputName="callFilterEmployeeResponse" inputName="callFilterEmployeeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5102b6db-c8de-4b8d-b9f8-ffa7b605d45a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8082/employeerepo</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://employee.services">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <emp:callFilterEmployeeRequest>\r
+         <emp:pincode>?</emp:pincode>\r
+      </emp:callFilterEmployeeRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://employee.services/EmployeePort/callFilterEmployeeRequest"/></con:call></con:operation><con:operation id="ed6e4c11-0965-4699-b36d-ce4aa8f9c4c6" isOneWay="false" action="" name="callInsertEmployeeAddress" bindingOperationName="callInsertEmployeeAddress" type="Request-Response" outputName="callInsertEmployeeAddressResponse" inputName="callInsertEmployeeAddressRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b020809f-bb79-4086-8252-8e943fc87db5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8082/employeerepo</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://employee.services">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <emp:callInsertEmployeeAddressRequest>\r
+         <emp:employeePermanentAddress>\r
+            <emp:houseName>?</emp:houseName>\r
+            <emp:streetName>?</emp:streetName>\r
+            <emp:city>?</emp:city>\r
+            <emp:state>?</emp:state>\r
+            <emp:pincode>?</emp:pincode>\r
+         </emp:employeePermanentAddress>\r
+         <emp:employeeTemporaryAddress>\r
+            <emp:houseName>?</emp:houseName>\r
+            <emp:streetName>?</emp:streetName>\r
+            <emp:city>?</emp:city>\r
+            <emp:state>?</emp:state>\r
+            <emp:pincode>?</emp:pincode>\r
+         </emp:employeeTemporaryAddress>\r
+      </emp:callInsertEmployeeAddressRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://employee.services/EmployeePort/callInsertEmployeeAddressRequest"/></con:call></con:operation><con:operation id="051b4286-faa5-4d50-96c7-e252be94e64d" isOneWay="false" action="" name="callInsertEmployeeDetails" bindingOperationName="callInsertEmployeeDetails" type="Request-Response" outputName="callInsertEmployeeDetailsResponse" inputName="callInsertEmployeeDetailsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="aa8c129b-7d45-4c5f-9f3c-77fb534442fb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8082/employeerepo</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://employee.services">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <emp:callInsertEmployeeDetailsRequest>\r
+         <emp:employeeDetails>\r
+            <emp:employeeID>?</emp:employeeID>\r
+            <emp:employeeFirstName>?</emp:employeeFirstName>\r
+            <emp:employeeMiddleName>?</emp:employeeMiddleName>\r
+            <emp:employeeLastName>?</emp:employeeLastName>\r
+            <emp:email>?</emp:email>\r
+            <emp:phoneNumber>?</emp:phoneNumber>\r
+            <emp:employeePermanentAddress>\r
+               <emp:houseName>?</emp:houseName>\r
+               <emp:streetName>?</emp:streetName>\r
+               <emp:city>?</emp:city>\r
+               <emp:state>?</emp:state>\r
+               <emp:pincode>?</emp:pincode>\r
+            </emp:employeePermanentAddress>\r
+            <emp:employeeTemporaryAddress>\r
+               <emp:houseName>?</emp:houseName>\r
+               <emp:streetName>?</emp:streetName>\r
+               <emp:city>?</emp:city>\r
+               <emp:state>?</emp:state>\r
+               <emp:pincode>?</emp:pincode>\r
+            </emp:employeeTemporaryAddress>\r
+         </emp:employeeDetails>\r
+      </emp:callInsertEmployeeDetailsRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://employee.services/EmployeePort/callInsertEmployeeDetailsRequest"/></con:call></con:operation><con:operation id="95c141fe-10a1-4cf9-bb34-73e7d7ac0e2a" isOneWay="false" action="" name="callOutputEmployee" bindingOperationName="callOutputEmployee" type="Request-Response" outputName="callOutputEmployeeResponse" inputName="callOutputEmployeeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="55517d3c-bcee-42d5-9e4c-e45d661f392b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8082/employeerepo</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://employee.services">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <emp:callOutputEmployeeRequest/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://employee.services/EmployeePort/callOutputEmployeeRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

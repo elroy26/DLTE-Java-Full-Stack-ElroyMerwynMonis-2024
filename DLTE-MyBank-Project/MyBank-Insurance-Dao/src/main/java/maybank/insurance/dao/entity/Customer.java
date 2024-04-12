@@ -5,7 +5,12 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-public class Customer {
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+
+public class Customer implements UserDetails  {
     @NotNull(message = "{user.customerId.null}")
     @Digits(integer = 8, fraction = 0, message = "{user.customerId.null}")
     private Integer customerId;
@@ -26,7 +31,29 @@ public class Customer {
     @NotNull(message = "{user.password.null}")
     @Size(min = 8, message = "{user.password.invalid}")
     private String password;
+    private int attempts;
 
+    public int getAttempts() {
+        return attempts;
+    }
+
+//    public int getStatus() {
+//        return status;
+//    }
+//
+//    public void setStatus(int status) {
+//        this.status = status;
+//    }
+
+    public void setAttempts(int attempts) {
+        this.attempts = attempts;
+    }
+
+    public int getMaxAttempt() {
+        return maxAttempt;
+    }
+//    private int status;
+    private final int maxAttempt=3;
     public Customer() {
     }
 
@@ -84,8 +111,33 @@ public class Customer {
         return username;
     }
 
+    @Override
+    public boolean isAccountNonExpired() {
+        return false;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return false;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return false;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return false;
+    }
+
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return null;
     }
 
     public String getPassword() {

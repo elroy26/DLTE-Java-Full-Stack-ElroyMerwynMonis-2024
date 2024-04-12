@@ -18,7 +18,7 @@ import org.springframework.xml.xsd.XsdSchema;
 
 @EnableWs
 @Configuration
-@ComponentScan("maybank.insurance.dao.insurancedao")
+@ComponentScan("maybank.insurance.dao")
 public class SoapServiceConfiguration extends WsConfigurerAdapter {
 
     // conversion xsd to wsdl
