@@ -8,10 +8,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
 
+   
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #007bff;">
         <div class="container-fluid">
             <a class="navbar-brand text-light display-6 text-uppercase" style="font-weight: bold;" href="#">MyBank</a>
@@ -21,13 +22,13 @@
             <div class="collapse navbar-collapse" id="myBankMenu">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a target="_blank" href="form.html" class="nav-link text-light">Apply cheque book</a>
+                        <button onclick="changePage('form.html')" class="nav-link text-light" style="border: none; background: none; cursor: pointer;">Apply cheque book</button>
                     </li>
                     <li class="nav-item">
-                        <a target="_blank" href="table.html" class="nav-link text-light">Tables</a>
+                        <button onclick="changePage('table.html')" class="nav-link text-light" style="border: none; background: none; cursor: pointer;">Tables</button>
                     </li>
                     <li class="nav-item">
-                        <a target="_blank" href="slide.html" class="nav-link text-light">Alignment</a>
+                        <button onclick="changePage('slide.html')" class="nav-link text-light" style="border: none; background: none; cursor: pointer;">Alignment</button>
                     </li>
                 </ul>
                 <!-- Search bar -->
@@ -38,6 +39,16 @@
             </div>
         </div>
     </nav>
+
+
+    <iframe id="pageFrame" src="" width="100%" height="600px" frameborder="0"></iframe>
+
+    
+    <script>
+        function changePage(pageName) {
+            document.getElementById('pageFrame').src = pageName;
+        }
+    </script>
     
 </body>
 </html>
