@@ -31,7 +31,7 @@ public class CustomerFailureHandler extends SimpleUrlAuthenticationFailureHandle
         String username= request.getParameter("username");
         Customer customer=service.findByUserName(username);
         if(customer!=null){
-            if (!"closed".equals(customer.getCustomerStatus())) {
+            if (!customer.getCustomerStatus().equals("closed")) {
                 if (customer.getAttempts()<customer.getMaxAttempt()){
                     customer.setAttempts(customer.getAttempts()+1);
                     service.updateAttempts(customer);

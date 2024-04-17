@@ -60,7 +60,7 @@ public class InsuranceAvailableDbRepo implements InsuranceAvailableRepository {
         }
     }
 //---------------Lambda expression-------------------
-
+//
 //    @Override
 //    public List<InsuranceAvailable> callAllInsuranceAvailable() throws SQLException, InsuranceAvailableException {
 //        try {

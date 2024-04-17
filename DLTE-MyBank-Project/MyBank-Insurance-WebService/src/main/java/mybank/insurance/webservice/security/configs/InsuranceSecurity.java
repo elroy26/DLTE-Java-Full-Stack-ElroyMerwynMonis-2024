@@ -9,14 +9,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-@EnableGlobalMethodSecurity(prePostEnabled = true)
 @ComponentScan("maybank.insurance.dao")
 public class InsuranceSecurity {
     @Autowired
@@ -36,15 +34,17 @@ public class InsuranceSecurity {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.csrf().disable();
         httpSecurity.httpBasic();
         httpSecurity.formLogin()
                 .usernameParameter("username")
-                .successHandler(successHandler)
-                .failureHandler(failureHandler);
+                .failureHandler(failureHandler)
+                .successHandler(successHandler);
         httpSecurity.csrf().disable();
 
         httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
+//        httpSecurity.authorizeRequests().antMatchers("/insurancerepo/insurance.wsdl").permitAll();
+
         httpSecurity.authorizeRequests().anyRequest().authenticated();
 
 
@@ -57,4 +57,5 @@ public class InsuranceSecurity {
 
         return httpSecurity.build();
     }
+
 }

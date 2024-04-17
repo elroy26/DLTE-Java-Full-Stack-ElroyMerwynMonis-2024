@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: maybank.insurance.dao.InsuranceAvailedTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.699 s - in maybank.insurance.dao.InsuranceAvailedTest

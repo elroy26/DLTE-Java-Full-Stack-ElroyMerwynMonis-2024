@@ -34,7 +34,7 @@ class InsurancedaoApplicationTests {
         List<InsuranceAvailable> mockInsuranceList = new ArrayList<>();
         mockInsuranceList.add(new InsuranceAvailable(1, "Type1", "Name1", "KeyBenefits1", 10));
         mockInsuranceList.add(new InsuranceAvailable(2, "Type2", "Name2", "KeyBenefits2", 20));
-        when(jdbcTemplate.query(anyString(), any(InsuranceAvailableDbRepo.InsuranceMapper.class))).thenReturn(mockInsuranceList);
+//        when(jdbcTemplate.query(anyString(), any(InsuranceAvailableDbRepo.InsuranceMapper.class))).thenReturn(mockInsuranceList);
 
         // Calling the method under test
         List<InsuranceAvailable> result = insuranceAvailableDbRepo.callAllInsuranceAvailable();
@@ -49,7 +49,7 @@ class InsurancedaoApplicationTests {
         List<InsuranceAvailable> mockInsuranceList = new ArrayList<>();
         mockInsuranceList.add(new InsuranceAvailable(1, "Type1", "Name1", "KeyBenefits1", 10));
         mockInsuranceList.add(new InsuranceAvailable(2, "Type2", "Name2", "KeyBenefits2", 20));
-        when(jdbcTemplate.query(anyString(), any(InsuranceAvailableDbRepo.InsuranceMapper.class))).thenReturn(mockInsuranceList);
+//        when(jdbcTemplate.query(anyString(), any(InsuranceAvailableDbRepo.InsuranceMapper.class))).thenReturn(mockInsuranceList);
 
         // Calling the method under test
         List<InsuranceAvailable> result = insuranceAvailableDbRepo.callAllInsuranceAvailable();
@@ -63,7 +63,7 @@ class InsurancedaoApplicationTests {
 //    @Test
     void callAllInsuranceAvailable_NoDataFound() {
         // Mocking an empty response from the database
-        when(jdbcTemplate.query(anyString(), any(InsuranceAvailableDbRepo.InsuranceMapper.class))).thenReturn(new ArrayList<>());
+//        when(jdbcTemplate.query(anyString(), any(InsuranceAvailableDbRepo.InsuranceMapper.class))).thenReturn(new ArrayList<>());
 
         // Calling the method under test and expecting an exception
 //        assertThrows(SQLException.class, () -> insuranceAvailableDbRepo.callAllInsuranceAvailable());//fail

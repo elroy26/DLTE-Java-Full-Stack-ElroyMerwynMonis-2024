@@ -19,8 +19,7 @@ public class InsuranceAvailed {
     @Digits(integer = 2, fraction = 0, message = "{availed.insuranceLifetime.invalid}")
     private Integer insuranceLifetime;
     @NotNull(message = "{availed.insurancePremium.null}")
-    @Digits(integer = Integer.MAX_VALUE, fraction = Integer.MAX_VALUE, message = "{availed.insurancePremium.invalid}")
-//    @Pattern(regexp = "^\\d+$", message = "{availed.insurancePremium.invalid}")
+    @Digits(integer = Integer.MAX_VALUE, fraction =2, message = "{availed.insurancePremium.invalid}")
     private Double insurancePremium;
     @NotNull(message = "{availed.customerId.null}")
     @Digits(integer = 8, fraction = 0, message = "{user.customerId.null}")
@@ -29,7 +28,7 @@ public class InsuranceAvailed {
     @Digits(integer = 8, fraction = 0, message = "{availed.insuranceId.invalid}")
     private Integer insuranceId;
     @NotNull(message = "{availed.insuranceCoverage.null}")
-    @Digits(integer = Integer.MAX_VALUE, fraction = Integer.MAX_VALUE, message = "{availed.insuranceCoverage.invalid}")
+    @Digits(integer = Integer.MAX_VALUE, fraction = 2, message = "{availed.insuranceCoverage.invalid}")
     private Double insuranceCoverage;
 
     public InsuranceAvailed() {

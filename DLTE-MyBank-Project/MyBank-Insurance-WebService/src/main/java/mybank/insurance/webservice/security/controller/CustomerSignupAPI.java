@@ -27,7 +27,7 @@ public class CustomerSignupAPI {
 
     @PostMapping("/register")
     public Customer save(@RequestBody Customer customer){
-        logger.debug(resourceBundle.getString("Password encoded"));
+        logger.debug(resourceBundle.getString("security.password"));
         customer.setPassword(passwordEncoder.encode(customer.getPassword()));
         return repository.signingUp(customer);
     }

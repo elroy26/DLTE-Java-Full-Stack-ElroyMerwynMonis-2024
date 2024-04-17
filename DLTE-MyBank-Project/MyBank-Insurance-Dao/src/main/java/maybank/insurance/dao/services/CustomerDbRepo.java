@@ -52,21 +52,34 @@ public class CustomerDbRepo implements CustomerRepository,UserDetailsService {
 
     @Override
     public Customer findByUserName(String username) {
-        try {
-            return jdbcTemplate.queryForObject(
+//        try {
+            Customer customer=jdbcTemplate.queryForObject(
                     "SELECT * FROM MYBANK_WEB_CUSTOMER WHERE USERNAME = ?",
                     new Object[]{username},
                     new BeanPropertyRowMapper<>(Customer.class)
             );
-        } catch (EmptyResultDataAccessException e) {
-            // Handle case where no customer is found with the given username
-            throw new CustomerException(resourceBundle.getString("customer.null") + username+ e);
-        } catch (DataAccessException e) {
-            // Handle other database access exceptions
-            logger.error(resourceBundle.getString("customer.find.error")+username+ e);
-            throw new CustomerException(resourceBundle.getString("customer.find.error")+username+ e);
+
+            return customer;
+//        } catch (EmptyResultDataAccessException e) {
+//            // Handle case where no customer is found with the given username
+//            throw new CustomerException(resourceBundle.getString("customer.null") + username+ e);
+//        } catch (DataAccessException e) {
+//            // Handle other database access exceptions
+//            logger.error(resourceBundle.getString("customer.find.error")+username+ e);
+//            throw new CustomerException(resourceBundle.getString("customer.find.error")+username+ e);
+//        }
+    }
+
+    @Override
+    public Integer findByCustomerId(String userName) {
+        try {
+            return jdbcTemplate.queryForObject("SELECT CUSTOMER_ID FROM MYBANK_WEB_CUSTOMER WHERE USERNAME = ?", Integer.class, userName);
+        } catch (DataAccessException sqlException) {
+            logger.error(resourceBundle.getString("customer.id.error") + sqlException.getMessage());
+            throw new CustomerException(resourceBundle.getString("customer.id.error")+sqlException.getMessage());
         }
     }
+
 
     @Override
     public void updateAttempts(Customer customer) {

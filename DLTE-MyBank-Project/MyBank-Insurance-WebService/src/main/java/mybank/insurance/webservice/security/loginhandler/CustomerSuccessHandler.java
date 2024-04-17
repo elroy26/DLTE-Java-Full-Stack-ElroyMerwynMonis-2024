@@ -30,12 +30,18 @@ public class CustomerSuccessHandler extends SimpleUrlAuthenticationSuccessHandle
 
         Customer customer = (Customer) authentication.getPrincipal();
 
-        if (!"closed".equals(customer.getCustomerStatus())) {
-            customer.setAttempts(1);
-            logger.debug(resourceBundle.getString("security.update"));
-            service.updateAttempts(customer);
-
-            super.setDefaultTargetUrl("/insurance/availed");
+        if (!customer.getCustomerStatus().equals("closed")) {
+            if(customer.getAttempts()>1)
+            {
+                customer.setAttempts(1);
+                logger.warn(resourceBundle.getString("security.update"));
+                service.updateAttempts(customer);
+            }
+            logger.warn(customer.getCustomerStatus());
+            //System.out.println(customer.getAttempts()+" after updates");
+//            super.setDefaultTargetUrl("/insurance/availed");
+            super.setDefaultTargetUrl("/insurancerepo/insurance.wsdl");
+//            super.setDefaultTargetUrl("/swagger-ui/index.html");
         } else {
             logger.warn(resourceBundle.getString("security.max"));
             super.setDefaultTargetUrl("/login");
