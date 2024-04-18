@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .form-group label {
+            font-weight: bold; /* Bold label text */
+        }
+        .form-control:focus {
+            border-color: #ffd166; /* Yellow border color on focus */
+            box-shadow: 0 0 0 0.25rem rgba(141, 100, 3, 0.25); /* Yellow box shadow on focus */
+        }
+    </style>
+</head>
+<body style="background-color: rgb(206, 236, 246);">
+    <div class="container col-9">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4 me-4" id="insuranceCards">
+            <!-- Insurance cards will be dynamically generated here -->
+        </div>
+    </div>
+
+    <!-- Modal for detailed view -->
+    <div id="modalContent">
+        <!-- Modal content will be dynamically generated here -->
+    </div>
+
+    <script>
+        $(document).ready(() => {
+            // Array to store insurance data
+            const insuranceData = [];
+
+            // Function to fetch insurance data from SOAP endpoint
+            const fetchInsuranceData = () => {
+                // Construct SOAP request
+                var soapRequest = `
+                    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins="http://insurance.services">
+                        <soapenv:Header/>
+                        <soapenv:Body>
+                            <ins:callAllInsuranceAvailableRequest/>
+                        </soapenv:Body>
+                    </soapenv:Envelope>`;
+
+                // Make AJAX call to SOAP endpoint
+                $.ajax({
+                    url: "http://localhost:8082/insurancerepo/insurance.wsdl",
+                    type: "POST",
+                    dataType: "xml",
+                    data: soapRequest,
+                    contentType: "text/xml;charset=utf-8",
+                    success: function(response) {
+                        // Parse the SOAP response and extract insurance data
+                        $(response).find("ns2\\:insurance").each(function(index) {
+                            let insuranceID = $(this).find("ns2\\:insuranceId").text();
+                            let insuranceType = $(this).find("ns2\\:insuranceType").text();
+                            let insuranceName = $(this).find("ns2\\:insuranceName").text();
+                            let insuranceKeyBenefits = $(this).find("ns2\\:insuranceKeyBenefits").text();
+                            let insuranceLifetime = $(this).find("ns2\\:insuranceLifetime").text();
+
+                            // Create insurance object and add to insuranceData array
+                            insuranceData.push({ insuranceID, insuranceType, insuranceName, insuranceKeyBenefits, insuranceLifetime });
+                        });
+
+                        // Call function to generate insurance cards and modals
+                        generateInsuranceCards();
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error fetching insurance data:", error);
+                    }
+                });
+            };
+
+            // Function to generate insurance cards and modals
+            const generateInsuranceCards = () => {
+                // Clear existing content
+                $("#insuranceCards").empty();
+                $("#modalContent").empty();
+
+                // Loop through insurance data to generate cards and modals
+                insuranceData.forEach((insurance, index) => {
+                    // Generate card HTML
+                    let cardHtml = `
+                        <div class="col">
+                            <div class="card text-white bg-warning btn btn-outline-dark p-2 me-4 shadow-lg" data-bs-toggle="modal" data-bs-target="#cardModal${index}">
+                                <div class="card-header">${insurance.insuranceType}</div>
+                                <div class="card-body card-content">
+                                    <h5 class="card-title">${insurance.insuranceName}</h5>
+                                    <p class="card-text">${insurance.insuranceKeyBenefits}</p>
+                                </div>
+                            </div>
+                        </div>`;
+
+                    // Append card HTML to #insuranceCards div
+                    $("#insuranceCards").append(cardHtml);
+
+                    // Generate modal HTML
+                    let modalHtml = `
+                        <div class="modal fade" id="cardModal${index}" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="cardModalLabel">Detailed View</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="card text-white bg-warning">
+                                            <div class="card-header">${insurance.insuranceType}</div>
+                                            <div class="card-body">
+                                                <h3 class="card-title">${insurance.insuranceName}</h3>
+                                                <h5 class="card-body">
+                                                    <p class="card-text font-monospace">Insurance ID: ${insurance.insuranceID}</p>
+                                                    <p class="card-text font-monospace">Insurance Type: ${insurance.insuranceType}</p>
+                                                    <p class="card-text font-monospace">Key Benefits: ${insurance.insuranceKeyBenefits}</p>
+                                                    <p class="card-text font-monospace text-dark">Insurance Lifetime: ${insurance.insuranceLifetime}</p>
+                                                </h5>
+                                                <button type="button" onclick="window.location.href='../html/AvailInsurance.html'" class="btn btn-primary">Apply Insurance</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+
+                    // Append modal HTML to #modalContent div
+                    $("#modalContent").append(modalHtml);
+                });
+            };
+
+            // Call function to fetch insurance data
+            fetchInsuranceData();
+        });
+    </script>
+</body>
+</html>
