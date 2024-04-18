@@ -60,10 +60,10 @@ public class InsuranceSecurity {
                 .successHandler(successHandler);
         httpSecurity.csrf().disable();
         httpSecurity.cors();
-        
+
         httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
-//        httpSecurity.authorizeRequests().antMatchers("/insurancerepo/insurance.wsdl").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/insurancerepo/insurance.wsdl").permitAll();
 
         httpSecurity.authorizeRequests().anyRequest().authenticated();
 
