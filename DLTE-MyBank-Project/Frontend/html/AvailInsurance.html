@@ -55,7 +55,7 @@
                     type: "POST",
                     dataType: "text",
                     beforeSend: function (handler) {
-                        handler.setRequestHeader("Authorization", "Basic " + btoa("doe:12345678"));
+                        handler.setRequestHeader("Authorization", "Basic " + sessionStorage.getItem("logged"));
                     },
                     contentType: "application/json;charset=utf-8",
                     data: JSON.stringify(request),
@@ -87,10 +87,13 @@
     </script>
 </head>
 <body style="background-color: rgb(206, 236, 246);">
-    <div class="container">
-        <div class="row justify-content-center">
+    <div class="container ">
+        <div class="row justify-content-center ">
+            <div class="col-md-8 bg-warning-subtle">
+                <div class="card p-4 ">
+                    <h1 class="text-center mb-4">Apply for Insurance</h1>
             <p id="status" class="display-6 text-center text-primary"></p>
-            <div class="p-5 m-5 rounded-5 shadow">
+            <div class="p-5 m-5 rounded-5 shadow ">
                 <div class="form-group">
                     <label for="insuranceType">Insurance Type</label>
                     <input type="text" id="insuranceType" class="form-control" placeholder="Insurance type" />
@@ -124,12 +127,13 @@
                     <input type="number" id="insuranceID" class="form-control" placeholder="Insurance ID" />
                 </div>
                 <div class="m-5 row justify-content-around">
-                    <button id="add" class="col-1 btn btn-outline-primary"><p class="display-6 bi bi-cash-coin"></p></button>
-                    <button id="cancel" class="col-1 btn btn-outline-dark"><p class="display-6 bi bi-escape"></p></button>
+                    <button id="add" class="col-5 btn btn-outline-success"><p class="display-5 bi bi-envelope-check"></p></button>
+                    <button id="cancel" class="col-5 btn btn-outline-danger"><p class="display-5 bi bi-envelope-x"></p></button>
                 </div>
             </div>
         </div>
     </div>
-    
+</div>
+</div>
 </body>
 </html>
