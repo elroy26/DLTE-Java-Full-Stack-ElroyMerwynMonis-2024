@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+    <!-- Add new loan -->
+    <h:form>
+        Loan Number: <h:inputText value="#{loanBean.newLoan.loanNumber}" /><br/>
+        Loan Amount: <h:inputText value="#{loanBean.newLoan.loanAmount}" /><br/>
+        Loan Date: <h:inputText value="#{loanBean.newLoan.loanDate}" /><br/>
+        Loan Status: <h:inputText value="#{loanBean.newLoan.loanStatus}" /><br/>
+        Borrower Name: <h:inputText value="#{loanBean.newLoan.borrowerName}" /><br/>
+        Borrower Contact: <h:inputText value="#{loanBean.newLoan.borrowerContact}" /><br/>
+        <h:commandButton value="Add Loan" action="#{loanBean.addNewLoan}" />
+    </h:form>
+
+    <!-- Display closed loans -->
+    <h:dataTable value="#{loanBean.closedLoans}" var="loan">
+        <h:column>
+            <f:facet name="header">Loan Number</f:facet>
+            #{loan.loanNumber}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Loan Amount</f:facet>
+            #{loan.loanAmount}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Loan Date</f:facet>
+            #{loan.loanDate}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Loan Status</f:facet>
+            #{loan.loanStatus}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Borrower Name</f:facet>
+            #{loan.borrowerName}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Borrower Contact</f:facet>
+            #{loan.borrowerContact}
+        </h:column>
+    </h:dataTable>
+
+    <!-- Delete loan -->
+    <h:form>
+        Loan Number to Delete: <h:inputText value="#{loanBean.loanNumberToDelete}" /><br/>
+        <h:commandButton value="Delete Loan" action="#{loanBean.deleteLoan}" />
+    </h:form></f:view>
+</html>
