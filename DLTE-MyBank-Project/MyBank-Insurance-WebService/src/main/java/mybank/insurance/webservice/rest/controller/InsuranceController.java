@@ -70,19 +70,16 @@ public class InsuranceController {
     public ResponseEntity<Object> save(@Valid @RequestBody InsuranceAvailed availed){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username = authentication.getName();
-//        System.out.println(username);
+
         // Retrieve the customer ID associated with the logged-in customer name from the database
         Integer loggedInCustomerId =customerRepository.findByCustomerId(username);
-//        System.out.println(loggedInCustomerId);
         InsuranceAvailed availed1=null;
         if (!loggedInCustomerId.equals(availed.getCustomerId())) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(resourceBundle.getString("customer.avail.iderror"));
         }
         try {
+
             availed1=availedDbRepo.callSaveInsuranceAvailed(availed);
-
-//            System.out.println(availed.getCustomerId());
-
             return ResponseEntity.ok(availed1);
 
         }catch (SQLException sqlException) {

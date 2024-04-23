@@ -39,8 +39,8 @@ public class CustomerSuccessHandler extends SimpleUrlAuthenticationSuccessHandle
             }
             logger.warn(customer.getCustomerStatus());
             //System.out.println(customer.getAttempts()+" after updates");
-            super.setDefaultTargetUrl("/insurance/availed");
-//            super.setDefaultTargetUrl("/insurancerepo/insurance.wsdl");
+//            super.setDefaultTargetUrl("/insurance/availed");
+            super.setDefaultTargetUrl("/insurancerepo/insurance.wsdl");
 
         } else {
             logger.warn(resourceBundle.getString("security.max"));

@@ -15,6 +15,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.ResourceBundle;
 
 @Service
@@ -52,32 +53,39 @@ public class CustomerDbRepo implements CustomerRepository,UserDetailsService {
 
     @Override
     public Customer findByUserName(String username) {
-//        try {
-            Customer customer=jdbcTemplate.queryForObject(
-                    "SELECT * FROM MYBANK_WEB_CUSTOMER WHERE USERNAME = ?",
-                    new Object[]{username},
-                    new BeanPropertyRowMapper<>(Customer.class)
-            );
-
+        try {
+            Customer customer = listAllCustomer().stream()
+                    .filter(each -> each.getUsername().equals(username))
+                    .findFirst()
+                    .orElseThrow(() -> new EmptyResultDataAccessException(resourceBundle.getString("customer.id.error"), 1));
             return customer;
-//        } catch (EmptyResultDataAccessException e) {
-//            // Handle case where no customer is found with the given username
-//            throw new CustomerException(resourceBundle.getString("customer.null") + username+ e);
-//        } catch (DataAccessException e) {
-//            // Handle other database access exceptions
-//            logger.error(resourceBundle.getString("customer.find.error")+username+ e);
-//            throw new CustomerException(resourceBundle.getString("customer.find.error")+username+ e);
-//        }
+        } catch (EmptyResultDataAccessException e) {
+            // Handle case where no customer is found with the given username
+            throw new CustomerException(resourceBundle.getString("customer.null") + username+ e);
+        } catch (DataAccessException e) {
+            // Handle other database access exceptions
+            logger.error(resourceBundle.getString("customer.find.error")+username+ e);
+            throw new CustomerException(resourceBundle.getString("customer.find.error")+username+ e);
+        }
     }
 
     @Override
     public Integer findByCustomerId(String userName) {
         try {
-            return jdbcTemplate.queryForObject("SELECT CUSTOMER_ID FROM MYBANK_WEB_CUSTOMER WHERE USERNAME = ?", Integer.class, userName);
+//            return jdbcTemplate.queryForObject("SELECT CUSTOMER_ID FROM MYBANK_WEB_CUSTOMER WHERE USERNAME = ?", Integer.class, userName);
+            Customer customer = listAllCustomer().stream()
+                    .filter(each -> each.getUsername().equals(userName))
+                    .findFirst()
+                    .orElseThrow(() -> new EmptyResultDataAccessException(resourceBundle.getString("customer.id.error"), 1));
+            return customer.getCustomerId();
         } catch (DataAccessException sqlException) {
             logger.error(resourceBundle.getString("customer.id.error") + sqlException.getMessage());
             throw new CustomerException(resourceBundle.getString("customer.id.error")+sqlException.getMessage());
         }
+    }
+
+    public List<Customer> listAllCustomer(){
+        return jdbcTemplate.query("select * from MYBANK_WEB_CUSTOMER",new BeanPropertyRowMapper<>(Customer.class));
     }
 
 
