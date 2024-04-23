@@ -44,7 +44,7 @@
                 </li>
 
                 <li class="nav-item pe-3" >
-                    <a class="logout nav-link text-light btn btn-outline-danger border border-light ">Logout</a>
+                    <a class="logout nav-link text-light btn btn-outline-danger border border-light " href="logout">Logout</a>
                 </li>
             </ul>
             <!-- Search bar -->
