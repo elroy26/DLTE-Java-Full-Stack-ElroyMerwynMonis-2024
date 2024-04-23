@@ -1,0 +1,219 @@
+capture the employee permanent address and temp address ,name spliteed form,
+house name,street,city,stae,pincode
+eamil,phone number
+
+---------------------------------------------------------------------------------
+
+for what type of bussiness
+	== do you want the user to enter the address in the splitted form 
+		if yes: how many forms
+			like city state country
+		do you want this format for temporary address also
+	   if the user enters the address how would admin like to view it. like do you want counts of type
+		
+	== along with adress what other details you want to retrive from the customer
+
+	== so along with address do you want the name of the person who is entering the address
+		if yes:
+			do you want user to enter the name in one line or
+			multiple line(first name,middle name, last name)
+		how do you want to view the name should itbe associate with the city
+
+tostring():	
+use loop
+how will we know in how many placess we havae use mthods	
+Debug mode- reach upto a specific point and reach onto it	
+see documentation
+try with foreach
+what is null pointerexception
+
+check null for the required vlues
+then use if condition for handling the exception
+performance faster. fintuning the code
+
+missed requremnt gathering started striaght away class
+have design on a document before starting
+segregate the code- be conceptually clear, performance handling, do more hands on, 
+use debugger- at the run time change the value of the data get familiar.
+	step by step, go specific point
+
+
+next time add switch input and display error handling, 
+	so while readig if the user wants to enter then continue it or else show the menu
+
+----------------------------------------------------------------------------
+is it possible to have have break in method
+after break there iscode will the code execute
+what is the use of return
+if i give invalid input in swith case why will it ask again
+while designing make it more user frendly
+
+can i make a 2 differnt pom.xml like one for input and other for output
+
+implement trycatch, one to many,loggers,properties 
+cqn we keep files in the network , how to access it
+
+display for a specific pincode filter method
+can we retrive the specific content from the file
+
+------------
+is it required to keep the properties in the resource directory where are we reading it,
+what does getbundle give . what does it do
+what is the difference between the txt and properties file
+why should we use properties
+place it in differnet location and check it
+how to know if i am using the method in differnt project struture
+will printstack trace will it print in log file
+for run time exception waht type of logger level should we use
+use user defined exception
+
+
+----------------------------
+12/03/2024
+
+dont create object for validation everytime because it consumes space
+keep validation in the util class so others can access
+garbage collector
+crate acommon place for the notes
+see atleast one test data 
+in file while stroing data store it in the readabe form
+how arraylist is stored in the file 
+string Tokenizer store it in the form of stong with deliiters
+while stroring we will strore it has a string
+but while retiving we will retrive it from the a byte method 
+read the file line by line from the program 
+design architecture 
+slf4j: should we use logback name only other name is allowed
+can we write it in the same file all the time if the file is 1gb of size then can i open it in the notepad
+can i make sure only error is added to the log file not the info---- check about enabling the log level 
+start designing the interface
+
+why version snapshot is used---- sir explained it 2.0.7-highEffect.majoreffect.bugFixes(lessEffect)
+
+do 2.0 snapshot new one with database
+
+------------------
+13/03/2024
+use a vaiable if only one employee list is used if many employee list are there then use lists
+each backend should have interface. so middleware should not have interface all time time
+object->businesslogic(valicdation)->interface->implementaion 
+get should be done in the console and set in backend
+
+-----------------------------
+19/03/2024
+
+make sure the classname is samiliar to the package name
+make sure while using constructor the passing arguments are not lengthy
+make sure the package nameformat is good has the external dependency
+what is the differnce between the break and return and continue;
+
+comment the qureies on the worksheet sql developers when there are multiple qureies in the worksheet
+add the constraint violation exception
+make sure the user know what exception is happening like the exact reason what user shold kow not the inbuld 
+in which all cases sqlintegrity constraint violation excepton
+
+in the webservice how many cases we should we consider for a particular method
+for a particular signature return type homeny cases can we return if all how do we do it
+for multiple exception we can use thows keyword
+for the most of the error we give message has system error
+
+---------------------------------
+20/03/2024
+
+use constor only while necessary and try to use the methods of initialize the connection
+bussness logic in another package 
+dont use constructor for the database connection
+seperate validation class for the pojo to check if the getter and seeter is not null
+start writing the junit
+
+======================
+26/02/2024
+
+create one class and table for the address 
+add on delete cascade and index.
+generate more than one log in the system
+customer relationship 
+team workmanship
+so id the file size increased then new file is generated and zipped with the previous file.
+return indiviual record as indiviual list of objects
+write the query beautifully not all in one line. write it in multiple line such that that it is readable
+why inner join is used . what is the difference between the inner join and join 
+filter by pincode wrt to permanent or temporary
+write the select column nane no the * write only the specified column not the entire colum
+difernt type joins in sql
+in the left side it is database scheama connection or schema
+use soap webservice in new project
+why not rest in client
+commenting in the sql
+-----------------------
+27/03/2024
+
+use the flag value for the temporary address
+have we used any of the java8 feature
+let the query return everting for the filter pincode and use the stream for that filterpincode method. 
+try to use all the concepts learned till now in this emplyee project
+join and inner joim is not same check with on and in 
+so one database connection can it have multiple database
+defien our own schema and make sure it has only the table that i want see not the default tables 
+version mangement layer, module
+
+console(3.0) <-> webservice(1.0) <-> backend database(1.0)
+
+waht is the diffence between the methods in ha=java and the websevice
+
+
+===================================
+02/04/2024
+
+learn http code
+who is preparing the the hhtp code server or coder
+handle the http errors and send message to the client
+use if else for throwing exception
+
+--------------------------------
+03/04/2024
+
+if there is server error the that getEnity what does it hold 
+check the null pointer response and the response .getentity should not get null value always check it.
+differntiate which role. like producer, tester, etc
+what is components 
+user properties got the url 
+and also use the methods for th eurl
+develop the spring project for the employee
+
+
+=============================================
+17/04/2024
+
+jdbc and nomal java sql differnce
+	the whole life cycle is controlled in noraml java but in spring container takes the control
+for login add java 8 features
+make sure the dao return waht the query returns
+and do the filter in the webservice 
+same method can be written in multiple way
+insurance name must be unique
+stream filter how does it acutally work
+without mock data how do i test it
+test all the possible cases
+
+==================================
+23/04/2024
+
+is it possible to start the developement for the dao and the webservice at the same time or it shoud start att he differnt time
+check about the customre id , insurane name and insurance type
+customer id 
+know the bussiness functionality of all the teams on the modules they are working on 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

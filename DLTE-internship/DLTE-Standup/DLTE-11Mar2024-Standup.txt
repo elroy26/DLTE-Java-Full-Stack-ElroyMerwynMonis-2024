@@ -1,0 +1,5 @@
+in class level where else can we use genrics----
+in which data loss is more files or database
+explian acid properties with examples- isolation,durabilty
+what is lambda and stream 
+  

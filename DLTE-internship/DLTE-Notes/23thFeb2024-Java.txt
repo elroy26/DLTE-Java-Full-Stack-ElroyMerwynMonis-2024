@@ -1,0 +1,51 @@
+Singleton classes: it is a class where it has one instance at time
+eg: runtime.getruntime();
+
+== multithreading:
+eg: lot
+
+parellel processing
+
+components:
+	resource class/service provider
+	1. extends thread>> java.lan
+	2. implements runnable>> java.Lang
+if we wan to access the resource class the execution begins form the run() method
+public void run(){
+	Thread.currentThread().getName()
+}
+
+
+main class;
+	customer/thread created towards the resouce
+Thread obj=new Thread(resorce,"nameof the thread');
+
+--execute:
+start- it goes to the run method
+run-it goes to main
+
+singletask multithread>>svncronized thread makes sure one thread is executed at atime
+multi task multithead>> inside the run method we use syncronized so thaat particaular thread is executed one at time ousise that other thread can be executed any tie.----also we can use the join method so that one thread exutes then other thread have to wait.
+
+method references: inheritence acan be avoidance object::member
+the objet has no definaition
+
+Tread life cyle:
+born
+running: start run notify
+
+passing data from one thread to the other can be done by constructor
+interthread communication
+
+SQL-------------------------
+--DCL: we are creatibg a user and give privilege using dcl, 
+	grant,revoke
+	select,connect,inset ,deelte,create
+
+%e%-anything with begging followed by e and ending anythig
+
+=== to create er diagram
+file->datamodula->improt->datadictionary
+
+== Joins:
+left,right,inner full

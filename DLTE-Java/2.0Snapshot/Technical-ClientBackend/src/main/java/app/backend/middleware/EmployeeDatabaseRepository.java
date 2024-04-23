@@ -1,8 +1,8 @@
 package app.backend.middleware;
 
+import app.backend.entity.EmployeeAddress;
 import app.backend.entity.EmployeeDetails;
-import app.backend.entity.EmployeePermanentAddress;
-import app.backend.entity.EmployeeTemporaryAddress;
+import app.backend.exceptions.EmployeeException;
 import app.backend.remotes.EmployeeRepository;
 
 import app.backend.validation.Validation;
@@ -27,8 +27,7 @@ public class EmployeeDatabaseRepository implements EmployeeRepository {
     }
 
     @Override
-    public EmployeeDetails insertEmployeeDetails(EmployeeDetails details) {
-//        connection=databaseTarget.initializeConnection();
+    public EmployeeDetails insertEmployeeDetails(EmployeeDetails details) throws SQLException {
         PreparedStatement employeeStatement = null;
         try {
             Validation validation=new Validation();
@@ -47,20 +46,26 @@ public class EmployeeDatabaseRepository implements EmployeeRepository {
                     logger.info(resourceBundle.getString("db.repo.insertEmployeeOk"));
                 } else {
                     logger.error(resourceBundle.getString("service.input.employee"));
+                    throw new EmployeeException(resourceBundle.getString("service.input.employee"));
                 }
             }else{
                 logger.warn("Error in employee details");
             }
         }catch (SQLIntegrityConstraintViolationException e) {
             logger.error("Constraint violation: " + e.getMessage());
+            throw new SQLException(e);
         } catch (SQLSyntaxErrorException e) {
             logger.error("SQL syntax error: " + e.getMessage());
+            throw new SQLException(e);
         } catch (DataTruncation e) {
             logger.error("Data truncation: " + e.getMessage());
+            throw new SQLException(e);
         } catch (SQLException e) {
             logger.error("Other SQL Exception: " + e.getMessage());
+            throw new SQLException(e);
         } catch (Exception e) {
             logger.error("Unexpected exception occurred: " + e.getMessage());
+            throw new SQLException(e);
         }finally {
             if (employeeStatement != null) {
                 try {
@@ -82,134 +87,112 @@ public class EmployeeDatabaseRepository implements EmployeeRepository {
     }
 
     @Override
-    public EmployeePermanentAddress insertEmployeePermanentAddress(EmployeePermanentAddress permanentAddress) {
-//        connection=databaseTarget.initializeConnection();
-        PreparedStatement permanentAddressStatement = null;
+    public EmployeeAddress insertEmployeeAddress(EmployeeAddress permanentAddress,EmployeeAddress temporaryAddress) throws SQLException {
+        PreparedStatement addressStatement = null;
 
         try {
             Validation validation=new Validation();
-            if (validation.validateEmployeePermanentAddress(permanentAddress)==true){
+            if (validation.validateEmployeeAddress(permanentAddress,temporaryAddress)==true){
                 permanentAddress.setEmployeeID(empId);
-                String permanentAddressInsertQuery = "INSERT INTO Employee_Permanent_Address (employee_id, permanentHouseName, permanentStreetName, permanentCity, permanentState, pincodePermanent) VALUES (?, ?, ?, ?, ?, ?)";
-                permanentAddressStatement = connection.prepareStatement(permanentAddressInsertQuery);
-                permanentAddressStatement.setInt(1, permanentAddress.getEmployeeID());
-                permanentAddressStatement.setString(2, permanentAddress.getPermanentHouseName());
-                permanentAddressStatement.setString(3, permanentAddress.getPermanentStreetName());
-                permanentAddressStatement.setString(4, permanentAddress.getPermanentCity());
-                permanentAddressStatement.setString(5, permanentAddress.getPermanentState());
-                permanentAddressStatement.setInt(6, permanentAddress.getPincodePermanent());
+                temporaryAddress.setEmployeeID(empId);
+                String addressInsertQuery = "INSERT INTO Employee_Addresses (employee_id, house_name, street_name, city, residing_state, pincode, isTemporary) VALUES (?, ?, ?, ?, ?, ?, ?)";
+                addressStatement = connection.prepareStatement(addressInsertQuery);
+//                addressStatement.setInt(1, permanentAddress.getEmployeeID());
+//                addressStatement.setString(2, permanentAddress.getHouseName());
+//                addressStatement.setString(3, permanentAddress.getStreetName());
+//                addressStatement.setString(4, permanentAddress.getCity());
+//                addressStatement.setString(5, permanentAddress.getState());
+//                addressStatement.setInt(6, permanentAddress.getPincode());
+//
+//                addressStatement.setString(7, temporaryAddress.getHouseName());
+//                addressStatement.setString(8, temporaryAddress.getStreetName());
+//                addressStatement.setString(9, temporaryAddress.getCity());
+//                addressStatement.setString(10, temporaryAddress.getState());
+//                addressStatement.setInt(11, temporaryAddress.getPincode());
 
-                int affectedRows = permanentAddressStatement.executeUpdate();
+                // Insert permanent address
+                addressStatement.setInt(1, permanentAddress.getEmployeeID());
+                addressStatement.setString(2, permanentAddress.getHouseName());
+                addressStatement.setString(3, permanentAddress.getStreetName());
+                addressStatement.setString(4, permanentAddress.getCity());
+                addressStatement.setString(5, permanentAddress.getState());
+                addressStatement.setInt(6, permanentAddress.getPincode());
+                addressStatement.setString(7, "false");
+                addressStatement.executeUpdate();
+
+                // Insert temporary address
+                addressStatement.setInt(1, temporaryAddress.getEmployeeID());
+                addressStatement.setString(2, temporaryAddress.getHouseName());
+                addressStatement.setString(3, temporaryAddress.getStreetName());
+                addressStatement.setString(4, temporaryAddress.getCity());
+                addressStatement.setString(5, temporaryAddress.getState());
+                addressStatement.setInt(6, temporaryAddress.getPincode());
+                addressStatement.setString(7, "true");
+//                addressStatement.executeUpdate();
+
+                int affectedRows = addressStatement.executeUpdate();
 
                 if (affectedRows > 0) {
                     logger.info(resourceBundle.getString("db.repo.insertPermanentOK"));
                 } else {
                     logger.error(resourceBundle.getString("service.input.permanent"));
+                    throw new EmployeeException(resourceBundle.getString("service.input.permanent"));
                 }
             }else {
                 logger.warn("Error in employee details");
-            }
-
-        }catch (SQLIntegrityConstraintViolationException e) {
-            logger.error("Constraint violation: " + e.getMessage());
-        } catch (SQLSyntaxErrorException e) {
-            logger.error("SQL syntax error: " + e.getMessage());
-        } catch (DataTruncation e) {
-            logger.error("Data truncation: " + e.getMessage());
-        } catch (SQLException e) {
-            logger.error("Other SQL Exception: " + e.getMessage());
-        } catch (Exception e) {
-            logger.error("Unexpected exception occurred: " + e.getMessage());
-        } finally {
-            if (permanentAddressStatement != null) {
-                try {
-                    permanentAddressStatement.close();
-                } catch (SQLException e) {
-                    logger.error(resourceBundle.getString("db.repo.preparedStatement"), e.getMessage());
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    logger.error("Error closing connection: " + e.getMessage());
-                }
-            }
-        }
-
-        return null;
-    }
-
-    @Override
-    public EmployeeTemporaryAddress insertEmployeeTemporaryAddress(EmployeeTemporaryAddress temporaryAddress) {
-//        connection=databaseTarget.initializeConnection();
-        PreparedStatement temporaryAddressStatement = null;
-        try {
-            Validation validation=new Validation();
-
-            if (validation.validateEmployeeTemporaryAddress(temporaryAddress)==true) {
-                temporaryAddress.setEmployeeID(empId);
-                String temporaryAddressInsertQuery = "INSERT INTO Employee_Temporary_Address (employee_id, temporaryHouseName, temporaryStreetName, temporaryCity, temporaryState, pincodeTemporary) VALUES (?, ?, ?, ?, ?, ?)";
-                temporaryAddressStatement = connection.prepareStatement(temporaryAddressInsertQuery);
-                temporaryAddressStatement.setInt(1, temporaryAddress.getEmployeeID());
-                temporaryAddressStatement.setString(2, temporaryAddress.getTemporaryHouseName());
-                temporaryAddressStatement.setString(3, temporaryAddress.getTemporaryStreetName());
-                temporaryAddressStatement.setString(4, temporaryAddress.getTemporaryCity());
-                temporaryAddressStatement.setString(5, temporaryAddress.getTemporaryState());
-                temporaryAddressStatement.setInt(6, temporaryAddress.getPincodeTemporary());
-
-                int affectedRows = temporaryAddressStatement.executeUpdate();
-
-                if (affectedRows > 0) {
-                    logger.info(resourceBundle.getString("db.repo.insertTemporaryOK"));
-                } else {
-                    logger.error(resourceBundle.getString("service.input.temporary"));
-                }
-            }else {
-                logger.warn("Error in employee details");
+                throw new EmployeeException("Error in employee details");
             }
         }catch (SQLIntegrityConstraintViolationException e) {
             logger.error("Constraint violation: " + e.getMessage());
+            throw new SQLException(e);
+
         } catch (SQLSyntaxErrorException e) {
             logger.error("SQL syntax error: " + e.getMessage());
+            throw new SQLException(e);
+
         } catch (DataTruncation e) {
             logger.error("Data truncation: " + e.getMessage());
+            throw new SQLException(e);
+
         } catch (SQLException e) {
             logger.error("Other SQL Exception: " + e.getMessage());
+            throw new SQLException(e);
+
         } catch (Exception e) {
             logger.error("Unexpected exception occurred: " + e.getMessage());
+            throw new SQLException(e);
+
         } finally {
-            if (temporaryAddressStatement != null) {
-                try {
-                    temporaryAddressStatement.close();
-                } catch (SQLException e) {
-                    logger.error(resourceBundle.getString("db.repo.preparedStatement"), e.getMessage());
-                }
-            }if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    logger.error("Error closing connection: " + e.getMessage());
-                }
+        if (addressStatement != null) {
+            try {
+                addressStatement.close();
+            } catch (SQLException e) {
+                logger.error(resourceBundle.getString("db.repo.preparedStatement"), e.getMessage());
             }
         }
-
+        if (connection != null) {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                logger.error("Error closing connection: " + e.getMessage());
+            }
+        }
+        }
         return null;
     }
 
+
     @Override
-    public List<EmployeeDetails> outputEmployeeProfile() {
+    public List<EmployeeDetails> outputEmployeeProfile() throws SQLException {
         PreparedStatement preparedStatement=null;
         ResultSet resultSet=null;
         List<EmployeeDetails> employeeDetailsList = new ArrayList<>();
         try {
 
             String query = "SELECT e.employee_ID, e.FirstName, e.MiddleName, e.LastName, e.email, e.phoneNumber, " +
-                    "p.permanentHouseName, p.permanentStreetName, p.permanentCity, p.permanentState, p.pincodePermanent, " +
-                    "t.temporaryHouseName, t.temporaryStreetName, t.temporaryCity, t.temporaryState, t.pincodeTemporary " +
+                    "a.House_Name, a.Street_Name, a.City, a.Residing_State, a.pincode,a.isTemporary " +
                     "FROM employee_details e " +
-                    "JOIN employee_permanent_address p ON e.employee_ID = p.employee_id " +  // Corrected aliasing
-                    "JOIN employee_temporary_address t ON e.employee_ID = t.employee_id";   // Corrected aliasing
+                    "JOIN employee_addresses a ON e.employee_ID = a.employee_id ";
 
 
             preparedStatement = connection.prepareStatement(query);
@@ -225,85 +208,86 @@ public class EmployeeDatabaseRepository implements EmployeeRepository {
                 employeeDetails.setPhoneNumber(resultSet.getLong(6));
 
                 // Creating permanent address object and setting its details
-                EmployeePermanentAddress permanentAddress = new EmployeePermanentAddress();
-                permanentAddress.setPermanentHouseName(resultSet.getString(7));
-                permanentAddress.setPermanentStreetName(resultSet.getString(8));
-                permanentAddress.setPermanentCity(resultSet.getString(9));
-                permanentAddress.setPermanentState(resultSet.getString(10));
-                permanentAddress.setPincodePermanent(resultSet.getInt(11));
+                EmployeeAddress permanentAddress = new EmployeeAddress();
+                permanentAddress.setHouseName(resultSet.getString(7));
+                permanentAddress.setStreetName(resultSet.getString(8));
+                permanentAddress.setCity(resultSet.getString(9));
+                permanentAddress.setState(resultSet.getString(10));
+                permanentAddress.setPincode(resultSet.getInt(11));
 
-                // Creating temporary address object and setting its details
-                EmployeeTemporaryAddress temporaryAddress = new EmployeeTemporaryAddress();
-                temporaryAddress.setTemporaryHouseName(resultSet.getString(12));
-                temporaryAddress.setTemporaryStreetName(resultSet.getString(13));
-                temporaryAddress.setTemporaryCity(resultSet.getString(14));
-                temporaryAddress.setTemporaryState(resultSet.getString(15));
-                temporaryAddress.setPincodeTemporary(resultSet.getInt(16));
-
-                // Setting permanent and temporary addresses to the employee details object
-                employeeDetails.setEmployeePermanentAddress(permanentAddress);
+                EmployeeAddress temporaryAddress = new EmployeeAddress();
+                if (resultSet.next()) {
+                    // Creating temporary address object and setting its details
+                    temporaryAddress.setHouseName(resultSet.getString(7));
+                    temporaryAddress.setStreetName(resultSet.getString(8));
+                    temporaryAddress.setCity(resultSet.getString(9));
+                    temporaryAddress.setState(resultSet.getString(10));
+                    temporaryAddress.setPincode(resultSet.getInt(11));
+                }
                 employeeDetails.setEmployeeTemporaryAddress(temporaryAddress);
-
+                employeeDetails.setEmployeePermanentAddress(permanentAddress);
                 employeeDetailsList.add(employeeDetails);
+                }
 
-            }
-
-        } catch (SQLIntegrityConstraintViolationException e) {
+    } catch (SQLIntegrityConstraintViolationException e) {
             logger.error("Constraint violation: " + e.getMessage());
+            throw new SQLException(e);
+
         }
         catch (SQLSyntaxErrorException e) {
             logger.error("SQL syntax error: " + e.getMessage());
+            throw new SQLException(e);
+
         }
         catch (DataTruncation e) {
             logger.error("Data truncation: " + e.getMessage());
+            throw new SQLException(e);
+
         }
         catch (SQLException e) {
             logger.error("Other SQL Exception: " + e.getMessage());
+            throw new SQLException(e);
+
         }finally {
-            if (resultSet != null) {
-                try {
-                    resultSet.close();
-                } catch (SQLException e) {
-                    logger.error("Error closing result set: " + e.getMessage());
-                }
+        if (resultSet != null) {
+            try {
+                resultSet.close();
+            } catch (SQLException e) {
+                logger.error("Error closing result set: " + e.getMessage());
             }
-            if (preparedStatement != null) {
-                try {
-                    preparedStatement.close();
-                } catch (SQLException e) {
-                    logger.error("Error closing prepared statement: " + e.getMessage());
-                }
+        }
+        if (preparedStatement != null) {
+            try {
+                preparedStatement.close();
+            } catch (SQLException e) {
+                logger.error("Error closing prepared statement: " + e.getMessage());
             }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    logger.error("Error closing connection: " + e.getMessage());
-                }
+        }
+        if (connection != null) {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                logger.error("Error closing connection: " + e.getMessage());
             }
+        }
         }
         return employeeDetailsList;
     }
     @Override
-    public List<EmployeeDetails> filterEmployeeProfilesByPincode(int pincode) {
-//        connection=databaseTarget.initializeConnection();
+    public List<EmployeeDetails> filterEmployeeProfilesByPincode(int pincode) throws SQLException {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         List<EmployeeDetails> employeeDetailsList = new ArrayList<>();
 
         try {
             String query = "SELECT e.employee_ID, e.FirstName, e.MiddleName, e.LastName, e.email, e.phoneNumber, " +
-                    "p.permanentHouseName, p.permanentStreetName, p.permanentCity, p.permanentState, p.pincodePermanent, " +
-                    "t.temporaryHouseName, t.temporaryStreetName, t.temporaryCity, t.temporaryState, t.pincodeTemporary "+
+                    "a.House_Name, a.Street_Name, a.City, a.Residing_State, a.pincode,a.isTemporary " +
                     "FROM employee_details e " +
-                    "JOIN employee_permanent_address p ON e.employee_ID = p.employee_id and p.pincodePermanent = ? " +
-                    "left outer JOIN employee_temporary_address t ON e.employee_ID = t.employee_id and t.pincodetemporary = ?";
-
+                    "JOIN employee_addresses a ON e.employee_ID = a.employee_id "+
+                    "WHERE a.pincode = ?";
 
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, pincode);
-            preparedStatement.setInt(2, pincode);
-
 
             resultSet = preparedStatement.executeQuery();
 
@@ -316,20 +300,21 @@ public class EmployeeDatabaseRepository implements EmployeeRepository {
                 employeeDetails.setEmail(resultSet.getString(5));
                 employeeDetails.setPhoneNumber(resultSet.getLong(6));
 
-                EmployeePermanentAddress permanentAddress = new EmployeePermanentAddress();
-                permanentAddress.setPermanentHouseName(resultSet.getString(7));
-                permanentAddress.setPermanentStreetName(resultSet.getString(8));
-                permanentAddress.setPermanentCity(resultSet.getString(9));
-                permanentAddress.setPermanentState(resultSet.getString(10));
-                permanentAddress.setPincodePermanent(resultSet.getInt(11));
+                EmployeeAddress permanentAddress = new EmployeeAddress();
+                permanentAddress.setHouseName(resultSet.getString(7));
+                permanentAddress.setStreetName(resultSet.getString(8));
+                permanentAddress.setCity(resultSet.getString(9));
+                permanentAddress.setState(resultSet.getString(10));
+                permanentAddress.setPincode(resultSet.getInt(11));
 
-                EmployeeTemporaryAddress temporaryAddress = new EmployeeTemporaryAddress();
-                temporaryAddress.setTemporaryHouseName(resultSet.getString(12));
-                temporaryAddress.setTemporaryStreetName(resultSet.getString(13));
-                temporaryAddress.setTemporaryCity(resultSet.getString(14));
-                temporaryAddress.setTemporaryState(resultSet.getString(15));
-                temporaryAddress.setPincodeTemporary(resultSet.getInt(16));
-
+                EmployeeAddress temporaryAddress = new EmployeeAddress();
+                if(resultSet.next()) {
+                    temporaryAddress.setHouseName(resultSet.getString(7));
+                    temporaryAddress.setStreetName(resultSet.getString(8));
+                    temporaryAddress.setCity(resultSet.getString(9));
+                    temporaryAddress.setState(resultSet.getString(10));
+                    temporaryAddress.setPincode(resultSet.getInt(11));
+                }
                 employeeDetails.setEmployeePermanentAddress(permanentAddress);
                 employeeDetails.setEmployeeTemporaryAddress(temporaryAddress);
 
@@ -338,6 +323,8 @@ public class EmployeeDatabaseRepository implements EmployeeRepository {
 
         } catch (SQLException e) {
             logger.error("Failed to fetch employee profiles by pincode: " + e.getMessage());
+            throw new SQLException(e);
+
         } finally {
             if (resultSet != null) {
                 try {
@@ -361,135 +348,7 @@ public class EmployeeDatabaseRepository implements EmployeeRepository {
                 }
             }
         }
-
         return employeeDetailsList;
     }
-
-
-
-//    @Override
-//    public List<EmployeeDetails> outputEmployeeDetails() {
-//        List<EmployeeDetails> employeeDetailsList = new ArrayList<>();
-//        PreparedStatement employeeDetailsStatement = null;
-//        ResultSet resultSet = null;
-//        try {
-//            String employeeDetailsQuery = "SELECT * FROM Employee_Details";
-//            employeeDetailsStatement = connection.prepareStatement(employeeDetailsQuery);
-//            resultSet = employeeDetailsStatement.executeQuery();
-//            System.out.println(resultSet);
-//            while (resultSet.next()) {
-//                EmployeeDetails employeeDetails = new EmployeeDetails();
-//                employeeDetails.setEmployeeID(resultSet.getInt(1));
-//                employeeDetails.setEmployeeFirstName(resultSet.getString(2));
-//                employeeDetails.setEmployeeMiddleName(resultSet.getString(3));
-//                employeeDetails.setEmployeeLastName(resultSet.getString(4));
-//                employeeDetails.setEmail(resultSet.getString(5));
-//                employeeDetails.setPhoneNumber(resultSet.getLong(6));
-//                employeeDetailsList.add(employeeDetails);
-//            }
-//        } catch (SQLException e) {
-//            logger.error(resourceBundle.getString("db.repo.fetchFailEmployee") + e.getMessage());
-//        } finally {
-//            if (resultSet != null) {
-//                try {
-//                    resultSet.close();
-//                } catch (SQLException e) {
-//                    logger.error(resourceBundle.getString("db.repo.resultset") + e.getMessage());
-//                }
-//            }
-//            if (employeeDetailsStatement != null) {
-//                try {
-//                    employeeDetailsStatement.close();
-//                } catch (SQLException e) {
-//                    logger.error(resourceBundle.getString("db.repo.preparedStatement"), e.getMessage());
-//                }
-//            }
-//        }
-//        return employeeDetailsList;
-//    }
-//
-//    @Override
-//    public List<EmployeePermanentAddress> outputEmployeePermanentAddress() {
-//        List<EmployeePermanentAddress> employeePermanentAddressList = new ArrayList<>();
-//        PreparedStatement permanentAddressStatement = null;
-//        ResultSet resultSet = null;
-//        try {
-//            String permanentAddressQuery = "SELECT * FROM Employee_Permanent_Address";
-//            permanentAddressStatement = connection.prepareStatement(permanentAddressQuery);
-//            resultSet = permanentAddressStatement.executeQuery();
-//            System.out.println(resultSet);
-//            while (resultSet.next()) {
-//                EmployeePermanentAddress permanentAddress = new EmployeePermanentAddress();
-//                permanentAddress.setEmployeeID(resultSet.getInt(1));
-//                permanentAddress.setPermanentHouseName(resultSet.getString(2));
-//                permanentAddress.setPermanentStreetName(resultSet.getString(3));
-//                permanentAddress.setPermanentCity(resultSet.getString(4));
-//                permanentAddress.setPermanentState(resultSet.getString(5));
-//                permanentAddress.setPincodePermanent(resultSet.getInt(6));
-//                employeePermanentAddressList.add(permanentAddress);
-//            }
-//        } catch (SQLException e) {
-//            logger.error(resourceBundle.getString("db.repo.fetchFailPermanent") + e.getMessage());
-//        } finally {
-//            if (resultSet != null) {
-//                try {
-//                    resultSet.close();
-//                } catch (SQLException e) {
-//
-//                    logger.error(resourceBundle.getString("db.repo.resultset") + e.getMessage());
-//                }
-//            }
-//            if (permanentAddressStatement != null) {
-//                try {
-//                    permanentAddressStatement.close();
-//                } catch (SQLException e) {
-//                    logger.error(resourceBundle.getString("db.repo.preparedStatement"), e.getMessage());
-//                }
-//            }
-//        }
-//        return employeePermanentAddressList;
-//    }
-//
-//    @Override
-//    public List<EmployeeTemporaryAddress> outputEmployeeTemporaryAddress() {
-//        List<EmployeeTemporaryAddress> employeeTemporaryAddressList = new ArrayList<>();
-//        PreparedStatement temporaryAddressStatement = null;
-//        ResultSet resultSet = null;
-//        try {
-//            String temporaryAddressQuery = "SELECT * FROM Employee_Temporary_Address";
-//            temporaryAddressStatement = connection.prepareStatement(temporaryAddressQuery);
-//            resultSet = temporaryAddressStatement.executeQuery();
-//            System.out.println(resultSet);
-//            while (resultSet.next()) {
-//                EmployeeTemporaryAddress temporaryAddress=new EmployeeTemporaryAddress();
-//                temporaryAddress.setEmployeeID(resultSet.getInt(1));
-//                temporaryAddress.setTemporaryHouseName(resultSet.getString(2));
-//                temporaryAddress.setTemporaryStreetName(resultSet.getString(3));
-//                temporaryAddress.setTemporaryCity(resultSet.getString(4));
-//                temporaryAddress.setTemporaryState(resultSet.getString(5));
-//                temporaryAddress.setPincodeTemporary(resultSet.getInt(6));
-//                employeeTemporaryAddressList.add(temporaryAddress);
-//            }
-//        } catch (SQLException e) {
-//            logger.error(resourceBundle.getString("db.repo.fetchFailTemporary") + e.getMessage());
-//        } finally {
-//            if (resultSet != null) {
-//                try {
-//                    resultSet.close();
-//                } catch (SQLException e) {
-//
-//                    logger.error(resourceBundle.getString("db.repo.resultset") + e.getMessage());
-//                }
-//            }
-//            if (temporaryAddressStatement != null) {
-//                try {
-//                    temporaryAddressStatement.close();
-//                } catch (SQLException e) {
-//                    logger.error(resourceBundle.getString("db.repo.preparedStatement"), e.getMessage());
-//                }
-//            }
-//        }
-//        return employeeTemporaryAddressList;
-//    }
 
 }

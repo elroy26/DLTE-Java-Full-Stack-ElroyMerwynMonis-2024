@@ -1,0 +1,470 @@
+19:24:12.701 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+19:24:23.401 [31m[main][0;39m WARN  console.input.App - [31mInvalid Name format. Please enter name which contains only letters[0;39m 
+19:24:34.414 [31m[main][0;39m WARN  console.input.App - [31mInvalid Name format. Please enter name which contains only letters[0;39m 
+19:26:31.178 [31m[main][0;39m WARN  console.input.App - [31mInvalid email format. Please enter a valid email address.[0;39m 
+19:26:36.586 [31m[main][0;39m WARN  console.input.App - [31mInvalid email format. Please enter a valid email address.[0;39m 
+19:26:47.571 [31m[main][0;39m WARN  console.input.App - [31mInvalid phone number format. Please enter a 10-digit phone number.[0;39m 
+19:26:50.121 [31m[main][0;39m WARN  console.input.App - [31mInvalid phone number format. Please enter a 10-digit phone number.[0;39m 
+19:26:53.954 [31m[main][0;39m WARN  console.input.App - [31mInvalid phone number format. Please enter a 10-digit phone number.[0;39m 
+19:27:06.945 [31m[main][0;39m WARN  console.input.App - [31mInvalid pincode format. Please enter a 6-digit pincode.[0;39m 
+19:27:09.928 [31m[main][0;39m WARN  console.input.App - [31mInvalid pincode format. Please enter a 6-digit pincode.[0;39m 
+19:27:24.687 [31m[main][0;39m WARN  console.input.App - [31mInvalid pincode format. Please enter a 6-digit pincode.[0;39m 
+19:27:29.797 [34m[main][0;39m INFO  console.input.App - [34mWould you like to continue with another employee's details? (Yes/No)[0;39m 
+19:32:15.560 [31m[main][0;39m WARN  console.input.App - [31mInvalid email format. Please enter a valid email address.[0;39m 
+19:32:25.382 [31m[main][0;39m WARN  console.input.App - [31mInvalid email format. Please enter a valid email address.[0;39m 
+19:33:10.008 [34m[main][0;39m INFO  console.input.App - [34mWould you like to continue with another employee's details? (Yes/No)[0;39m 
+19:33:12.397 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+19:37:43.332 [31m[main][0;39m WARN  console.input.App - [31mInvalid input. Please enter a valid choice.[0;39m 
+19:37:43.332 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+19:39:56.263 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+19:40:01.254 [31m[main][0;39m WARN  console.input.App - [31mInvalid input. Please enter a valid choice.[0;39m 
+19:40:01.254 [31m[main][0;39m WARN  console.input.App - [31mInvalid choice[0;39m 
+19:40:01.254 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+19:43:18.900 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+19:43:22.319 [31m[main][0;39m WARN  console.input.App - [31mInvalid choice. Please enter a number between 1 and 3.[0;39m 
+19:43:22.319 [31m[main][0;39m WARN  console.input.App - [31mInvalid choice[0;39m 
+19:43:22.319 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+19:43:32.305 [31m[main][0;39m WARN  console.input.App - [31mInvalid choice. Please enter a number between 1 and 3.[0;39m 
+19:43:32.305 [31m[main][0;39m WARN  console.input.App - [31mInvalid choice[0;39m 
+19:43:32.305 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+19:43:41.330 [31m[main][0;39m WARN  console.input.App - [31mInvalid choice. Please enter a number between 1 and 3.[0;39m 
+19:43:41.331 [31m[main][0;39m WARN  console.input.App - [31mInvalid choice[0;39m 
+19:43:41.331 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+19:44:17.798 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+19:44:30.890 [31m[main][0;39m WARN  console.input.App - [31mInvalid choice. Please enter a number between 1 and 3.[0;39m 
+19:44:30.890 [31m[main][0;39m WARN  console.input.App - [31mInvalid choice[0;39m 
+19:44:30.890 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+19:44:56.163 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+19:47:27.427 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+19:47:45.468 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+19:47:49.045 [31m[main][0;39m WARN  console.input.App - [31mInvalid input. Please enter a valid choice.[0;39m 
+19:47:49.046 [31m[main][0;39m WARN  console.input.App - [31mInvalid choice[0;39m 
+19:47:49.046 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+19:47:52.557 [31m[main][0;39m WARN  console.input.App - [31mInvalid choice[0;39m 
+19:47:52.557 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+20:53:32.325 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+20:53:39.396 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+21:05:22.489 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+21:05:47.777 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+21:14:21.761 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+21:14:52.308 [1;31m[main][0;39m ERROR a.backend.services.EmployeeService - [1;31mFailed to insert employee details.[0;39m 
+java.lang.NullPointerException: null
+	at app.backend.services.EmployeeService.callInsertEmployeeDetails(EmployeeService.java:35)
+	at console.input.App.main(App.java:114)
+21:14:52.332 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+21:22:10.708 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+21:22:34.953 [1;31m[main][0;39m ERROR a.backend.services.EmployeeService - [1;31mFailed to insert employee details.[0;39m 
+java.lang.NullPointerException: null
+	at app.backend.services.EmployeeService.callInsertEmployeeDetails(EmployeeService.java:35)
+	at console.input.App.main(App.java:126)
+21:22:34.969 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+22:06:32.337 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+22:06:54.125 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+22:15:19.087 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+22:15:51.975 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+22:16:27.352 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+22:48:18.585 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+22:48:51.025 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+22:53:34.418 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+22:53:58.232 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+22:54:50.105 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+23:04:07.515 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+23:04:23.327 [31m[main][0;39m WARN  console.input.App - [31mInvalid Name format. Please enter name which contains only letters[0;39m 
+23:21:04.549 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+23:21:26.436 [1;31m[main][0;39m ERROR a.backend.middleware.DatabaseTarget - [1;31mFailed to initialize database connection.[0;39m 
+javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(NamingManager.java:673)
+	at javax.naming.InitialContext.getDefaultInitCtx(InitialContext.java:313)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(InitialContext.java:350)
+	at javax.naming.InitialContext.lookup(InitialContext.java:417)
+	at app.backend.middleware.DatabaseTarget.<init>(DatabaseTarget.java:34)
+	at app.backend.services.EmployeeService.callInsertEmployeeDetails(EmployeeService.java:41)
+	at console.input.App.main(App.java:139)
+23:21:26.451 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+23:21:26.451 [1;31m[main][0;39m ERROR a.backend.services.EmployeeService - [1;31mFailed to insert employee details.[0;39m 
+java.lang.NullPointerException: null
+	at app.backend.middleware.EmployeeDatabaseRepository.insertEmployeeDetails(EmployeeDatabaseRepository.java:34)
+	at app.backend.services.EmployeeService.callInsertEmployeeDetails(EmployeeService.java:43)
+	at console.input.App.main(App.java:139)
+23:21:26.451 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+08:33:06.578 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+08:33:24.407 [31m[main][0;39m WARN  console.input.App - [31mInvalid email format. Please enter a valid email address.[0;39m 
+08:33:33.350 [1;31m[main][0;39m ERROR a.backend.middleware.DatabaseTarget - [1;31mFailed to initialize database connection.[0;39m 
+javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(NamingManager.java:673)
+	at javax.naming.InitialContext.getDefaultInitCtx(InitialContext.java:313)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(InitialContext.java:350)
+	at javax.naming.InitialContext.lookup(InitialContext.java:417)
+	at app.backend.middleware.DatabaseTarget.<init>(DatabaseTarget.java:34)
+	at app.backend.services.EmployeeService.callInsertEmployeeDetails(EmployeeService.java:41)
+	at console.input.App.main(App.java:139)
+08:33:33.368 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+08:33:33.381 [1;31m[main][0;39m ERROR a.backend.services.EmployeeService - [1;31mFailed to insert employee details.[0;39m 
+java.lang.NullPointerException: null
+	at app.backend.middleware.EmployeeDatabaseRepository.insertEmployeeDetails(EmployeeDatabaseRepository.java:34)
+	at app.backend.services.EmployeeService.callInsertEmployeeDetails(EmployeeService.java:43)
+	at console.input.App.main(App.java:139)
+08:33:33.381 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+08:40:11.900 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+08:42:11.791 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+08:46:15.853 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+09:30:29.555 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+09:30:29.570 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+09:30:49.438 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+09:31:59.260 [1;31m[main][0;39m ERROR a.backend.services.EmployeeService - [1;31mFailed to insert employee permanent address.[0;39m 
+java.lang.NullPointerException: null
+	at app.backend.middleware.EmployeeDatabaseRepository.insertEmployeePermanentAddress(EmployeeDatabaseRepository.java:68)
+	at app.backend.services.EmployeeService.callInsertEmployeePermanentAddress(EmployeeService.java:47)
+	at console.input.App.main(App.java:191)
+09:31:59.267 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+09:38:03.543 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+09:38:03.559 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+09:38:33.103 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mFailed to insert employee details.[0;39m 
+09:38:53.256 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+09:38:53.272 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+09:39:15.924 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+09:39:25.155 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee permanent address inserted successfully.[0;39m 
+09:39:31.247 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+09:39:54.531 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+09:39:54.562 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+09:40:16.838 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+09:40:37.980 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+09:40:38.042 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+09:40:58.124 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+09:41:04.309 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee permanent address inserted successfully.[0;39m 
+09:41:10.099 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mFailed to insert employee temporary address.[0;39m 
+09:41:10.099 [34m[main][0;39m INFO  console.input.App - [34mWould you like to continue with another employee's details? (Yes/No)[0;39m 
+09:55:12.382 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+09:55:12.382 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+09:55:54.543 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+09:56:02.803 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee permanent address inserted successfully.[0;39m 
+09:56:08.154 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+11:37:55.926 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:37:55.941 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:38:30.164 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+11:39:06.022 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee permanent address inserted successfully.[0;39m 
+11:39:38.810 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee temporary address inserted successfully.[0;39m 
+11:39:38.810 [34m[main][0;39m INFO  console.input.App - [34mWould you like to continue with another employee's details? (Yes/No)[0;39m 
+11:40:37.217 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+11:41:06.826 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee permanent address inserted successfully.[0;39m 
+11:42:00.714 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee temporary address inserted successfully.[0;39m 
+11:42:00.714 [34m[main][0;39m INFO  console.input.App - [34mWould you like to continue with another employee's details? (Yes/No)[0;39m 
+20:36:19.747 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+20:36:19.747 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+20:36:23.794 [1;31m[main][0;39m ERROR a.backend.services.EmployeeService - [1;31mFailed to output employee details.[0;39m 
+java.lang.NullPointerException: null
+	at app.backend.middleware.EmployeeDatabaseRepository.outputEmployeeDetails(EmployeeDatabaseRepository.java:147)
+	at app.backend.services.EmployeeService.callOutputEmployeeDetails(EmployeeService.java:68)
+	at console.input.App.main(App.java:253)
+20:36:23.794 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+20:39:10.815 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+20:39:10.833 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+20:39:14.585 [1;31m[main][0;39m ERROR a.backend.services.EmployeeService - [1;31mFailed to output employee details.java.lang.NullPointerException[0;39m 
+20:39:14.585 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+20:41:12.686 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+20:41:12.859 [1;31m[main][0;39m ERROR a.backend.services.EmployeeService - [1;31mFailed to output employee details.java.lang.NullPointerException[0;39m 
+20:43:25.977 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+20:43:26.265 [1;31m[main][0;39m ERROR a.backend.services.EmployeeService - [1;31mFailed to output employee details.java.lang.NullPointerException[0;39m 
+20:43:52.370 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+20:43:52.829 [1;31m[main][0;39m ERROR a.backend.services.EmployeeService - [1;31mFailed to output employee details.java.lang.NullPointerException[0;39m 
+21:01:46.070 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+21:01:46.242 [1;31m[main][0;39m ERROR a.backend.services.EmployeeService - [1;31mFailed to output employee details.java.lang.NullPointerException[0;39m 
+21:11:05.948 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+21:12:48.051 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+21:21:01.909 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+21:22:19.019 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+21:56:16.590 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+21:56:16.731 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mFailed to fetch employee profiles: ORA-00942: table or view does not exist
+[0;39m 
+21:56:54.769 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+21:56:55.478 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mFailed to fetch employee profiles: ORA-00942: table or view does not exist
+[0;39m 
+22:01:02.375 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+22:01:02.500 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mFailed to fetch employee profiles: ORA-00904: "P"."EMPLOYEEID": invalid identifier
+[0;39m 
+22:03:18.073 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+22:03:18.382 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mFailed to fetch employee profiles: ORA-00904: "E"."EMPLOYEEID": invalid identifier
+[0;39m 
+22:18:15.353 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+22:20:16.653 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+22:20:16.653 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+22:20:18.980 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+22:20:44.229 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+22:20:44.245 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+22:20:49.230 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+22:55:27.405 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+22:55:27.412 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+22:55:30.805 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+22:56:46.969 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+22:56:47.032 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+22:56:50.898 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+22:57:55.875 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+22:57:55.892 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+22:58:00.533 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+22:58:37.398 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+22:58:37.405 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+22:58:40.123 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+23:07:14.582 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+23:07:14.613 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+23:07:20.175 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+06:36:15.246 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:14:16.569 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:14:16.584 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+07:14:54.959 [1;31m[main][0;39m ERROR a.backend.services.EmployeeService - [1;31mFailed to insert employee details.java.lang.NullPointerException[0;39m 
+07:14:54.961 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+07:23:15.176 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:23:15.192 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+07:24:08.930 [1;31m[main][0;39m ERROR a.backend.services.EmployeeService - [1;31mFailed to insert employee details.java.lang.NullPointerException[0;39m 
+07:24:08.930 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+07:27:20.769 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:27:20.779 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+07:27:28.927 [31m[main][0;39m WARN  console.input.App - [31mInvalid Employee Id format. Please enter Employee id which contains only 5 digits[0;39m 
+07:27:49.534 [1;31m[main][0;39m ERROR a.backend.services.EmployeeService - [1;31mFailed to insert employee details.java.lang.NullPointerException[0;39m 
+07:27:49.539 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+11:06:49.623 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:06:49.634 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:07:36.695 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mUnexpected exception occurred: null[0;39m 
+11:11:14.506 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:11:14.522 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:11:31.883 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+11:11:50.185 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:11:50.202 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:12:48.815 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mUnexpected exception occurred: null[0;39m 
+11:20:37.574 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:20:37.590 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:21:04.576 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mUnexpected exception occurred: null[0;39m 
+11:29:50.587 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:29:50.603 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:30:15.915 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+12:44:41.321 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+12:44:41.341 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+12:46:02.733 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+12:46:29.112 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+12:46:29.134 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+12:47:32.723 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+12:48:48.829 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mFailed to fetch employee profiles by pincode: Closed Connection[0;39m 
+12:48:48.830 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+12:55:50.271 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+12:55:50.289 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+12:55:58.143 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mFailed to fetch employee profiles by pincode: ORA-00936: missing expression
+[0;39m 
+12:55:58.145 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:27:53.249 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:28:02.213 [1;31m[main][0;39m ERROR console.input.App - [1;31mError occurred while fetching and printing employee profiles: null[0;39m 
+10:28:02.213 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:32:14.659 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:32:25.812 [1;31m[main][0;39m ERROR console.input.App - [1;31mError occurred while fetching and printing employee profiles: null[0;39m 
+10:32:25.812 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:37:29.781 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:37:34.344 [1;31m[main][0;39m ERROR console.input.App - [1;31mError occurred while fetching and printing employee profiles: null[0;39m 
+10:37:34.344 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:39:30.634 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:39:33.718 [1;31m[main][0;39m ERROR console.input.App - [1;31mError occurred while fetching and printing employee profiles: null[0;39m 
+10:39:33.718 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:41:25.659 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:41:30.760 [1;31m[main][0;39m ERROR console.input.App - [1;31mError occurred while fetching and printing employee profiles: null[0;39m 
+10:41:30.760 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:42:28.599 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+10:54:30.913 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:54:34.677 [1;31m[main][0;39m ERROR console.input.App - [1;31mError occurred while fetching and printing employee profiles: null[0;39m 
+10:54:34.677 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:59:10.932 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:59:21.337 [1;31m[main][0;39m ERROR console.input.App - [1;31mError occurred while fetching and printing employee profiles: null[0;39m 
+10:59:21.337 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:59:21.337 [31m[main][0;39m WARN  console.input.App - [31mInvalid input. Please enter a valid choice.[0;39m 
+10:59:21.337 [31m[main][0;39m WARN  console.input.App - [31mInvalid choice[0;39m 
+10:59:21.337 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+10:59:25.002 [1;31m[main][0;39m ERROR console.input.App - [1;31mError occurred while fetching and printing employee profiles: null[0;39m 
+10:59:25.002 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:02:11.011 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:02:15.692 [1;31m[main][0;39m ERROR console.input.App - [1;31mError occurred while fetching and printing employee profiles: null[0;39m 
+11:02:15.692 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:03:19.911 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:03:22.600 [1;31m[main][0;39m ERROR console.input.App - [1;31mError occurred while fetching and printing employee profiles: null[0;39m 
+11:03:22.600 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:10:25.663 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:10:31.739 [1;31m[main][0;39m ERROR console.input.App - [1;31mError occurred while fetching and printing employee profiles: null[0;39m 
+11:10:31.739 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:33:44.935 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:33:50.115 [1;31m[main][0;39m ERROR console.input.App - [1;31mError occurred while fetching and printing employee profiles: null[0;39m 
+11:33:50.115 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:47:55.046 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:47:55.052 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:48:07.638 [1;31m[main][0;39m ERROR a.backend.services.EmployeeService - [1;31mFailed to output employee temporary address.java.lang.NullPointerException[0;39m 
+11:48:07.638 [1;31m[main][0;39m ERROR console.input.App - [1;31mError occurred while fetching and printing employee profiles: Failed to output employee temporary address.[0;39m 
+11:48:07.638 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:54:21.791 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:54:21.823 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+11:54:30.149 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+12:13:20.802 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+12:13:20.867 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+12:13:28.509 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+12:18:47.073 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+12:18:47.136 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+12:19:18.372 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+12:19:18.576 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+12:19:23.219 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+12:19:57.917 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+12:19:57.962 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+12:20:01.133 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+14:30:31.923 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+14:30:32.002 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+14:30:32.056 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+14:30:32.065 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+14:30:47.373 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+14:32:08.751 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mFailed to fetch employee profiles by pincode: ORA-00936: missing expression
+[0;39m 
+14:32:08.753 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+14:44:38.386 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+14:44:38.497 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+14:44:38.561 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+14:44:38.561 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+14:44:52.163 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mFailed to fetch employee profiles by pincode: Invalid column index[0;39m 
+14:44:52.163 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+15:04:35.252 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+15:04:35.346 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+15:04:35.411 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+15:04:35.411 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+15:04:42.513 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+15:11:14.944 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+15:11:38.055 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mOther SQL Exception: Closed Connection[0;39m 
+15:12:03.110 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mOther SQL Exception: Closed Connection[0;39m 
+15:12:03.110 [34m[main][0;39m INFO  console.input.App - [34mWould you like to continue with another employee's details? (Yes/No)[0;39m 
+15:14:30.045 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+15:14:30.202 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+15:14:30.202 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+15:14:46.976 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+15:15:31.143 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+15:15:40.543 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+15:16:11.499 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+15:16:11.546 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+15:16:35.511 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee permanent address inserted successfully.[0;39m 
+15:16:35.541 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+15:17:07.528 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee temporary address inserted successfully.[0;39m 
+15:17:07.544 [34m[main][0;39m INFO  console.input.App - [34mWould you like to continue with another employee's details? (Yes/No)[0;39m 
+15:17:14.058 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+15:17:19.261 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+15:17:31.882 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+15:57:53.669 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+15:58:56.397 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+16:00:37.344 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+16:03:57.237 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+16:04:16.644 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+16:04:33.882 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+16:04:50.353 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:16:19.087 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:16:19.245 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:16:19.308 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:16:19.359 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:16:19.424 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:30:57.140 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:50:58.747 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+23:03:17.707 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+23:03:25.030 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+23:03:40.579 [31m[main][0;39m WARN  console.input.App - [31mInvalid email format. Please enter a valid email address.[0;39m 
+23:03:53.393 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+23:03:53.456 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+23:04:23.719 [34m[main][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee permanent address inserted successfully.[0;39m 
+23:04:23.719 [34m[main][0;39m INFO  console.input.App - [34mWould you like to continue with another employee's details? (Yes/No)[0;39m 
+23:04:30.682 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+23:05:45.208 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+23:05:45.298 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+23:05:58.626 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+23:06:04.563 [1;31m[main][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mFailed to fetch employee profiles by pincode: ORA-00904: "A"."TEMPORARYSTATE": invalid identifier
+[0;39m 
+23:06:04.563 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+23:08:37.947 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+23:08:48.084 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+23:08:51.974 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+23:55:56.866 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:02:59.345 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:03:29.919 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+07:03:44.666 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:03:45.578 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+07:08:26.608 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+07:08:33.395 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:09:12.791 [1;31m[pool-1-thread-2][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mOther SQL Exception: Closed Connection[0;39m 
+07:09:12.940 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:09:38.876 [1;31m[pool-1-thread-2][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mOther SQL Exception: Closed Connection[0;39m 
+07:09:38.876 [34m[main][0;39m INFO  console.input.App - [34mWould you like to continue with another employee's details? (Yes/No)[0;39m 
+07:09:42.245 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+07:13:28.671 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:13:35.891 [31m[main][0;39m WARN  console.input.App - [31mInvalid email format. Please enter a valid email address.[0;39m 
+07:13:48.557 [1;31m[pool-1-thread-3][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mOther SQL Exception: Closed Connection[0;39m 
+07:13:48.596 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:17:32.652 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+07:17:40.858 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:18:00.707 [1;31m[main][0;39m ERROR console.input.App - [1;31mAn error occurred:[0;39m 
+07:19:24.052 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:20:10.381 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+07:20:37.404 [34m[pool-1-thread-1][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+07:21:09.519 [1;31m[pool-1-thread-1][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mOther SQL Exception: Closed Connection[0;39m 
+07:21:09.519 [34m[main][0;39m INFO  console.input.App - [34mWould you like to continue with another employee's details? (Yes/No)[0;39m 
+07:21:15.066 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+07:35:40.265 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:36:36.851 [31m[main][0;39m WARN  console.input.App - [31mInvalid Employee Id format. Please enter Employee id which contains only 5 digits[0;39m 
+07:36:58.687 [31m[main][0;39m WARN  console.input.App - [31mInvalid phone number format. Please enter a 10-digit phone number.[0;39m 
+07:37:04.785 [34m[pool-1-thread-1][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+07:40:43.218 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+07:41:07.483 [31m[main][0;39m WARN  console.input.App - [31mInvalid email format. Please enter a valid email address.[0;39m 
+07:41:22.498 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:41:22.568 [34m[pool-1-thread-1][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+07:42:02.076 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:42:02.082 [34m[pool-1-thread-1][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee permanent address inserted successfully.[0;39m 
+07:42:02.082 [34m[main][0;39m INFO  console.input.App - [34mWould you like to continue with another employee's details? (Yes/No)[0;39m 
+07:43:00.331 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+07:43:04.497 [34m[main][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:43:42.582 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+08:49:16.744 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+08:49:24.697 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+08:49:24.839 [34m[main][0;39m INFO  console.input.App - [34m------Welcome to the profile filling form-----------[0;39m 
+07:29:33.555 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:29:33.648 [34m[pool-1-thread-1][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+07:30:05.490 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:30:05.490 [1;31m[pool-1-thread-1][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mUnexpected exception occurred: null[0;39m 
+07:31:41.656 [34m[pool-1-thread-2][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:31:41.664 [1;31m[pool-1-thread-2][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mConstraint violation: ORA-00001: unique constraint (HELLO.SYS_C007334) violated
+[0;39m 
+07:33:14.727 [34m[pool-1-thread-2][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:33:14.769 [34m[pool-1-thread-2][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+07:34:26.897 [34m[pool-1-thread-3][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:34:26.897 [1;31m[pool-1-thread-3][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mUnexpected exception occurred: null[0;39m 
+07:35:37.903 [34m[pool-1-thread-4][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+07:35:37.959 [1;31m[pool-1-thread-4][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mOther SQL Exception: Invalid column index[0;39m 
+07:41:02.329 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+09:11:37.632 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+09:52:50.772 [34m[pool-1-thread-2][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+09:52:51.102 [34m[pool-1-thread-2][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+09:53:36.849 [34m[pool-1-thread-2][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+09:53:36.849 [1;31m[pool-1-thread-2][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mUnexpected exception occurred: null[0;39m 
+10:35:26.197 [34m[pool-1-thread-2][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+10:35:26.428 [34m[pool-1-thread-2][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+10:36:36.193 [34m[pool-1-thread-3][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+10:36:36.199 [34m[pool-1-thread-3][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee permanent address inserted successfully.[0;39m 
+10:47:26.229 [34m[pool-1-thread-4][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+10:53:20.507 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+10:53:21.014 [1;31m[pool-1-thread-1][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mFailed to fetch employee profiles by pincode: ORA-00904: "A"."TEMPORARY_PINCODE": invalid identifier
+[0;39m 
+10:53:49.360 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+10:53:49.363 [1;31m[pool-1-thread-1][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mFailed to fetch employee profiles by pincode: ORA-00904: "A"."TEMPORARY_PINCODE": invalid identifier
+[0;39m 
+09:14:53.137 [34m[pool-1-thread-2][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+09:14:53.404 [1;31m[pool-1-thread-2][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mFailed to fetch employee profiles by pincode: Invalid column index[0;39m 
+09:29:37.849 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+09:30:06.902 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:02:53.436 [34m[pool-1-thread-2][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:04:38.227 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:04:38.468 [34m[pool-1-thread-1][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+11:05:02.498 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:05:02.498 [34m[pool-1-thread-1][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee permanent address inserted successfully.[0;39m 
+11:09:36.442 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:09:36.855 [34m[pool-1-thread-1][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 
+11:10:35.020 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:10:35.149 [34m[pool-1-thread-1][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee permanent address inserted successfully.[0;39m 
+11:41:44.485 [34m[pool-1-thread-2][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:35:20.567 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+11:35:20.725 [1;31m[pool-1-thread-1][0;39m ERROR a.b.m.EmployeeDatabaseRepository - [1;31mSQL syntax error: ORA-00900: invalid SQL statement
+[0;39m 
+11:37:17.250 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+10:37:14.976 [34m[pool-1-thread-1][0;39m INFO  a.backend.middleware.DatabaseTarget - [34mDatabase server connection is initiated.[0;39m 
+10:37:15.230 [34m[pool-1-thread-1][0;39m INFO  a.b.m.EmployeeDatabaseRepository - [34mEmployee details inserted successfully.[0;39m 

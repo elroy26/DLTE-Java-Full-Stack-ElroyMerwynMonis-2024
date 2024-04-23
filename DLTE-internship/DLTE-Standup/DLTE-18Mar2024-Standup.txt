@@ -1,0 +1,14 @@
+Driver part try with differnt database-----
+waht is webservice-----
+what is a servlet-------
+is servlet and standalone application handle requests the same way-----
+is jboss web or applcation server
+what is the life cycle of servlet
+when init is invoked
+what happens if we invoke init for the second time
+what is the diffence between init and destroy
+so the @wevsevlet executes first or the init
+any other methods of definng servlets other than http servet
+why only few methods are overridden in httpservlet
+
+

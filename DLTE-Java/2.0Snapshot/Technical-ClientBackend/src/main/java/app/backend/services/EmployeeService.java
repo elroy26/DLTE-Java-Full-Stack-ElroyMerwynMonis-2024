@@ -1,8 +1,7 @@
 package app.backend.services;
 
+import app.backend.entity.EmployeeAddress;
 import app.backend.entity.EmployeeDetails;
-import app.backend.entity.EmployeePermanentAddress;
-import app.backend.entity.EmployeeTemporaryAddress;
 import app.backend.exceptions.EmployeeException;
 import app.backend.middleware.DatabaseTarget;
 import app.backend.middleware.EmployeeDatabaseRepository;
@@ -11,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -27,53 +27,44 @@ public class EmployeeService {
 
 
     // Insert Employee Details
-    public EmployeeDetails callInsertEmployeeDetails(EmployeeDetails details) {
-        try {
+    public EmployeeDetails callInsertEmployeeDetails(EmployeeDetails details) throws SQLException,EmployeeException {
+//        try {
             return employeeRepository.insertEmployeeDetails(details);
-        } catch (Exception e) {
-            logger.error(resourceBundle.getString("service.input.employee")+ e);
-            throw new EmployeeException(resourceBundle.getString("service.input.employee"));
-        }
+//        } catch (Exception e) {
+//            logger.error(resourceBundle.getString("service.input.employee")+ e);
+//            throw new EmployeeException(resourceBundle.getString("service.input.employee"));
+//        }
     }
 
-    public EmployeePermanentAddress callInsertEmployeePermanentAddress(EmployeePermanentAddress permanentAddress) {
-        try {
+    public EmployeeAddress callInsertEmployeeAddress(EmployeeAddress permanentAddress, EmployeeAddress temporaryAddress) throws SQLException , EmployeeException{
+//        try {
 
-            return employeeRepository.insertEmployeePermanentAddress(permanentAddress);
-        } catch (Exception e) {
-            logger.error(resourceBundle.getString("service.input.permanent")+ e);
-            throw new EmployeeException(resourceBundle.getString("service.input.permanent"));
-        }
+            return employeeRepository.insertEmployeeAddress(permanentAddress,temporaryAddress);
+//        } catch (Exception e) {
+//            logger.error(resourceBundle.getString("service.input.permanent")+ e);
+//            throw new EmployeeException(resourceBundle.getString("service.input.permanent"));
+//        }
     }
 
-    public EmployeeTemporaryAddress callInsertEmployeeTemporaryAddress(EmployeeTemporaryAddress temporaryAddress) {
-        try {
 
-            return employeeRepository.insertEmployeeTemporaryAddress(temporaryAddress);
-        } catch (Exception e) {
-            logger.error(resourceBundle.getString("service.input.temporary")+ e);
-            throw new EmployeeException(resourceBundle.getString("service.input.temporary"));
-        }
-    }
-
-    public List<EmployeeDetails> callFilterEmployeeProfilesByPincode(int pincode) {
-        try {
+    public List<EmployeeDetails> callFilterEmployeeProfilesByPincode(int pincode) throws SQLException {
+//        try {
 
             return employeeRepository.filterEmployeeProfilesByPincode(pincode);
-        } catch (Exception e) {
-            logger.error(resourceBundle.getString("service.input.temporary")+ e);
-            throw new EmployeeException(resourceBundle.getString("service.input.temporary"));
-        }
+//        } catch (Exception e) {
+//            logger.error(resourceBundle.getString("service.input.temporary")+ e);
+//            throw new EmployeeException(resourceBundle.getString("service.input.temporary"));
+//        }
     }
 
 
-    public List<EmployeeDetails> callOutputEmployeeProfile() {
-        try {
+    public List<EmployeeDetails> callOutputEmployeeProfile() throws SQLException {
+//        try {
 
             return employeeRepository.outputEmployeeProfile();
-        } catch (Exception e) {
-            logger.error(resourceBundle.getString("service.output.temporary")+ e);
-            throw new EmployeeException(resourceBundle.getString("service.output.temporary"));
-        }
+//        } catch (Exception e) {
+//            logger.error(resourceBundle.getString("service.output.temporary")+ e);
+//            throw new EmployeeException(resourceBundle.getString("service.output.temporary"));
+//        }
     }
 }

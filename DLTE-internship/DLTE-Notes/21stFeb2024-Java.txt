@@ -1,0 +1,71 @@
+Inheritance:
+
+extends: derive from the parent
+	here multiple inheritance is not provide and java provides virtual inheritance. to avoid ambiguity.
+multi level inheritance --from on base class multiple classes are derived--acessing all the details through a single account
+single,hierarchy,hybrid 
+
+derivedClass extends baseClass
+derivedInterface extends baaseInheritance
+derivedClass implements baseInterface
+
+overriding happens only when inheritance is done . it happens between the parent and child
+overloading happens in same class or an same interface same name and different parameter static 
+
+if local tostring method is there then it does nor look for the other classs tostring it will execute its local tostring. 
+
+interface--used to create on abstract methods and it can also have properties and it aslo doesnt have constructor
+	default interface method can have a body,
+	there are two types 
+		default: within a package and class and it is non static and need to create an object to access it.
+		static:  
+in class all metods are non- abstract
+in interface all methods are abstract
+
+we cant call interface like a class by uding objects it can only be called by implements keyword
+
+array size and normal variable value cannot be changed ouide the class r in interface.
+
+interphase enables other user to design the behavoir like icici usees credit card interface to design their own behavor ut axis can design it differnt using the same interphase.
+
+clonable - it is an interface it as no non astract method 
+
+when same method ois present in the two or more interface then when implemented form the other class it is first serve basis
+
+Abstraction class- it is combination of interfae and inheritence and it doesnot have construct. the methos must be overridden, declare member or initiaize it or maodify just like class, we can have all nonabtract mehods,
+
+if abstract method then it should not have defination
+
+
+Inner Class:
+ 
+	class may be the member of the another class
+1. static
+2. non static
+3. local
+4. anonymous- we can call one time 
+
+Modifiers:
+public
+private
+protected- inheritance is required when to try to access outsie the class
+default: package scope
+abstrct
+final: we cannot inherit final modifiers. we can use-- public final classname.....
+static
+
+Standalone Classes: public, final,abstract,degault
+member classees: private, protected,static
+
+local member can be accesed only trough reaching it but updation cannot be done
+
+runtime classes all its memory, and it is singleton class
+
+protected member can be inherited by using getter and setter
+
+
+
+
+
+
+

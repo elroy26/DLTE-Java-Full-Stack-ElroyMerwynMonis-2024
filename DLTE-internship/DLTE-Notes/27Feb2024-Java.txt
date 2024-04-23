@@ -1,0 +1,42 @@
+concurrency:
+	synchonization using lock>>lock unlock-> locak and unlock,sin the joinm methods
+	executor -mewchasehd
+	thread pool.- cached thread pool, scheduled thread pool
+
+Mutable: it pdates automatically,
+	insert recored in the particular position
+	insert(pos,charter),delte(Staert,end),apend(obj),toSting();
+
+waht is the diffence between
+
+	Stringbuffer-it is mutable, it access serially.	
+	
+	Stringbuilder-asynchronous, at the pararelle time multiple thread are access
+
+storage logics;
+	array >>linewt,staic,tempotraru,no invuilt methods
+	collections >> dynamic,builtin methods,temporary memmory
+	
+	Database	>> permanent	>> server
+	file	>>permanent	>>local system
+
+java.io
+file >>absolute Path,name, createNewFile ,
+stream >>: it is a pipeline between java file to secondary memeory and it tranfer in the form of binary data.it onl accepts only in bytestream
+	inputStream >> reading
+		FileInputStream
+		DataInputStream
+		ObjectioInputStream
+		InflatrerInputStream
+		InflaterInputSTream: 
+	
+	outputstream >>writing
+		Fileoutputstream
+		objectoutputstream
+		DeflaterOutputStream: convert into unreadable form encrypt it, it comes from java.util.zip package
+reader,writer,
+use \\ 
+stream will decide whether to read or write , unlike in python
+for appending the file add true in fileoutput stream methoda
+
+Serializable is used to convert object to file 

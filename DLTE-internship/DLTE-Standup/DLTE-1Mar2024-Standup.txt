@@ -1,0 +1,9 @@
+is it possible to change the order in list or is it based fixed based on the input
+what is the differnce between arraylist and linkedlist and which is faster
+in hashset will the updated value will hold instead of old one
+so for transactions is hashset appropriate to use because there can be repeated transaction to same person like transaction1 transaction 2
+use ctrl+D for repeating the stataemnts
+in lamda expression what does the n-> dshfa stand for.
+
+
+

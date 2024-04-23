@@ -1,0 +1,2 @@
+is component scan mandatory and what extra benifit we get by using this.----
+sql primary key and sequence explanation

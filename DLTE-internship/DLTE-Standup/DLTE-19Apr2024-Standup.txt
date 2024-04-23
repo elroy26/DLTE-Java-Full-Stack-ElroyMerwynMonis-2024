@@ -1,0 +1,5 @@
+now the service is down. is it the right approach to use the url to import
+what are the differnt ways of consuming wsdl
+if i am playing a role what is reured to get the data from the other roles- team contirbution    
+what is the -keep in wsimport
+we should not have class and java in the same package

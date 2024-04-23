@@ -1,0 +1,14 @@
+Normalizations
+1. 1st normal Form: primart key
+2. 2nd NF: conposite key
+3. 3rd NF: transitive dependency
+
+JDBC
+statement: which exectues the query from the database by sending it to the database
+prepared statement:query(,)
+callprepared statement(calling procedures)
+
+execrtions:executeQuery(): which returns the records which we have fetched using dql commands
+	resultSet() has next() property to get next value
+	eg: getString("")
+	    getInt(retrn index)

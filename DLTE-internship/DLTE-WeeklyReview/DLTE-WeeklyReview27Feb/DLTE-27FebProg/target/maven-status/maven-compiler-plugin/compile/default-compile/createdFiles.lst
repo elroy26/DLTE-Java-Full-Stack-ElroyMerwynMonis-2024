@@ -1,0 +1,11 @@
+org\example\EmployeeTemporaryAddress.class
+org\example\FileStorage.class
+org\example\OutputEmployeeDetails.class
+org\example\EmployeePermanentAddress.class
+org\example\OutputEmployeeDetailsInterface.class
+org\example\FilterOperations.class
+org\example\InputEmployeeDetailsInterface.class
+org\example\EmployeeMain.class
+org\example\FilterOperationsInterface.class
+org\example\InputEmployeeDetails.class
+org\example\Employee.class

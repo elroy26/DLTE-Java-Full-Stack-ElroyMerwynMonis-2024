@@ -1,0 +1,32 @@
+when to use thread and runnable
+can we achive paralleization without using thread.
+when we should go for execption
+what is differnce between trow and trows and in method
+task folder- assign the task folder in the flexible form
+open poject review on how tasks were created 
+try catch is good enough or else final is also required
+s
+
+on what senario we use custom exception
+
+can we throw inbuilt methods
+can we use multiple try and catch and can we have multiple final
+when should we write final and on what senario. 
+how will user know that he has ecncounterd exception.
+where do we use final and finally  what will happen if i apply final at class level
+can we assign value to the final object by using getter and setter methods and if error does it give compile time error waht is the error-----
+can i apply final to user defined variable like public class 
+	student akash;
+	student arjun; can we apply final there and what is the behaviour in that thing 
+can we apply final on string level
+
+where is the refernce for the transitive dependences 
+
+if a topic is explained 
+	then why do we need it 
+	see the application part and explore around the topic rather than within the topic 
+
+
+
+
+ 

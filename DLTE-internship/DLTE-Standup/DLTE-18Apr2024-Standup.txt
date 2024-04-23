@@ -1,0 +1,8 @@
+what is thediffernce between wsdl and xsd.which is the parent and child.
+what is the command for to generate the wsdl
+is it possible to keep the xsd outside. and use this as the refernce in the wsdl.
+where ae we specifying the xdl file path to generate the wsdl
+how will the wsdl know it has to refer that specific request and responses
+what is the port type
+what is the complex type
+what are the types in xsd available and when to go for it.

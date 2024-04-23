@@ -1,0 +1,33 @@
+06:51:34.005 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+06:51:34.043 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m1. Enter the Employee details
+2. View the Employee details
+3. Do you want to retrieve the Employee data based on pincode
+4. Do you want to exit
+Enter the choice[0;39m 
+06:51:52.760 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+06:57:12.772 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+06:57:16.548 [31m[main][0;39m WARN  console.app.EmployeeProfile - [31mInvalid input. Please enter a valid choice.[0;39m 
+06:57:16.548 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+06:57:24.694 [31m[main][0;39m WARN  console.app.EmployeeProfile - [31mInvalid choice[0;39m 
+06:57:24.694 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+06:34:28.277 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+06:34:47.452 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+06:35:46.233 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+06:45:56.253 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+06:47:30.471 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+06:51:36.590 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+06:55:14.447 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+09:22:49.453 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+09:28:27.774 [1;31m[main][0;39m ERROR console.app.EmployeeProfile - [1;31mAn error occurred:[0;39m 
+09:33:50.430 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+09:46:11.864 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+09:47:18.318 [1;31m[main][0;39m ERROR console.app.EmployeeProfile - [1;31mAn error occurred:[0;39m 
+09:47:58.852 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+09:48:40.167 [1;31m[main][0;39m ERROR console.app.EmployeeProfile - [1;31mAn error occurred:[0;39m 
+11:07:06.850 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+11:10:51.873 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+11:25:30.241 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+11:33:12.569 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+11:44:20.332 [1;31m[main][0;39m ERROR console.app.EmployeeProfile - [1;31mAn error occurred:[0;39m 
+11:52:07.130 [34m[main][0;39m INFO  console.app.EmployeeProfile - [34m------Welcome to the profile filling form-----------[0;39m 
+11:53:11.162 [1;31m[main][0;39m ERROR console.app.EmployeeProfile - [1;31mAn error occurred:[0;39m 

@@ -1,0 +1,5 @@
+how can i tell the getmapping as a service
+i am developer which develops create loan 
+endpoint request response pile it int service wsdl
+create new loan fo a front end developer asjs what should interact with the webservice of create new loan
+how will the user know that the input which is given shoul ee written in string or the number or any othe format

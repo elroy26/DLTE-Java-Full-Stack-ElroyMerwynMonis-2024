@@ -1,0 +1,19 @@
+Junit- jupiter unit
+mochito-> mock resource
+
+before each-- here we write diffrnt test cases 
+bedore all
+test 
+after each
+after class
+
+test cases can give results, count,timeouts,failures
+
+@test{
+	assertion/assertionnull()/assertnotnull/assertequal-looks for address reference/assersame-looks for same value/assertrue/asserfalse
+	timeout
+	exception
+}
+ 
+
+Test suite

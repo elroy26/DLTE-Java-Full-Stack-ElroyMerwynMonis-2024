@@ -40,7 +40,8 @@ public class InsuranceSecurity {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOriginPatterns(Arrays.asList("http://127.0.0.1:5502"));
+//        configuration.setAllowedOriginPatterns(Arrays.asList("http://127.0.0.1:5502"));
+        configuration.setAllowedOriginPatterns(Arrays.asList("https://**"));
 
         configuration.addAllowedMethod("*");
         configuration.addAllowedHeader("*");

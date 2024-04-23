@@ -1,6 +1,6 @@
 package app.employee.dao.entity;
 
-public class EmployeeAddress {
+public class EmployeeAddress  {
     private Integer employeeID;
     private String houseName, streetName, city, state;
     private Integer pincode;

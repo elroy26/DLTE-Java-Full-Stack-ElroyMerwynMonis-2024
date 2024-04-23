@@ -5,14 +5,13 @@ public class EmployeeDetails {
     private String employeeFirstName,employeeMiddleName,employeeLastName;
     private String email;
     private Long phoneNumber;
-    private EmployeePermanentAddress employeePermanentAddress;
-    private EmployeeTemporaryAddress employeeTemporaryAddress;
-
+    private EmployeeAddress employeePermanentAddress;
+    private EmployeeAddress employeeTemporaryAddress;
 
     public EmployeeDetails() {
     }
 
-    public EmployeeDetails(Integer employeeID, String employeeFirstName, String employeeMiddleName, String employeeLastName, String email, Long phoneNumber, EmployeePermanentAddress employeePermanentAddress, EmployeeTemporaryAddress employeeTemporaryAddress) {
+    public EmployeeDetails(Integer employeeID, String employeeFirstName, String employeeMiddleName, String employeeLastName, String email, Long phoneNumber, EmployeeAddress employeePermanentAddress, EmployeeAddress employeeTemporaryAddress) {
         this.employeeID = employeeID;
         this.employeeFirstName = employeeFirstName;
         this.employeeMiddleName = employeeMiddleName;
@@ -20,36 +19,6 @@ public class EmployeeDetails {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.employeePermanentAddress = employeePermanentAddress;
-        this.employeeTemporaryAddress = employeeTemporaryAddress;
-    }
-
-    @Override
-    public String toString() {
-        return "EmployeeDetails{" +
-                "employeeID=" + employeeID +
-                ", employeeFirstName='" + employeeFirstName + '\'' +
-                ", employeeMiddleName='" + employeeMiddleName + '\'' +
-                ", employeeLastName='" + employeeLastName + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNumber=" + phoneNumber +
-                ", employeePermanentAddress=" + employeePermanentAddress +
-                ", employeeTemporaryAddress=" + employeeTemporaryAddress +
-                '}';
-    }
-
-    public EmployeePermanentAddress getEmployeePermanentAddress() {
-        return employeePermanentAddress;
-    }
-
-    public void setEmployeePermanentAddress(EmployeePermanentAddress employeePermanentAddress) {
-        this.employeePermanentAddress = employeePermanentAddress;
-    }
-
-    public EmployeeTemporaryAddress getEmployeeTemporaryAddress() {
-        return employeeTemporaryAddress;
-    }
-
-    public void setEmployeeTemporaryAddress(EmployeeTemporaryAddress employeeTemporaryAddress) {
         this.employeeTemporaryAddress = employeeTemporaryAddress;
     }
 
@@ -99,5 +68,35 @@ public class EmployeeDetails {
 
     public void setPhoneNumber(Long phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public EmployeeAddress getEmployeePermanentAddress() {
+        return employeePermanentAddress;
+    }
+
+    public void setEmployeePermanentAddress(EmployeeAddress employeePermanentAddress) {
+        this.employeePermanentAddress = employeePermanentAddress;
+    }
+
+    public EmployeeAddress getEmployeeTemporaryAddress() {
+        return employeeTemporaryAddress;
+    }
+
+    public void setEmployeeTemporaryAddress(EmployeeAddress employeeTemporaryAddress) {
+        this.employeeTemporaryAddress = employeeTemporaryAddress;
+    }
+
+    @Override
+    public String toString() {
+        return "EmployeeDetails{" +
+                "employeeID=" + employeeID +
+                ", employeeFirstName='" + employeeFirstName + '\'' +
+                ", employeeMiddleName='" + employeeMiddleName + '\'' +
+                ", employeeLastName='" + employeeLastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", employeePermanentAddress=" + employeePermanentAddress +
+                ", employeeTemporaryAddress=" + employeeTemporaryAddress +
+                '}';
     }
 }

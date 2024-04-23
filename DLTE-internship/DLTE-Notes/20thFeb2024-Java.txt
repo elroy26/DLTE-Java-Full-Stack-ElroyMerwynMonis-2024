@@ -1,0 +1,51 @@
+Class is used for encapsulaation
+it is give the relation betweeen objects of a class
+at each time the data in class is associated by one instance respectively.
+
+collection of object- initialization
+we create objects which are private because they are core instances like videos in netflix.
+we need to go through process to acces privaate object like to achange balance after the deposit of my we need to call deposit function
+
+encapsulation class contains private methods, private properties
+Constructor- the operation privilege to to at beggining
+		to instaialze the objects
+lombok-allargconstructor
+	noargconstructor
+ polymorphism-staic/compile/overloading
+
+object- is a issue or problem or requirement .....simlataion tool -citia
+	offer solution>>applications
+
+here each index in object has 8 properties like string long .....
+anonymous way of object creation-> Classname[] object=new Classname(  ,   ,  ,)
+
+
+Databases
+
+array is fixed size but database is not or limitation of records
+duplicate data in array cannot be discovered 
+
+Structured and semistruced
+oracle:
+	SQL developer	>>gui 
+	sqlpus		>>cli
+
+Tables:columns and rows
+datatype:varchar,bigint, double,float,date,block,text
+Sql language:
+	DDL: create,drop,alter
+		datablse,table,views,types,procedure,triggers,sequence
+		create table transaction_DLTE_2024(transaction_id int not null, transaction_date date not null, transaction_to varchar(255) not null, transaction_amount number not null, transaction_remarks varchar(100) );
+
+	Data control Language: grant,revoke
+		
+	DAta manipulation language:insert,delete,update,truncate
+	Data Query Language: select,from,where,joins,
+	Transcaton control Language>>commit,rollback- in recent qurey are allowed
+
+trigger
+procedure
+ER-Diagram: Normalization
+
+
+

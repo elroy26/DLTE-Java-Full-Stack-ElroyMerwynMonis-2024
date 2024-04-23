@@ -1,0 +1,273 @@
+Operators:
+	Arthematic: +-*/%
+	Unary:++ --
+	Bitwise: >><<&|^ encoding decoding encryption
+	shorthand:+=-=*=/=%=>>=<<=
+boolean:true/false
+	realtional: >< >= <= == !
+	Logical: && ||
+
+
+Credit card emi processing fee calculataion
+	principle amount=50000
+	processing fee in percentage =1% with Gst >>500+90>590
+	Rol >>21.25%  >>10500
+	principle+roi>>60500
+	tenure >>10
+	emi>> 6050
+	first emi  >>6640
+
+Control Staatemnets:understand user requirement and provide user with results
+if:here we can work with all relaatonal operato all daata type
+switch:
+	this supperts only whole nubmer and only string and integer
+	it uses only == || operators
+
+
+
+todays tasks:old and new
+income task slabs
+
+
+Loop statements:
+for prompts it is used
+loop is used less time complexity and space complexity
+
+	while:login,index,entry check
+	do while:password checking, count pin validation,index, exit check
+	for:date works with range, work with index,binary search
+	for each: doenot work with index, set of items, its gets the refernce of the inex of the array, creates temporary array
+			changes hapens only in the temp manner not the array. it cannot be used for insertion, deletion onl for readin
+
+how many debits are hapening 
+
+system.out.println
+
+scanner.next()
+Type conversion:
+	type casting: csaring btw data type char->int int->char 
+				eg: int accountType='S'; // implicit casting prints asscii value of s not s-> low size datatype to large size dtype
+				    char transctionTpe='d';int transType=TransactionType;
+				
+	type parsing: conversion from stringto other types usin respective wrapper class parse mthod 
+
+
+
+
+Java learning:
+	source code.........(java c)........byte code........(JVM)............Machine code.
+
+Distributed structure
+managing external library
+debug
+deploy
+
+
+maven:
+apache foundation
+building tool in java applications.
+importance is that for the dependencies(dowloads and configures automatically) and deployment.
+
+archetypes > schema:quickstart >>jar , webapp >> war ,..
+artifacts  > project/ library/ dependency name
+group id	> where class files  grouped/ packages
+maven goals > clean, install, package , test-compile,test.
+
+
+Structure:
+src
+	main
+		resources>> maintaining the static files
+				application.properties>>config
+		java:
+			source code(.java files)
+	test
+		java:
+			java test codes
+pom.xml(project object model) >> dependency config, deployment instructions 
+target >> build files, test reports, byte codes.
+
+
+
+junit is for testing will be provided later.
+
+command to run the target file(test cases):
+cd target
+java -jar DLTE-Java-001-1.0-SNAPSHOT.jar
+
+
+
+how to save the file in the github:
+DLTE-JavaFullStack-Name
+	DLTE-JavaDevelopment
+
+
+
+Git:
+git config --global user.name
+{1.local repo
+2.assign remote} only first time
+3.add
+4.commit "version"
+5.push
+	
+pull
+	initialze local repositiry
+	assign remote repo
+	pull
+
+git remote add origin https://github.com/rajvarun2709/DLTE-java-full-stack-VarunRaj2024.git
+
+git init
+git status
+git add .
+git commit -m  ""
+git push origin 
+
+
+
+Programming:
+data:
+	stored, access
+	variables:
+		datatype variable_names;
+	objects:
+		classname object-name= new classname();//non literal object creation
+		character bankType='S';//literal:8 wrapper, String, Object
+	scopes:
+		local: cannot come outside its block, everything need to be initialised
+		class level: can be.., need not be.
+	modifiers:
+		static
+		default
+		public
+		protected
+		private
+		final
+		abstract
+
+
+
+
+
+
+	
+------------------------------------------------------------------
+
+You can have the one public class but should have file name
+cannot have multiple pub class.
+can have multiple class with mul mains
+run with file name.
+
+to change which class to be excecuted , edit configuration.
+
+we can create n number of mains in one class but with overloading only(same method diff parameters).
+
+we can call the other main with the static without using the object by calling in the main main.
+
+we can pass the arguments to the main using the command line. In intellige we can do it using the edit configurations.
+
+excecution can be changed using the static block. eg: static{  }
+
+Main is must even if its empty even after having static block.
+
+Even if we call the main method inside the static block, the static block once again calls the main method after its excecution as a regular habit(Even with the command line)
+
+
+operations:process
+	Operators:
+	Arithmetic +-*/%
+	Unary ++--
+	Bitwise >><<&|^
+	Shorthand +=-=*=/=%=>>=<<=
+	relational ><>=<= == !=
+	logical && ||
+
+Credit card EMI processing fee calculation
+Principle anount=50000
+processing  fee in percentage=1% with GST >> 500+90>590
+Rol >> 21.25% >>10500
+princi+roi>>60500
+tenure >>10
+EMI >>6050
+First EMI >>6640
+
+
+Control statements:
+if
+	can work with all relational operators
+	all the data types
+switch
+	work with only whole numbers and characters
+	cant work with relational operators, can work with relational ==, logical ||
+	specific choices in switch(ex budget in hotel menu 100)
+
+**homework: income tax slabs of new and old regime.**
+
+
+control statements: to understand the user requirements and give the solution based on that.
+
+
+loop statements:
+	while used in debit card is correct 
+	do while in password
+	for
+	for each, it store in temporary array so it does not store, so only for print.
+
+how the scanner.nextInt and System.out.println is formed.
+
+Type Conversion:
+	Type Casting: Casting betweenany datatypes.
+	eg: int accountType='S'(implicit castig).
+	Ex int accountType 'S' //implicit
+	Type Parsing:Conversion from string to other types using Respective Wrapper class parse method
+scanner,nextInt
+
+String:
+	string is a class in java
+	literal way and non literal way of object creation
+	storage logic: CRUD operations
+	string is immutable class
+	it wont accept automatically(concat) you should assign it.
+	charAt
+	substring
+	trim
+	contains
+	replace
+
+RegEx:
+	for the data validation
+	for example the password with some range and the password containing the letters and numbers.
+	Pattern>>compile, match
+	Mathcer>matches
+	
+	^ >> start
+	$ >> end
+	[0-9] >> numbers
+	[a-zA-Z] >> alphabets
+	?= >> Grouping
+	{start, limit} >> length of the string
+
+Array:
+	storage logic: temporary, fixed size, type specific.
+	types: single , multi(in every floor same number of rooms), jagged(in every floor there is no same number of rooms)
+	declaration:
+		type[]var/obj={v1,v2...}
+		type[]var/obj=new type[size];//10..default values in all indices.
+	Operations:
+		CRUD
+		Search
+		Sort
+		Analysis
+Methods:
+	minimize the space complexity by distributed code of grouping statements based on nature.
+	excecuted when make a call 
+	
+	types:
+		inbuilt methods
+		user defined
+	category:
+		parameter with return: type parsing
+		parameter without return: println
+		no parameter without return: finalize
+		no parameter with return: scanner methods

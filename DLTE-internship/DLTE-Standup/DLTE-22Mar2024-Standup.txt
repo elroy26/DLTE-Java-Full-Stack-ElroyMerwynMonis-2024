@@ -1,0 +1,10 @@
+what is the webservice
+what kind of the output does the webservice give
+who is the client in the webservice
+is front end communicates with webservice.
+what is proxy.
+can we make a call to rest to soap or viceversa
+have your own client for testing apis
+if my rest is developed in java and other in dotnet can it be communicated
+
+

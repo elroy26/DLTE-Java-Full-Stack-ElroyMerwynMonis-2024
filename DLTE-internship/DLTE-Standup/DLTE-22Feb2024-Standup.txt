@@ -1,0 +1,11 @@
+1. try when class is orivate and that class memeber is publec
+2. student class is procted and address class is aslo protected can it be inherited
+3. if class is default the its membes shuld be of what type and how can it be accessed by other class
+4. store maven jar in some other location 
+5. why it is not present in project but present in local project 
+6. Excecute java program in cammand prompt and see the process and find where the file is stroed in vbasi.services
+7. remember the error code and explore it.
+8. transitve library- one library depending on other the other library
+
+
+https://chat.openai.com/share/0ff52766-97c5-4ef5-83d4-edd7f9ab24b3

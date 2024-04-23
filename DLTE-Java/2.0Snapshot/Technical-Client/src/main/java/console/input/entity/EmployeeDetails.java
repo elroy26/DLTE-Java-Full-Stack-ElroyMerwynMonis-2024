@@ -1,21 +1,18 @@
 package console.input.entity;
 
-import app.backend.entity.EmployeePermanentAddress;
-import app.backend.entity.EmployeeTemporaryAddress;
-
 public class EmployeeDetails {
     private Integer employeeID;
     private String employeeFirstName,employeeMiddleName,employeeLastName;
     private String email;
     private Long phoneNumber;
-    private EmployeePermanentAddress employeePermanentAddress;
-    private EmployeeTemporaryAddress employeeTemporaryAddress;
+    private EmployeeAddress employeePermanentAddress;
+    private EmployeeAddress employeeTemporaryAddress;
 
 
     public EmployeeDetails() {
     }
 
-    public EmployeeDetails(Integer employeeID, String employeeFirstName, String employeeMiddleName, String employeeLastName, String email, Long phoneNumber, EmployeePermanentAddress employeePermanentAddress, EmployeeTemporaryAddress employeeTemporaryAddress) {
+    public EmployeeDetails(Integer employeeID, String employeeFirstName, String employeeMiddleName, String employeeLastName, String email, Long phoneNumber, EmployeeAddress employeePermanentAddress, EmployeeAddress employeeTemporaryAddress) {
         this.employeeID = employeeID;
         this.employeeFirstName = employeeFirstName;
         this.employeeMiddleName = employeeMiddleName;
@@ -40,19 +37,19 @@ public class EmployeeDetails {
                 '}';
     }
 
-    public EmployeePermanentAddress getEmployeePermanentAddress() {
+    public EmployeeAddress getEmployeePermanentAddress() {
         return employeePermanentAddress;
     }
 
-    public void setEmployeePermanentAddress(EmployeePermanentAddress employeePermanentAddress) {
+    public void setEmployeePermanentAddress(EmployeeAddress employeePermanentAddress) {
         this.employeePermanentAddress = employeePermanentAddress;
     }
 
-    public EmployeeTemporaryAddress getEmployeeTemporaryAddress() {
+    public EmployeeAddress getEmployeeTemporaryAddress() {
         return employeeTemporaryAddress;
     }
 
-    public void setEmployeeTemporaryAddress(EmployeeTemporaryAddress employeeTemporaryAddress) {
+    public void setEmployeeTemporaryAddress(EmployeeAddress employeeTemporaryAddress) {
         this.employeeTemporaryAddress = employeeTemporaryAddress;
     }
 

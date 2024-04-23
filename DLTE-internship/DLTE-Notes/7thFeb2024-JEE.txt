@@ -1,0 +1,49 @@
+standalone application
+web application
+mobile application
+ 
+presentation logic-ui
+business logic- code
+data logic- storage
+
+single tire,multi....
+
+Http-Transfer pages text,images
+tcp,udp,smtp
+location,port,user,password
+
+here we are using CLIENT SERVER ARCHITECTURE ------------------
+Two tier architecture--
+	for the client it gives only presentation logic,business logic but no data logic
+three tier architecture-client-ui and bussiness
+			server-ui and business
+			databaser server
+n-tier archetecture- proxy server, like tietoevry and ISP
+model-storage
+view- ui
+controller- business
+
+application server should have- xml-soap api, json-restapi webservice we use
+
+
+Web
+    JavaEE
+	pages-jsp,jsf
+	business 
+		servlet-accept,read,process,provide
+		model-pojo/entity	
+	data-oracle-Jboss server
+	     webservie- JAX-WS
+			JAX-RS
+    Frameworks
+
+slf4j:
+implement:
+logger,loggerFactory(Classname.Class)
+
+util.logger:
+logger.log(level.msg)
+slg4j:
+logger.info(msg)
+logger.error(msg)
+logger.warning(msg)

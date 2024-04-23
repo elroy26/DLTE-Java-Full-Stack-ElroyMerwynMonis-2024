@@ -55,12 +55,12 @@
     } else if (current.hasClass("logout")) {
         console.log("Logout link clicked");
         sessionStorage.removeItem("logged");
-        location.assign("http://127.0.0.1:5502/html/login.html");
+        location.assign("http://127.0.0.1:5502/html/index.html");
     }
 });
     } else {
         console.log("User not logged in. Redirecting to login page.");
-        location.assign("http://127.0.0.1:5502/html/login.html");
+        location.assign("http://127.0.0.1:5502/html/index.html");
     }
 });
 

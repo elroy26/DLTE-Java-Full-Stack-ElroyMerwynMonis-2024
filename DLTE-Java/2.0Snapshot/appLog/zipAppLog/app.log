@@ -1,0 +1,2 @@
+10:36:36.055 [main] INFO  console.input.App - ------Welcome to the profile filling form-----------
+10:36:48.759 [main] WARN  console.input.App - Invalid Employee Id format. Please enter Employee id which contains only 5 digits

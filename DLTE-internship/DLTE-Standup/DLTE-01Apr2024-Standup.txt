@@ -1,0 +1,4 @@
+try connecting rest and client
+can we write json structure for req and res just by looking at entites in java
+what other possiblities in datatype are there then how do i derive it
+buckets 

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e9b1ff4-9d04-4b6d-883c-9f29a74549de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../DLTE-MyBank-Project/MyBank-Insurance-Dao/logs/Mybank-InsuranceDao.log.2024-04-16.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-MyBank-Project/MyBank-Insurance-WebService/logs/mybank-InsuranceWebservice.log.2024-04-21.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employee-webservice.log.2024-04-19.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Technical_Review_Spring_Soap/employee-webservice.log.2024-04-19.0.gz" afterDir="false" />
+    <list default="true" id="623e18fc-49b6-47fd-97e3-a926908b5633" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-WebService/logs/mybank-EmployeeWebservice.log.2024-04-18.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-FrontEnd/DLTE-FrontEnd-001/DLTE-FE-001-HtmlComponents.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-Java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Java/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-Java/2.0Snapshot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Java/2.0Snapshot/.idea/workspace.xml" afterDir="false" />
@@ -68,7 +65,13 @@
       <change beforePath="$PROJECT_DIR$/../../DLTE-Java/2.0Snapshot/appLog/zipAppLog/app-2024-04-03.1.log.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Java/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Task848/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Task848/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Rest-DAOLayer/DAO-MyBankTransactionHistory/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Rest-DAOLayer/DAO-MyBankTransactionHistory/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Rest-DAOLayer/REST webservice/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Rest-DAOLayer/REST webservice/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Rest-DAOLayer/REST webservice/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Rest-DAOLayer/REST webservice/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Rest-DAOLayer/REST webservice/src/main/java/dao/servlets/AuthorizeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Rest-DAOLayer/REST webservice/src/main/java/dao/servlets/AuthorizeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Rest-DAOLayer/REST webservice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Rest-DAOLayer/REST webservice/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Rest-DAOLayer/REST webservice/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Rest-DAOLayer/REST webservice/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Rest-DAOLayer/REST webservice/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Rest-DAOLayer/REST webservice/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task885-Soap-DAOLayer/Task879/Task879-Client/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task885-Soap-DAOLayer/Task879/Task879-Client/src/main/java/org/example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-MyBank-Project/MyBank-Insurance-Dao/logs/Mybank-InsuranceDao.log.2024-04-11.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-MyBank-Project/MyBank-Insurance-Dao/logs/Mybank-InsuranceDao.log.2024-04-12.0.gz" beforeDir="false" />
@@ -84,6 +87,7 @@
       <change beforePath="$PROJECT_DIR$/../../DLTE-MyBank-Project/MyBank-Insurance-WebService/logs/mybank-InsuranceWebservice.log.2024-04-14.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-MyBank-Project/MyBank-Insurance-WebService/logs/mybank-InsuranceWebservice.log.2024-04-15.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-MyBank-Project/MyBank-Insurance-WebService/logs/mybank-InsuranceWebservice.log.2024-04-16.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/mybank/insurance/webservice/security/loginhandler/CustomerSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/mybank/insurance/webservice/security/loginhandler/CustomerSuccessHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-Spring/DLTE-Spring-Tasks/Task1007/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Spring/DLTE-Spring-Tasks/Task1007/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-Client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallFilterEmployeeRequest.class" beforeDir="false" />
@@ -139,21 +143,32 @@
       <change beforePath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-WebService/logs/mybank-EmployeeWebservice.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-WebService/logs/mybank-EmployeeWebservice.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-WebService/logs/mybank-EmployeeWebservice.log.2024-04-11.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-WebService/logs/mybank-EmployeeWebservice.log.2024-04-12.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-WebService/logs/mybank-EmployeeWebservice.log.2024-04-15.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-WebService/src/main/java/app/employee/webservice/WebserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-WebService/src/main/java/app/employee/webservice/WebserviceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-WebService/src/main/java/app/employee/webservice/configs/SoapServiceConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-WebService/src/main/java/app/employee/webservice/configs/SoapServiceConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-WebService/src/main/java/app/employee/webservice/endpoint/EmployeeProfileEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-WebService/src/main/java/app/employee/webservice/endpoint/EmployeeProfileEndpoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-WebService/src/main/resources/employee.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Spring/technical/Technical-WebService/src/main/resources/employee.xsd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Techinical_Review_Spring_Backend/employee-backend.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Techinical_Review_Spring_Backend/employee-backend.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Techinical_Review_Spring_Backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Techinical_Review_Spring_Backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Techinical_Review_Spring_Backend/src/main/java/employeebackend/service/TechnicalReviewSpringBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Techinical_Review_Spring_Backend/src/main/java/employeebackend/service/TechnicalReviewSpringBackendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Techinical_Review_Spring_Backend/src/main/java/employeebackend/service/entity/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Techinical_Review_Spring_Backend/src/main/java/employeebackend/service/entity/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Techinical_Review_Spring_Backend/src/main/java/employeebackend/service/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Techinical_Review_Spring_Backend/src/main/java/employeebackend/service/entity/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Techinical_Review_Spring_Backend/src/main/java/employeebackend/service/repository/DataBaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Techinical_Review_Spring_Backend/src/main/java/employeebackend/service/repository/DataBaseRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Techinical_Review_Spring_Backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Techinical_Review_Spring_Backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-webservice.log" beforeDir="false" afterPath="$PROJECT_DIR$/employee-webservice.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-webservice.log.2024-04-11.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-webservice.log.2024-04-19.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Technical_Review_Spring_Soap/employee-backend.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Technical_Review_Spring_Soap/employee-backend.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/employee/client/soap/console/EmployeeConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/employee/client/soap/console/EmployeeConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/employee/client/soap/service/SOAPConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/employee/client/soap/service/SOAPConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/employee/client/soap/TechnicalReviewSpringClientApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/employee/client/soap/TechnicalReviewSpringClientApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Technical_Review_Spring_Soap/employee-backend.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Technical_Review_Spring_Soap/employee-webservice.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Technical_Review_Spring_Soap/employee-webservice.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Technical_Review_Spring_Soap/employee-webservice.log.2024-04-09.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Technical_Review_Spring_Soap/employee-webservice.log.2024-04-10.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Technical_Review_Spring_Soap/employee-webservice.log.2024-04-11.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Technical_Review_Spring_Soap/employee-webservice.log.2024-04-19.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Technical_Review_Spring_Soap/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Technical_Review_Spring_Soap/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,14 +187,17 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2fIuMlIJxIQ2fPI74Kr1BdvTTay" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2fRQ8rs0KXWkMwjYNRVa4QQR6ZX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -188,6 +206,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RunManager">
@@ -216,53 +240,60 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1e9b1ff4-9d04-4b6d-883c-9f29a74549de" name="Default Changelist" comment="" />
-      <created>1713500867569</created>
+      <changelist id="623e18fc-49b6-47fd-97e3-a926908b5633" name="Default Changelist" comment="" />
+      <created>1713761253133</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1713500867569</updated>
-      <workItem from="1713500870910" duration="822000" />
-      <workItem from="1713675582346" duration="34000" />
-      <workItem from="1713760144826" duration="113000" />
-      <workItem from="1713760285427" duration="1028000" />
+      <updated>1713761253133</updated>
+      <workItem from="1713761256595" duration="158000" />
+      <workItem from="1713761756554" duration="1297000" />
+      <workItem from="1713764444524" duration="1091000" />
+      <workItem from="1713844158296" duration="4163000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1237" height="203" key="GridCell.Tab.0.bottom" timestamp="1713761349765">
+    <state x="421" y="93" key="FileChooserDialogImpl" timestamp="1713761750983">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1713761349765" />
-    <state width="1237" height="203" key="GridCell.Tab.0.center" timestamp="1713761349765">
+    <state x="421" y="93" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1713761750983" />
+    <state width="1237" height="351" key="GridCell.Tab.0.bottom" timestamp="1713764156216">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1713761349765" />
-    <state width="1237" height="203" key="GridCell.Tab.0.left" timestamp="1713761349765">
+    <state width="1237" height="351" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1713764156216" />
+    <state width="1237" height="351" key="GridCell.Tab.0.center" timestamp="1713764156216">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1713761349765" />
-    <state width="1237" height="203" key="GridCell.Tab.0.right" timestamp="1713761349765">
+    <state width="1237" height="351" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1713764156216" />
+    <state width="1237" height="351" key="GridCell.Tab.0.left" timestamp="1713764156216">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1713761349765" />
-    <state width="1237" height="203" key="GridCell.Tab.1.bottom" timestamp="1713761349765">
+    <state width="1237" height="351" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1713764156216" />
+    <state width="1237" height="351" key="GridCell.Tab.0.right" timestamp="1713764156216">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.1.bottom/0.0.1280.672@0.0.1280.672" timestamp="1713761349765" />
-    <state width="1237" height="203" key="GridCell.Tab.1.center" timestamp="1713761349765">
+    <state width="1237" height="351" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1713764156216" />
+    <state width="1237" height="351" key="GridCell.Tab.1.bottom" timestamp="1713764156216">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.1.center/0.0.1280.672@0.0.1280.672" timestamp="1713761349765" />
-    <state width="1237" height="203" key="GridCell.Tab.1.left" timestamp="1713761349765">
+    <state width="1237" height="351" key="GridCell.Tab.1.bottom/0.0.1280.672@0.0.1280.672" timestamp="1713764156216" />
+    <state width="1237" height="351" key="GridCell.Tab.1.center" timestamp="1713764156216">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.1.left/0.0.1280.672@0.0.1280.672" timestamp="1713761349765" />
-    <state width="1237" height="203" key="GridCell.Tab.1.right" timestamp="1713761349765">
+    <state width="1237" height="351" key="GridCell.Tab.1.center/0.0.1280.672@0.0.1280.672" timestamp="1713764156216" />
+    <state width="1237" height="351" key="GridCell.Tab.1.left" timestamp="1713764156216">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.1.right/0.0.1280.672@0.0.1280.672" timestamp="1713761349765" />
+    <state width="1237" height="351" key="GridCell.Tab.1.left/0.0.1280.672@0.0.1280.672" timestamp="1713764156216" />
+    <state width="1237" height="351" key="GridCell.Tab.1.right" timestamp="1713764156216">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="351" key="GridCell.Tab.1.right/0.0.1280.672@0.0.1280.672" timestamp="1713764156216" />
   </component>
 </project>

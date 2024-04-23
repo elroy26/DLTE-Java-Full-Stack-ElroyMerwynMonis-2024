@@ -1,0 +1,5 @@
+waht is the top down or bottm up
+is it allowed to have mor than one port type in same wsdl
+what is @payloadroot and @resonsepayload
+@reuestPAyload can it have two times in method signature
+how will the wsdl know which is the input and output . how is the request and response are linked

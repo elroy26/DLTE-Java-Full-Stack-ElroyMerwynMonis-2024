@@ -1,0 +1,4 @@
+cloud storage
+what is the first step in database connection 
+with oracle driver can i connected to all the driver
+close the resoucres which are opend like result pepareed statmenet and connection

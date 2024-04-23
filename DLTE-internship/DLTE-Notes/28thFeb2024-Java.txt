@@ -1,0 +1,11 @@
+Console application
+
+oops,exception,properties,logs,files,collections
+
+== credit card:card number ,card expiry, cardCvv, cardPin, cardTotalLimit, cardAvailableLimit, cardUsage,cardStatus
+   operations: readByCardNumber,update,
+
+== Transaction: transactionId,doneBy, dateBy, amount, receiver,
+   operations: create,read,update,sort
+
+architecture: 

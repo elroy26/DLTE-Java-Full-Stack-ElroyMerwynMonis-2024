@@ -1,0 +1,57 @@
+Generics: here we can store arguments of differnt datatype
+type safety :
+generic class:
+	class ClassName<T>
+{
+datamembers
+methods
+}
+instance:
+	Classname<Double>object1=new jClassName<Double>();
+interface:
+	interface Interfacenae<T>{
+}
+methods:
+public void methodName(T object){
+}
+public T methidName(){
+}
+
+datamembers:
+T memnbername
+
+generic methods
+gemnrics memberes
+
+Lambda expression:it can be used with only one astract method
+instance=(parameter)-> (method definaition)
+instance.callMethos(argument)
+
+Collections: java.util,it offers storage classes, it has fixed and dynamic storage, 
+	iterable>>interface
+	collection
+		List:
+			arraylist,linkedlist(addLast/add,addFirst,getIndex,getFirst(),getLast(),removeFist/removeLast),vector,stack
+		set:hashset,treeset-this uses only literal values,linkedHashset
+		map:hashset, hashmap,treemap,hashtable it takes 11 bits and is it is synchrnizes and thread safety
+			<key,value>
+			put,putAll,get(),keyset(not duplicates)
+			Key base insertion deletion updation is possible Eg:contacts in phone,login, 
+
+
+
+		queue:
+	overcome:
+		flexibility to work with fixed and dynaic size
+		flexibilty towork with generics and non generics
+		inbuilt methods to perform crud and anaysis
+		interact as objects
+		incorporate with class and objects
+		
+iterator:works simialr ot for loop
+
+Stream
+	comparables-use two or more parameter,needs to use this operator to point to object, new object replace the old one when there is redundancy basedon the recent insertion
+	comparator- use only one argument
+		
+factory pattern- Account obj= new Debit();	

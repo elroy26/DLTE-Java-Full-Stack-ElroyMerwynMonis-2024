@@ -42,3 +42,23 @@ Identify and stop the process that's listening on port 8082 or configure this ap
 2024-04-18 22:13:04 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4094 ms
 2024-04-18 22:13:05 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
 2024-04-18 22:13:05 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8083 (http) with context path ''
+2024-04-18 22:13:05 [restartedMain] INFO  a.e.console.ConsoleApplication - Started ConsoleApplication in 6.731 seconds (JVM running for 9.33)
+2024-04-18 22:13:41 [restartedMain] INFO  a.e.console.ConsoleApplication - Starting ConsoleApplication using Java 1.8.0_292 on WPG02VBMJ with PID 25140 (C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-Spring\technical\Technical-Console\target\classes started by xxmonise in C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-Spring\technical\Technical-Console)
+2024-04-18 22:13:41 [restartedMain] INFO  a.e.console.ConsoleApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-18 22:13:41 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-18 22:13:41 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-04-18 22:13:42 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f9262ef6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-18 22:13:43 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-18 22:13:43 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8083 (http)
+2024-04-18 22:13:43 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-18 22:13:43 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-18 22:13:43 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-18 22:13:43 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2269 ms
+2024-04-18 22:13:44 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2024-04-18 22:13:44 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8083 (http) with context path ''
+2024-04-18 22:13:44 [restartedMain] INFO  a.e.console.ConsoleApplication - Started ConsoleApplication in 4.142 seconds (JVM running for 6.523)
+2024-04-18 22:14:14 [main] INFO  a.e.console.ConsoleApplicationTests - Starting ConsoleApplicationTests using Java 1.8.0_292 on WPG02VBMJ with PID 24920 (started by xxmonise in C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-Spring\technical\Technical-Console)
+2024-04-18 22:14:14 [main] INFO  a.e.console.ConsoleApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-04-18 22:14:16 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$7b93cd8b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-18 22:14:16 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-18 22:14:18 [main] INFO  a.e.console.ConsoleApplicationTests - Started ConsoleApplicationTests in 5.264 seconds (JVM running for 7.77)

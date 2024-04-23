@@ -1,5 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="64ad0594-4868-4ad8-a5f5-14ff3d32294d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/logs/Mybank-InsuranceDao.log.2024-04-12.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/logs/Mybank-InsuranceDao.log.2024-04-14.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/logs/Mybank-InsuranceDao.log.2024-04-15.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/surefire-reports/TEST-maybank.insurance.dao.InsuranceAvailedTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/surefire-reports/maybank.insurance.dao.InsuranceAvailedTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/logs/Mybank-InsuranceDao.log.2024-04-15.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/logs/mybank-InsuranceWebservice.log.2024-04-12.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/logs/mybank-InsuranceWebservice.log.2024-04-14.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/logs/mybank-InsuranceWebservice.log.2024-04-15.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallFilterEmployeeRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallFilterEmployeeRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallFilterEmployeeResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallFilterEmployeeResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallInsertEmployeeAddressRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallInsertEmployeeAddressRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallInsertEmployeeAddressResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallInsertEmployeeAddressResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallInsertEmployeeDetailsRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallInsertEmployeeDetailsRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallInsertEmployeeDetailsResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallInsertEmployeeDetailsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallOutputEmployeeRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallOutputEmployeeRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallOutputEmployeeResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/CallOutputEmployeeResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/EmployeeAddress.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/EmployeeAddress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/EmployeeDetails.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/EmployeeDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/EmployeePort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/EmployeePort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/EmployeePortService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/EmployeePortService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/ObjectFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/ObjectFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/ServiceStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/ServiceStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/package-info.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-Client/src/main/java/services/employee/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-WebService/logs/mybank-EmployeeWebservice.log.2024-04-12.0.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-FrontEnd/DLTE-FrontEnd-001/DLTE-FE-001-HtmlComponents.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/main/java/console/input/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/main/java/console/input/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/main/java/console/input/entity/EmployeeAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/main/java/console/input/entity/EmployeeAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/main/java/console/input/entity/EmployeeDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/main/java/console/input/entity/EmployeeDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/main/java/console/input/presentation/FilterEmployeeByPincode.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/main/java/console/input/presentation/FilterEmployeeByPincode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/main/java/console/input/presentation/InputEmployeeProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/main/java/console/input/presentation/InputEmployeeProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/main/java/console/input/presentation/OutputEmployeeProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/main/java/console/input/presentation/OutputEmployeeProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/test/java/console/input/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/src/test/java/console/input/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/classes/console/input/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/classes/console/input/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/classes/console/input/entity/EmployeeDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/classes/console/input/entity/EmployeeDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/classes/console/input/entity/EmployeePermanentAddress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/classes/console/input/entity/EmployeeTemporaryAddress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/classes/console/input/presentation/FilterEmployeeByPincode.class" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/classes/console/input/presentation/FilterEmployeeByPincode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/classes/console/input/presentation/InputEmployeeProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/classes/console/input/presentation/InputEmployeeProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/classes/console/input/presentation/OutputEmployeeProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/classes/console/input/presentation/OutputEmployeeProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/classes/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/test-classes/console/input/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-Client/target/test-classes/console/input/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/main/java/app/backend/entity/EmployeeAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/main/java/app/backend/entity/EmployeeAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/main/java/app/backend/entity/EmployeeDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/main/java/app/backend/entity/EmployeeDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/main/java/app/backend/middleware/EmployeeDatabaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/main/java/app/backend/middleware/EmployeeDatabaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/main/java/app/backend/remotes/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/main/java/app/backend/remotes/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/main/java/app/backend/remotes/ValidationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/main/java/app/backend/remotes/ValidationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/main/java/app/backend/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/main/java/app/backend/services/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/main/java/app/backend/validation/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/main/java/app/backend/validation/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/test/java/app/backend/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/src/test/java/app/backend/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/Technical-ClientBackend-2.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/Technical-ClientBackend-2.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/classes/META-INF/Technical-ClientBackend.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/classes/app/backend/entity/EmployeeDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/classes/app/backend/entity/EmployeeDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/classes/app/backend/entity/EmployeePermanentAddress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/classes/app/backend/entity/EmployeeTemporaryAddress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/classes/app/backend/middleware/EmployeeDatabaseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/classes/app/backend/middleware/EmployeeDatabaseRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/classes/app/backend/remotes/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/classes/app/backend/remotes/EmployeeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/classes/app/backend/remotes/ValidationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/classes/app/backend/remotes/ValidationRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/classes/app/backend/services/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/classes/app/backend/services/EmployeeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/classes/app/backend/validation/Validation.class" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/classes/app/backend/validation/Validation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/surefire-reports/TEST-app.backend.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/surefire-reports/app.backend.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/test-classes/app/backend/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-ClientBackend/target/test-classes/app/backend/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/Technical-SOAPwebservice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/Technical-SOAPwebservice.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/src/main/java/web/EmployeeCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/src/main/java/web/EmployeeCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/src/main/java/web/EmployeeSoap.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/src/main/java/web/EmployeeSoap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/src/main/java/web/SoapEndpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/src/main/java/web/SoapEndpoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/target/Technical-SOAPwebservice-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/target/Technical-SOAPwebservice-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/target/classes/web/EmployeeSoap.class" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/target/classes/web/EmployeeSoap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/target/surefire-reports/TEST-app.soap.endpoints.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/target/surefire-reports/TEST-app.soap.endpoints.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/target/surefire-reports/app.soap.endpoints.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2.0Snapshot/Technical-SOAPwebservice/target/surefire-reports/app.soap.endpoints.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.0Snapshot/appLog/app-2024-04-03.0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DLTE-Java-ConsoleApp/DAO-MyBankTransactionHistory/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-JavaEE/DLTE-JavaEE-Tasks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-JavaEE/DLTE-JavaEE-Tasks/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Task848/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task854-Rest-DAOLayer/Task848/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task885-Soap-DAOLayer/Task879/Task879-Client/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-JavaEE/DLTE-JavaEE-Tasks/Task885-Soap-DAOLayer/Task879/Task879-Client/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank Banking application.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank Banking application.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/logs/Mybank-InsuranceDao.log.2024-04-08.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/logs/Mybank-InsuranceDao.log.2024-04-09.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/logs/Mybank-InsuranceDao.log.2024-04-10.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/logs/mybank-InsuranceDao.log" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/logs/mybank-InsuranceDao.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/main/java/maybank/insurance/dao/InsurancedaoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/main/java/maybank/insurance/dao/InsurancedaoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/main/java/maybank/insurance/dao/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/main/java/maybank/insurance/dao/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/main/java/maybank/insurance/dao/entity/InsuranceAvailed.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/main/java/maybank/insurance/dao/entity/InsuranceAvailed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/main/java/maybank/insurance/dao/remotes/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/main/java/maybank/insurance/dao/remotes/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/main/java/maybank/insurance/dao/services/CustomerDbRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/main/java/maybank/insurance/dao/services/CustomerDbRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/main/java/maybank/insurance/dao/services/InsuranceAvailableDbRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/main/java/maybank/insurance/dao/services/InsuranceAvailableDbRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/test/java/maybank/insurance/dao/InsuranceAvailedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/test/java/maybank/insurance/dao/InsuranceAvailedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/test/java/maybank/insurance/dao/InsurancedaoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/src/test/java/maybank/insurance/dao/InsurancedaoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/classes/maybank/insurance/dao/InsurancedaoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/classes/maybank/insurance/dao/InsurancedaoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/classes/maybank/insurance/dao/entity/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/classes/maybank/insurance/dao/entity/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/classes/maybank/insurance/dao/entity/InsuranceAvailed.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/classes/maybank/insurance/dao/entity/InsuranceAvailed.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/classes/maybank/insurance/dao/remotes/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/classes/maybank/insurance/dao/remotes/CustomerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/classes/maybank/insurance/dao/services/CustomerDbRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/classes/maybank/insurance/dao/services/CustomerDbRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/insurancedao-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/insurancedao-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/test-classes/maybank/insurance/dao/InsuranceAvailedTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/test-classes/maybank/insurance/dao/InsuranceAvailedTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/test-classes/maybank/insurance/dao/InsurancedaoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-Dao/target/test-classes/maybank/insurance/dao/InsurancedaoApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/logs/Mybank-InsuranceDao.log" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/logs/Mybank-InsuranceDao.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/logs/mybank-InsuranceWebservice.log" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/logs/mybank-InsuranceWebservice.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/logs/mybank-InsuranceWebservice.log.2024-04-08.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/logs/mybank-InsuranceWebservice.log.2024-04-09.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/logs/mybank-InsuranceWebservice.log.2024-04-10.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/mybank/insurance/webservice/rest/controller/InsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/mybank/insurance/webservice/rest/controller/InsuranceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/mybank/insurance/webservice/security/configs/InsuranceSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/mybank/insurance/webservice/security/configs/InsuranceSecurity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/mybank/insurance/webservice/security/controller/CustomerSignupAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/mybank/insurance/webservice/security/controller/CustomerSignupAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/mybank/insurance/webservice/security/loginhandler/CustomerFailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/mybank/insurance/webservice/security/loginhandler/CustomerFailureHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/mybank/insurance/webservice/security/loginhandler/CustomerSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/mybank/insurance/webservice/security/loginhandler/CustomerSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/services/insurance/CallAllInsuranceAvailableRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/services/insurance/CallAllInsuranceAvailableRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/services/insurance/CallAllInsuranceAvailableResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/services/insurance/CallAllInsuranceAvailableResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/services/insurance/InsuranceAvailable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/services/insurance/InsuranceAvailable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/services/insurance/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/services/insurance/ObjectFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/services/insurance/ServiceStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/services/insurance/ServiceStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/services/insurance/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/java/services/insurance/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/test/java/mybank/insurance/webservice/InsuranceAvailedRestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-MyBank-Project/MyBank-Insurance-WebService/src/test/java/mybank/insurance/webservice/InsuranceAvailedRestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Spring/DLTE-Spring-Tasks/Task1007/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Spring/DLTE-Spring-Tasks/Task1007/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/src/main/java/app/employee/dao/DaoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/src/main/java/app/employee/dao/DaoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/src/main/java/app/employee/dao/entity/EmployeeAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/src/main/java/app/employee/dao/entity/EmployeeAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/src/main/java/app/employee/dao/entity/EmployeeHttpResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/src/main/java/app/employee/dao/entity/EmployeeHttpResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/src/main/java/app/employee/dao/exceptions/EmployeeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/src/main/java/app/employee/dao/exceptions/EmployeeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/src/main/java/app/employee/dao/remotes/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/src/main/java/app/employee/dao/remotes/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/src/main/java/app/employee/dao/services/EmployeeDbRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/src/main/java/app/employee/dao/services/EmployeeDbRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-DAO/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-WebService/insurance-soapui-project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-WebService/insurance-soapui-project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-WebService/logs/mybank-EmployeeWebservice.log" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-WebService/logs/mybank-EmployeeWebservice.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-WebService/src/main/java/app/employee/webservice/WebserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-WebService/src/main/java/app/employee/webservice/WebserviceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-WebService/src/main/java/app/employee/webservice/configs/SoapServiceConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-WebService/src/main/java/app/employee/webservice/configs/SoapServiceConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-WebService/src/main/java/app/employee/webservice/endpoint/EmployeeProfileEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-WebService/src/main/java/app/employee/webservice/endpoint/EmployeeProfileEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-WebService/src/main/resources/employee.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Spring/technical/Technical-WebService/src/main/resources/employee.xsd" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -7,7 +179,47 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectId" id="2fDN5o50isISNz3zU8DiLmvf84Y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64ad0594-4868-4ad8-a5f5-14ff3d32294d" name="Default Changelist" comment="" />
+      <created>1713331507500</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713331507500</updated>
+      <workItem from="1713331509673" duration="157000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
 </project>

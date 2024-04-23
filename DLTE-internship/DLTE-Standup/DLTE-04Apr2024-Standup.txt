@@ -1,0 +1,8 @@
+when is object created in spring
+wahat is the diff btw the bean name and bean id
+waht is the diff between @bean and @Component
+how we tried bean annotation with xml
+do i get flexibility with xml to differntiate that class has service bean configuration 
+is xml and annotation same if there is any extra in xml 
+how objects are getting created with xml and spring and in java
+

@@ -1,0 +1,8 @@
+client- diffent option lik payment profile login 
+	<-> amazon multiple webservice - one type or mltile type conversion    
+				       <->  bank webservice 
+							    <-> database
+
+server has a client both end it must has 
+what is top down and and bottom up aproach and hwaoit is applicable for the rest
+how to creatae object in sring core and how to return tose bean how do we invoke it

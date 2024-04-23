@@ -1,0 +1,12 @@
+so waht is the basaic criteria for inherience
+---so use the protected
+---overidding under the shild class
+what access specifier i can apply at method level
+make sure use the camel case while declaasring the class name
+when we should make our class abstract
+where are junit supported version present and if it is preent where
+why are the log files present
+is mvn clean and build same or differrnt
+
+
+make sure it is practical explanation,lagging with the team work, 

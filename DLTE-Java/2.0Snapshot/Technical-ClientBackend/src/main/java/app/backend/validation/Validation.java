@@ -1,8 +1,7 @@
 package app.backend.validation;
 
+import app.backend.entity.EmployeeAddress;
 import app.backend.entity.EmployeeDetails;
-import app.backend.entity.EmployeePermanentAddress;
-import app.backend.entity.EmployeeTemporaryAddress;
 import app.backend.remotes.ValidationRepository;
 
 import java.util.regex.Pattern;
@@ -54,30 +53,26 @@ public class Validation implements ValidationRepository {
         return true;
     }
     @Override
-    public boolean validateEmployeePermanentAddress(EmployeePermanentAddress permanentAddress){
+    public boolean validateEmployeeAddress(EmployeeAddress permanentAddress,EmployeeAddress temporaryAddress){
 
+        String permanentPincode=permanentAddress.getPincode().toString();
+        String temporaryPincode=temporaryAddress.getPincode().toString();
 
-        String pincode=permanentAddress.getPincodePermanent().toString();
-        if (isValidName(permanentAddress.getPermanentCity()))
-            permanentAddress.setPermanentCity(permanentAddress.getPermanentCity());
-        if (isValidName(permanentAddress.getPermanentState()))
-            permanentAddress.setPermanentState(permanentAddress.getPermanentState());
-        if (isValidPincode(pincode))
-            permanentAddress.setPincodePermanent(permanentAddress.getPincodePermanent());
+        if (isValidName(permanentAddress.getCity()))
+            permanentAddress.setCity(permanentAddress.getCity());
+        if (isValidName(permanentAddress.getState()))
+            permanentAddress.setState(permanentAddress.getState());
+        if (isValidPincode(permanentPincode))
+            permanentAddress.setPincode(permanentAddress.getPincode());
+
+        if (isValidName(temporaryAddress.getCity()))
+            temporaryAddress.setCity(temporaryAddress.getCity());
+        if (isValidName(temporaryAddress.getState()))
+            temporaryAddress.setState(temporaryAddress.getState());
+        if (isValidPincode(temporaryPincode))
+            temporaryAddress.setPincode(temporaryAddress.getPincode());
         return true;
     }
-    @Override
-    public boolean validateEmployeeTemporaryAddress(EmployeeTemporaryAddress temporaryAddress){
 
-
-        String pincode=temporaryAddress.getPincodeTemporary().toString();
-        if (isValidName(temporaryAddress.getTemporaryCity()))
-            temporaryAddress.setTemporaryCity(temporaryAddress.getTemporaryCity());
-        if (isValidName(temporaryAddress.getTemporaryState()))
-            temporaryAddress.setTemporaryState(temporaryAddress.getTemporaryState());
-        if (isValidPincode(pincode))
-            temporaryAddress.setPincodeTemporary(temporaryAddress.getPincodeTemporary());
-        return true;
-    }
 
 }

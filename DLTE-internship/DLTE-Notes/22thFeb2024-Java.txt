@@ -1,0 +1,72 @@
+final: 
+
+== we cannot inherit final modifiers. we can use-- public final classname.....
+== protected member can be inherited by using getter and setter
+== final methods can be inherited but it cannot be overidden
+== in interface all members are final by default
+
+Exceptions:both can be fixed but in error only one can fixed.
+--throwable: it is a parent class of exception
+
+
+== Error:it happens in
+	compiletime:syntax, logical...>> it can be fixed before compliing the code
+	run time: stack overflow, network error>> we cannot fix it.
+== compile time exception: checked exception>> this exception must be fixed before execution
+	methods defined defined with handling someexception,whenever a developer tries to call or ooverride thee same exception should have ahndled
+eg: IOexception,interrupted exception,classnot found execption,clonenotfoundexception
+
+== run time exception: happens during ruunig the code when unexpected data or condition. it can be fixed.it doesnt give the type of exception
+eg: arrayoutofbound exception
+inputMismatch exception
+numberformat exception
+while user ging the input 
+
+-- throws block is used for the system error or complie time exception
+-- catch is used for user and syserror
+
+== objective:
+1. let the code complete ecen whenexception occurs
+2. Offer another chance to fix the exception and continue(customer experine)
+--how to handle:
+1. using throws at signatue of the method
+2. try catch finally
+
+== throws insights:
+	run time exception can be ignored but complie time must be handled
+
+use properties to give instructions to the user dont hardcode it in the class file.
+
+Loggings: 
+Logger logger=Logger.getlogger(Logger.....give the (level,message)
+==console Logs:
+==Storing logs as a seperate file:
+
+==Scanner when encounter inputmisamaath exception the scanner terminates..so we have to create the new scanner
+
+== Assertions:if we want to handle the exception before encounting it we use this
+
+
+================Sql -------------=================
+Procedure:writ complex reapeated queries and  compile it once and execute it any times. unlike other which are executed every time.network traffic, comilation, it also works with exception handling
+create or replace prodcdure Prodechre_name
+begin 
+end
+
+parameter ;
+in,out,inout
+
+Trigger: time  >>  before,after
+event  >> insert update,delete
+
+syntax:
+create or replace triggers TRIGGER_NAME
+TIME EVEENT on TABLE
+for each row
+CONDITION
+begin
+...
+end;
+/
+
+create or replace triggers

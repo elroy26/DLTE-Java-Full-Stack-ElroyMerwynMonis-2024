@@ -1,0 +1,68 @@
+DLTE-JavaFullStack-ElroyMerwynMonis
+
+Local Machine:
+ config
+	username
+	email
+ authentication(cli)
+ tools
+
+1. Local repo
+2. assign remote
+3. add
+4. commit
+5. push
+ 
+Pull
+ initialize local repo
+ assign remote
+ pull
+
+git init
+git add .
+git status
+git commit -m "Java Project is created"
+git config --global user.name elroy26
+git config --global user.email elroymerwyn@gmail.com
+git remote add origin https://github.com/elroy26/DLTE-JavaFullStack-ElroyMerwynMonis.git
+git push origin master
+git clone https://github.com/elroy26/DLTE-JavaFullStack-ElroyMerwynMonis.git
+git pull origin master
+
+Programmimg:
+1. data:
+	how it can stored and accessed
+		variables:
+			dataypes variable_names;
+		object:
+			Classname object_name=new Classname();	//non-literal
+			Character banktype='S'				//literal ,8 wrapper classes
+			datatype compile time classes
+			wrapper  runtime classes,  can be used for string to long,string,object
+
+		scopes:
+			Local:  
+			class level
+		modifier: for data and operations 
+			static:
+			default
+			public
+			protected
+			private
+			final
+			abstract
+			
+2. operations
+
+
+public class should have same name has a file name
+in a single file have multiple classes and single public classes
+we can creaate multiplt main methods but in way of overloac=ding but only one stattic main method for eecution
+1.overloading
+
+
+gpay
+insurance type
+loan
+emi
+fd calculator

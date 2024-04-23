@@ -22,11 +22,10 @@ import java.util.List;
 @Service
 public class DataBaseRepository implements Operations {
 
-    private static final String INSERT_EMPLOYEE_QUERY = "INSERT INTO employee_personal (firstname, middlename, lastname, phone, email, employee_id) VALUES (?, ?, ?, ?, ?, ?)";
-    private static final String INSERT_ADDRESS_QUERY = "INSERT INTO employee_address (employee_id, house_name, street_name, city, state, pincode, type) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    private static final String SELECT_EMPLOYEE_QUERY = "SELECT ep.firstname, ep.middlename, ep.lastname, ep.phone, ep.email, ep.employee_id, ea.house_name, ea.street_name, ea.city, ea.state, ea.pincode FROM employee_personal ep JOIN employee_address ea ON ep.employee_id = ea.employee_id WHERE ea.type IN ('permanent', 'temporary')";
-    private static final String FILTER_BY_PINCODE_QUERY = "SELECT ep.firstname, ep.middlename, ep.lastname, ep.phone, ep.email, ep.employee_id, ea.house_name, ea.street_name, ea.city, ea.state, ea.pincode FROM employee_personal ep JOIN employee_address ea ON ep.employee_id = ea.employee_id WHERE ea.pincode = ?";
-
+    private static final String INSERT_EMPLOYEE_QUERY = "insert into EMPLOYEE_DETAILS values(?,?,?,?,?,?)";
+    private static final String INSERT_ADDRESS_QUERY = "INSERT INTO Employee_Addresses (employee_id, house_name, street_name, city, residing_state, pincode, isTemporary) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    private static final String SELECT_EMPLOYEE_QUERY = "SELECT e.employee_ID, e.FirstName, e.MiddleName, e.LastName, e.email, e.phoneNumber, a.House_Name, a.Street_Name, a.City, a.Residing_State, a.pincode,a.isTemporary FROM employee_details e JOIN employee_addresses a ON e.employee_ID = a.employee_id where a.isTemporary in ('true','false')";
+    private static final String FILTER_BY_PINCODE_QUERY = "SELECT e.employee_ID, e.FirstName, e.MiddleName, e.LastName, e.email, e.phoneNumber, a.House_Name, a.Street_Name, a.City, a.Residing_State, a.pincode,a.isTemporary FROM employee_details e JOIN employee_addresses a ON e.employee_ID = a.employee_id WHERE a.pincode = ?";
     private final Logger logger = LoggerFactory.getLogger(DataBaseRepository.class);
 
     @Autowired
@@ -40,8 +39,8 @@ public class DataBaseRepository implements Operations {
 
         try {
            int result= jdbcTemplate.update(INSERT_EMPLOYEE_QUERY,
-                    employee.getFirstName(), employee.getMiddleName(), employee.getLastName(),
-                    employee.getPhone(), employee.getEmail(), employee.getEmployeeID());
+                   employee.getEmployeeID(),employee.getFirstName(), employee.getMiddleName(), employee.getLastName(),
+                    employee.getEmail(), employee.getPhone());
             if (result == 0) {
                 logger.error("SQL-001");
                 return "SQL-001";

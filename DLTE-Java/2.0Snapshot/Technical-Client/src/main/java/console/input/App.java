@@ -7,7 +7,10 @@ import console.input.presentation.OutputEmployeeProfile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.xml.ws.BindingProvider;
+import javax.xml.ws.handler.Handler;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
@@ -15,7 +18,6 @@ import static java.lang.System.exit;
 
 public class App
 {
-
         private static ResourceBundle resourceBundle = ResourceBundle.getBundle("clientApp");
         private static Logger logger = LoggerFactory.getLogger(App.class);
         private static Scanner scanner=new Scanner(System.in);
@@ -24,7 +26,6 @@ public class App
         private static FilterEmployeeByPincode filterEmployeeByPincode=new FilterEmployeeByPincode();
 
         public static void main(String[] args) {
-
                 try {
                         while (true) {
                                 logger.info(resourceBundle.getString("app.greet"));
@@ -43,8 +44,7 @@ public class App
                                                 String option;
                                                  do {
                                                         inputEmployeeProfile.inputEmployeeDetails();
-                                                        inputEmployeeProfile.inputEmployeePermanentAddress();
-                                                        inputEmployeeProfile.inputEmployeeTemporaryAddress();
+                                                        inputEmployeeProfile.inputEmployeeAddress();
 
                                                          logger.info(resourceBundle.getString("app.request.again"));
                                                         System.out.println(resourceBundle.getString("app.request.again"));

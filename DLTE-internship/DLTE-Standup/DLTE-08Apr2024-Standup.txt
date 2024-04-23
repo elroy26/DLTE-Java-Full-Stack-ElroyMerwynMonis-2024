@@ -1,0 +1,4 @@
+use getbean definition to find whic bean is loaded first when annotation is used.
+in jpa also we do the same
+how to determine the annotaion shold be applied at the class level and at the method level
+if we want to write any bean in xml then can we be able to defferntiate

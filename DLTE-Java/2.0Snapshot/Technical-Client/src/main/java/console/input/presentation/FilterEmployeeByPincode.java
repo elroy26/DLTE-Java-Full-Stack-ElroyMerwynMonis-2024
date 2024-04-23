@@ -3,11 +3,11 @@ package console.input.presentation;
 import app.backend.entity.EmployeeDetails;
 import app.backend.services.EmployeeService;
 import console.input.App;
-import console.input.entity.EmployeePermanentAddress;
-import console.input.entity.EmployeeTemporaryAddress;
-import console.input.validation.Validation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import web.EmployeeSoap;
+import web.EmployeeSoapService;
+import web.SOAPException_Exception;
 
 import java.util.List;
 import java.util.ResourceBundle;
@@ -15,17 +15,23 @@ import java.util.Scanner;
 
 public class FilterEmployeeByPincode {
 
-
+    private static EmployeeSoapService employeeSoapService=new EmployeeSoapService();
+    private static EmployeeSoap soap=employeeSoapService.getEmployeeSoapPort();
     private static ResourceBundle resourceBundle = ResourceBundle.getBundle("clientApp");
     private static Logger logger = LoggerFactory.getLogger(App.class);
     private static Scanner scanner=new Scanner(System.in);
 
     public void filterByPincode() {
-        EmployeeService employeeService=new EmployeeService();
+//        EmployeeService employeeService=new EmployeeService();
         System.out.println("Enter the the pincode to find the Employees residing in that area");
         int pincode = scanner.nextInt();
-        List<EmployeeDetails> employeeProfiles = employeeService.callFilterEmployeeProfilesByPincode(pincode);
-        for (app.backend.entity.EmployeeDetails profile : employeeProfiles) {
+        List<web.EmployeeDetails> employeeProfiles = null;
+        try {
+            employeeProfiles = soap.readByFilterPincode(pincode).getEmployeeDetails();
+        } catch (SOAPException_Exception e) {
+            System.out.println(e.getFaultInfo()+e.getMessage());
+        }
+        for (web.EmployeeDetails profile : employeeProfiles) {
 //                                                                employeeDetails.setEmployeeID(profile.getEmployeeID());
             System.out.println("===========================================");
             System.out.println("-------Employee Details:-------");
@@ -37,18 +43,18 @@ public class FilterEmployeeByPincode {
             System.out.println("Phone Number: " + profile.getPhoneNumber());
 
             System.out.println("-------Permanent Address:-------");
-            System.out.println("House Name: " + profile.getEmployeePermanentAddress().getPermanentHouseName());
-            System.out.println("Street Name: " + profile.getEmployeePermanentAddress().getPermanentStreetName());
-            System.out.println("City: " + profile.getEmployeePermanentAddress().getPermanentCity());
-            System.out.println("State: " + profile.getEmployeePermanentAddress().getPermanentState());
-            System.out.println("Pincode: " + profile.getEmployeePermanentAddress().getPincodePermanent());
+            System.out.println("House Name: " + profile.getEmployeePermanentAddress().getHouseName());
+            System.out.println("Street Name: " + profile.getEmployeePermanentAddress().getStreetName());
+            System.out.println("City: " + profile.getEmployeePermanentAddress().getCity());
+            System.out.println("State: " + profile.getEmployeePermanentAddress().getState());
+            System.out.println("Pincode: " + profile.getEmployeePermanentAddress().getPincode());
 
             System.out.println("--------Temporary Address:------");
-            System.out.println("House Name: " + profile.getEmployeeTemporaryAddress().getTemporaryHouseName());
-            System.out.println("Street Name: " + profile.getEmployeeTemporaryAddress().getTemporaryStreetName());
-            System.out.println("City: " + profile.getEmployeeTemporaryAddress().getTemporaryCity());
-            System.out.println("State: " + profile.getEmployeeTemporaryAddress().getTemporaryState());
-            System.out.println("Pincode: " + profile.getEmployeeTemporaryAddress().getPincodeTemporary());
+            System.out.println("House Name: " + profile.getEmployeeTemporaryAddress().getHouseName());
+            System.out.println("Street Name: " + profile.getEmployeeTemporaryAddress().getStreetName());
+            System.out.println("City: " + profile.getEmployeeTemporaryAddress().getCity());
+            System.out.println("State: " + profile.getEmployeeTemporaryAddress().getState());
+            System.out.println("Pincode: " + profile.getEmployeeTemporaryAddress().getPincode());
             System.out.println("===========================================");
 
         }

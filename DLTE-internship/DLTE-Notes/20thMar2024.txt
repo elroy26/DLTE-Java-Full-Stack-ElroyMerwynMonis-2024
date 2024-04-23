@@ -1,0 +1,11 @@
+Object Relational Mapping
+	POJO converted as relational(sql) 
+	it uses the enttiy ane repository(interface)
+In JPA there are two repo
+	here we have specify wich interface to use
+	Crud-
+	jpaRepo
+		it has methods like save,findById-we have to give option, finall-it gives collection, delete-void
+if we want to write our own query 
+HQL-works on entity and its attributes
+Native Query-our own query

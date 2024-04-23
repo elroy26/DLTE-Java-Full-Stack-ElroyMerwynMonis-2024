@@ -4,6 +4,7 @@ public class EmployeeAddress {
     private Integer employeeID;
     private String houseName, streetName, city, state;
     private Integer pincode;
+    private String isTemporary;
 
     public EmployeeAddress() {
     }
@@ -15,6 +16,14 @@ public class EmployeeAddress {
         this.city = city;
         this.state = state;
         this.pincode = pincode;
+    }
+
+    public String getIsTemporary() {
+        return isTemporary;
+    }
+
+    public void setIsTemporary(String isTemporary) {
+        this.isTemporary = isTemporary;
     }
 
     public Integer getEmployeeID() {

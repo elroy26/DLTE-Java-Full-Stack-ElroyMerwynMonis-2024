@@ -1,0 +1,3 @@
+why in the url the project folder name appears
+how to get the response content type in html
+did we in

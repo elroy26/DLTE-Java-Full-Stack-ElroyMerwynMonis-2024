@@ -1,0 +1,5 @@
+why logger is used--------
+in file handler why should we give true -------
+how is that the timestamp printed with log messages can we change the timestamp
+why is that class name appears in the log file
+
