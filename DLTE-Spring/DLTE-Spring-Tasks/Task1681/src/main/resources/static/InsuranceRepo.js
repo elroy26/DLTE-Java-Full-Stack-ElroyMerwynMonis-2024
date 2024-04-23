@@ -52,7 +52,7 @@ function renderInsuranceCards() {
                                                 <p class="card-text font-monospace">Key Benefits: ${insurance.insuranceKeyBenefits}</p>
                                                 <p class="card-text font-monospace text-dark">Insurance Lifetime: ${insurance.insuranceLifetime}</p>
                                             </h5>
-                                            <button type="button" th:attr="data-href=@{/AvailInsurance}" class="btn btn-primary">Apply Insurance</button>
+                                            <button type="button"  onclick="applyInsurance()" class="btn btn-primary" >Apply Insurance</button>
                                         </div>
                                     </div>
                                 </div>
@@ -62,4 +62,11 @@ function renderInsuranceCards() {
     });
 
     document.getElementById("insuranceCards").innerHTML = content;
+}
+function applyInsurance() {
+    // Get the URL of the insurance application page
+    var insuranceUrl = "/AvailInsurance.html"; // Change this to the correct URL if needed
+
+    // Set the src attribute of the iframe to the insuranceUrl
+    window.location.href = insuranceUrl;
 }
