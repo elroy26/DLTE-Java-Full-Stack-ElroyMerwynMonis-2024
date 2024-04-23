@@ -1,10 +1,10 @@
 package crud;
-
 import com.example.jdbctemplate.TransactionEntity;
 import com.example.jdbctemplate.TransactionService;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import java.util.ArrayList;
 import java.util.List;
 
 @ManagedBean
@@ -12,6 +12,7 @@ import java.util.List;
 public class TransactionCrud {
     private TransactionService service;
     private TransactionEntity transactionEntity = new TransactionEntity();
+    private List<TransactionEntity> filteredTransactions;
     private String sender;
     private String receiver;
     private Double amount;
@@ -54,15 +55,18 @@ public class TransactionCrud {
     }
 
     public List<TransactionEntity> filterBySender() {
-        return service.findBySender(sender);
+        filteredTransactions = service.findBySender(sender); // Update filtered transactions
+        return filteredTransactions;
     }
 
     public List<TransactionEntity> filterByReceiver() {
-        return service.findByReceiver(receiver);
+        filteredTransactions = service.findByReceiver(receiver); // Update filtered transactions
+        return filteredTransactions;
     }
 
     public List<TransactionEntity> filterByAmount() {
-        return service.findByAmount(amount);
+        filteredTransactions = service.findByAmount(amount); // Update filtered transactions
+        return filteredTransactions;
     }
 
     public TransactionService getService() {
@@ -71,5 +75,13 @@ public class TransactionCrud {
 
     public void setService(TransactionService service) {
         this.service = service;
+    }
+
+    public List<TransactionEntity> getFilteredTransactions() {
+        return filteredTransactions;
+    }
+
+    public void setFilteredTransactions(List<TransactionEntity> filteredTransactions) {
+        this.filteredTransactions = filteredTransactions;
     }
 }

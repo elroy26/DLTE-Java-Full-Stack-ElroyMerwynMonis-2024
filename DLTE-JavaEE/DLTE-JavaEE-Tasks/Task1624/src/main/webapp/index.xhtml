@@ -17,7 +17,7 @@
             <h:inputText value="#{transactionCrud.transactionEntity.transactionId}" />
 
             <h:outputLabel value="Transaction Date:"/>
-            <h:inputText value="#{transactionCrud.transactionEntity.transactionDate}" />
+            <h:inputText converter="dateTranslate" value="#{transactionCrud.transactionEntity.transactionDate}" />
 
             <h:outputLabel value="Sent To:"/>
             <h:inputText value="#{transactionCrud.transactionEntity.sentTo}" />
@@ -42,6 +42,32 @@
             <h:outputLabel value="Sender:"/>
             <h:inputText value="#{transactionCrud.sender}" />
             <h:commandButton value="Search" action="#{transactionCrud.filterBySender}" />
+            <h:dataTable value="#{transactionCrud.filteredTransactions}" var="transaction">
+                <h:column>
+                    <f:facet name="header">Transaction ID</f:facet>
+                    #{transaction.transactionId}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Transaction Date</f:facet>
+                    #{transaction.transactionDate}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Sent To</f:facet>
+                    #{transaction.sentTo}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Received By</f:facet>
+                    #{transaction.receivedBy}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Amount</f:facet>
+                    #{transaction.amount}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Remarks</f:facet>
+                    #{transaction.remarks}
+                </h:column>
+            </h:dataTable>
         </h:form>
 
         <br/>
@@ -52,6 +78,32 @@
             <h:outputLabel value="Receiver:"/>
             <h:inputText value="#{transactionCrud.receiver}" />
             <h:commandButton value="Search" action="#{transactionCrud.filterByReceiver}" />
+            <h:dataTable value="#{transactionCrud.filteredTransactions}" var="transaction">
+                <h:column>
+                    <f:facet name="header">Transaction ID</f:facet>
+                    #{transaction.transactionId}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Transaction Date</f:facet>
+                    #{transaction.transactionDate}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Sent To</f:facet>
+                    #{transaction.sentTo}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Received By</f:facet>
+                    #{transaction.receivedBy}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Amount</f:facet>
+                    #{transaction.amount}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Remarks</f:facet>
+                    #{transaction.remarks}
+                </h:column>
+            </h:dataTable>
         </h:form>
 
         <br/>
@@ -62,6 +114,32 @@
             <h:outputLabel value="Amount:"/>
             <h:inputText value="#{transactionCrud.amount}" />
             <h:commandButton value="Search" action="#{transactionCrud.filterByAmount}" />
+            <h:dataTable value="#{transactionCrud.filteredTransactions}" var="transaction">
+                <h:column>
+                    <f:facet name="header">Transaction ID</f:facet>
+                    #{transaction.transactionId}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Transaction Date</f:facet>
+                    #{transaction.transactionDate}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Sent To</f:facet>
+                    #{transaction.sentTo}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Received By</f:facet>
+                    #{transaction.receivedBy}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Amount</f:facet>
+                    #{transaction.amount}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Remarks</f:facet>
+                    #{transaction.remarks}
+                </h:column>
+            </h:dataTable>
         </h:form>
 
     </h:body>
