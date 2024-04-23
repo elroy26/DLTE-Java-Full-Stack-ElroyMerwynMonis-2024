@@ -38,7 +38,7 @@ public class AuthorizeServlet  extends HttpServlet {
             Driver driver=new OracleDriver();
             DriverManager.registerDriver(driver);
             Connection connection=DriverManager.getConnection(resourceBundle.getString("db.url"),resourceBundle.getString("db.user"), resourceBundle.getString("db.pass"));
-            String query = "select * from mybank_ where username=? and password=?";
+            String query = "SELECT * FROM MYBANK_WEB_CUSTOMER WHERE USERNAME = ? and password=?";
             PreparedStatement preparedStatement=connection.prepareStatement(query);
             preparedStatement.setString(1,username);
             preparedStatement.setString(2,password);
