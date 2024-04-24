@@ -30,6 +30,7 @@ public class TransactionSecurity {
         httpSecurity.csrf().disable();
 
         httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/web/**","/pics/**").permitAll();
 
         httpSecurity.authorizeRequests().antMatchers("/transact/viewBySender/*").hasAuthority("customer");
         httpSecurity.authorizeRequests().antMatchers("/transact/viewByReceiver/*").hasAuthority("customer");
