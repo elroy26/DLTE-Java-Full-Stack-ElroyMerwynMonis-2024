@@ -21,13 +21,13 @@ public class PageController {
     @Autowired
     TransactionService transactionService;
 
-    @GetMapping("/")
+    @RequestMapping(value = "/",method = RequestMethod.GET)
     public String showIndexPage(Model model) {
         model.addAttribute("transaction", new TransactionEntity());
         return "index";
     }
 
-    @PostMapping("/send")
+    @RequestMapping(value = "/send",method = RequestMethod.POST)
     public String newTransaction(@ModelAttribute("transaction") TransactionEntity transactionEntity,
                                  Model model,
                                  RedirectAttributes redirectAttributes) {
@@ -41,7 +41,8 @@ public class PageController {
         }
     }
 
-    @GetMapping("/confirmation")
+
+    @RequestMapping(value = "/confirmation",method = RequestMethod.GET)
     public String transactionConfirmation(Model model) {
         return "transactionConfirmation";
     }
