@@ -1,6 +1,4 @@
 package business.logic;
-import business.logic.LoanService;
-import business.logic.Loans;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
@@ -13,12 +11,22 @@ public class LoanBean {
     @ManagedProperty("#{loanService}")
     private LoanService loanService;
 
-    private Loans newLoan = new Loans();
+    private Loans newLoan;
     private Long loanNumberToDelete;
 
-    public void addNewLoan() {
-        loanService.addLoan(newLoan);
+    // Constructor (optional)
+    public LoanBean() {
         newLoan = new Loans();
+    }
+
+    public void addNewLoan() {
+        try {
+            loanService.addLoan(newLoan);
+            // Reset newLoan for next entry
+            newLoan = new Loans();
+        } catch (Exception e) {
+            // Handle error (log it, display message, etc.)
+        }
     }
 
     public List<Loans> getClosedLoans() {
@@ -26,8 +34,14 @@ public class LoanBean {
     }
 
     public void deleteLoan() {
-        loanService.deleteLoan(loanNumberToDelete);
+        try {
+            loanService.deleteLoan(loanNumberToDelete);
+        } catch (Exception e) {
+            // Handle error (log it, display message, etc.)
+        }
     }
+
+    // Getters and setters
 
     public Loans getNewLoan() {
         return newLoan;
@@ -53,4 +67,3 @@ public class LoanBean {
         this.loanService = loanService;
     }
 }
-

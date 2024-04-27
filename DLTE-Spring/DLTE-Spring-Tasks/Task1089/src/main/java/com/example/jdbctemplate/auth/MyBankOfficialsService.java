@@ -40,7 +40,17 @@ public class MyBankOfficialsService implements UserDetailsService {
                 new Object[]{username},new BeanPropertyRowMapper<>(MyBankOfficials.class));
         return myBankOfficials;
     }
+    public void updateAttempts(MyBankOfficials myBankOfficials){
+        jdbcTemplate.update("update mybank_officials set attempts=? where username=?",
+                new Object[]{myBankOfficials.getAttempts(),myBankOfficials.getUsername()});
 
+    }
+
+    public void updateStatus(MyBankOfficials myBankOfficials){
+        jdbcTemplate.update("update mybank_officials set status=0 where username=?",
+                new Object[]{myBankOfficials.getUsername()});
+
+    }
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         MyBankOfficials officials = findByUsername(username);

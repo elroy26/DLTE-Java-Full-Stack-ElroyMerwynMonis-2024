@@ -1,0 +1,7 @@
+condiser the sdl lifcycle fron the requirenment to the delivery
+
+Backend
+
+
+
+Frontend

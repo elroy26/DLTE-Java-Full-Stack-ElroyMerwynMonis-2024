@@ -1,16 +1,30 @@
 package com.example.jdbctemplate;
 
 
+import javax.validation.constraints.*;
 import java.util.Date;
 
 public class TransactionEntity {
     //Transaction Id, transaction date, transaction by(sender), transaction to(receiver), transaction amount, transaction for(remarks)
 
+    @NotNull(message = "{field.not.null}")
     private Long transactionId;
+
+    @NotNull(message = "{field.not.null}")
+    @Past(message = "{field.date.error}")
     private Date transactionDate;
+
+    @NotBlank(message = "{field.not.null}")
     private String sentTo;
+
+    @NotBlank(message = "{field.not.null}")
     private String receivedBy;
+
+    @NotNull(message = "{field.not.null}")
+    @Positive(message = "{field.amt.error}")
     private Double amount;
+
+    @Size(max = 255, message = "{field.remark.error}")
     private String remarks;
 
     public TransactionEntity(Long transactionId, Date transactionDate, String sentTo, String receivedBy, Double amount, String remarks) {

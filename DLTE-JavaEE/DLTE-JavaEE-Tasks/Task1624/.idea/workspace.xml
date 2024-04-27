@@ -2,15 +2,25 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Task1624:war" />
+      <artifact name="Task1624:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc89bd7e-4626-4755-93a9-2e743f5e319e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/crud/DateTranslate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Task1624/WEB-INF/classes/crud/DateTranslate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task1621/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task1621/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task1621/src/main/java/business/logic/LoanBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task1621/src/main/java/business/logic/LoanBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task1621/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task1621/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task1621/target/Task1621.war" beforeDir="false" afterPath="$PROJECT_DIR$/../Task1621/target/Task1621.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task1621/target/Task1621/WEB-INF/classes/business/logic/LoanBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task1621/target/Task1621/WEB-INF/classes/business/logic/LoanBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task1621/target/Task1621/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task1621/target/Task1621/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task1621/target/classes/business/logic/LoanBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task1621/target/classes/business/logic/LoanBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/crud/TransactionCrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/crud/TransactionCrud.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task1624/WEB-INF/classes/crud/TransactionCrud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task1624/WEB-INF/classes/crud/TransactionCrud.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task1624/WEB-INF/lib/reactive-streams-1.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task1624/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task1624/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/crud/TransactionCrud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/crud/TransactionCrud.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +60,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Task1621" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -58,9 +69,8 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JBoss Server.JBoss 18.1.2.Final-redhat-000012">
     <configuration name="JBoss 18.1.2.Final-redhat-00001" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 18.1.2.Final-redhat-00001" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:7001/Task1624/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Task1624:war">
@@ -131,6 +141,81 @@
         </option>
       </method>
     </configuration>
+    <configuration name="JBoss 18.1.2.Final-redhat-000012" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 18.1.2.Final-redhat-00001" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Task1624:war exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="SERVER" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" value="main-server-group" />
+        <option name="USERNAME" value="" />
+        <option name="CREDENTIAL_ALIAS" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="JBoss" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52014" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Task1624:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JBoss Server.JBoss 18.1.2.Final-redhat-00001" />
+      <item itemvalue="JBoss Server.JBoss 18.1.2.Final-redhat-000012" />
+    </list>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -145,7 +230,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -166,7 +251,7 @@
       <updated>1713879492379</updated>
       <workItem from="1713879500559" duration="64000" />
       <workItem from="1713879721133" duration="211000" />
-      <workItem from="1713879990117" duration="3127000" />
+      <workItem from="1713879990117" duration="5325000" />
     </task>
     <servers />
   </component>
@@ -174,29 +259,33 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1713880626325">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1713884189870">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.672@0.0.1280.672" timestamp="1713880626325" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.672@0.0.1280.672" timestamp="1713884189870" />
     <state x="490" y="227" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1713879879690">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="490" y="227" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.672@0.0.1280.672" timestamp="1713879879690" />
-    <state width="845" height="278" key="GridCell.Tab.0.bottom" timestamp="1713881679298">
+    <state x="421" y="93" key="FileChooserDialogImpl" timestamp="1713884250268">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="278" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1713881679298" />
-    <state width="845" height="278" key="GridCell.Tab.0.center" timestamp="1713881679298">
+    <state x="421" y="93" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1713884250268" />
+    <state width="845" height="278" key="GridCell.Tab.0.bottom" timestamp="1713885595114">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="278" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1713881679298" />
-    <state width="845" height="278" key="GridCell.Tab.0.left" timestamp="1713881679298">
+    <state width="845" height="278" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1713885595114" />
+    <state width="845" height="278" key="GridCell.Tab.0.center" timestamp="1713885595114">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="278" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1713881679298" />
-    <state width="845" height="278" key="GridCell.Tab.0.right" timestamp="1713881679298">
+    <state width="845" height="278" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1713885595114" />
+    <state width="845" height="278" key="GridCell.Tab.0.left" timestamp="1713885595114">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="278" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1713881679298" />
+    <state width="845" height="278" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1713885595114" />
+    <state width="845" height="278" key="GridCell.Tab.0.right" timestamp="1713885595114">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="845" height="278" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1713885595114" />
   </component>
 </project>

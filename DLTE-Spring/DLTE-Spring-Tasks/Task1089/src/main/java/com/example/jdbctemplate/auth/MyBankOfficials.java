@@ -15,6 +15,30 @@ public class MyBankOfficials implements UserDetails {
     private long aadhaar;
     private String role;
     private String address;
+    private int attempts;
+    private int status;
+
+    public int getAttempts() {
+        return attempts;
+    }
+
+    public void setAttempts(int attempts) {
+        this.attempts = attempts;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public int getMaxAttempt() {
+        return maxAttempt;
+    }
+
+    private final int maxAttempt=3;
 
     public String getAddress() {
         return address;
