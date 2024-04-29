@@ -55,6 +55,12 @@ public class InsuranceSecurity {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.httpBasic();
+        httpSecurity.authorizeRequests().antMatchers("/images/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/ui/**").permitAll();
+
+        httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/insurancerepo/insurance.wsdl").permitAll();
         httpSecurity.formLogin()
                 .usernameParameter("username")
                 .failureHandler(failureHandler)
@@ -62,14 +68,8 @@ public class InsuranceSecurity {
         httpSecurity.csrf().disable();
         httpSecurity.cors();
 
-        httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/insurancerepo/insurance.wsdl").permitAll();
-
         httpSecurity.authorizeRequests().anyRequest().authenticated();
 
-
-        // 3rd layer
         AuthenticationManagerBuilder builder=httpSecurity.
                 getSharedObject(AuthenticationManagerBuilder.class);
         builder.userDetailsService(service);

@@ -3,6 +3,7 @@ package mybank.insurance.webservice;
 import maybank.insurance.dao.entity.InsuranceAvailable;
 import maybank.insurance.dao.remotes.InsuranceAvailableRepository;
 import mybank.insurance.webservice.soap.endpoint.InsuranceAvailableEndpoint;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -31,7 +32,7 @@ public class WebserviceApplicationTests {
     @InjectMocks
     private InsuranceAvailableEndpoint endpoint;
 
-   // @Test
+    @Test
     public void testListLoans_Success() throws SQLException {
         // Arrange
         CallAllInsuranceAvailableRequest request = new CallAllInsuranceAvailableRequest();
@@ -57,7 +58,7 @@ public class WebserviceApplicationTests {
         assertNotNull(response.getInsurance());
 //        assertEquals(1, response.getInsurance().size());//fail
     }
-   // @Test
+    @Test
     public void testListLoans_Failure() throws SQLException {
         // Arrange
         CallAllInsuranceAvailableRequest request = new CallAllInsuranceAvailableRequest();
@@ -80,7 +81,7 @@ public class WebserviceApplicationTests {
         assertEquals(1, response.getInsurance().size());//fail
     }
 
-    //@Test
+    @Test
     public void testListLoans_SQLException() throws SQLException {
         // Arrange
         CallAllInsuranceAvailableRequest request = new CallAllInsuranceAvailableRequest();
