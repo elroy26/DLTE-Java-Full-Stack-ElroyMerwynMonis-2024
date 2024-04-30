@@ -214,6 +214,28 @@
         const cardsPerPage = 8;
         let totalPages = 0; // Initialize totalPages
 
+        window.appendDataToForm = function(index) {
+            // Get data from modal fields using unique IDs based on the index
+            const insuranceID = document.getElementById(`insuranceID${index}`).value;
+            const insuranceType = document.getElementById(`insuranceType${index}`).value;
+            const insuranceName = document.getElementById(`insuranceName${index}`).value;
+            const insuranceKeyBenefits = document.getElementById(`insuranceKeyBenefits${index}`).value;
+            const insuranceLifetime = document.getElementById(`insuranceLifetime${index}`).value;
+
+            // Create a new form data object
+            const formData = new FormData();
+
+            // Append data to the form data object
+            formData.append('insuranceID', insuranceID);
+            formData.append('insuranceType', insuranceType);
+            formData.append('insuranceName', insuranceName);
+            formData.append('insuranceKeyBenefits', insuranceKeyBenefits);
+            formData.append('insuranceLifetime', insuranceLifetime);
+
+            // Redirect to the applyInsurance.html page with appended data
+            window.location.href = '../ui/apply?' + new URLSearchParams(formData).toString();
+        }
+
         const fetchInsuranceData = () => {
             var soapRequest = `
                 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins="http://insurance.services">
@@ -300,7 +322,12 @@
                                         <p class="card-text fst-poppins">Key Benefits: ${insurance.insuranceKeyBenefits}</p>
                                         <p class="card-text font-poppins">Insurance Lifetime: ${insurance.insuranceLifetime}</p>
                                     </h5>
-                                    <button type="button" th:onclick="|window.location.href='@{/ui/apply}'|" class="apply">Apply Insurance</button>
+                        <input type="hidden" id="insuranceID${i}" value="${insurance.insuranceID}">
+                        <input type="hidden" id="insuranceType${i}" value="${insurance.insuranceType}">
+                        <input type="hidden" id="insuranceName${i}" value="${insurance.insuranceName}">
+                        <input type="hidden" id="insuranceKeyBenefits${i}" value="${insurance.insuranceKeyBenefits}">
+                        <input type="hidden" id="insuranceLifetime${i}" value="${insurance.insuranceLifetime}">
+                        <button type="button" onclick="appendDataToForm(${i})" class="apply">Apply Insurance</button>
                                 </div>
                             </div>
                         </div>
@@ -313,6 +340,7 @@
 
             generatePageNumbers();
         };
+
 
 
         // Function to handle pagination
