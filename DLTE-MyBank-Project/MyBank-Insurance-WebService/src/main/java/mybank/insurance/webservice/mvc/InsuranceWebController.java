@@ -12,8 +12,13 @@ public class InsuranceWebController {
         return "dashboard";
     }
 
-    @GetMapping("/footer")
-    public String footer(){
-        return "footer";
+    @GetMapping("/apply")
+    public String save(){
+        return "applyInsurance";
+    }
+
+    @GetMapping("/view")
+    public String view(){
+        return "viewInsurance";
     }
 }

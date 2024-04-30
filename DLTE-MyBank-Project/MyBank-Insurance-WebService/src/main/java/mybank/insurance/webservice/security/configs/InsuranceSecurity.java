@@ -56,6 +56,7 @@ public class InsuranceSecurity {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.httpBasic();
         httpSecurity.authorizeRequests().antMatchers("/images/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/styles/**").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/ui/**").permitAll();
 
         httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
