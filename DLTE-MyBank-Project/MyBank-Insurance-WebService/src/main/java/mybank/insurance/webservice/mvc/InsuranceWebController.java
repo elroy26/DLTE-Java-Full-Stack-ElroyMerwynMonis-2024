@@ -61,4 +61,8 @@ public class InsuranceWebController {
     public String view(){
         return "viewInsurance";
     }
+    @GetMapping("/error")
+    public String errorPage() {
+        return "error"; // Return the name of the HTML template for the error page
+    }
 }

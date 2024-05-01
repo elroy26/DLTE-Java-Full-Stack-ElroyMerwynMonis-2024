@@ -119,21 +119,43 @@
         <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
-                <h5 class="modal-title">Insurance Availed Successfully!</h5>
+                <h5 class="modal-title" style="color: #182052; font-family:'Montserrat', sans-serif ">Insurance Availed Successfully!</h5>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <!-- Modal body -->
             <div class="modal-body">
-                <p>Your insurance has been availed successfully.</p>
+                <p id="successMessage" style="color: #182052; font-family: 'Poppins', sans-serif">Thank you for applying this insurance with insurance id </p>
             </div>
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" th:href="@{'/ui/dash'}">Back to Home</button>
+                <button type="button" class="btn btn-secondary" th:href="@{'/ui/dash'}" id="backHome">Back to Home</button>
                 <button type="button" class="btn btn-primary" th:href="@{'/ui/apply'}" id="viewInsurance">View Insurance</button>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Error Modal -->
+<div class="modal" id="errorModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h5 class="modal-title"  style="color: #182052; font-family:'Montserrat', sans-serif ">Error</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <p id="errorMessage"  style="color: #182052; font-family: 'Poppins', sans-serif"></p>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" id="viewAllInsurance">View Available Insurances</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <br><br>
 <div th:replace="footer :: footer"></div>
@@ -237,13 +259,47 @@
                 contentType: "application/json;charset=utf-8",
                 data: JSON.stringify(request),
                 success: function(response) {
-                    let element = $("#status");
-                    $("#confirmationModal").modal("show");                },
-                error: function(err) {
-                    let element = $("#status");
-                    element.append(`<h1>${err.status}</h1>`);
+                    // Access the insuranceId property from the response
+                    const jsonResponse = JSON.parse(response); // Parse the JSON string to object
+                    const insuranceId = jsonResponse.insuranceId;
+
+                    // Display the success message with the insuranceId
+                    $("#successMessage").text(`Thank you for applying this insurance with insurance id: ${insuranceId}`);
+                    $("#confirmationModal").modal("show");
+
+                },
+                error: function(xhr, status, error) {
+                    if (xhr.status === 409) {
+                        // Extract the response body from xhr.responseText
+                        const responseBody = xhr.responseText;
+                        $("#errorMessage").text(responseBody);
+                        $("#errorModal").modal("show");
+                    }else {
+                        const errorCode = xhr.status;
+                        const errorMessage = xhr.responseText;
+                        const errorPageUrl = `/error?code=${errorCode}&message=${encodeURIComponent(errorMessage)}`;
+
+                        // Navigate to the error page
+                        window.location.href = errorPageUrl;
+
+                    }
+
                 }
             });
+        });
+        $("#backHome").click(function() {
+            // Redirect to the home page
+            window.location.href = "/ui/dash";
+        });
+
+        // Function to handle "View Insurance" button click
+        $("#viewInsurance").click(function() {
+            // Redirect to the apply insurance page
+            window.location.href = "/ui/view";
+        });
+        $("#viewAllInsurance").click(function() {
+            // Redirect to the apply insurance page
+            window.location.href = "/ui/view";
         });
 
         // Function to handle form cancellation

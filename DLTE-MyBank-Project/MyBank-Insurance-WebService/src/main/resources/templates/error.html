@@ -2,12 +2,56 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <title>Error page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+    <!-- Bootstrap CSS -->
+    <link th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css}" rel="stylesheet">
+    <style>
+        .custom-card {
+            width: 350px;
+            height: 250px;
+            border-radius: 50px;
+            background-color: #043670;
+            color: #ffffff;
+        }
+        .center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'poppins-bold', sans-serif !important; /* Change font family */
+            font-size: 150px;
+            font-weight: bold; /* Increase font size */
+        }
+        .vertical-center {
+            padding-top: 250px;
+        }
+    </style>
 </head>
 <body>
-<h1>
-    Invalid endpoint/ URL
-</h1>
+<div class="container-fluid vertical-center">
+    <div class="row justify-content-center">
+        <div class="text-center">
+            <div class="card custom-card shadow-lg">
+                <div class="card-body">
+                    <p class="card-text center-text" th:text="${param.code}"></p> <!-- Corrected here -->
+                </div>
+            </div>
+            <div class="text-center">
+                <p class="font-weight-bold display-5"><h3 th:text="${param.message}">PAGE NOT FOUND.</h3></p>
+            </div>
+            <div class="text-center">
+                <a th:href="@{'/ui/dash'}" class="btn btn-primary rounded-pill" style="background-color: rgb(253, 141, 12);">
+                    <i class="fas fa-home mr-2"></i>
+                    Home Page
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Font Awesome JS -->
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js}"></script>
 </body>
 </html>
