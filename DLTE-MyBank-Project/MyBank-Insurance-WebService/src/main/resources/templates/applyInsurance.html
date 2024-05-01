@@ -70,40 +70,40 @@
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="insuranceType">INSURANCE TYPE:</label>
-                            <input type="text" class="form-control" id="insuranceType" placeholder="Enter insurance type" readonly>
+                            <input type="text" class="form-control" id="insuranceType" placeholder="Enter insurance type" readonly required>
                         </div>
                         <div class="form-group col-md-1"></div>
                         <div class="form-group col-md-1"></div>
                         <div class="form-group col-md-5">
                             <label for="insurancePremium">INSURANCE PREMIUM:</label>
-                            <input type="text" class="form-control" id="insurancePremium" placeholder="Enter insurance premium" value="10000" oninput="validateInsurancePremium(this),calculateCoverage()" >
+                            <input type="number" class="form-control" id="insurancePremium" placeholder="Enter insurance premium" value="10000" oninput="validateInsurancePremium(this),calculateCoverage(this)" required >
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="insuranceName">INSURANCE NAME:</label>
-                            <input type="text" class="form-control" id="insuranceName" placeholder="Enter insurance name" readonly>
+                            <input type="text" class="form-control" id="insuranceName" placeholder="Enter insurance name" readonly required>
                         </div>
                         <div class="form-group col-md-1"></div>
                         <div class="form-group col-md-1"></div>
 
                         <div class="form-group col-md-5">
                             <label for="insuranceLifetime">INSURANCE LIFETIME:</label>
-                            <input type="text" class="form-control" id="insuranceLifetime" placeholder="Enter insurance lifetime" readonly>
+                            <input type="number" class="form-control" id="insuranceLifetime" placeholder="Enter insurance lifetime" readonly required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="keyBenefits">KEY BENEFITS:</label>
-                            <textarea class="form-control" id="keyBenefits" rows="3" placeholder="Enter key benefits" readonly></textarea>
+                            <textarea class="form-control" id="keyBenefits" rows="3" placeholder="Enter key benefits" readonly required></textarea>
                         </div>
                         <div class="form-group col-md-1"></div>
                         <div class="form-group col-md-1"></div>
 
                         <div class="form-group col-md-5">
                             <label for="insuranceCoverage">INSURANCE COVERAGE:</label>
-                            <input type="text" class="form-control" id="insuranceCoverage" placeholder="Enter insurance coverage" oninput="calculateCoverage(this)" readonly >
+                            <input type="munber" class="form-control" id="insuranceCoverage" placeholder="Enter insurance coverage" oninput="calculateCoverage(this)" readonly required >
                         </div>
                     </div>
                     <br>
@@ -135,26 +135,43 @@
         populateForm();
     });
     function validateInsurancePremium(input) {
-        const defaultValue = 9999; // Change this to your default value
-        let enteredValue = parseInt(input.value);
+        const defaultValue = 10000; // Change this to your default value
 
-        // Check if the entered value is smaller than the default value
-        if (enteredValue < defaultValue) {
-            // Reset the input field value to the default value
-            input.value = defaultValue;
-        }
+        // Add event listener for the blur event
+        $(input).on('blur', function() {
+            let enteredValue = parseInt($(this).val());
+
+            // Check if the entered value is smaller than the default value
+            if (enteredValue < defaultValue) {
+                // Reset the input field value to the default value
+                $(this).val(defaultValue);
+                calculateCoverage(input);
+            }
+        });
     }
-    function calculateCoverage(input) {
-        // Get the values of insurance premium and lifetime
-        const insurancePremium = parseFloat(document.getElementById('insurancePremium').value);
-        const insuranceLifetime = parseInt(document.getElementById('insuranceLifetime').value);
 
-        // Your logic to calculate insurance coverage
+    // Define the calculateCoverage function outside of the $(document).ready() scope
+    function calculateCoverage(input) {
+        const insurancePremium = parseFloat($(input).val());
+        const insuranceLifetime = parseInt($('#insuranceLifetime').val());
+
         const coverage = insurancePremium * insuranceLifetime;
 
-        // Update the value of the insurance coverage input field
-        input.value = coverage.toFixed(2); // Adjust as needed
+        $('#insuranceCoverage').val(coverage.toFixed(2));
     }
+
+    // Wait for the document to be ready
+    $(document).ready(function() {
+        // Call calculateCoverage on change of insurancePremium or insuranceLifetime
+        $('#insurancePremium, #insuranceLifetime').on('blur change', function() {
+            calculateCoverage(this);
+        });
+
+        // Call calculateCoverage on page load
+        calculateCoverage($('#insurancePremium'));
+    });
+
+
 
 
 </script>
