@@ -57,13 +57,12 @@ public class InsuranceSecurity {
         httpSecurity.httpBasic();
         httpSecurity.authorizeRequests().antMatchers("/images/**").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/styles/**").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/templates/**").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/ui/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/ui/").permitAll();
 
         httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/insurancerepo/insurance.wsdl").permitAll();
-        httpSecurity.formLogin()
+        httpSecurity.formLogin().loginPage("/ui/")
                 .usernameParameter("username")
                 .failureHandler(failureHandler)
                 .successHandler(successHandler);

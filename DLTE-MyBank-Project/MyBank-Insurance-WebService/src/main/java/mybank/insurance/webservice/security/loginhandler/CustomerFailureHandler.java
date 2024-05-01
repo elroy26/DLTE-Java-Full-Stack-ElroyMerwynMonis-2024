@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.authentication.LockedException;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 import org.springframework.stereotype.Component;
 
@@ -29,26 +30,35 @@ public class CustomerFailureHandler extends SimpleUrlAuthenticationFailureHandle
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
         String username= request.getParameter("username");
-        Customer customer=service.findByUserName(username);
-        if(customer!=null){
-            if (!customer.getCustomerStatus().equals("closed")) {
-                if (customer.getAttempts()<customer.getMaxAttempt()){
-                    customer.setAttempts(customer.getAttempts()+1);
-                    service.updateAttempts(customer);
-                    logger.warn(resourceBundle.getString("security.invalid"));
-                    exception=new LockedException(resourceBundle.getString("security.invalid"));
-                }else {
-                    service.updateStatus(customer);
-                    logger.warn(resourceBundle.getString("security.max"));
-                    exception=new LockedException(resourceBundle.getString("security.max"));
+        try {
+            Customer customer=service.findByUserName(username);
+            if(customer!=null){
+                if (!customer.getCustomerStatus().equals("closed")) {
+                    if (customer.getAttempts()<customer.getMaxAttempt()){
+                        customer.setAttempts(customer.getAttempts()+1);
+                        service.updateAttempts(customer);
+                        logger.warn(resourceBundle.getString("security.invalid"));
+                        exception=new LockedException((4 - customer.getAttempts())+resourceBundle.getString("security.invalid"));
+                        String err = customer.getAttempts() + " " + exception.getMessage();
+                        logger.warn(err);
+                        super.setDefaultFailureUrl("/ui/?error=" + err);
+                    }else {
+                        service.updateStatus(customer);
+                        logger.warn(resourceBundle.getString("security.max"));
+                        exception=new LockedException(resourceBundle.getString("security.max"));
+                        super.setDefaultFailureUrl("/ui/?error=" + exception.getMessage());
+                    }
+                }else{
+                    super.setDefaultFailureUrl("/ui/?error="+resourceBundle.getString("security.suspend"));
                 }
-            }else{
-                logger.warn(resourceBundle.getString("security.suspend"));
             }
-        }else{
-            logger.warn(resourceBundle.getString("security.null"));
+        }catch (UsernameNotFoundException e){
+            logger.info(e.toString());
+            logger.warn(resourceBundle.getString("security.suspend"));
+            exception = new LockedException(resourceBundle.getString("customer.null"));
+            super.setDefaultFailureUrl("/ui/?error=true"+exception.getMessage());
         }
-        super.setDefaultFailureUrl("/login?error=true");
+
         super.onAuthenticationFailure(request, response, exception);
     }
 }

@@ -9,21 +9,26 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" th:href="@{/styles/styles.css}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <link rel="stylesheet" th:href="@{/styles/styles.css}">
+    <script th:src="@{'/js/dashboard.js'}"></script>
 </head>
 <body>
 <div th:fragment="dashboard">
     <nav class="navbar navbar-expand-lg navbar-light navbar-custom" style="background-color: #ffffff;">
         <div class="container">
-            <a class="navbar-brand" th:href="@{'/ui/'}">
+            <a class="navbar-brand" th:href="@{'/ui/dash'}">
                 <img th:src="@{'/images/logo.png'}" alt="My Bank Logo" style="width: 60px; height: 60px; "/>
                 <span style="color: #182052;  font-family: 'Montserrat', sans-serif;">My Bank</span>
             </a>
 
-            <div class="navbar-text ml-auto">
-                <span style="color: #182052; font-size: 24px;">Welcome, John Doe</span>
-                <button class="btn btn-logout ml-2">Logout</button>
+            <div class="navbar-text ml-auto d-flex align-items-center">
+                <span th:id="Username" style="color: #182052; font-size: 24px;">Welcome, John Doe</span>
+
+                <form id="logoutForm" action="/logout" method="post">
+                    <button class="btn btn-logout ml-2" type="submit">Logout</button>
+                </form>
             </div>
         </div>
     </nav>
