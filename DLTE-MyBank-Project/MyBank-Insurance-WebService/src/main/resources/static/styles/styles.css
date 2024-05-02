@@ -7,6 +7,34 @@
 .navbar-custom .nav-item.active .nav-link {
     color: #f8f9fa !important;
 }
+/* Responsive font sizes */
+@media (max-width: 576px) {
+    .navbar-custom .navbar-brand, .navbar-custom .navbar-nav .nav-link, .brand-text, .user-text {
+        font-size: 24px; /* Reduce font size for small screens */
+    }
+}
+.welcome-text {
+    color: #182052;
+    font-size: 24px;
+}
+
+/* Responsive font sizes */
+@media (max-width: 576px) {
+    .welcome-text {
+        font-size: 18px; /* Reduce font size for small screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .welcome-text {
+        font-size: 20px; /* Increase font size for large screens */
+    }
+}
+@media (max-width: 992px) {
+    .navbar-custom .navbar-brand, .navbar-custom .navbar-nav .nav-link, .brand-text, .user-text {
+        font-size: 34px; /* Increase font size for large screens */
+    }
+}
 .dropdown-toggle::after {
     display: none;
 }
@@ -55,9 +83,19 @@
     height: 300px;
     border: 2px solid #182052;
 }
-
 .bottom-right-image {
-    position: relative;
+    position: absolute;
     bottom: 10px;
-    left: 1010px;
+    right: 10px;
+    max-width: 200px; /* Maximum width for responsiveness */
+    height: auto; /* Let the height adjust proportionally */
+}
+
+@media (max-width: 992px) {
+    .bottom-right-image {
+        position: relative;
+        bottom: auto; /* Reset the bottom positioning */
+        left: auto; /* Reset the left positioning */
+        right: 10px; /* Adjust the position for small screens */
+    }
 }

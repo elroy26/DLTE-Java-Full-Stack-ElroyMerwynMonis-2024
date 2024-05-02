@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error Page</title>
     <!-- Bootstrap CSS -->
-    <link th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css}" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
-    <link th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         .custom-card {
-            width: 350px;
-            height: 250px;
+            width: 300px;
+            height: auto;
             border-radius: 50px;
             background-color: #043670;
             color: #ffffff;
         }
+
         .center-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: 'poppins-bold', sans-serif !important; /* Change font family */
+            font-family: 'poppins-bold', sans-serif !important;
             font-size: 150px;
-            font-weight: bold; /* Increase font size */
+            font-weight: bold;
         }
-        .vertical-center {
-            padding-top: 250px;
+
+        /* Added new styles */
+        .error-message {
+            width: 500px;
+            height: auto;
+            font-size: 24px;
+            margin-top: 10px;
         }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .custom-card{
+                width: 200px;
+                height: auto;
+            }
+            .center-text {
+                font-size: 100px; /* Adjust font size for smaller screens */
+            }
+
+            .error-message {
+                width: 300px; /* Adjust width for smaller screens */
+                font-size: 18px; /* Adjust font size for smaller screens */
+            }
+        }
+
     </style>
 </head>
+
 <body>
-<div class="container-fluid vertical-center">
+<div class="container-fluid d-flex justify-content-center align-items-center" style="height: 60vh; margin-bottom: 0">
     <div class="row justify-content-center">
-        <div class="text-center">
+        <div class="col col-md-12 col-lg-12 col-sm-12 col-12 text-center">
             <div class="card custom-card shadow-lg">
-                <div class="card-body">
-                    <p class="card-text center-text" th:text="${param.code}">404</p> <!-- Corrected here -->
-                </div>
+                <p class="card-text center-text" th:text="${param.code}">404</p>
             </div>
-            <div class="text-center">
-                <p class="font-weight-bold display-5"><h3 th:text="${param.message}">PAGE NOT FOUND.</h3></p>
-            </div>
-            <div class="text-center">
+        </div>
+    </div>
+</div>
+<br>
+<div class="container-fluid d-flex justify-content-center align-items-center" style="height: 0vh;">
+    <div class="row justify-content-center">
+        <div class="col col-md-12 col-lg-12 col-sm-12 col-12 text-center">
+            <p class="error-message" th:text="${param.message}">PAGE NOT FOUND.</p>
+            <div class="mt-3">
                 <a th:href="@{'/ui/dash'}" class="btn btn-primary rounded-pill" style="background-color: rgb(253, 141, 12);">
                     <i class="fas fa-home mr-2"></i>
                     Home Page
@@ -52,6 +76,7 @@
     </div>
 </div>
 <!-- Font Awesome JS -->
-<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </body>
+
 </html>

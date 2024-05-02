@@ -290,14 +290,14 @@
                 },
                 error: function(xhr, status, error) {
                     if (xhr.status === 409) {
-                        // const errorCode = xhr.status;
-                        // const errorMessage = xhr.responseText;
-                        // const errorPageUrl = `/error?code=${errorCode}&message=${encodeURIComponent(errorMessage)}`;
-                        // window.location.href = errorPageUrl;
+                        const errorCode = xhr.status;
+                        const errorMessage = xhr.responseText;
+                        const errorPageUrl = `/error?code=${errorCode}&message=${encodeURIComponent(errorMessage)}`;
+                        window.location.href = errorPageUrl;
                         // Extract the response body from xhr.responseText
-                        const responseBody = xhr.responseText;
-                        $("#errorMessage").text(responseBody);
-                        $("#errorModal").modal("show");
+                        // const responseBody = xhr.responseText;
+                        // $("#errorMessage").text(responseBody);
+                        // $("#errorModal").modal("show");
                     }else {
                         const errorCode = xhr.status;
                         const errorMessage = xhr.responseText;
