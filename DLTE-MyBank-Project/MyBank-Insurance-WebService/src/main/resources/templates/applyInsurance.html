@@ -184,25 +184,43 @@
         const coverage = insurancePremium * insuranceLifetime;
         $('#insuranceCoverage').val(coverage.toFixed(2));
     }
+
     $(document).ready(function() {
         let insuranceId = 0;
         let customerId = 0;
 
-        // Function to populate form fields with URL parameters
         function populateForm() {
-            // Get URL parameters
-            const params = new URLSearchParams(window.location.search);
-            insuranceId = params.get('insuranceID');
-
+            // Get form data from session storage
+            const insuranceData = JSON.parse(sessionStorage.getItem('insuranceData'));
+            insuranceId=insuranceData.insuranceID;
             // Populate form fields
-            $('#insuranceType').val(params.get('insuranceType'));
-            $('#insuranceName').val(params.get('insuranceName'));
-            $('#keyBenefits').val(params.get('insuranceKeyBenefits'));
-            $('#insuranceLifetime').val(params.get('insuranceLifetime'));
+            $('#insuranceType').val(insuranceData.insuranceType);
+            $('#insuranceName').val(insuranceData.insuranceName);
+            $('#keyBenefits').val(insuranceData.insuranceKeyBenefits);
+            $('#insuranceLifetime').val(insuranceData.insuranceLifetime);
+
+
         }
 
-        // Call the populateForm function when the page loads
+// Call the populateForm function when the page loads
         populateForm();
+
+
+        // // Function to populate form fields with URL parameters
+        // function populateForm() {
+        //     // Get URL parameters
+        //     const params = new URLSearchParams(window.location.search);
+        //     insuranceId = params.get('insuranceID');
+        //
+        //     // Populate form fields
+        //     $('#insuranceType').val(params.get('insuranceType'));
+        //     $('#insuranceName').val(params.get('insuranceName'));
+        //     $('#keyBenefits').val(params.get('insuranceKeyBenefits'));
+        //     $('#insuranceLifetime').val(params.get('insuranceLifetime'));
+        // }
+        //
+        // // Call the populateForm function when the page loads
+        // populateForm();
 
         // Function to fetch the customer ID and insurance ID
         function getIDs() {
@@ -266,10 +284,16 @@
                     // Display the success message with the insuranceId
                     $("#successMessage").text(`Thank you for applying this insurance with insurance id: ${insuranceId}`);
                     $("#confirmationModal").modal("show");
+                    sessionStorage.clear();
+
 
                 },
                 error: function(xhr, status, error) {
                     if (xhr.status === 409) {
+                        // const errorCode = xhr.status;
+                        // const errorMessage = xhr.responseText;
+                        // const errorPageUrl = `/error?code=${errorCode}&message=${encodeURIComponent(errorMessage)}`;
+                        // window.location.href = errorPageUrl;
                         // Extract the response body from xhr.responseText
                         const responseBody = xhr.responseText;
                         $("#errorMessage").text(responseBody);

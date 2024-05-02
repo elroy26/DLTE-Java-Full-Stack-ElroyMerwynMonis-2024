@@ -29,7 +29,6 @@ public class CustomerSuccessHandler extends SimpleUrlAuthenticationSuccessHandle
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
 
         Customer customer = (Customer) authentication.getPrincipal();
-
         if (!customer.getCustomerStatus().equals("closed")) {
             if(customer.getAttempts()>1)
             {

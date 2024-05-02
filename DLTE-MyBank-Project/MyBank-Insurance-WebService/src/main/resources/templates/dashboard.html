@@ -27,7 +27,7 @@
                 <span th:id="Username" style="color: #182052; font-size: 24px;">Welcome, John Doe</span>
 
                 <form id="logoutForm" action="/logout" method="post">
-                    <button class="btn btn-logout ml-2" type="submit">Logout</button>
+                    <button id="logoutButton" class="btn btn-logout ml-2" type="submit">Logout</button>
                 </form>
             </div>
         </div>
@@ -130,7 +130,6 @@
 <div th:replace="footer :: footer">
 
 </div>
-
 
 
 </body>
