@@ -54,9 +54,7 @@ public class WebserviceApplicationTests {
         assertNotNull(response);
         assertEquals(2, response.getInsurance().size());
         assertEquals(expectedServiceStatus.getStatus(), response.getServiceStatus().getStatus());
-//        assertEquals(expectedServiceStatus.getMessage(), response.getServiceStatus().getMessage());// fail
         assertNotNull(response.getInsurance());
-//        assertEquals(1, response.getInsurance().size());//fail
     }
     @Test
     public void testListLoans_Failure() throws SQLException {
@@ -96,10 +94,8 @@ public class WebserviceApplicationTests {
 
         // Assert
         assertNotNull(response);
-//        assertNull(response);//fail
         assertEquals(expectedServiceStatus.getStatus(), response.getServiceStatus().getStatus());
-//        assertEquals(expectedServiceStatus.getMessage(), response.getServiceStatus().getMessage());//fail
-//        assertFalse(response.getInsurance().isEmpty());//fail
+
     }
 
 }

@@ -68,12 +68,6 @@
             border-color: #182052;
         }
 
-        /*.page-number.active {*/
-        /*    z-index: 3;*/
-        /*    color: #fff;*/
-        /*    background-color: #007bff;*/
-        /*    border-color: #007bff;*/
-        /*}*/
         .card-container {
             height: 400px; /* Fixed height for the card container */
             overflow-y: auto; /* Add vertical scrollbar if content exceeds container height */
@@ -113,23 +107,29 @@
             background-color: white;
             border: 2px solid #182052;
         }
-        button {
+        /* Ensure that the button styles are specific enough */
+        div.container button {
             background-color: #182052;
             color: white;
+            border: none; /* Add border style to remove default button border */
+            padding: 5px 10px; /* Add padding for better appearance */
         }
-        button:hover {
+
+        div.container button:hover {
             background-color: orange;
             border: 1px solid darkorange;
         }
 
-        .apply {
+
+        button.apply {
+            color: white;
             background-color: #182052;
             border:1px solid white;
             border-radius: 10px;
             font-weight: bold;
             padding: 10px;
         }
-        .apply:hover {
+        button.apply:hover {
             background-color: #f5854d;
             border: 1px solid white;
         }
@@ -142,35 +142,38 @@
 
 <div class="container">
     <!-- Search by Insurance ID -->
-    <div class="form-row justify-content-center">
-        <div class="col-4">
-            <div class="form-group" style="border: 1px solid #182052; padding: 10px;">
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="form-group p-3"  style="border: 1px solid #182052;">
                 <h6 class="mb-3" style="color: #182052; font-weight: bold;">Find by ID</h6>
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search by Insurance ID">
-                    <button  type="button">Search</button>
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Search by Coverage -->
-        <div class="col-6">
-            <div class="form-group" style="border: 1px solid #182052; padding: 10px;">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="form-group p-3" style="border: 1px solid #182052;">
                 <h6 class="mb-3" style="color: #182052; font-weight: bold;">Find by Coverage</h6>
-                <div class="form-row">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Enter Minimum Amount">
+                <div class="row">
+                    <div class="col-sm-12 col-md-5 mb-2 mb-md-0 pr-0 ">
+                        <input type="text" class="form-control pr-0" placeholder="Enter Minimum Amount">
                     </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Enter Maximum Amount">
+                    <div class="col-sm-12 col-md-5 mb-2 mb-md-0 pr-0 ">
+                        <input type="text" class="form-control pr-0" placeholder="Enter Maximum Amount">
                     </div>
-                    <div class="col-auto" style="padding-left: 0;">
-                        <button style=" padding: 5px"  type="button">Search</button>
+                    <div class="col-sm-12 col-md-2 d-flex align-items-center justify-content-sm-center pr-0">
+                        <button class="btn btn-primary" type="button">Search</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 
 <div class="container-fluid col-10 ">
@@ -215,27 +218,6 @@
         const cardsPerPage = 8;
         let totalPages = 0; // Initialize totalPages
 
-        // window.appendDataToForm = function(index) {
-        //     // Get data from modal fields using unique IDs based on the index
-        //     const insuranceID = document.getElementById(`insuranceID${index}`).value;
-        //     const insuranceType = document.getElementById(`insuranceType${index}`).value;
-        //     const insuranceName = document.getElementById(`insuranceName${index}`).value;
-        //     const insuranceKeyBenefits = document.getElementById(`insuranceKeyBenefits${index}`).value;
-        //     const insuranceLifetime = document.getElementById(`insuranceLifetime${index}`).value;
-        //
-        //     // Create a new form data object
-        //     const formData = new FormData();
-        //
-        //     // Append data to the form data object
-        //     formData.append('insuranceID', insuranceID);
-        //     formData.append('insuranceType', insuranceType);
-        //     formData.append('insuranceName', insuranceName);
-        //     formData.append('insuranceKeyBenefits', insuranceKeyBenefits);
-        //     formData.append('insuranceLifetime', insuranceLifetime);
-        //
-        //     // Redirect to the applyInsurance.html page with appended data
-        //     window.location.href = '../ui/apply?' + new URLSearchParams(formData).toString();
-        // }
 
         window.appendDataToForm = function(index) {
             // Get data from modal fields using unique IDs based on the index

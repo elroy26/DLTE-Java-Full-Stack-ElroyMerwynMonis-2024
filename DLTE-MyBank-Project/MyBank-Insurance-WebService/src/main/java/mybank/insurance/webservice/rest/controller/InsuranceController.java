@@ -1,7 +1,5 @@
 package mybank.insurance.webservice.rest.controller;
 
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import maybank.insurance.dao.entity.InsuranceAvailed;
 import maybank.insurance.dao.exceptions.InsuranceAvailedException;
 import maybank.insurance.dao.remotes.CustomerRepository;
@@ -27,45 +25,16 @@ import java.util.ResourceBundle;
 @RestController
 @RequestMapping("/insurance")
 @ComponentScan("maybank.insurance.dao")
-@ApiResponses(value = {
-        @ApiResponse(responseCode = "200", description = "Insurance added successfully"),
-        @ApiResponse(responseCode = "409", description = "Insurance already exists for the customer"),
-        @ApiResponse(responseCode = "204", description = "No Insurance data exists"),
-        @ApiResponse(responseCode = "403", description = "Customer is inactive"),
-        @ApiResponse(responseCode = "500", description = "Internal server error"),
-        @ApiResponse(responseCode = "404", description = "Customer not found")
-})
+
 public class InsuranceController {
-//http://localhost:8082/swagger-ui/index.html
-    //{{baseUrl}}/insurance/availed
-//http://localhost:7001/webservice-0.0.1-SNAPSHOT/insurance/availed/
-//    http://localhost:7001/webservice-0.0.1-SNAPSHOT/v3/api-docs
-//http://localhost:8082/insurance/availed
-//{
-//    "insurancePremium": "2000.0",
-//        "insuranceKeyBenefits": "hign interest rates",
-//        "insuranceLifetime": 2,
-//        "customerId": 20012004,
-//        "insuranceId": 90019002,
-//        "insuranceName": "Maxlife",
-//        "insuranceType": "Health",
-//        "insuranceCoverage": "10000.0"
-//}
-    ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("insurance");
     Logger logger = LoggerFactory.getLogger(InsuranceController.class);
 
     @Autowired
     private InsuranceAvailedRepository availedDbRepo;
     @Autowired
     private CustomerRepository customerRepository;
-//    @Autowired
-//    private InsuranceAvailableRepository repo;
-
-//    @GetMapping("/")
-//    public List<InsuranceAvailable> readAll() throws SQLException {
-//        return repo.callAllInsuranceAvailable();
-//    }
-
     @PostMapping("/availed")
     public ResponseEntity<Object> save(@Valid @RequestBody InsuranceAvailed availed){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -78,31 +47,31 @@ public class InsuranceController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(resourceBundle.getString("customer.avail.iderror"));
         }
         try {
-
             availed1=availedDbRepo.callSaveInsuranceAvailed(availed);
             return ResponseEntity.ok(availed1);
 
         }catch (SQLException sqlException) {
             // Handle SQL exception
             logger.error(resourceBundle.getString("availed.sql.error")+ sqlException);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(resourceBundle.getString("availed.sql.error") + sqlException.getMessage());
+            return ResponseEntity.ok().body(resourceBundle.getString("availed.sql.error") + sqlException.getMessage());
         } catch (InsuranceAvailedException availedException) {
             // Handle InsuranceAvailedException based on error codes
             if (availedException.getMessage().contains("-20001")) {
                 logger.error(resourceBundle.getString("availed.20001.error")+ availedException);
-                return ResponseEntity.status(HttpStatus.NO_CONTENT).body(resourceBundle.getString("availed.20001.error"));
+                return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString("availed.20001.error"));
             } else if (availedException.getMessage().contains("-20002")) {
                 logger.warn(resourceBundle.getString("availed.20002.error")+ availedException);
-                return ResponseEntity.status(HttpStatus.CONFLICT).body(resourceBundle.getString("availed.20002.error") );
+                return ResponseEntity.ok(resourceBundle.getString("availed.20002.error"));
+//                return ResponseEntity.status(HttpStatus.CONFLICT).body(resourceBundle.getString("availed.20002.error"));
             } else if (availedException.getMessage().contains("-20003")) {
                 logger.error(resourceBundle.getString("availed.20003.error")+ availedException);
-                return ResponseEntity.status(HttpStatus.FORBIDDEN).body(resourceBundle.getString("availed.20003.error") );
+                return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString("availed.20003.error") );
             } else if (availedException.getMessage().contains("-20004")) {
                 logger.error(resourceBundle.getString("availed.20004.error")+ availedException);
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(resourceBundle.getString("availed.20004.error"));
+                return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString("availed.20004.error"));
             } else {
                 logger.error(resourceBundle.getString("availed.error")+ availedException.getMessage());
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(resourceBundle.getString("availed.error"));
+                return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString("availed.error"));
             }
         }
     }
@@ -114,7 +83,52 @@ public class InsuranceController {
         ex.getBindingResult().getAllErrors().forEach((error) -> {
             String fieldName = ((FieldError) error).getField();
             String errorMessage = error.getDefaultMessage();
-            errors.put(fieldName, errorMessage);
+            switch (fieldName){
+            //customer
+                case "customerId":
+                    errors.put("1000",errorMessage);
+                    break;
+                case "customerName":
+                    errors.put("1002",errorMessage);
+                    break;
+                case "customerAddress":
+                    errors.put("1003",errorMessage);
+                    break;
+                case "customerStatus":
+                    errors.put("1004",errorMessage);
+                    break;
+                case "customerContact":
+                    errors.put("1005",errorMessage);
+                    break;
+                case "username":
+                    errors.put("1006",errorMessage);
+                    break;
+                case "password":
+                    errors.put("1007",errorMessage);
+                    break;
+            //insurance
+                case "insuranceId":
+                    errors.put("1008",errorMessage);
+                    break;
+                case "insuranceType":
+                    errors.put("1009",errorMessage);
+                    break;
+                case "insuranceName":
+                    errors.put("1010",errorMessage);
+                    break;
+                case "insuranceKeyBenefits":
+                    errors.put("10011",errorMessage);
+                    break;
+                case "insuranceLifetime":
+                    errors.put("10012",errorMessage);
+                    break;
+                case "insurancePremium":
+                    errors.put("10013",errorMessage);
+                    break;
+                case "insuranceCoverage":
+                    errors.put("10014",errorMessage);
+                    break;
+            }
         });
         return errors;
     }

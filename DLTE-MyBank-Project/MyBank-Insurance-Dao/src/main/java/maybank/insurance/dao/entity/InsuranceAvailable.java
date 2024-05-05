@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 
 public class InsuranceAvailable {
     @NotNull(message = "{available.insuranceId.null}")
-    @Digits(integer = 8, fraction = 0, message = "{available.insuranceId.invalid}")
+    @Digits(integer = 9, fraction = 0, message = "{available.insuranceId.invalid}")
     private Integer insuranceId;
     @NotNull(message = "{available.insuranceType.null}")
     private String insuranceType;
@@ -30,10 +30,6 @@ public class InsuranceAvailable {
                 '}';
     }
 
-    public Integer getInsuranceId() {
-        return insuranceId;
-    }
-
     public void setInsuranceId(Integer insuranceId) {
         this.insuranceId = insuranceId;
     }
@@ -54,16 +50,8 @@ public class InsuranceAvailable {
         this.insuranceName = insuranceName;
     }
 
-    public String getInsuranceKeyBenefits() {
-        return insuranceKeyBenefits;
-    }
-
     public void setInsuranceKeyBenefits(String insuranceKeyBenefits) {
         this.insuranceKeyBenefits = insuranceKeyBenefits;
-    }
-
-    public Integer getInsuranceLifetime() {
-        return insuranceLifetime;
     }
 
     public void setInsuranceLifetime(Integer insuranceLifetime) {

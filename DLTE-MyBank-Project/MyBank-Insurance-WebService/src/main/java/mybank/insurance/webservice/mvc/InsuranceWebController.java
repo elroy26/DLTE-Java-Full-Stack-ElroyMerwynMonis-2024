@@ -3,6 +3,7 @@ package mybank.insurance.webservice.mvc;
 import maybank.insurance.dao.entity.Customer;
 import maybank.insurance.dao.remotes.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -14,26 +15,28 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/ui")
-public class InsuranceWebController {
+public class InsuranceWebController  implements ErrorController {
 
     @Autowired
     CustomerRepository customerRepository;
-
 
     @GetMapping("/dash")
     public String dash(){
         return "dashboard";
     }
+
     @GetMapping("/")
     public String landing()
     {
         return "index";
     }
+
     @PostMapping("/")
     public String loginError(Model model) {
         model.addAttribute("error", true);
         return "index";
     }
+
     @GetMapping("/name")
     @ResponseBody
     public String customerName(){
@@ -61,8 +64,5 @@ public class InsuranceWebController {
     public String view(){
         return "viewInsurance";
     }
-    @GetMapping("/error")
-    public String errorPage() {
-        return "error"; // Return the name of the HTML template for the error page
-    }
+
 }

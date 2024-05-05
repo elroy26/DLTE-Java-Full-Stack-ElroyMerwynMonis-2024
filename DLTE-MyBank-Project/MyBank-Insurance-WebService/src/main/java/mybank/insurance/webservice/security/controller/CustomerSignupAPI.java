@@ -23,7 +23,7 @@ public class CustomerSignupAPI {
     @Autowired
     private PasswordEncoder passwordEncoder;
     Logger logger= LoggerFactory.getLogger(CustomerSignupAPI.class);
-    ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("insurance");
 
     @PostMapping("/register")
     public Customer save(@RequestBody Customer customer){

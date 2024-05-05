@@ -13,6 +13,8 @@ import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
 
+import java.util.ResourceBundle;
+
 //This configuration file generates the java classes from xsd file to wsdl in the services. insurance package
 
 
@@ -20,6 +22,7 @@ import org.springframework.xml.xsd.XsdSchema;
 @Configuration
 @ComponentScan("maybank.insurance.dao")
 public class SoapServiceConfiguration extends WsConfigurerAdapter {
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("app");
 
     // conversion xsd to wsdl
     @Bean
@@ -35,7 +38,7 @@ public class SoapServiceConfiguration extends WsConfigurerAdapter {
     public DefaultWsdl11Definition convertToWsdl(XsdSchema xsdSchema){
         DefaultWsdl11Definition defaultWsdl11Definition=new DefaultWsdl11Definition();
         defaultWsdl11Definition.setPortTypeName("InsurancePort");
-        defaultWsdl11Definition.setTargetNamespace("http://insurance.services");
+        defaultWsdl11Definition.setTargetNamespace(resourceBundle.getString("services.app.uri"));
         defaultWsdl11Definition.setLocationUri("/insurancerepo");
         defaultWsdl11Definition.setSchema(xsdSchema);
         return defaultWsdl11Definition;

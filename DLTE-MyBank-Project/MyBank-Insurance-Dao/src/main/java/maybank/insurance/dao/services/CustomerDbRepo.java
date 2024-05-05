@@ -61,26 +61,26 @@ public class CustomerDbRepo implements CustomerRepository,UserDetailsService {
             return customer;
         } catch (EmptyResultDataAccessException e) {
             // Handle case where no customer is found with the given username
-            throw new CustomerException(resourceBundle.getString("customer.null") + username+ e);
+            logger.error(resourceBundle.getString("customer.null")+username+ e);
+            throw new CustomerException(resourceBundle.getString("customer.null") + username);
         } catch (DataAccessException e) {
             // Handle other database access exceptions
             logger.error(resourceBundle.getString("customer.find.error")+username+ e);
-            throw new CustomerException(resourceBundle.getString("customer.find.error")+username+ e);
+            throw new CustomerException(resourceBundle.getString("customer.find.error")+username);
         }
     }
 
     @Override
     public Integer findByCustomerId(String userName) {
         try {
-//            return jdbcTemplate.queryForObject("SELECT CUSTOMER_ID FROM MYBANK_WEB_CUSTOMER WHERE USERNAME = ?", Integer.class, userName);
             Customer customer = listAllCustomer().stream()
                     .filter(each -> each.getUsername().equals(userName))
                     .findFirst()
-                    .orElseThrow(() -> new EmptyResultDataAccessException(resourceBundle.getString("customer.id.error"), 1));
+                    .orElseThrow(() -> new EmptyResultDataAccessException(resourceBundle.getString("customer.id.error")+userName, 1));
             return customer.getCustomerId();
         } catch (DataAccessException sqlException) {
             logger.error(resourceBundle.getString("customer.id.error") + sqlException.getMessage());
-            throw new CustomerException(resourceBundle.getString("customer.id.error")+sqlException.getMessage());
+            throw new CustomerException(resourceBundle.getString("customer.id.error"));
         }
     }
 

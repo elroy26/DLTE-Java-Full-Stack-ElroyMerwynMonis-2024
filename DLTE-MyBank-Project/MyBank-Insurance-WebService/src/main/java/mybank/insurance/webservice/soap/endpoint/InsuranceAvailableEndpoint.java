@@ -26,11 +26,10 @@ import java.util.ResourceBundle;
 @Endpoint
 @ComponentScan("maybank.insurance.dao")
 public class InsuranceAvailableEndpoint {
-    //http://localhost:8082/insurancerepo/insurance.wsdl
 
     private final String url = "http://insurance.services";
     Logger LOGGER = LoggerFactory.getLogger(InsuranceAvailableEndpoint.class);
-    ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("insurance");
 
     @Autowired
     private InsuranceAvailableRepository availableDbRepo;
@@ -59,13 +58,13 @@ public class InsuranceAvailableEndpoint {
             availableResponse.getInsurance().addAll(actualInsurance);
         } catch (SQLException e) {
             //this catch throws exception with respect to sql syntax
-            serviceStatus.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            LOGGER.error(resourceBundle.getString("soap.sql.error") + e + HttpServletResponse.SC_INTERNAL_SERVER_ERROR );
+            serviceStatus.setStatus(HttpServletResponse.SC_OK);
+            LOGGER.error(resourceBundle.getString("soap.sql.error") + e + HttpServletResponse.SC_OK );
             serviceStatus.setMessage(resourceBundle.getString("soap.db.error"));
         } catch (InsuranceAvailableException e) {
             //this catch throws exceptions with respect to the other server exceptions
-            serviceStatus.setStatus(HttpServletResponse.SC_NO_CONTENT);
-            LOGGER.error(resourceBundle.getString("soap.unknown.error")+ e + HttpServletResponse.SC_NO_CONTENT);
+            serviceStatus.setStatus(HttpServletResponse.SC_OK);
+            LOGGER.error(resourceBundle.getString("soap.unknown.error")+ e + HttpServletResponse.SC_OK);
             serviceStatus.setMessage(resourceBundle.getString("soap.unknown.error"));
         }
 

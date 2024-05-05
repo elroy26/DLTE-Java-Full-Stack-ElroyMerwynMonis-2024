@@ -34,17 +34,7 @@ public class InsuranceAvailed {
     public InsuranceAvailed() {
     }
 
-//    public InsuranceAvailed(Integer insuranceAvailedId, String insuranceType, String insuranceName, String insuranceKeyBenefits, Integer insuranceLifetime, Double insurancePremium, Integer customerId, Integer insuranceId, Double insuranceCoverage) {
-////        this.insuranceAvailedId = insuranceAvailedId;
-//        this.insuranceType = insuranceType;
-//        this.insuranceName = insuranceName;
-//        this.insuranceKeyBenefits = insuranceKeyBenefits;
-//        this.insuranceLifetime = insuranceLifetime;
-//        this.insurancePremium = insurancePremium;
-//        this.customerId = customerId;
-//        this.insuranceId = insuranceId;
-//        this.insuranceCoverage = insuranceCoverage;
-//    }
+
     public InsuranceAvailed(Integer customerId,Integer insuranceId,String insuranceType, String insuranceName, String insuranceKeyBenefits, Integer insuranceLifetime, Double insurancePremium,Double insuranceCoverage){
         this.insuranceType = insuranceType;
         this.insuranceName = insuranceName;
@@ -56,13 +46,6 @@ public class InsuranceAvailed {
         this.insuranceCoverage = insuranceCoverage;
     }
 
-//    public Integer getInsuranceAvailedId() {
-//        return insuranceAvailedId;
-//    }
-//
-//    public void setInsuranceAvailedId(Integer insuranceAvailedId) {
-//        this.insuranceAvailedId = insuranceAvailedId;
-//    }
 
     public String getInsuranceType() {
         return insuranceType;
@@ -131,7 +114,6 @@ public class InsuranceAvailed {
     @Override
     public String toString() {
         return "InsuranceAvailed{" +
-//                "insuranceAvailedId=" + insuranceAvailedId +
                 ", insuranceType='" + insuranceType + '\'' +
                 ", insuranceName='" + insuranceName + '\'' +
                 ", insuranceKeyBenefits='" + insuranceKeyBenefits + '\'' +

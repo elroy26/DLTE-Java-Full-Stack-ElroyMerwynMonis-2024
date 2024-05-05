@@ -52,11 +52,11 @@
         .card {
             border: none;
         }
+        .alert.fade {
+            transition: opacity 1.5s linear;
+        }
     </style>
 
-    <script>
-
-    </script>
 </head>
 <body>
 <div th:replace="dashboard :: dashboard"></div>
@@ -66,23 +66,29 @@
     <div class="d-flex justify-content-center mt-5">
         <div class="card col col-9 ">
             <div class="card-body">
-                <form >
+                <div id="notification"></div>
+                <form name = "application">
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="insuranceType">INSURANCE TYPE:</label>
                             <input type="text" class="form-control" id="insuranceType" placeholder="Enter insurance type" readonly required>
+                            <span id="insuranceTypeErr" class="error"></span>
                         </div>
                         <div class="form-group col-md-1"></div>
                         <div class="form-group col-md-1"></div>
                         <div class="form-group col-md-5">
                             <label for="insurancePremium">INSURANCE PREMIUM:</label>
-                            <input type="number" class="form-control" id="insurancePremium" placeholder="Enter insurance premium" value="10000" oninput="validateInsurancePremium(this),calculateCoverage(this)" required >
+                            <input type="number" class="form-control" id="insurancePremium" placeholder="Enter insurance premium" value="5000" oninput="validateInsurancePremium(this),calculateCoverage(this)" required >
+                            <span id="insurancePremiumErr" class="error"></span>
+
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="insuranceName">INSURANCE NAME:</label>
                             <input type="text" class="form-control" id="insuranceName" placeholder="Enter insurance name" readonly required>
+                            <span id="insuranceNameErr" class="error"></span>
+
                         </div>
                         <div class="form-group col-md-1"></div>
                         <div class="form-group col-md-1"></div>
@@ -90,6 +96,8 @@
                         <div class="form-group col-md-5">
                             <label for="insuranceLifetime">INSURANCE LIFETIME:</label>
                             <input type="number" class="form-control" id="insuranceLifetime" placeholder="Enter insurance lifetime" readonly required>
+                            <span id="insuranceLifetimeErr" class="error"></span>
+
                         </div>
                     </div>
 
@@ -97,6 +105,8 @@
                         <div class="form-group col-md-5">
                             <label for="keyBenefits">KEY BENEFITS:</label>
                             <textarea class="form-control" id="keyBenefits" rows="3" placeholder="Enter key benefits" readonly required></textarea>
+                            <span id="KeyBenefitsErr" class="error"></span>
+
                         </div>
                         <div class="form-group col-md-1"></div>
                         <div class="form-group col-md-1"></div>
@@ -104,6 +114,8 @@
                         <div class="form-group col-md-5">
                             <label for="insuranceCoverage">INSURANCE COVERAGE:</label>
                             <input type="munber" class="form-control" id="insuranceCoverage" placeholder="Enter insurance coverage" oninput="calculateCoverage(this)" readonly required >
+                            <span id="insuranceCoverageErr" class="error"></span>
+
                         </div>
                     </div>
                     <br>
@@ -163,7 +175,7 @@
 <script>
     // Function to validate insurance premium
     function validateInsurancePremium(input) {
-        const defaultValue = 10000; // Change this to your default value
+        const defaultValue = 5000; // Change this to your default value
 
         // Add event listener for the blur event
         $(input).on('blur', function() {
@@ -174,6 +186,20 @@
                 // Reset the input field value to the default value
                 $(this).val(defaultValue);
                 calculateCoverage(input);
+
+                $('#notification').html(`
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        The entered value is less than the default value. It has been reset to ${defaultValue}.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                `);
+
+// Set a timer to hide the notification after 3 seconds
+                setTimeout(function() {
+                    $('.alert').alert('close');
+                }, 2000);
             }
         });
     }
@@ -201,26 +227,77 @@
 
 
         }
-
 // Call the populateForm function when the page loads
         populateForm();
 
+        // Function to perform validation
+        const performValidate = () => {
+            var isValid = true;
+            var myForm = document.forms['application'];
+            const insuranceType = $('#insuranceType').val().trim();
+            const insuranceName = $('#insuranceName').val().trim();
+            const insuranceLifetime = $('#insuranceLifetime').val().trim();
+            // const insurancePremium = $('#insurancePremium').val().trim();
+            var insurancePremium = myForm.insurancePremium.value.trim();
+            const keyBenefits= $('#keyBenefits').val().trim();
 
-        // // Function to populate form fields with URL parameters
-        // function populateForm() {
-        //     // Get URL parameters
-        //     const params = new URLSearchParams(window.location.search);
-        //     insuranceId = params.get('insuranceID');
-        //
-        //     // Populate form fields
-        //     $('#insuranceType').val(params.get('insuranceType'));
-        //     $('#insuranceName').val(params.get('insuranceName'));
-        //     $('#keyBenefits').val(params.get('insuranceKeyBenefits'));
-        //     $('#insuranceLifetime').val(params.get('insuranceLifetime'));
-        // }
-        //
-        // // Call the populateForm function when the page loads
-        // populateForm();
+            const insuranceTypeErr = $('#insuranceTypeErr');
+            const insuranceNameErr = $('#insuranceNameErr');
+            const insuranceLifetimeErr = $('#insuranceLifetimeErr');
+            var insurancePremiumErr = $('#insurancePremiumErr');
+            const keyBenefitsErr = $('#keyBenefitsErr');
+
+            try {
+                if (!/^[A-Za-z\u00C0-\u00FF\s]+$/.test(insuranceType)) {
+                    throw "Please enter a valid insurance type.";
+                }
+                insuranceTypeErr.text('');
+            } catch (error) {
+                insuranceTypeErr.text(error);
+                isValid = false;
+            }
+            try {
+                if (!/^[A-Za-z\u00C0-\u00FF\s]+$/.test(keyBenefits)) {
+                    throw "Please enter a valid insurance type.";
+                }
+                keyBenefitsErr.text('');
+            } catch (error) {
+                keyBenefitsErr.text(error);
+                isValid = false;
+            }
+
+            try {
+                if (!/^[A-Za-z\d\u00C0-\u00FF\s]+$/.test(insuranceName)) {
+                    throw "Please enter a valid Key Benifts.";
+                }
+                insuranceNameErr.text('');
+            } catch (error) {
+                insuranceNameErr.text(error);
+                isValid = false;
+            }
+
+            try {
+                if (!/^\d+$/.test(insuranceLifetime)) {
+                    throw "Please enter a valid insurance lifetime (only digits).";
+                }
+                insuranceLifetimeErr.text('');
+            } catch (error) {
+                insuranceLifetimeErr.text(error);
+                isValid = false;
+            }
+
+            try {
+                if (!/^\d+$/.test(insurancePremium) && insurancePremium != null) {
+                    throw "Please enter a valid insurance premium (only digits).";
+                }
+                insurancePremiumErr.text(''); // Corrected selector here
+            } catch (error) {
+                insurancePremiumErr.text(error); // Corrected selector here
+                isValid = false;
+            }
+
+            return isValid;
+        };
 
         // Function to fetch the customer ID and insurance ID
         function getIDs() {
@@ -244,9 +321,11 @@
         getIDs();
 
         // Function to handle form submission
-        $("#add").click(function(event) {
+        // $("#add").click(function(event) {
+        $("form[name='application']").submit(function(event) {
             event.preventDefault(); // Prevent the form from submitting normally
-
+            // Perform form validation
+            if (performValidate()) {
             // Retrieve form data
             const insuranceType = $("#insuranceType").val();
             const insuranceName = $("#insuranceName").val();
@@ -277,6 +356,7 @@
                 contentType: "application/json;charset=utf-8",
                 data: JSON.stringify(request),
                 success: function(response) {
+
                     // Access the insuranceId property from the response
                     const jsonResponse = JSON.parse(response); // Parse the JSON string to object
                     const insuranceId = jsonResponse.insuranceId;
@@ -285,19 +365,14 @@
                     $("#successMessage").text(`Thank you for applying this insurance with insurance id: ${insuranceId}`);
                     $("#confirmationModal").modal("show");
                     sessionStorage.clear();
-
-
                 },
                 error: function(xhr, status, error) {
                     if (xhr.status === 409) {
-                        const errorCode = xhr.status;
-                        const errorMessage = xhr.responseText;
-                        const errorPageUrl = `/error?code=${errorCode}&message=${encodeURIComponent(errorMessage)}`;
-                        window.location.href = errorPageUrl;
                         // Extract the response body from xhr.responseText
-                        // const responseBody = xhr.responseText;
-                        // $("#errorMessage").text(responseBody);
-                        // $("#errorModal").modal("show");
+                        const responseBody = xhr.responseText;
+                        $("#errorMessage").text(responseBody);
+                        $("#errorModal").modal("show");
+                        sessionStorage.clear();
                     }else {
                         const errorCode = xhr.status;
                         const errorMessage = xhr.responseText;
@@ -305,11 +380,13 @@
 
                         // Navigate to the error page
                         window.location.href = errorPageUrl;
+                        sessionStorage.clear();
 
                     }
 
                 }
             });
+            }
         });
         $("#backHome").click(function() {
             // Redirect to the home page

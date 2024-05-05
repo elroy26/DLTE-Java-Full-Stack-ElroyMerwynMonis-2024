@@ -3,27 +3,39 @@ package mybank.insurance.webservice;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import maybank.insurance.dao.entity.InsuranceAvailed;
 import maybank.insurance.dao.exceptions.InsuranceAvailedException;
+import maybank.insurance.dao.remotes.CustomerRepository;
 import maybank.insurance.dao.remotes.InsuranceAvailedRepository;
 import mybank.insurance.webservice.rest.controller.InsuranceController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.validation.BeanPropertyBindingResult;
+import org.springframework.validation.Errors;
+import org.springframework.validation.FieldError;
+import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 
-import javax.validation.Validation;
-import javax.validation.Validator;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -36,15 +48,58 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class InsuranceAvailedRestTest {
     @Autowired
     private MockMvc mockMvc;
-    @MockBean
+    @Mock
     private InsuranceAvailedRepository availableDbRepo;
+
+    @Mock
+    private CustomerRepository customerRepository;
 
     @InjectMocks
     private InsuranceController insuranceController;
 
     private final ObjectMapper objectMapper = new ObjectMapper();
-    private final Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
+    private final ResourceBundle resourceBundle = ResourceBundle.getBundle("insurance");
+    @Test
+    void testSaveInsuranceAvailed_ValidationFailure() {
+        // Create a dummy invalid InsuranceAvailed object
+        InsuranceAvailed availed = new InsuranceAvailed();
 
+        // Create a MethodArgumentNotValidException with validation errors
+        List<ObjectError> errors = new ArrayList<>();
+        errors.add(new FieldError("InsuranceAvailed", "customerId", "Customer ID is required"));
+        errors.add(new FieldError("InsuranceAvailed", "insuranceType", "Insurance type is required"));
+        MethodArgumentNotValidException ex = new MethodArgumentNotValidException(null, new BeanPropertyBindingResult(availed, "InsuranceAvailed"));
+        ex.getBindingResult().addAllErrors((Errors) errors);
+
+        // Call the method under test
+        ResponseEntity<Object> response = (ResponseEntity<Object>) insuranceController.handleValidationExceptions(ex);
+
+        // Verify that the response contains the expected error messages
+        assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
+        assertTrue(response.getBody().toString().contains("1000")); // Check for error code
+        assertTrue(response.getBody().toString().contains("1009")); // Check for error code
+    }
+
+    @Test
+    void testSaveInsuranceAvailed_UnauthorizedAccess() {
+        // Mock the SecurityContext to simulate a logged-in user
+        Authentication authentication = new UsernamePasswordAuthenticationToken("doe", "12345678");
+        SecurityContext securityContext = SecurityContextHolder.getContext();
+        securityContext.setAuthentication(authentication);
+
+        // Mock the customerRepository to return a different customer ID
+        when(customerRepository.findByCustomerId("doe")).thenReturn(456);
+
+        // Create a valid InsuranceAvailed object with a different customer ID
+        InsuranceAvailed availed = new InsuranceAvailed();
+        availed.setCustomerId(123);
+
+        // Call the method under test
+        ResponseEntity<Object> response = insuranceController.save(availed);
+
+        // Verify that the response contains an unauthorized status code
+        assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode());
+    }
 
     @Test
     public void testSaveInsuranceAvailed_Success() throws SQLException, InsuranceAvailedException {

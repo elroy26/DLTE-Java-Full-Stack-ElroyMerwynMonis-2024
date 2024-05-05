@@ -23,7 +23,7 @@ public class CustomerSuccessHandler extends SimpleUrlAuthenticationSuccessHandle
     CustomerRepository service;
 
     Logger logger= LoggerFactory.getLogger(CustomerSuccessHandler.class);
-    ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("insurance");
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
@@ -37,8 +37,6 @@ public class CustomerSuccessHandler extends SimpleUrlAuthenticationSuccessHandle
                 service.updateAttempts(customer);
             }
             logger.warn(customer.getCustomerStatus());
-            //System.out.println(customer.getAttempts()+" after updates");
-//            super.setDefaultTargetUrl("/insurance/availed");
             super.setDefaultTargetUrl("/ui/dash");
 
         } else {

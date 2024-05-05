@@ -36,23 +36,6 @@ public class Customer implements UserDetails  {
     public int getAttempts() {
         return attempts;
     }
-
-//    public int getStatus() {
-//        return status;
-//    }
-//
-//    public void setStatus(int status) {
-//        this.status = status;
-//    }
-
-    public void setAttempts(int attempts) {
-        this.attempts = attempts;
-    }
-
-    public int getMaxAttempt() {
-        return maxAttempt;
-    }
-//    private int status;
     private final int maxAttempt=3;
     public Customer() {
     }
@@ -71,24 +54,12 @@ public class Customer implements UserDetails  {
         return customerId;
     }
 
-    public void setCustomerId(Integer customerId) {
-        this.customerId = customerId;
-    }
-
     public String getCustomerName() {
         return customerName;
     }
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
     public String getCustomerAddress() {
         return customerAddress;
-    }
-
-    public void setCustomerAddress(String customerAddress) {
-        this.customerAddress = customerAddress;
     }
 
     public String getCustomerStatus() {
@@ -101,10 +72,6 @@ public class Customer implements UserDetails  {
 
     public Long getCustomerContact() {
         return customerContact;
-    }
-
-    public void setCustomerContact(Long customerContact) {
-        this.customerContact = customerContact;
     }
 
     public String getUsername() {
@@ -131,8 +98,19 @@ public class Customer implements UserDetails  {
         return true;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "customerId=" + customerId +
+                ", customerName='" + customerName + '\'' +
+                ", customerAddress='" + customerAddress + '\'' +
+                ", customerStatus='" + customerStatus + '\'' +
+                ", customerContact=" + customerContact +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", attempts=" + attempts +
+                ", maxAttempt=" + maxAttempt +
+                '}';
     }
 
     @Override
@@ -144,20 +122,4 @@ public class Customer implements UserDetails  {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "customerId=" + customerId +
-                ", customerName='" + customerName + '\'' +
-                ", customerAddress='" + customerAddress + '\'' +
-                ", customerStatus='" + customerStatus + '\'' +
-                ", customerContact=" + customerContact +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
 }
