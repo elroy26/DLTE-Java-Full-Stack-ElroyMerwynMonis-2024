@@ -1,0 +1,26 @@
+http://localhost:8082/swagger-ui/index.html
+    {{baseUrl}}/insurance/availed
+http://localhost:7001/webservice-0.0.1-SNAPSHOT/insurance/availed/
+    http://localhost:7001/webservice-0.0.1-SNAPSHOT/v3/api-docs
+http://localhost:8082/insurance/availed
+{
+    "insurancePremium": "2000.0",
+        "insuranceKeyBenefits": "hign interest rates",
+        "insuranceLifetime": 2,
+        "customerId": 20012004,
+        "insuranceId": 90019002,
+        "insuranceName": "Maxlife",
+        "insuranceType": "Health",
+        "insuranceCoverage": "10000.0"
+}
+
+    http://localhost:8082/insurancerepo/insurance.wsdl
+
+@ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Insurance added successfully"),
+        @ApiResponse(responseCode = "409", description = "Insurance already exists for the customer"),
+        @ApiResponse(responseCode = "204", description = "No Insurance data exists"),
+        @ApiResponse(responseCode = "403", description = "Customer is inactive"),
+        @ApiResponse(responseCode = "500", description = "Internal server error"),
+        @ApiResponse(responseCode = "404", description = "Customer not found")
+})

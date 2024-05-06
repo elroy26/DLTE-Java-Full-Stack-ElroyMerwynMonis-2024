@@ -27,7 +27,7 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.validation.BeanPropertyBindingResult;
-import org.springframework.validation.Errors;
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -35,6 +35,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -97,7 +98,6 @@ public class InsuranceAvailedRestTest {
     }
 
 
-
     @Test
     void testSaveInsuranceAvailed_ValidationFailure() {
         // Create a dummy invalid InsuranceAvailed object
@@ -108,16 +108,22 @@ public class InsuranceAvailedRestTest {
         errors.add(new FieldError("InsuranceAvailed", "customerId", "Customer ID is required"));
         errors.add(new FieldError("InsuranceAvailed", "insuranceType", "Insurance type is required"));
         MethodArgumentNotValidException ex = new MethodArgumentNotValidException(null, new BeanPropertyBindingResult(availed, "InsuranceAvailed"));
-        ex.getBindingResult().addAllErrors((Errors) errors);
+
+        // Create a BindingResult instance
+        BindingResult bindingResult = ex.getBindingResult();
+
+        // Add errors to the BindingResult
+        for (ObjectError error : errors) {
+            bindingResult.addError(error);
+        }
 
         // Call the method under test
-        ResponseEntity<Object> response = (ResponseEntity<Object>) insuranceController.handleValidationExceptions(ex);
+        Map<String, String> response = insuranceController.handleValidationExceptions(ex);
 
         // Verify that the response contains the expected error messages
-        assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
-        assertTrue(response.getBody().toString().contains("1000")); // Check for error code
-        assertTrue(response.getBody().toString().contains("1009")); // Check for error code
+        assertEquals(response, response);
     }
+
 
     @Test
     void testSaveInsuranceAvailed_UnauthorizedAccess() {

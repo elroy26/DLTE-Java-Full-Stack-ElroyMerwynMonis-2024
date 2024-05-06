@@ -31,6 +31,48 @@ public class Customer implements UserDetails  {
     @NotNull(message = "{user.password.null}")
     @Size(min = 8, message = "{user.password.invalid}")
     private String password;
+
+    public Customer(@NotNull(message = "{user.customerName.null}") @Pattern(regexp = "^[a-zA-Z ]+$", message = "{user.customerName.invalid}") String customerName, @NotNull(message = "{user.customerAddress.null}") String customerAddress, @NotNull(message = "{user.customerStatus.null}") @Pattern(regexp = "^(open|closed)$", message = "{user.customerStatus.invalid}") String customerStatus, @NotNull(message = "{user.customerContact.null}") @Pattern(regexp = "\\d{10}", message = "{user.customerContact.invalid}") Long customerContact, @NotNull(message = "{user.username.null}") @Pattern(regexp = "^(?=.*[a-zA-Z])(?=.*\\d)[a-zA-Z\\d]+$", message = "{user.username.invalid}") String username, @NotNull(message = "{user.password.null}") @Size(min = 8, message = "{user.password.invalid}") String password) {
+        this.customerName = customerName;
+        this.customerAddress = customerAddress;
+        this.customerStatus = customerStatus;
+        this.customerContact = customerContact;
+        this.username = username;
+        this.password = password;
+    }
+
+    public void setCustomerId(Integer customerId) {
+        this.customerId = customerId;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public void setCustomerAddress(String customerAddress) {
+        this.customerAddress = customerAddress;
+    }
+
+    public void setCustomerContact(Long customerContact) {
+        this.customerContact = customerContact;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setAttempts(int attempts) {
+        this.attempts = attempts;
+    }
+
+    public int getMaxAttempt() {
+        return maxAttempt;
+    }
+
     private int attempts;
 
     public int getAttempts() {
@@ -40,7 +82,7 @@ public class Customer implements UserDetails  {
     public Customer() {
     }
 
-    public Customer(Integer customerId, String customerName, String customerAddress, String customerStatus, Long customerContact, String username, String password) {
+    public Customer(Integer customerId, String customerName, String customerAddress, String customerStatus, Long customerContact, String username, String password,int attempts) {
         this.customerId = customerId;
         this.customerName = customerName;
         this.customerAddress = customerAddress;
@@ -48,6 +90,7 @@ public class Customer implements UserDetails  {
         this.customerContact = customerContact;
         this.username = username;
         this.password = password;
+        this.attempts = attempts;
     }
 
     public Integer getCustomerId() {
@@ -101,15 +144,12 @@ public class Customer implements UserDetails  {
     @Override
     public String toString() {
         return "Customer{" +
-                "customerId=" + customerId +
                 ", customerName='" + customerName + '\'' +
                 ", customerAddress='" + customerAddress + '\'' +
                 ", customerStatus='" + customerStatus + '\'' +
                 ", customerContact=" + customerContact +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", attempts=" + attempts +
-                ", maxAttempt=" + maxAttempt +
                 '}';
     }
 

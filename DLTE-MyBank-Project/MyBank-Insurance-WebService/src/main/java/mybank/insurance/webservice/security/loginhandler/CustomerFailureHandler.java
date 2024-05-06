@@ -41,21 +41,21 @@ public class CustomerFailureHandler extends SimpleUrlAuthenticationFailureHandle
                         exception=new LockedException((4 - customer.getAttempts())+" "+resourceBundle.getString("security.invalid"));
                         String err = customer.getAttempts() + " " + exception.getMessage();
                         logger.warn(err);
-                        super.setDefaultFailureUrl("/ui/?error=" + err);
+                        super.setDefaultFailureUrl(resourceBundle.getString("error.url")+ err);
                     }else {
                         service.updateStatus(customer);
                         logger.warn(resourceBundle.getString("security.max"));
                         exception=new LockedException(resourceBundle.getString("security.max"));
-                        super.setDefaultFailureUrl("/ui/?error=" + exception.getMessage());
+                        super.setDefaultFailureUrl(resourceBundle.getString("error.url")+ exception.getMessage());
                     }
                 }else{
-                    super.setDefaultFailureUrl("/ui/?error="+resourceBundle.getString("security.suspend"));
+                    super.setDefaultFailureUrl(resourceBundle.getString("error.url")+resourceBundle.getString("security.suspend"));
                 }
             }
         }catch (CustomerException e){
             logger.warn(resourceBundle.getString("customer.null")+e.getMessage());
             exception = new LockedException(e.getMessage());
-            super.setDefaultFailureUrl("/ui/?error="+ exception.getMessage());
+            super.setDefaultFailureUrl(resourceBundle.getString("error.url")+ exception.getMessage());
         }
 
         super.onAuthenticationFailure(request, response, exception);

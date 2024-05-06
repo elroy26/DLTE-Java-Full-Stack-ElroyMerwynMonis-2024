@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 @Service
 public class InsuranceAvailableDbRepo implements InsuranceAvailableRepository {
 
-     ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+     ResourceBundle resourceBundle = ResourceBundle.getBundle("insuranceData");
      Logger LOGGER = LoggerFactory.getLogger(InsuranceAvailableDbRepo.class);
 
     @Autowired

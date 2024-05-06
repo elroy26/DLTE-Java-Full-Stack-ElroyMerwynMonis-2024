@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 
 @Service
 public class InsuranceAvailedDbRepo implements InsuranceAvailedRepository {
-    ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("insuranceData");
     Logger logger = LoggerFactory.getLogger(InsuranceAvailedDbRepo.class);
 
     @Autowired

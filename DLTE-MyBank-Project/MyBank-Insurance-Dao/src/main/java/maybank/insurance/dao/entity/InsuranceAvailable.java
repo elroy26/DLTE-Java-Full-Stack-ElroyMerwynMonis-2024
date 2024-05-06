@@ -19,6 +19,18 @@ public class InsuranceAvailable {
     @Digits(integer = 4, fraction = 0, message = "{user.customerId.null}")
     private Integer insuranceLifetime;
 
+    public Integer getInsuranceId() {
+        return insuranceId;
+    }
+
+    public String getInsuranceKeyBenefits() {
+        return insuranceKeyBenefits;
+    }
+
+    public Integer getInsuranceLifetime() {
+        return insuranceLifetime;
+    }
+
     @Override
     public String toString() {
         return "InsuranceAvailable{" +

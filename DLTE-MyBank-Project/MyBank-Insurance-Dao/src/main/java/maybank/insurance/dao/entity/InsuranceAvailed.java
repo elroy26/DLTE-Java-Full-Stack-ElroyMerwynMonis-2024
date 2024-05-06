@@ -6,9 +6,6 @@ import javax.validation.constraints.Pattern;
 
 public class InsuranceAvailed {
 
-//    @NotNull(message = "{availed.insuranceAvailedId.null}")
-//    @Digits(integer = 8, fraction = 0, message = "{availed.insuranceAvailedId.invalid}")
-//    private Integer insuranceAvailedId;
     @NotNull(message = "{availed.insuranceType.null}")
     private String insuranceType;
     @NotNull(message = "{availed.insuranceName.null}")

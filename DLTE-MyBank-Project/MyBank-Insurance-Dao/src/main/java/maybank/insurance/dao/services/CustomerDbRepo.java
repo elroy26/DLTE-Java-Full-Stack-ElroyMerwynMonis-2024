@@ -24,7 +24,7 @@ public class CustomerDbRepo implements CustomerRepository,UserDetailsService {
     @Autowired
     private JdbcTemplate jdbcTemplate;
     Logger logger= LoggerFactory.getLogger(CustomerDbRepo.class);
-    ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("insuranceData");
 
 
     @Override

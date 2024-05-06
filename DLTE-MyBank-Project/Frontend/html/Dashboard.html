@@ -34,7 +34,6 @@
     $(document).ready(() => {
     // Retrieve username from session storage
     const loggedInUser = sessionStorage.getItem("logged");
-    if (loggedInUser) {
         // Decode username from base64
         const decodedCredentials = atob(loggedInUser);
         const username = decodedCredentials.split(":")[0];
@@ -58,11 +57,8 @@
         location.assign("http://127.0.0.1:5502/html/index.html");
     }
 });
-    } else {
-        console.log("User not logged in. Redirecting to login page.");
-        location.assign("http://127.0.0.1:5502/html/index.html");
-    }
-});
+    } 
+);
 
     </script>
 </head>

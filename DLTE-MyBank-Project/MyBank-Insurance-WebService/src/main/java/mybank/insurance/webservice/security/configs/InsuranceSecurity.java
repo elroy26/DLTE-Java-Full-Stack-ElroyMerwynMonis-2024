@@ -18,6 +18,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
+import java.util.ResourceBundle;
 
 @Configuration
 @ComponentScan("maybank.insurance.dao")
@@ -32,6 +33,8 @@ public class InsuranceSecurity {
     @Autowired
     CustomerFailureHandler failureHandler;
 
+    ResourceBundle resourceBundle= ResourceBundle.getBundle("webservice");
+
     @Bean
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
@@ -40,8 +43,7 @@ public class InsuranceSecurity {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOriginPatterns(Arrays.asList("https://**"));
-
+        configuration.setAllowedOriginPatterns(Arrays.asList(resourceBundle.getString("cors.url")));
         configuration.addAllowedMethod("*");
         configuration.addAllowedHeader("*");
         configuration.setAllowCredentials(true);
@@ -54,15 +56,15 @@ public class InsuranceSecurity {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.httpBasic();
-        httpSecurity.authorizeRequests().antMatchers("/images/**").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/styles/**").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/ui/").permitAll();
+        httpSecurity.authorizeRequests().antMatchers(resourceBundle.getString("image.url")).permitAll();
+        httpSecurity.authorizeRequests().antMatchers(resourceBundle.getString("style.url")).permitAll();
+        httpSecurity.authorizeRequests().antMatchers(resourceBundle.getString("url")).permitAll();
 
-        httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/insurancerepo/insurance.wsdl").permitAll();
-        httpSecurity.formLogin().loginPage("/ui/")
-                .usernameParameter("username")
+        httpSecurity.authorizeRequests().antMatchers(resourceBundle.getString("signup.url")).permitAll();
+        httpSecurity.authorizeRequests().antMatchers(resourceBundle.getString("api.doc.url")).permitAll();
+        httpSecurity.authorizeRequests().antMatchers(resourceBundle.getString("soap.wsdl")).permitAll();
+        httpSecurity.formLogin().loginPage(resourceBundle.getString("url"))
+                .usernameParameter(resourceBundle.getString("param.user"))
                 .failureHandler(failureHandler)
                 .successHandler(successHandler);
         httpSecurity.csrf().disable();

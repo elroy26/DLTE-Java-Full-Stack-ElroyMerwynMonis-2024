@@ -30,16 +30,16 @@ public class SoapServiceConfiguration extends WsConfigurerAdapter {
         MessageDispatcherServlet servlet=new MessageDispatcherServlet();
         servlet.setTransformWsdlLocations(true);
         servlet.setApplicationContext(applicationContext);
-        return new ServletRegistrationBean(servlet,"/insurancerepo/*");
+        return new ServletRegistrationBean(servlet,resourceBundle.getString("app.folder"));
     }
 
     // wsdl properties
     @Bean(name = "insurance")
     public DefaultWsdl11Definition convertToWsdl(XsdSchema xsdSchema){
         DefaultWsdl11Definition defaultWsdl11Definition=new DefaultWsdl11Definition();
-        defaultWsdl11Definition.setPortTypeName("InsurancePort");
+        defaultWsdl11Definition.setPortTypeName(resourceBundle.getString("app.portname"));
         defaultWsdl11Definition.setTargetNamespace(resourceBundle.getString("services.app.uri"));
-        defaultWsdl11Definition.setLocationUri("/insurancerepo");
+        defaultWsdl11Definition.setLocationUri(resourceBundle.getString("app.uri"));
         defaultWsdl11Definition.setSchema(xsdSchema);
         return defaultWsdl11Definition;
     }

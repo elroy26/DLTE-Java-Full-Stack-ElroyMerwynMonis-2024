@@ -37,11 +37,11 @@ public class CustomerSuccessHandler extends SimpleUrlAuthenticationSuccessHandle
                 service.updateAttempts(customer);
             }
             logger.warn(customer.getCustomerStatus());
-            super.setDefaultTargetUrl("/ui/dash");
+            super.setDefaultTargetUrl(resourceBundle.getString("default.url"));
 
         } else {
             logger.warn(resourceBundle.getString("security.max"));
-            super.setDefaultTargetUrl("/ui/?errors="+resourceBundle.getString("security.max"));
+            super.setDefaultTargetUrl(resourceBundle.getString("error.url")+resourceBundle.getString("security.max"));
         }
         super.onAuthenticationSuccess(request, response, authentication);
     }
