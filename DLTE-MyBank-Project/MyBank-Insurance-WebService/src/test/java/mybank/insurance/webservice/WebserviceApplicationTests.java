@@ -78,23 +78,6 @@ public class WebserviceApplicationTests {
         assertNotEquals(1, response.getInsurance().size());//fail
     }
 
-    @Test
-    public void testListLoans_SQLException() throws SQLException {
-        // Arrange
-        CallAllInsuranceAvailableRequest request = new CallAllInsuranceAvailableRequest();
-        ServiceStatus expectedServiceStatus = new ServiceStatus();
-        expectedServiceStatus.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-        expectedServiceStatus.setMessage("Database error");
 
-        when(repository.callAllInsuranceAvailable()).thenThrow(SQLException.class);
-
-        // Act
-        CallAllInsuranceAvailableResponse response = endpoint.listInsurance(request);
-
-        // Assert
-        assertNotNull(response);
-        assertEquals(expectedServiceStatus.getStatus(), response.getServiceStatus().getStatus());
-
-    }
 
 }

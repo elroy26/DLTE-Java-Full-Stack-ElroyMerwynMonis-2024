@@ -24,40 +24,42 @@ public class CustomerFailureHandler extends SimpleUrlAuthenticationFailureHandle
     @Autowired
     CustomerRepository service;
 
-    Logger logger= LoggerFactory.getLogger(CustomerSuccessHandler.class);
+    Logger logger = LoggerFactory.getLogger(CustomerSuccessHandler.class);
     ResourceBundle resourceBundle = ResourceBundle.getBundle("insurance");
 
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
-        String username= request.getParameter("username");
+        String username = request.getParameter("username");
         try {
-            Customer customer=service.findByUserName(username);
-            if(customer!=null){
+            Customer customer = service.findByUserName(username);
+            if (customer != null) {
                 if (!customer.getCustomerStatus().equals("closed")) {
-                    if (customer.getAttempts()<customer.getMaxAttempt()){
-                        customer.setAttempts(customer.getAttempts()+1);
+                    if (customer.getAttempts() < customer.getMaxAttempt()) {
+                        customer.setAttempts(customer.getAttempts() + 1);
                         service.updateAttempts(customer);
                         logger.warn(resourceBundle.getString("security.invalid"));
-                        exception=new LockedException((4 - customer.getAttempts())+" "+resourceBundle.getString("security.invalid"));
+                        exception = new LockedException((4 - customer.getAttempts()) + " " + resourceBundle.getString("security.invalid"));
                         String err = customer.getAttempts() + " " + exception.getMessage();
                         logger.warn(err);
-                        super.setDefaultFailureUrl(resourceBundle.getString("error.url")+ err);
-                    }else {
+                        super.setDefaultFailureUrl(resourceBundle.getString("error.url") + exception.getMessage());
+                    } else {
                         service.updateStatus(customer);
                         logger.warn(resourceBundle.getString("security.max"));
-                        exception=new LockedException(resourceBundle.getString("security.max"));
-                        super.setDefaultFailureUrl(resourceBundle.getString("error.url")+ exception.getMessage());
+                        exception = new LockedException(resourceBundle.getString("security.max"));
+                        super.setDefaultFailureUrl(resourceBundle.getString("error.url") + exception.getMessage());
                     }
-                }else{
-                    super.setDefaultFailureUrl(resourceBundle.getString("error.url")+resourceBundle.getString("security.suspend"));
+                } else {
+                    logger.warn(resourceBundle.getString("security.suspend"));
+                    exception = new LockedException(resourceBundle.getString("security.suspend"));
+                    super.setDefaultFailureUrl(resourceBundle.getString("error.url") + exception.getMessage());
                 }
             }
-        }catch (CustomerException e){
-            logger.warn(resourceBundle.getString("customer.null")+e.getMessage());
-            exception = new LockedException(e.getMessage());
-            super.setDefaultFailureUrl(resourceBundle.getString("error.url")+ exception.getMessage());
-        }
 
+        } catch (CustomerException e) {
+            logger.warn(resourceBundle.getString("customer.null") + e.getMessage());
+            exception = new LockedException(resourceBundle.getString("customer.null"));
+            super.setDefaultFailureUrl(resourceBundle.getString("error.url") + exception.getMessage());
+        }
         super.onAuthenticationFailure(request, response, exception);
     }
 }

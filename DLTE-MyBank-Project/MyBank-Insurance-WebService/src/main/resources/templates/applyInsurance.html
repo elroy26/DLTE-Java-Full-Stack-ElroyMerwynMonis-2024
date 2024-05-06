@@ -372,17 +372,8 @@
                         $("#successMessage").text(`Thank you for applying this insurance with insurance id: ${insuranceId}`);
                         $("#confirmationModal").modal("show");
                     }
+                    sessionStorage.clear();
 
-
-                    //
-                    // // Access the insuranceId property from the response
-                    // const jsonResponse = JSON.parse(response); // Parse the JSON string to object
-                    // const insuranceId = jsonResponse.insuranceId;
-                    //
-                    // // Display the success message with the insuranceId
-                    // $("#successMessage").text(`Thank you for applying this insurance with insurance id: ${insuranceId}`);
-                    // $("#confirmationModal").modal("show");
-                    // sessionStorage.clear();
                 },
                 error: function(xhr, status, error) {
                     if (xhr.status === 409) {

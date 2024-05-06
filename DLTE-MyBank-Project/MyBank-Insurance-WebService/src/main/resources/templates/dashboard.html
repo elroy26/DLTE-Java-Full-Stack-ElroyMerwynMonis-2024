@@ -40,31 +40,31 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto justify-content-start">
                     <li class="nav-item dropdown" aria-haspopup="false">
-                        <a class="nav-link dropdown-toggle" href="#" id="accountsDropdownToggle" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                        <a class="err nav-link dropdown-toggle" href="#" id="accountsDropdownToggle" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" data-error-code="404" data-error-message="Page not found or is under development">
                             Accounts <i class="bi bi-chevron-down"></i>
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="depositsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="err nav-link dropdown-toggle" href="#" id="depositsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-error-code="404" data-error-message="Page not found or is under development">
                             Deposits <i class="bi bi-chevron-down"></i>
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="paymentsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="err nav-link dropdown-toggle" href="#" id="paymentsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-error-code="404" data-error-message="Page not found or is under development">
                             Payments <i class="bi bi-chevron-down"></i>
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="loansDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="err nav-link dropdown-toggle" href="#" id="loansDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-error-code="404" data-error-message="Page not found or is under development">
                             Loans <i class="bi bi-chevron-down"></i>
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="cardsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="err nav-link dropdown-toggle" href="#" id="cardsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-error-code="404" data-error-message="Page not found or is under development">
                             Cards <i class="bi bi-chevron-down"></i>
                         </a>
                     </li>
@@ -81,6 +81,44 @@
             </div>
         </div>
     </nav>
+<br>
+    <!-- Previous and Next buttons -->
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <div class="col-auto">
+                <ul class="pager" style="list-style: none; ">
+                    <li class="previous">
+                        <a href="javascript:void(0)" onclick="window.history.back()" class="btn text-light ml-0" style=" border-radius: 10px; font-weight: bold; background-color: #182052">Previous</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-auto">
+                <ul class="pager" style="list-style: none; font-weight: bold">
+                    <li class="next">
+                        <a href="javascript:void(0)" onclick="window.history.forward()" class="btn text-light mr-0" style=" border-radius: 10px; font-weight: bold; background-color: #182052">Next</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        $(document).ready(function() {
+            $('.err').click(function() {
+                // Get the error code and error message from data attributes
+                var errorCode = $(this).data('error-code');
+                var errorMessage = $(this).data('error-message');
+
+                // Construct the URL of the error page with error code and message
+                var errorPageUrl = `/error?code=${errorCode}&message=${encodeURIComponent(errorMessage)}`;
+
+                // Redirect the user to the error page
+                window.location.href = errorPageUrl;
+            });
+        });
+    </script>
 
 </div>
 <div class="carousel-container">
@@ -115,6 +153,7 @@
         </a>
     </div>
 </div>
+
 
 
 <br><br>

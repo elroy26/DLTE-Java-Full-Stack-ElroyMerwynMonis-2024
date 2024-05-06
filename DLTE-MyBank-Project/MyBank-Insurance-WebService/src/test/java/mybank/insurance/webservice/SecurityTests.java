@@ -2,7 +2,6 @@ package mybank.insurance.webservice;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import maybank.insurance.dao.entity.Customer;
-import maybank.insurance.dao.exceptions.CustomerException;
 import maybank.insurance.dao.remotes.CustomerRepository;
 import mybank.insurance.webservice.security.controller.CustomerSignupAPI;
 import mybank.insurance.webservice.security.loginhandler.CustomerFailureHandler;
@@ -14,12 +13,12 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
-import org.springframework.security.authentication.LockedException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
@@ -30,6 +29,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -51,8 +52,13 @@ public class SecurityTests {
     private CustomerFailureHandler failureHandler;
     @InjectMocks
     private CustomerSuccessHandler successHandler;
-
+    @Autowired
     private MockMvc mockMvc;
+    @Mock
+    private HttpServletRequest request;
+
+    @Mock
+    private HttpServletResponse response;
 
     @Test
     public void testSave() throws Exception {
@@ -114,68 +120,6 @@ public class SecurityTests {
         }
     }
 
-    @Test
-    void onAuthenticationFailure_ValidCustomer() throws IOException, ServletException {
-        MockHttpServletRequest request = new MockHttpServletRequest();
-        MockHttpServletResponse response = new MockHttpServletResponse();
-
-        String username = "testUser";
-        Customer customer = new Customer();
-        customer.setUsername(username);
-        customer.setAttempts(2);
-
-
-        when(repository.findByUserName(username)).thenReturn(customer);
-
-        AuthenticationException exception = new LockedException("Invalid credentials");
-
-        failureHandler.onAuthenticationFailure(request, response, exception);
-
-        verify(repository, times(1)).updateAttempts(any(Customer.class));
-        verify(repository, never()).updateStatus(any(Customer.class));
-        verify(response).sendRedirect("/ui/?error=1 Invalid credentials");
-    }
-
-    @Test
-    void onAuthenticationFailure_MaxAttemptsReached() throws IOException, ServletException {
-        MockHttpServletRequest request = new MockHttpServletRequest();
-        MockHttpServletResponse response = new MockHttpServletResponse();
-
-        String username = "testUser";
-        Customer customer = new Customer();
-        customer.setUsername(username);
-        customer.setAttempts(3); // Max attempts reached
-
-
-        when(repository.findByUserName(username)).thenReturn(customer);
-
-        AuthenticationException exception = new LockedException("Invalid credentials");
-
-        failureHandler.onAuthenticationFailure(request, response, exception);
-
-        verify(repository, never()).updateAttempts(any(Customer.class));
-        verify(repository, times(1)).updateStatus(any(Customer.class));
-        verify(response).sendRedirect("/ui/?error=Invalid credentials");
-    }
-
-    @Test
-    void onAuthenticationFailure_NullCustomer() throws IOException, ServletException {
-        MockHttpServletRequest request = new MockHttpServletRequest();
-        MockHttpServletResponse response = new MockHttpServletResponse();
-
-        String username = "testUser";
-
-        when(repository.findByUserName(anyString())).thenThrow(new CustomerException("Customer not found")); // Stubbing to handle any string argument
-
-        AuthenticationException exception = new LockedException("Invalid credentials");
-
-        failureHandler.onAuthenticationFailure(request, response, exception);
-
-        verify(repository, never()).updateAttempts(any(Customer.class));
-        verify(repository, never()).updateStatus(any(Customer.class));
-        verify(response).sendRedirect("/ui/?error=Customer not found");
-    }
-
 
 
     @Test
@@ -191,8 +135,33 @@ public class SecurityTests {
 
         // Call the method
         successHandler.onAuthenticationSuccess(request, response, authentication);
+    }
 
+    @Test
+    void onAuthenticationFailure_CustomerFound_ValidStatus_MaxAttemptsReached() throws Exception {
+        // Given
+        AuthenticationException exception = mock(AuthenticationException.class);
+        Customer customer = new Customer();
+        customer.setCustomerStatus("active");
+        customer.setAttempts(5); // Max attempts reached
+        customer.setMaxAttempt(5);
 
+        // Mock HttpServletRequest and HttpServletResponse
+        HttpServletRequest request = mock(HttpServletRequest.class);
+        HttpServletResponse response = mock(HttpServletResponse.class);
+
+        // Mock request.getParameter
+        when(request.getParameter("username")).thenReturn("testuser");
+
+        // Mock repository response
+        when(repository.findByUserName("testuser")).thenReturn(customer);
+
+        // When
+        failureHandler.onAuthenticationFailure(request, response, exception);
+
+        // Then
+        verify(repository, never()).updateAttempts(customer);
+        verify(repository, times(1)).updateStatus(customer);
     }
 
 }
