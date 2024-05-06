@@ -6,11 +6,13 @@ import maybank.insurance.dao.exceptions.CustomerException;
 import maybank.insurance.dao.remotes.CustomerRepository;
 import mybank.insurance.webservice.security.controller.CustomerSignupAPI;
 import mybank.insurance.webservice.security.loginhandler.CustomerFailureHandler;
+import mybank.insurance.webservice.security.loginhandler.CustomerSuccessHandler;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,6 +20,8 @@ import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.security.authentication.LockedException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.web.servlet.MockMvc;
@@ -28,6 +32,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import javax.servlet.ServletException;
 import java.io.IOException;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest
@@ -44,6 +49,8 @@ public class SecurityTests {
     private CustomerSignupAPI controller;
     @InjectMocks
     private CustomerFailureHandler failureHandler;
+    @InjectMocks
+    private CustomerSuccessHandler successHandler;
 
     private MockMvc mockMvc;
 
@@ -70,6 +77,33 @@ public class SecurityTests {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.username").value("testUser"));
     }
+    @Test
+    public void testSaveProfile() {
+        // Mock customer data
+        Customer customer = new Customer();
+        customer.setUsername("testUser");
+        customer.setPassword("testPassword");
+
+        // Mock repository response
+        Mockito.when(repository.signingUp(ArgumentMatchers.any(Customer.class))).thenReturn(customer);
+
+        // Mock password encoder response
+        Mockito.when(passwordEncoder.encode(ArgumentMatchers.anyString())).thenReturn("encodedPassword");
+
+        // Perform save operation
+        Customer savedCustomer = controller.save(customer);
+
+        // Verify that repository method is called with the correct argument
+        Mockito.verify(repository).signingUp(customer);
+
+        // Verify that password encoder is called with the correct argument
+        Mockito.verify(passwordEncoder).encode("testPassword");
+
+        // Verify the returned customer object
+        assertEquals(customer.getUsername(), savedCustomer.getUsername());
+        assertEquals("encodedPassword", savedCustomer.getPassword()); // Assuming password was encoded correctly
+    }
+
 
     // Helper method to convert object to JSON string
     private String asJsonString(final Object obj) {
@@ -142,5 +176,23 @@ public class SecurityTests {
         verify(response).sendRedirect("/ui/?error=Customer not found");
     }
 
+
+
+    @Test
+    void onAuthenticationSuccess_CustomerClosed() throws ServletException, IOException {
+        // Mock authentication
+        Customer customer = new Customer();
+        customer.setCustomerStatus("closed");
+        Authentication authentication = new UsernamePasswordAuthenticationToken(customer, null);
+
+        // Mock request and response
+        MockHttpServletRequest request = new MockHttpServletRequest();
+        MockHttpServletResponse response = new MockHttpServletResponse();
+
+        // Call the method
+        successHandler.onAuthenticationSuccess(request, response, authentication);
+
+
+    }
 
 }

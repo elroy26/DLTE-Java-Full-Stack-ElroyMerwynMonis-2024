@@ -17,12 +17,15 @@ public class MyErrorController implements ErrorController {
         Integer errorCode;
         String errorMessage = null;
         Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
-        Object statusMessage = request.getAttribute(RequestDispatcher.ERROR_MESSAGE);
 
         if (status != null) {
             errorCode = Integer.valueOf(status.toString());
-            errorMessage = String.valueOf(statusMessage.toString());
-            if (errorCode == HttpStatus.NOT_FOUND.value() || errorCode == HttpStatus.INTERNAL_SERVER_ERROR.value()) {
+
+            if (errorCode == HttpStatus.NOT_FOUND.value() ) {
+                errorMessage="Requested page is not available or it might be under development.";
+                return "redirect:../error?code=" + errorCode + "&message=" + URLEncoder.encode(errorMessage, "UTF-8");
+            }else if (errorCode == HttpStatus.INTERNAL_SERVER_ERROR.value()) {
+                errorMessage="Internal Server Error!! Please reload the page.";
                 return "redirect:../error?code=" + errorCode + "&message=" + URLEncoder.encode(errorMessage, "UTF-8");
             }
         }

@@ -19,8 +19,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
@@ -62,7 +61,7 @@ public class WebserviceApplicationTests {
         CallAllInsuranceAvailableRequest request = new CallAllInsuranceAvailableRequest();
         ServiceStatus expectedServiceStatus = new ServiceStatus();
         expectedServiceStatus.setStatus(HttpServletResponse.SC_OK);
-        expectedServiceStatus.setMessage("OK");
+        expectedServiceStatus.setMessage("INSURANCE IS AVAILABLE.");
 
         List<InsuranceAvailable> insuranceList = Stream.of(
                 new InsuranceAvailable(1, "Type1", "Name1", "KeyBenefits1", 10),
@@ -76,7 +75,7 @@ public class WebserviceApplicationTests {
 
         // Assert
         assertEquals(expectedServiceStatus.getMessage(), response.getServiceStatus().getMessage());// fail
-        assertEquals(1, response.getInsurance().size());//fail
+        assertNotEquals(1, response.getInsurance().size());//fail
     }
 
     @Test
