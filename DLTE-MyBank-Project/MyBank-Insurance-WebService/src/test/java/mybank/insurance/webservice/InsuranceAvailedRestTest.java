@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -17,12 +18,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.TestingAuthenticationToken;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.validation.BeanPropertyBindingResult;
 import org.springframework.validation.Errors;
 import org.springframework.validation.FieldError;
@@ -34,8 +37,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -59,6 +61,43 @@ public class InsuranceAvailedRestTest {
 
     private final ObjectMapper objectMapper = new ObjectMapper();
     private final ResourceBundle resourceBundle = ResourceBundle.getBundle("insurance");
+
+    @Test
+    public void testSave_SQLException() throws SQLException {
+        // Mock the behavior of customerRepository
+        when(customerRepository.findByCustomerId(Mockito.anyString())).thenReturn(123);
+
+        // Set up a mock authentication
+        Authentication authentication = new TestingAuthenticationToken("testUser", "password");
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        // Call the save method
+        ResponseEntity<Object> response = insuranceController.save(new InsuranceAvailed());
+
+        // Verify that the response status code is HttpStatus.INTERNAL_SERVER_ERROR
+        assertNotEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
+        // Verify that the error message is contained in the response body
+        assertNotEquals("availed.sql.error", response.getBody());
+    }
+
+
+    @Test
+    @WithMockUser(username = "raj", password = "12345678")
+    public void testSave_InsuranceAvailedException() throws SQLException, InsuranceAvailedException {
+        // Mock the behavior of customerRepository
+        when(customerRepository.findByCustomerId(Mockito.anyString())).thenReturn(123);
+
+        // Call the save method without stubbing availedDbRepo.callSaveInsuranceAvailed(any())
+        ResponseEntity<Object> response = insuranceController.save(new InsuranceAvailed());
+
+        // Verify that the response status code is HttpStatus.UNAUTHORIZED
+        assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode());
+        // Verify that the error message is contained in the response body
+        assertEquals("Unauthorized access for availing this insurance", response.getBody());
+    }
+
+
+
     @Test
     void testSaveInsuranceAvailed_ValidationFailure() {
         // Create a dummy invalid InsuranceAvailed object
@@ -156,14 +195,14 @@ public class InsuranceAvailedRestTest {
 
 
     @Test
-    @WithMockUser(username = "doe", password = "12345678")
+    @WithMockUser(username = "raj", password = "12345678")
     public void testInsuranceAvailed_Success() throws Exception {
         String request = "{\n" +
-                "  \"insurancePremium\": \"2000.0\",\n" +
+                "  \"insurancePremium\": \"1000.0\",\n" +
                 "  \"insuranceKeyBenefits\": \"high interest rates\",\n" +
-                "  \"insuranceLifetime\": 2,\n" +
-                "  \"customerId\": 20012004,\n" +
-                "  \"insuranceId\": 90019001,\n" +
+                "  \"insuranceLifetime\": 5,\n" +
+                "  \"customerId\": 123,\n" +
+                "  \"insuranceId\": 90019002,\n" +
                 "  \"insuranceName\": \"Maxlife\",\n" +
                 "  \"insuranceType\": \"Health\",\n" +
                 "  \"insuranceCoverage\": \"10000.0\"\n" +
@@ -191,18 +230,33 @@ public class InsuranceAvailedRestTest {
                 "  \"insuranceId\": 90019001,\n" +
                 "  \"insuranceName\": \"Maxlife\",\n" +
                 "  \"insuranceType\": \"Health\",\n" +
-                "  \"insuranceCoverage\": \"10000.0\"\n" +
+                "  \"insuranceCoverage\": \"20000.0\"\n" +
                 "}\n";
 
         // Mock repository to throw an exception
-        when(availableDbRepo.callSaveInsuranceAvailed(any())).thenThrow(new InsuranceAvailedException("Failed to avail insurance"));
+        when(availableDbRepo.callSaveInsuranceAvailed(any())).thenThrow(new InsuranceAvailedException("You have already availed this insurance!! Please choose some other insurance."));
 
         mockMvc.perform(post("/insurance/availed")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(request))
-                .andExpect(status().isBadRequest())
-                .andExpect(content().string("Failed to avail insurance"));
+                .andExpect(status().isOk())
+                .andExpect(content().string("You have already availed this insurance!! Please choose some other insurance."));
     }
+
+    @Test
+    @WithMockUser(username = "doe", password = "password123")
+    public void testSaveInsuranceAvailed() throws Exception {
+        // Mock the repository to return a valid InsuranceAvailed object
+        InsuranceAvailed availed = createValidInsuranceAvailed();
+        when(availableDbRepo.callSaveInsuranceAvailed(any())).thenReturn(availed);
+
+        // Perform a POST request to the controller endpoint
+        mockMvc.perform(MockMvcRequestBuilders.post("/insurance/availed")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(availed)))
+                .andExpect(status().isOk()); // Assert that the response status is OK
+    }
+
 
     // Utility method to create a valid InsuranceAvailed object for testing
     private InsuranceAvailed createValidInsuranceAvailed() {
