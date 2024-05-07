@@ -1,0 +1,151 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: InsuranceWebController</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">mybank.insurance.webservice.mvc</a> ]
+</div>
+
+<h1>Coverage Summary for Class: InsuranceWebController (mybank.insurance.webservice.mvc)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">InsuranceWebController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (8/ 8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (15/ 15)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package mybank.insurance.webservice.mvc;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import maybank.insurance.dao.entity.Customer;
+<i>4</i>&nbsp;import maybank.insurance.dao.remotes.CustomerRepository;
+<i>5</i>&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+<i>6</i>&nbsp;import org.springframework.boot.web.servlet.error.ErrorController;
+<i>7</i>&nbsp;import org.springframework.security.core.Authentication;
+<i>8</i>&nbsp;import org.springframework.security.core.context.SecurityContextHolder;
+<i>9</i>&nbsp;import org.springframework.stereotype.Controller;
+<i>10</i>&nbsp;import org.springframework.ui.Model;
+<i>11</i>&nbsp;import org.springframework.web.bind.annotation.GetMapping;
+<i>12</i>&nbsp;import org.springframework.web.bind.annotation.PostMapping;
+<i>13</i>&nbsp;import org.springframework.web.bind.annotation.RequestMapping;
+<i>14</i>&nbsp;import org.springframework.web.bind.annotation.ResponseBody;
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;@Controller
+<i>17</i>&nbsp;@RequestMapping(&quot;/ui&quot;)
+<b class="fc"><i>18</i>&nbsp;public class InsuranceWebController  implements ErrorController {</b>
+<i>19</i>&nbsp;
+<i>20</i>&nbsp;    @Autowired
+<i>21</i>&nbsp;    CustomerRepository customerRepository;
+<i>22</i>&nbsp;
+<i>23</i>&nbsp;    @GetMapping(&quot;/dash&quot;)
+<i>24</i>&nbsp;    public String dash(){
+<b class="fc"><i>25</i>&nbsp;        return &quot;dashboard&quot;;</b>
+<i>26</i>&nbsp;    }
+<i>27</i>&nbsp;
+<i>28</i>&nbsp;    @GetMapping(&quot;/&quot;)
+<i>29</i>&nbsp;    public String landing()
+<i>30</i>&nbsp;    {
+<b class="fc"><i>31</i>&nbsp;        return &quot;index&quot;;</b>
+<i>32</i>&nbsp;    }
+<i>33</i>&nbsp;
+<i>34</i>&nbsp;    @PostMapping(&quot;/&quot;)
+<i>35</i>&nbsp;    public String loginError(Model model) {
+<b class="fc"><i>36</i>&nbsp;        model.addAttribute(&quot;error&quot;, true);</b>
+<b class="fc"><i>37</i>&nbsp;        return &quot;index&quot;;</b>
+<i>38</i>&nbsp;    }
+<i>39</i>&nbsp;
+<i>40</i>&nbsp;    @GetMapping(&quot;/name&quot;)
+<i>41</i>&nbsp;    @ResponseBody
+<i>42</i>&nbsp;    public String customerName(){
+<b class="fc"><i>43</i>&nbsp;        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();</b>
+<b class="fc"><i>44</i>&nbsp;        String name = authentication.getName();</b>
+<b class="fc"><i>45</i>&nbsp;        Customer customer = customerRepository.findByUserName(name);</b>
+<b class="fc"><i>46</i>&nbsp;        return customer.getCustomerName();</b>
+<i>47</i>&nbsp;    }
+<i>48</i>&nbsp;
+<i>49</i>&nbsp;    @GetMapping(&quot;/id&quot;)
+<i>50</i>&nbsp;    @ResponseBody
+<i>51</i>&nbsp;    public Integer customerId(){
+<b class="fc"><i>52</i>&nbsp;        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();</b>
+<b class="fc"><i>53</i>&nbsp;        String name = authentication.getName();</b>
+<b class="fc"><i>54</i>&nbsp;        Integer customerId = customerRepository.findByCustomerId(name);</b>
+<b class="fc"><i>55</i>&nbsp;        return customerId;</b>
+<i>56</i>&nbsp;    }
+<i>57</i>&nbsp;
+<i>58</i>&nbsp;    @GetMapping(&quot;/apply&quot;)
+<i>59</i>&nbsp;    public String save(){
+<b class="fc"><i>60</i>&nbsp;        return &quot;applyInsurance&quot;;</b>
+<i>61</i>&nbsp;    }
+<i>62</i>&nbsp;
+<i>63</i>&nbsp;    @GetMapping(&quot;/view&quot;)
+<i>64</i>&nbsp;    public String view(){
+<b class="fc"><i>65</i>&nbsp;        return &quot;viewInsurance&quot;;</b>
+<i>66</i>&nbsp;    }
+<i>67</i>&nbsp;
+<i>68</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-05-07 10:34</div>
+</div>
+</body>
+</html>

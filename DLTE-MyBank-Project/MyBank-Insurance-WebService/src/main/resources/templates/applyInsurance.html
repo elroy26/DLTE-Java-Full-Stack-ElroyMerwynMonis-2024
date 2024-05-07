@@ -61,6 +61,26 @@
 <body>
 <div th:replace="dashboard :: dashboard"></div>
 <br>
+<!-- Previous and Next buttons -->
+<div class="container-fluid">
+    <div class="row justify-content-between">
+        <div class="col-auto">
+            <ul class="pager" style="list-style: none; ">
+                <li class="previous">
+                    <a href="javascript:void(0)" onclick="window.history.back()" class="btn text-light ml-0" style=" border-radius: 10px; font-weight: bold; background-color: #182052">Previous</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-auto">
+            <ul class="pager" style="list-style: none; font-weight: bold">
+                <li class="next">
+                    <a href="javascript:void(0)" onclick="window.history.forward()" class="btn text-light mr-0" style=" border-radius: 10px; font-weight: bold; background-color: #182052">Next</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br>
 <div class="container">
     <h2 class="mb-0" style="color: #182052; font-weight: bold; font-family: 'Poppins', sans-serif;">Apply Insurance</h2>
     <div class="d-flex justify-content-center mt-5">

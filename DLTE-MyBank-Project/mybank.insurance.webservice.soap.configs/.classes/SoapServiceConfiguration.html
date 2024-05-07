@@ -1,0 +1,151 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: SoapServiceConfiguration</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">mybank.insurance.webservice.soap.configs</a> ]
+</div>
+
+<h1>Coverage Summary for Class: SoapServiceConfiguration (mybank.insurance.webservice.soap.configs)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">SoapServiceConfiguration</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (4/ 4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (13/ 13)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">SoapServiceConfiguration$$EnhancerBySpringCGLIB$$1827ef71</td>
+  </tr>
+  <tr>
+    <td class="name">SoapServiceConfiguration$$EnhancerBySpringCGLIB$$1827ef71$$FastClassBySpringCGLIB$$7b99e1c7</td>
+  </tr>
+  <tr>
+    <td class="name">SoapServiceConfiguration$$FastClassBySpringCGLIB$$80eed979</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (4/ 4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (13/ 13)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package mybank.insurance.webservice.soap.configs;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import org.springframework.boot.web.servlet.ServletRegistrationBean;
+<i>4</i>&nbsp;import org.springframework.context.ApplicationContext;
+<i>5</i>&nbsp;import org.springframework.context.annotation.Bean;
+<i>6</i>&nbsp;import org.springframework.context.annotation.ComponentScan;
+<i>7</i>&nbsp;import org.springframework.context.annotation.Configuration;
+<i>8</i>&nbsp;import org.springframework.core.io.ClassPathResource;
+<i>9</i>&nbsp;import org.springframework.ws.config.annotation.EnableWs;
+<i>10</i>&nbsp;import org.springframework.ws.config.annotation.WsConfigurerAdapter;
+<i>11</i>&nbsp;import org.springframework.ws.transport.http.MessageDispatcherServlet;
+<i>12</i>&nbsp;import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
+<i>13</i>&nbsp;import org.springframework.xml.xsd.SimpleXsdSchema;
+<i>14</i>&nbsp;import org.springframework.xml.xsd.XsdSchema;
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;import java.util.ResourceBundle;
+<i>17</i>&nbsp;
+<i>18</i>&nbsp;//This configuration file generates the java classes from xsd file to wsdl in the services. insurance package
+<i>19</i>&nbsp;
+<i>20</i>&nbsp;
+<i>21</i>&nbsp;@EnableWs
+<i>22</i>&nbsp;@Configuration
+<i>23</i>&nbsp;@ComponentScan(&quot;maybank.insurance.dao&quot;)
+<b class="fc"><i>24</i>&nbsp;public class SoapServiceConfiguration extends WsConfigurerAdapter {</b>
+<b class="fc"><i>25</i>&nbsp;    ResourceBundle resourceBundle = ResourceBundle.getBundle(&quot;app&quot;);</b>
+<i>26</i>&nbsp;
+<i>27</i>&nbsp;    // conversion xsd to wsdl
+<i>28</i>&nbsp;    @Bean
+<i>29</i>&nbsp;    public ServletRegistrationBean servletRegistrationBean(ApplicationContext applicationContext){
+<b class="fc"><i>30</i>&nbsp;        MessageDispatcherServlet servlet=new MessageDispatcherServlet();</b>
+<b class="fc"><i>31</i>&nbsp;        servlet.setTransformWsdlLocations(true);</b>
+<b class="fc"><i>32</i>&nbsp;        servlet.setApplicationContext(applicationContext);</b>
+<b class="fc"><i>33</i>&nbsp;        return new ServletRegistrationBean(servlet,resourceBundle.getString(&quot;app.folder&quot;));</b>
+<i>34</i>&nbsp;    }
+<i>35</i>&nbsp;
+<i>36</i>&nbsp;    // wsdl properties
+<i>37</i>&nbsp;    @Bean(name = &quot;insurance&quot;)
+<i>38</i>&nbsp;    public DefaultWsdl11Definition convertToWsdl(XsdSchema xsdSchema){
+<b class="fc"><i>39</i>&nbsp;        DefaultWsdl11Definition defaultWsdl11Definition=new DefaultWsdl11Definition();</b>
+<b class="fc"><i>40</i>&nbsp;        defaultWsdl11Definition.setPortTypeName(resourceBundle.getString(&quot;app.portname&quot;));</b>
+<b class="fc"><i>41</i>&nbsp;        defaultWsdl11Definition.setTargetNamespace(resourceBundle.getString(&quot;services.app.uri&quot;));</b>
+<b class="fc"><i>42</i>&nbsp;        defaultWsdl11Definition.setLocationUri(resourceBundle.getString(&quot;app.uri&quot;));</b>
+<b class="fc"><i>43</i>&nbsp;        defaultWsdl11Definition.setSchema(xsdSchema);</b>
+<b class="fc"><i>44</i>&nbsp;        return defaultWsdl11Definition;</b>
+<i>45</i>&nbsp;    }
+<i>46</i>&nbsp;
+<i>47</i>&nbsp;    // identify the xsd
+<i>48</i>&nbsp;    @Bean
+<i>49</i>&nbsp;    public XsdSchema loansSchema(){
+<b class="fc"><i>50</i>&nbsp;        return new SimpleXsdSchema(new ClassPathResource(&quot;insurance.xsd&quot;));</b>
+<i>51</i>&nbsp;    }
+<i>52</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-05-07 10:34</div>
+</div>
+</body>
+</html>

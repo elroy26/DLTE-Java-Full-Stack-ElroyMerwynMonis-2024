@@ -9,8 +9,8 @@
 }
 /* Responsive font sizes */
 @media (max-width: 576px) {
-    .navbar-custom .navbar-brand, .navbar-custom .navbar-nav .nav-link, .brand-text, .user-text {
-        font-size: 24px; /* Reduce font size for small screens */
+  .navbar-brand  {
+        font-size: 24px;
     }
 }
 .welcome-text {
@@ -21,13 +21,13 @@
 /* Responsive font sizes */
 @media (max-width: 576px) {
     .welcome-text {
-        font-size: 18px; /* Reduce font size for small screens */
+        font-size: 18px;
     }
 }
 
 @media (max-width: 992px) {
     .welcome-text {
-        font-size: 20px; /* Increase font size for large screens */
+        font-size: 20px;
     }
 }
 @media (max-width: 992px) {

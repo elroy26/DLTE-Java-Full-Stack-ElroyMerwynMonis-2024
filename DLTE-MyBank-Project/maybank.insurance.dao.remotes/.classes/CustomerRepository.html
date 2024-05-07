@@ -1,0 +1,61 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: CustomerRepository</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">maybank.insurance.dao.remotes</a> ]
+</div>
+
+<h1>Coverage Summary for Class: CustomerRepository (maybank.insurance.dao.remotes)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">CustomerRepository</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package maybank.insurance.dao.remotes;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import maybank.insurance.dao.entity.Customer;
+<i>4</i>&nbsp;import org.springframework.stereotype.Repository;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;@Repository
+<i>7</i>&nbsp;public interface CustomerRepository  {
+<i>8</i>&nbsp;    Customer signingUp(Customer customer);
+<i>9</i>&nbsp;    Customer findByUserName(String username);
+<i>10</i>&nbsp;    Integer findByCustomerId(String customerName);
+<i>11</i>&nbsp;    void updateAttempts(Customer customer);
+<i>12</i>&nbsp;    void updateStatus(Customer customer);
+<i>13</i>&nbsp;
+<i>14</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-05-07 10:32</div>
+</div>
+</body>
+</html>

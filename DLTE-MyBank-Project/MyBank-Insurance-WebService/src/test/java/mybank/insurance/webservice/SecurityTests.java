@@ -19,6 +19,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.LockedException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
@@ -34,7 +36,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -138,30 +140,58 @@ public class SecurityTests {
     }
 
     @Test
-    void onAuthenticationFailure_CustomerFound_ValidStatus_MaxAttemptsReached() throws Exception {
-        // Given
-        AuthenticationException exception = mock(AuthenticationException.class);
-        Customer customer = new Customer();
-        customer.setCustomerStatus("active");
-        customer.setAttempts(5); // Max attempts reached
-        customer.setMaxAttempt(5);
+    public void testAuthenticationFailureAttemptsExceeded() throws IOException, ServletException {
+        MockHttpServletRequest request = new MockHttpServletRequest();
+        MockHttpServletResponse response = new MockHttpServletResponse();
+        AuthenticationException exception = new BadCredentialsException("Invalid credentials");
 
-        // Mock HttpServletRequest and HttpServletResponse
-        HttpServletRequest request = mock(HttpServletRequest.class);
-        HttpServletResponse response = mock(HttpServletResponse.class);
-
-        // Mock request.getParameter
-        when(request.getParameter("username")).thenReturn("testuser");
-
-        // Mock repository response
-        when(repository.findByUserName("testuser")).thenReturn(customer);
-
-        // When
+        String username = "testUser";
+        Customer customer=new Customer();
+        customer.setUsername(username);
+        customer.setCustomerStatus("open"); // Assuming status allows authentication
+        customer.setAttempts(3); // Assuming maximum attempts are 3
+        when(repository.findByUserName(null)).thenReturn(customer);
         failureHandler.onAuthenticationFailure(request, response, exception);
 
-        // Then
-        verify(repository, never()).updateAttempts(customer);
-        verify(repository, times(1)).updateStatus(customer);
+        assertEquals("/ui/?error=Max Attempts reached, account is suspended. Contact admin !!",response.getRedirectedUrl());
     }
 
+
+    @Test
+    public void testAuthenticationFailureAttempts() throws IOException, ServletException {
+        MockHttpServletRequest request = new MockHttpServletRequest();
+        MockHttpServletResponse response = new MockHttpServletResponse();
+        AuthenticationException exception = new LockedException("Max Attempts reached account is suspended");
+
+        String username = "testUser";
+        request.setParameter("username", username);
+        Customer customer=new Customer();
+        customer.setUsername(username);
+        customer.setCustomerStatus("open"); // Assuming status allows authentication
+        customer.setAttempts(2); // Assuming maximum attempts are 3
+        when(repository.findByUserName(username)).thenReturn(customer);
+
+        failureHandler.onAuthenticationFailure(request, response, exception);
+
+        assertEquals("/ui/?error=1 Attempts left.", response.getRedirectedUrl());
+    }
+
+    @Test
+    public void testAuthenticationFailureSuspend() throws IOException, ServletException {
+        MockHttpServletRequest request = new MockHttpServletRequest();
+        MockHttpServletResponse response = new MockHttpServletResponse();
+        AuthenticationException exception = new LockedException("Max Attempts reached account is suspended");
+
+        String username = "testUser";
+        request.setParameter("username", username);
+        Customer customer=new Customer();
+        customer.setUsername(username);
+        customer.setCustomerStatus("open"); // Assuming status allows authentication
+        customer.setAttempts(2); // Assuming maximum attempts are 3
+        when(repository.findByUserName(username)).thenReturn(customer);
+
+        failureHandler.onAuthenticationFailure(request, response, exception);
+
+        assertEquals("/ui/?error=1 Attempts left.", response.getRedirectedUrl());
+    }
 }
