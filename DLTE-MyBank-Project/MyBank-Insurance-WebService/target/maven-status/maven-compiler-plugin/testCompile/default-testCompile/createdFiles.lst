@@ -1,0 +1,4 @@
+mybank\insurance\webservice\WebserviceApplicationTests.class
+mybank\insurance\webservice\SecurityTests.class
+mybank\insurance\webservice\InsuranceAvailedRestTest.class
+mybank\insurance\webservice\InsuranceWebControllerTest.class

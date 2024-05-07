@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: mybank.insurance.webservice.InsuranceAvailedRestTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.235 s - in mybank.insurance.webservice.InsuranceAvailedRestTest

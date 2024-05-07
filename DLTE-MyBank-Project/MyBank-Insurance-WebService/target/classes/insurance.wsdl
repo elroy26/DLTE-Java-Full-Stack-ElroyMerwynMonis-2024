@@ -1,0 +1,36 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://insurance.services" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://insurance.services" targetNamespace="http://insurance.services">
+    <wsdl:types>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+            <xsd:import namespace="http://loans.services" schemaLocation="insurance.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="callAllInsuranceAvailableRequest">
+        <wsdl:part element="tns:callAllInsuranceAvailableRequest" name="callAllInsuranceAvailableRequest"> </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="callAllInsuranceAvailableResponse">
+        <wsdl:part element="tns:callAllInsuranceAvailableResponse" name="callAllInsuranceAvailableResponse"> </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="InsurancePort">
+        <wsdl:operation name="callAllInsuranceAvailable">
+            <wsdl:input message="tns:callAllInsuranceAvailableRequest" name="callAllInsuranceAvailableRequest"> </wsdl:input>
+            <wsdl:output message="tns:callAllInsuranceAvailableResponse" name="callAllInsuranceAvailableResponse"> </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="InsurancePortSoap11" type="tns:InsurancePort">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="callAllInsuranceAvailable">
+            <soap:operation soapAction=""/>
+            <wsdl:input name="callAllInsuranceAvailableRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="callAllInsuranceAvailableResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="InsurancePortService">
+        <wsdl:port binding="tns:InsurancePortSoap11" name="InsurancePortSoap11">
+            <soap:address location="http://localhost:8082/insurancerepo"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

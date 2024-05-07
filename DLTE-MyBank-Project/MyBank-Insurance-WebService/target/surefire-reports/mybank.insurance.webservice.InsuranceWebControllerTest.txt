@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: mybank.insurance.webservice.InsuranceWebControllerTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.943 s - in mybank.insurance.webservice.InsuranceWebControllerTest

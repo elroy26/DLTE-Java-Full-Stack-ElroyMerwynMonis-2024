@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Application Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/styles/styles.css}">
+    <script th:src="@{'/js/dashboard.js'}"></script>
+    <style>
+        body {
+            background-color: white;
+            color: white;
+        }
+        .btn-primary {
+            background-color: #182052;
+            border-color: #182052;
+            border-radius: 10px;
+        }
+        .btn-primary:hover {
+            background-color: #f5854d;
+            border-color: #f5854d;
+        }
+        .form-control {
+            background-color: #ffffff;
+            border-color: #182052;
+            border-width: 1.5px; /* Adjust the value as needed */
+
+        }
+        .form-control::placeholder {
+            color: grey;
+            opacity: 0.5;
+        }
+        .form-group label {
+            color: #182052;
+            font-weight: bold;
+        }
+        .form-group input:hover{
+            border-color: darkorange;
+        }
+        .form-group textarea:hover{
+            border-color: darkorange;
+        }
+        .card {
+            border: none;
+        }
+        .alert.fade {
+            transition: opacity 1.5s linear;
+        }
+    </style>
+
+</head>
+<body>
+<div th:replace="dashboard :: dashboard"></div>
+<br>
+<!-- Previous and Next buttons -->
+<div class="container-fluid">
+    <div class="row justify-content-between">
+        <div class="col-auto">
+            <ul class="pager" style="list-style: none; ">
+                <li class="previous">
+                    <a href="javascript:void(0)" onclick="window.history.back()" class="btn text-light ml-0" style=" border-radius: 10px; font-weight: bold; background-color: #182052">Previous</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-auto">
+            <ul class="pager" style="list-style: none; font-weight: bold">
+                <li class="next">
+                    <a href="javascript:void(0)" onclick="window.history.forward()" class="btn text-light mr-0" style=" border-radius: 10px; font-weight: bold; background-color: #182052">Next</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <h2 class="mb-0" style="color: #182052; font-weight: bold; font-family: 'Poppins', sans-serif;">Apply Insurance</h2>
+    <div class="d-flex justify-content-center mt-5">
+        <div class="card col col-9 ">
+            <div class="card-body">
+                <div id="notification"></div>
+                <form name = "application">
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label for="insuranceType">INSURANCE TYPE:</label>
+                            <input type="text" class="form-control" id="insuranceType" placeholder="Enter insurance type" readonly required>
+                            <span id="insuranceTypeErr" class="error"></span>
+                        </div>
+                        <div class="form-group col-md-1"></div>
+                        <div class="form-group col-md-1"></div>
+                        <div class="form-group col-md-5">
+                            <label for="insurancePremium">INSURANCE PREMIUM:</label>
+                            <input type="number" class="form-control" id="insurancePremium" placeholder="Enter insurance premium" value="5000" oninput="validateInsurancePremium(this),calculateCoverage(this)" required >
+                            <span id="insurancePremiumErr" class="error"></span>
+
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label for="insuranceName">INSURANCE NAME:</label>
+                            <input type="text" class="form-control" id="insuranceName" placeholder="Enter insurance name" readonly required>
+                            <span id="insuranceNameErr" class="error"></span>
+
+                        </div>
+                        <div class="form-group col-md-1"></div>
+                        <div class="form-group col-md-1"></div>
+
+                        <div class="form-group col-md-5">
+                            <label for="insuranceLifetime">INSURANCE LIFETIME:</label>
+                            <input type="number" class="form-control" id="insuranceLifetime" placeholder="Enter insurance lifetime" readonly required>
+                            <span id="insuranceLifetimeErr" class="error"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label for="keyBenefits">KEY BENEFITS:</label>
+                            <textarea class="form-control" id="keyBenefits" rows="3" placeholder="Enter key benefits" readonly required></textarea>
+                            <span id="KeyBenefitsErr" class="error"></span>
+
+                        </div>
+                        <div class="form-group col-md-1"></div>
+                        <div class="form-group col-md-1"></div>
+
+                        <div class="form-group col-md-5">
+                            <label for="insuranceCoverage">INSURANCE COVERAGE:</label>
+                            <input type="munber" class="form-control" id="insuranceCoverage" placeholder="Enter insurance coverage" value="0" oninput="calculateCoverage(this)" readonly required >
+                            <span id="insuranceCoverageErr" class="error"></span>
+
+                        </div>
+                    </div>
+                    <br>
+                    <button id="add" type="submit" class="btn btn-primary">APPLY INSURANCE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Add a modal for displaying the confirmation -->
+<div class="modal" id="confirmationModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h5 class="modal-title" id="headAck" style="color: #182052; font-family:'Montserrat', sans-serif ">Insurance Availed Successfully!</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <p id="successMessage" style="color: #182052; font-family: 'Poppins', sans-serif">Thank you for applying this insurance with insurance id </p>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" th:href="@{'/ui/dash'}" id="backHome">Back to Home</button>
+                <button type="button" class="btn btn-primary" th:href="@{'/ui/apply'}" id="viewInsurance">View Insurance</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Error Modal -->
+<div class="modal" id="errorModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h5 class="modal-title"  style="color: #182052; font-family:'Montserrat', sans-serif ">Error</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <p id="errorMessage"  style="color: #182052; font-family: 'Poppins', sans-serif"></p>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" id="viewAllInsurance">View Available Insurances</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br><br>
+<div th:replace="footer :: footer"></div>
+
+<script>
+    // Function to validate insurance premium
+    function validateInsurancePremium(input) {
+        const defaultValue = 5000; // Change this to your default value
+
+        // Add event listener for the blur event
+        $(input).on('blur', function() {
+            let enteredValue = parseInt($(this).val());
+
+            // Check if the entered value is smaller than the default value
+            if (enteredValue < defaultValue) {
+                // Reset the input field value to the default value
+                $(this).val(defaultValue);
+                calculateCoverage(input);
+
+                $('#notification').html(`
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        The entered value is less than the default value. It has been reset to ${defaultValue}.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                `);
+
+// Set a timer to hide the notification after 3 seconds
+                setTimeout(function() {
+                    $('.alert').alert('close');
+                }, 2000);
+            }
+        });
+    }
+    // Define the calculateCoverage function
+    function calculateCoverage(input) {
+        const insurancePremium = parseFloat($(input).val());
+        const insuranceLifetime = parseInt($('#insuranceLifetime').val());
+        const coverage = insurancePremium * insuranceLifetime;
+        $('#insuranceCoverage').val(coverage.toFixed(2));
+    }
+
+    $(document).ready(function() {
+        let insuranceId = 0;
+        let customerId = 0;
+
+        function populateForm() {
+            // Get form data from session storage
+            const insuranceData = JSON.parse(sessionStorage.getItem('insuranceData'));
+            insuranceId=insuranceData.insuranceID;
+            // Populate form fields
+            $('#insuranceType').val(insuranceData.insuranceType);
+            $('#insuranceName').val(insuranceData.insuranceName);
+            $('#keyBenefits').val(insuranceData.insuranceKeyBenefits);
+            $('#insuranceLifetime').val(insuranceData.insuranceLifetime);
+
+
+        }
+// Call the populateForm function when the page loads
+        populateForm();
+
+        // Function to perform validation
+        const performValidate = () => {
+            var isValid = true;
+            var myForm = document.forms['application'];
+            const insuranceType = $('#insuranceType').val().trim();
+            const insuranceName = $('#insuranceName').val().trim();
+            const insuranceLifetime = $('#insuranceLifetime').val().trim();
+            // const insurancePremium = $('#insurancePremium').val().trim();
+            var insurancePremium = myForm.insurancePremium.value.trim();
+            const keyBenefits= $('#keyBenefits').val().trim();
+
+            const insuranceTypeErr = $('#insuranceTypeErr');
+            const insuranceNameErr = $('#insuranceNameErr');
+            const insuranceLifetimeErr = $('#insuranceLifetimeErr');
+            var insurancePremiumErr = $('#insurancePremiumErr');
+            const keyBenefitsErr = $('#keyBenefitsErr');
+
+            try {
+                if (!/^[A-Za-z\u00C0-\u00FF\s]+$/.test(insuranceType)) {
+                    throw "Please enter a valid insurance type.";
+                }
+                insuranceTypeErr.text('');
+            } catch (error) {
+                insuranceTypeErr.text(error);
+                isValid = false;
+            }
+            try {
+                if (!/^[A-Za-z\u00C0-\u00FF\s]+$/.test(keyBenefits)) {
+                    throw "Please enter a valid insurance type.";
+                }
+                keyBenefitsErr.text('');
+            } catch (error) {
+                keyBenefitsErr.text(error);
+                isValid = false;
+            }
+
+            try {
+                if (!/^[A-Za-z\d\u00C0-\u00FF\s]+$/.test(insuranceName)) {
+                    throw "Please enter a valid Key Benifts.";
+                }
+                insuranceNameErr.text('');
+            } catch (error) {
+                insuranceNameErr.text(error);
+                isValid = false;
+            }
+
+            try {
+                if (!/^\d+$/.test(insuranceLifetime)) {
+                    throw "Please enter a valid insurance lifetime (only digits).";
+                }
+                insuranceLifetimeErr.text('');
+            } catch (error) {
+                insuranceLifetimeErr.text(error);
+                isValid = false;
+            }
+
+            try {
+                if (!/^\d+$/.test(insurancePremium) && insurancePremium != null) {
+                    throw "Please enter a valid insurance premium (only digits).";
+                }
+                insurancePremiumErr.text(''); // Corrected selector here
+            } catch (error) {
+                insurancePremiumErr.text(error); // Corrected selector here
+                isValid = false;
+            }
+
+            return isValid;
+        };
+
+        // Function to fetch the customer ID and insurance ID
+        function getIDs() {
+            $.ajax({
+                type: "GET",
+                url: "/ui/id", // Endpoint to fetch customer ID and insurance ID
+                dataType: "json", // Expecting JSON response
+                contentType: "application/json;charset=utf-8",
+                success: function(response) {
+                    // Set the customer ID and insurance ID in the form fields
+                    customerId = response;
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                    // Handle error if unable to fetch IDs
+                }
+            });
+        }
+
+        // Call the getIDs function
+        getIDs();
+
+        // Function to handle form submission
+        // $("#add").click(function(event) {
+        $("form[name='application']").submit(function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            // Perform form validation
+            if (performValidate()) {
+            // Retrieve form data
+            const insuranceType = $("#insuranceType").val();
+            const insuranceName = $("#insuranceName").val();
+            const insuranceKeyBenefits = $("#keyBenefits").val();
+            const insuranceLifetime = $("#insuranceLifetime").val();
+            const insurancePremium = $("#insurancePremium").val();
+            const insuranceCoverage = $("#insuranceCoverage").val();
+
+            // Construct request object
+            const request = {
+                "insurancePremium": insurancePremium,
+                "insuranceKeyBenefits": insuranceKeyBenefits,
+                "insuranceLifetime": insuranceLifetime,
+                "customerId": customerId,
+                "insuranceId": insuranceId,
+                "insuranceName": insuranceName,
+                "insuranceType": insuranceType,
+                "insuranceCoverage": insuranceCoverage
+            };
+
+            console.log(JSON.stringify(request));
+
+            // AJAX request to submit form data
+            $.ajax({
+                url: "http://localhost:8082/insurance/availed/",
+                type: "POST",
+                dataType: "text",
+                contentType: "application/json;charset=utf-8",
+                data: JSON.stringify(request),
+                success: function(response) {
+
+                    var excRegex = /2000\d\s*:/;
+                    if(excRegex.test(response)){
+                        var errorMessage = response.replace(excRegex, '').trim();
+                        $("#headAck").text(`Error occured during applying the Insurance`);
+                        $("#successMessage").text(errorMessage);
+                        $("#confirmationModal").modal("show");
+                    } else {
+
+                        // Handle other success cases here
+                        const jsonResponse = JSON.parse(response);
+                        const insuranceId = jsonResponse.insuranceId;
+                        $("#headAck").text(`Insurance Applied Successfully!`);
+                        $("#successMessage").text(`Thank you for applying this insurance with insurance id: ${insuranceId}`);
+                        $("#confirmationModal").modal("show");
+                    }
+                    sessionStorage.clear();
+
+                },
+                error: function(xhr, status, error) {
+                    if (xhr.status === 409) {
+                        // Extract the response body from xhr.responseText
+                        const responseBody = xhr.responseText;
+                        $("#errorMessage").text(responseBody);
+                        $("#errorModal").modal("show");
+                        sessionStorage.clear();
+                    }else {
+                        const errorCode = xhr.status;
+                        const errorMessage = xhr.responseText;
+                        const errorPageUrl = `/error?code=${errorCode}&message=${encodeURIComponent(errorMessage)}`;
+
+                        // Navigate to the error page
+                        window.location.href = errorPageUrl;
+                        sessionStorage.clear();
+
+                    }
+
+                }
+            });
+            }
+        });
+        $("#backHome").click(function() {
+            // Redirect to the home page
+            window.location.href = "/ui/dash";
+        });
+
+        // Function to handle "View Insurance" button click
+        $("#viewInsurance").click(function() {
+            // Redirect to the apply insurance page
+            window.location.href = "/ui/view";
+        });
+        $("#viewAllInsurance").click(function() {
+            // Redirect to the apply insurance page
+            window.location.href = "/ui/view";
+        });
+
+        // Function to handle form cancellation
+        $("#cancel").click(function() {
+            $("#insuranceType").val("");
+            $("#insuranceName").val("");
+            $("#keyBenefits").val("");
+            $("#insuranceLifetime").val("");
+            $("#insurancePremium").val("");
+            $("#insuranceCoverage").val("");
+        });
+
+
+        // Call calculateCoverage on change of insurancePremium or insuranceLifetime
+        $('#insurancePremium, #insuranceLifetime').on('blur change', function() {
+            calculateCoverage(this);
+        });
+
+        // Call calculateCoverage on page load
+        calculateCoverage($('#insurancePremium'));
+    });
+
+</script>
+</body>
+</html>

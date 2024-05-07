@@ -1,0 +1,17 @@
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\mybank\insurance\webservice\ServletInitializer.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\services\insurance\InsuranceAvailable.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\mybank\insurance\webservice\soap\endpoint\InsuranceAvailableEndpoint.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\mybank\insurance\webservice\security\loginhandler\CustomerSuccessHandler.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\services\insurance\CallAllInsuranceAvailableRequest.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\mybank\insurance\webservice\rest\controller\InsuranceController.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\services\insurance\ServiceStatus.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\mybank\insurance\webservice\mvc\MyErrorController.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\mybank\insurance\webservice\mvc\InsuranceWebController.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\services\insurance\package-info.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\mybank\insurance\webservice\security\configs\InsuranceSecurity.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\mybank\insurance\webservice\WebserviceApplication.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\mybank\insurance\webservice\soap\configs\SoapServiceConfiguration.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\mybank\insurance\webservice\security\loginhandler\CustomerFailureHandler.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\mybank\insurance\webservice\security\controller\CustomerSignupAPI.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\services\insurance\ObjectFactory.java
+C:\DLTE-Java-Full-Stack-ElroyMerwynMonis-2024\DLTE-MyBank-Project\MyBank-Insurance-WebService\src\main\java\services\insurance\CallAllInsuranceAvailableResponse.java
