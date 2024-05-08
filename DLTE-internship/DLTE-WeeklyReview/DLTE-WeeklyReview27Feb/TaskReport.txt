@@ -204,7 +204,23 @@ check about the customre id , insurane name and insurance type
 customer id 
 know the bussiness functionality of all the teams on the modules they are working on 
 
+===================================
+30/04/2024
 
+patent Jupiter voot security, dont repeat it in the all the pom.xml can we write all in one file not repeat in all the pom.xml
+optimize on the properties pon.xml
+make 1.0.0 for version. remove unecesary dependicies
+use before in the test case 
+use file size for the log files
+for names make sure the name have swedis regex pattern
+
+test for json
+customer name: 3212
+customer name: null
+insurance :asdfads
+
+make the response body contain the key has number not has the entity name
+custom validation do that in dao
 
 
 

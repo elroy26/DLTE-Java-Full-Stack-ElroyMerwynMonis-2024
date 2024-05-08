@@ -173,7 +173,7 @@
         <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
-                <h5 class="modal-title"  style="color: #182052; font-family:'Montserrat', sans-serif ">Error</h5>
+                <h5 class="modal-title" id="headerrAck"  style="color: #182052; font-family:'Montserrat', sans-serif ">Error</h5>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <!-- Modal body -->
@@ -380,11 +380,10 @@
                     var excRegex = /2000\d\s*:/;
                     if(excRegex.test(response)){
                         var errorMessage = response.replace(excRegex, '').trim();
-                        $("#headAck").text(`Error occured during applying the Insurance`);
-                        $("#successMessage").text(errorMessage);
-                        $("#confirmationModal").modal("show");
+                        $("#headerrAck").text(`Error occured during applying the Insurance`);
+                        $("#errorMessage").text(errorMessage);
+                        $("#errorModal").modal("show");
                     } else {
-
                         // Handle other success cases here
                         const jsonResponse = JSON.parse(response);
                         const insuranceId = jsonResponse.insuranceId;

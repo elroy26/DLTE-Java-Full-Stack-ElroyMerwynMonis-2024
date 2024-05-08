@@ -22,7 +22,7 @@ public class InsuranceAvailed {
     @Digits(integer = 8, fraction = 0, message = "{user.customerId.null}")
     private Integer customerId;
     @NotNull(message = "{availed.insuranceId.null}")
-    @Digits(integer = 8, fraction = 0, message = "{availed.insuranceId.invalid}")
+    @Digits(integer = 9, fraction = 0, message = "{availed.insuranceId.invalid}")
     private Integer insuranceId;
     @NotNull(message = "{availed.insuranceCoverage.null}")
     @Digits(integer = Integer.MAX_VALUE, fraction = 2, message = "{availed.insuranceCoverage.invalid}")

@@ -69,6 +69,10 @@ public class Customer implements UserDetails  {
         this.attempts = attempts;
     }
 
+    public int getMaxAttempt() {
+        return maxAttempt;
+    }
+
 
     private int attempts;
 

@@ -1,0 +1,148 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: CustomerFailureHandler</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">mybank.insurance.webservice.security.loginhandler</a> ]
+</div>
+
+<h1>Coverage Summary for Class: CustomerFailureHandler (mybank.insurance.webservice.security.loginhandler)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">CustomerFailureHandler</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    76.7%
+  </span>
+  <span class="absValue">
+    (23/ 30)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package mybank.insurance.webservice.security.loginhandler;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import maybank.insurance.dao.entity.Customer;
+<i>4</i>&nbsp;import maybank.insurance.dao.exceptions.CustomerException;
+<i>5</i>&nbsp;import maybank.insurance.dao.remotes.CustomerRepository;
+<i>6</i>&nbsp;import org.slf4j.Logger;
+<i>7</i>&nbsp;import org.slf4j.LoggerFactory;
+<i>8</i>&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+<i>9</i>&nbsp;import org.springframework.context.annotation.ComponentScan;
+<i>10</i>&nbsp;import org.springframework.security.authentication.LockedException;
+<i>11</i>&nbsp;import org.springframework.security.core.AuthenticationException;
+<i>12</i>&nbsp;import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
+<i>13</i>&nbsp;import org.springframework.stereotype.Component;
+<i>14</i>&nbsp;
+<i>15</i>&nbsp;import javax.servlet.ServletException;
+<i>16</i>&nbsp;import javax.servlet.http.HttpServletRequest;
+<i>17</i>&nbsp;import javax.servlet.http.HttpServletResponse;
+<i>18</i>&nbsp;import java.io.IOException;
+<i>19</i>&nbsp;import java.util.ResourceBundle;
+<i>20</i>&nbsp;
+<i>21</i>&nbsp;@Component
+<i>22</i>&nbsp;@ComponentScan(&quot;maybank.insurance.dao&quot;)
+<b class="fc"><i>23</i>&nbsp;public class CustomerFailureHandler extends SimpleUrlAuthenticationFailureHandler {</b>
+<i>24</i>&nbsp;    @Autowired
+<i>25</i>&nbsp;    CustomerRepository service;
+<i>26</i>&nbsp;
+<b class="fc"><i>27</i>&nbsp;    Logger logger = LoggerFactory.getLogger(CustomerSuccessHandler.class);</b>
+<b class="fc"><i>28</i>&nbsp;    ResourceBundle resourceBundle = ResourceBundle.getBundle(&quot;insurance&quot;);</b>
+<i>29</i>&nbsp;
+<i>30</i>&nbsp;    @Override
+<i>31</i>&nbsp;    public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
+<b class="fc"><i>32</i>&nbsp;        String username = request.getParameter(&quot;username&quot;);</b>
+<i>33</i>&nbsp;        try {
+<b class="fc"><i>34</i>&nbsp;            Customer customer = service.findByUserName(username);</b>
+<b class="fc"><i>35</i>&nbsp;            if (customer != null) {</b>
+<b class="fc"><i>36</i>&nbsp;                if (!customer.getCustomerStatus().equals(&quot;closed&quot;)) {</b>
+<b class="fc"><i>37</i>&nbsp;                    if (customer.getAttempts() &lt; customer.getMaxAttempt()) {</b>
+<b class="fc"><i>38</i>&nbsp;                        customer.setAttempts(customer.getAttempts() + 1);</b>
+<b class="fc"><i>39</i>&nbsp;                        service.updateAttempts(customer);</b>
+<b class="fc"><i>40</i>&nbsp;                        logger.warn(resourceBundle.getString(&quot;security.invalid&quot;));</b>
+<b class="fc"><i>41</i>&nbsp;                        exception = new LockedException((4 - customer.getAttempts()) + &quot; &quot; + resourceBundle.getString(&quot;security.invalid&quot;));</b>
+<b class="fc"><i>42</i>&nbsp;                        String err = customer.getAttempts() + &quot; &quot; + exception.getMessage();</b>
+<b class="fc"><i>43</i>&nbsp;                        logger.warn(err);</b>
+<b class="fc"><i>44</i>&nbsp;                        super.setDefaultFailureUrl(resourceBundle.getString(&quot;error.url&quot;) + exception.getMessage());</b>
+<b class="fc"><i>45</i>&nbsp;                    } else {</b>
+<b class="fc"><i>46</i>&nbsp;                        service.updateStatus(customer);</b>
+<b class="fc"><i>47</i>&nbsp;                        logger.warn(resourceBundle.getString(&quot;security.max&quot;));</b>
+<b class="fc"><i>48</i>&nbsp;                        exception = new LockedException(resourceBundle.getString(&quot;security.max&quot;));</b>
+<b class="fc"><i>49</i>&nbsp;                        super.setDefaultFailureUrl(resourceBundle.getString(&quot;error.url&quot;) + exception.getMessage());</b>
+<i>50</i>&nbsp;                    }
+<i>51</i>&nbsp;                } else {
+<b class="nc"><i>52</i>&nbsp;                    logger.warn(resourceBundle.getString(&quot;security.suspend&quot;));</b>
+<b class="nc"><i>53</i>&nbsp;                    exception = new LockedException(resourceBundle.getString(&quot;security.suspend&quot;));</b>
+<b class="nc"><i>54</i>&nbsp;                    super.setDefaultFailureUrl(resourceBundle.getString(&quot;error.url&quot;) + exception.getMessage());</b>
+<i>55</i>&nbsp;                }
+<i>56</i>&nbsp;            }
+<i>57</i>&nbsp;
+<b class="nc"><i>58</i>&nbsp;        } catch (CustomerException e) {</b>
+<b class="nc"><i>59</i>&nbsp;            logger.warn(resourceBundle.getString(&quot;customer.null&quot;) + e.getMessage());</b>
+<b class="nc"><i>60</i>&nbsp;            exception = new LockedException(resourceBundle.getString(&quot;customer.null&quot;));</b>
+<b class="nc"><i>61</i>&nbsp;            super.setDefaultFailureUrl(resourceBundle.getString(&quot;error.url&quot;) + exception.getMessage());</b>
+<b class="fc"><i>62</i>&nbsp;        }</b>
+<b class="fc"><i>63</i>&nbsp;        super.onAuthenticationFailure(request, response, exception);</b>
+<b class="fc"><i>64</i>&nbsp;    }</b>
+<i>65</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-05-07 10:49</div>
+</div>
+</body>
+</html>

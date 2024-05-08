@@ -8,11 +8,11 @@ public class PageController {
 
     @GetMapping("/AvailInsurance.html")
     public String availInsurancePage() {
-        return "AvailInsurance"; // This should match the name of your HTML template file
+        return "AvailInsurance";
     }
 
     @GetMapping("/ActualCards.html")
     public String actualCardsPage() {
-        return "ActualCards"; // This should match the name of your HTML template file
+        return "ActualCards";
     }
 }

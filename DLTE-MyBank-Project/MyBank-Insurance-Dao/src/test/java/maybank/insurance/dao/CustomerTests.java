@@ -188,6 +188,7 @@ public class CustomerTests {
         Customer customer = new Customer();
         customer.setUsername("john123");
         customer.setAttempts(2);
+        customer.getMaxAttempt();
 
         // Call the method under test
         repo.updateAttempts(customer);

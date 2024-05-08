@@ -1,0 +1,8 @@
+how to check the test coverrage percentage
+do not override the exitng system errorcode
+do not use uneccesary error code
+do not comment the negative test case amd make the test case pass
+make the test case return 90%
+remove the oracle part from the webservice
+seperate the properties files
+error message has to be in the okay but message should be sent in that
